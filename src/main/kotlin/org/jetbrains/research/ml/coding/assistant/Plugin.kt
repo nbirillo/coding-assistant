@@ -4,6 +4,4 @@
 
 package org.jetbrains.research.ml.coding.assistant
 
-object Plugin {
-
-}
+object Plugin
