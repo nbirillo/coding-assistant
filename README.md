@@ -11,3 +11,6 @@ The .zip is located in `build/distributions/coding-assistant-1.0-SNAPSHOT.zip`. 
 ## Getting started
 
 To run the plugin run `runIde` Gradle task provided by [gradle-intellij-plugin](https://github.com/JetBrains/gradle-intellij-plugin).
+
+To add `git hook` for auto-formatting the project according to the code style guide before each commit 
+run `./gradlew addKtlintFormatGitPreCommitHook`. As the result, the `.git` folder will contain the necessary hook.
