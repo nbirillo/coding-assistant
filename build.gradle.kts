@@ -18,6 +18,10 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
+
+    implementation("com.github.gumtreediff", "client", "2.1.2")
+    implementation("com.github.gumtreediff", "client.diff", "2.1.2")
+    implementation("com.github.gumtreediff", "core", "2.1.2")
 }
 
 intellij {
