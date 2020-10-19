@@ -1,0 +1,9 @@
+<idea-plugin>
+    <id>io.github.nbirillo.coding.assistant</id>
+    <name>Coding Assistant</name>
+    <vendor url="https://research.jetbrains.org/">JetBrains Research</vendor>
+
+    <description><![CDATA[
+    A PyCharm plugin for generating the personalized hints
+    ]]></description>
+</idea-plugin>
