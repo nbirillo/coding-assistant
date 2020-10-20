@@ -6,7 +6,10 @@ package org.jetbrains.research.ml.coding.assistant.tree
 
 import com.github.gumtreediff.tree.ITree
 import com.github.gumtreediff.tree.TreeContext
+import com.github.gumtreediff.tree.TreeUtils
 import com.intellij.psi.PsiElement
+import util.PsiUtil.label
+import util.PsiUtil.preOrderNumbering
 import java.util.*
 
 object TreeConverter {
@@ -30,7 +33,7 @@ object TreeConverter {
     * After first null in psiNodes we will have the following psiNodes and parentNodes lists:
     * [5, 6, ...] and [2, ...]. It means for the nodes 5 and 6 the parent node is 2.
     * */
-    fun getTree(psiRoot: PsiElement): TreeContext {
+    fun getTree(psiRoot: PsiElement, toPSINumbering: Boolean = false): TreeContext {
         val context = TreeContext()
         val psiNodes: Queue<PsiElement?> = LinkedList(psiRoot.children.toMutableList())
         psiNodes.add(null)
@@ -38,6 +41,10 @@ object TreeConverter {
         val treeRoot = psiRoot.getTree(context)
         context.root = treeRoot
         val parentNodes: Queue<ITree> = LinkedList(listOf(treeRoot))
+
+        if (toPSINumbering) {
+            psiRoot.preOrderNumbering()
+        }
 
         while (psiNodes.isNotEmpty()) {
             val currentPsi = psiNodes.poll()
@@ -53,14 +60,23 @@ object TreeConverter {
                 parentNodes.poll()
             }
         }
-        context.validate()
+        // TODO: Is it ok to use preOrderValidate instead of context.validate() with postOder numbering?
+        context.preOrderValidate()
         return context
     }
 
     // Get GumTree tree
     private fun PsiElement.getTree(context: TreeContext): ITree {
         val typeLabel = this.node.elementType.toString()
-        val label = if (this.children.isEmpty()) this.text else ""
-        return context.createTree(typeLabel.hashCode(), label, typeLabel)
+        return context.createTree(typeLabel.hashCode(), this.label, typeLabel)
+    }
+
+    private fun TreeContext.preOrderValidate() {
+        root.refresh()
+        postOrderNumbering(root)
+    }
+
+    private fun postOrderNumbering(tree: ITree) {
+        TreeUtils.numbering(tree.preOrder())
     }
 }

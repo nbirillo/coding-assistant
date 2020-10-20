@@ -7,9 +7,9 @@ package org.jetbrains.research.ml.coding.assistant.tree
 import com.github.gumtreediff.tree.TreeContext
 import com.intellij.openapi.application.ApplicationManager
 import junit.framework.TestCase
+import org.jetbrains.research.ml.coding.assistant.util.FileTestUtil.getNestedFiles
 import org.jetbrains.research.ml.coding.assistant.util.ParametrizedBaseTest
-import org.jetbrains.research.ml.coding.assistant.util.equalTreeStructure
-import org.jetbrains.research.ml.coding.assistant.util.getNestedFiles
+import org.jetbrains.research.ml.coding.assistant.util.PsiTestUtil.equalTreeStructure
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
@@ -34,10 +34,10 @@ class TreeConverterTest : ParametrizedBaseTest(getResourcesRootPath(::TreeConver
     var inFile: File? = null
 
     @Test
-    fun test() {
+    fun `converting PSI to GumTree tree test`() {
         val psiInFile = myFixture.configureByFile(inFile!!.name)
         val inContext = ApplicationManager.getApplication().runReadAction<TreeContext> {
-            TreeConverter.getTree(psiInFile)
+            TreeConverter.getTree(psiInFile, true)
         }
         TestCase.assertTrue(psiInFile.equalTreeStructure(inContext))
     }
