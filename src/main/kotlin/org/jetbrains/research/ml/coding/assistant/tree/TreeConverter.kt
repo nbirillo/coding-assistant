@@ -13,46 +13,31 @@ import java.util.*
 
 object TreeConverter {
 
-    /*
-    * Create a GumTree tree for PSI.  We use BFS to traversal the PSI. To indicate the level is ended we add null
-    * into psiNodes. The algorithm works as follow:
-    * Let we have a tree:
-    *      [1]
-    *   /   |   \
-    * [2]  [3]  [4]
-    *  | \
-    * [5] [6]
-    * ...
-    * Each vertex from the list of vertex [2, 3, 4] we should link with the vertex 1.
-    * After that we should do it for each level.
-    * For example, for each vertex from the list [5, 6] we should link with the vertex 2.
-    *
-    * It means, we had the following psiNodes list: [2, 3, 4, null, 5, 6, ...]
-    * and the following parentNodes list: [1, 2, ...].
-    * After first null in psiNodes we will have the following psiNodes and parentNodes lists:
-    * [5, 6, ...] and [2, ...]. It means for the nodes 5 and 6 the parent node is 2.
-    * */
+    /**
+     * Convert PSI to GumTree, storing already converted GumTree parent nodes and corresponding PSI child nodes:
+     *       PSI:              GumTree:
+     *  | children of A |       | A |
+     *  | children of B |       | B |
+     *  | children of C |       | C |
+     *        ....               ...
+     *  | children of Z |       | Z |
+     *
+     *  On each iteration children from PSI are converted to GumTree format and added to GumTree parents one by one;
+     *  their PSI children are added to the corresponding place in the PSI children collection.
+     */
     fun convertTree(psiRoot: PsiElement): TreeContext {
         val context = TreeContext()
-        val psiNodes: Queue<PsiElement?> = LinkedList(psiRoot.children.toMutableList())
-        psiNodes.add(null)
+        context.root = context.createTree(psiRoot)
+        val gumTreeParents: Queue<ITree> = LinkedList(listOf(context.root))
+        val psiChildren: Queue<List<PsiElement>> = LinkedList(listOf(psiRoot.children.toList()))
 
-        val treeRoot = context.createTree(psiRoot)
-        context.root = treeRoot
-        val parentNodes: Queue<ITree> = LinkedList(listOf(treeRoot))
-
-        while (psiNodes.isNotEmpty()) {
-            val currentPsi = psiNodes.poll()
-            currentPsi?.let {
-                val tree = context.createTree(currentPsi)
-                tree.setParentAndUpdateChildren(parentNodes.peek())
-                psiNodes.addAll(currentPsi.children)
-                if (currentPsi.children.isNotEmpty()) {
-                    psiNodes.add(null)
-                    parentNodes.add(tree)
-                }
-            } ?: let {
-                parentNodes.poll()
+        while (psiChildren.isNotEmpty()) {
+            val parent = gumTreeParents.poll()
+            psiChildren.poll().forEach {
+                val tree = context.createTree(it)
+                tree.setParentAndUpdateChildren(parent)
+                gumTreeParents.add(tree)
+                psiChildren.add(it.children.toList())
             }
         }
         // TODO: Is it ok to use preOrderValidate instead of context.validate() with postOder numbering?
