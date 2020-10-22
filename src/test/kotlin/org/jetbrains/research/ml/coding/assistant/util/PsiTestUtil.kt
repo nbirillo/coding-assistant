@@ -23,12 +23,14 @@ object PsiTestUtil {
         if (psiPreOrder.size != treeCtxPreOrder.size) {
             return false
         }
-        psiPreOrder.zip(treeCtxPreOrder).forEach { (psi, tree) ->
-            if (!compareStructure(psi, tree, treeCtx, toCompareNumbering)) {
-                return false
-            }
+        return psiPreOrder.zip(treeCtxPreOrder).all { (psi, tree) ->
+            compareStructure(
+                psi,
+                tree,
+                treeCtx,
+                toCompareNumbering
+            )
         }
-        return true
     }
 
     private fun compareStructure(

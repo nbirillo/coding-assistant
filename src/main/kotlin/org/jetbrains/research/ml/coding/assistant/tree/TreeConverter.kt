@@ -9,7 +9,6 @@ import com.github.gumtreediff.tree.TreeContext
 import com.github.gumtreediff.tree.TreeUtils
 import com.intellij.psi.PsiElement
 import util.PsiUtil.label
-import util.PsiUtil.preOrderNumbering
 import java.util.*
 
 object TreeConverter {
@@ -33,24 +32,20 @@ object TreeConverter {
     * After first null in psiNodes we will have the following psiNodes and parentNodes lists:
     * [5, 6, ...] and [2, ...]. It means for the nodes 5 and 6 the parent node is 2.
     * */
-    fun getTree(psiRoot: PsiElement, toPSINumbering: Boolean = false): TreeContext {
+    fun convertTree(psiRoot: PsiElement): TreeContext {
         val context = TreeContext()
         val psiNodes: Queue<PsiElement?> = LinkedList(psiRoot.children.toMutableList())
         psiNodes.add(null)
 
-        val treeRoot = psiRoot.getTree(context)
+        val treeRoot = context.createTree(psiRoot)
         context.root = treeRoot
         val parentNodes: Queue<ITree> = LinkedList(listOf(treeRoot))
 
-        if (toPSINumbering) {
-            psiRoot.preOrderNumbering()
-        }
-
         while (psiNodes.isNotEmpty()) {
             val currentPsi = psiNodes.poll()
-            val tree = currentPsi?.getTree(context)
             currentPsi?.let {
-                tree?.setParentAndUpdateChildren(parentNodes.peek())
+                val tree = context.createTree(currentPsi)
+                tree.setParentAndUpdateChildren(parentNodes.peek())
                 psiNodes.addAll(currentPsi.children)
                 if (currentPsi.children.isNotEmpty()) {
                     psiNodes.add(null)
@@ -65,10 +60,10 @@ object TreeConverter {
         return context
     }
 
-    // Get GumTree tree
-    private fun PsiElement.getTree(context: TreeContext): ITree {
-        val typeLabel = this.node.elementType.toString()
-        return context.createTree(typeLabel.hashCode(), this.label, typeLabel)
+    // Create GumTree tree
+    private fun TreeContext.createTree(psiTree: PsiElement): ITree {
+        val typeLabel = psiTree.node.elementType.toString()
+        return this.createTree(typeLabel.hashCode(), psiTree.label, typeLabel)
     }
 
     private fun TreeContext.preOrderValidate() {

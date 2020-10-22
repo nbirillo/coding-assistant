@@ -13,6 +13,7 @@ import org.jetbrains.research.ml.coding.assistant.util.PsiTestUtil.equalTreeStru
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
+import util.PsiUtil.preOrderNumbering
 import java.io.File
 
 @RunWith(Parameterized::class)
@@ -23,9 +24,7 @@ class TreeConverterTest : ParametrizedBaseTest(getResourcesRootPath(::TreeConver
         @Parameterized.Parameters(name = "{index}: ({0})")
         // TODO: which tests cases should I have?
         fun getTestData(): List<Array<File>> = getNestedFiles(getResourcesRootPath(::TreeConverterTest)).map {
-            arrayOf(
-                it
-            )
+            arrayOf(it)
         }.toList()
     }
 
@@ -35,10 +34,11 @@ class TreeConverterTest : ParametrizedBaseTest(getResourcesRootPath(::TreeConver
 
     @Test
     fun `converting PSI to GumTree tree test`() {
-        val psiInFile = myFixture.configureByFile(inFile!!.name)
+        val inFilePsi = myFixture.configureByFile(inFile!!.name)
         val inContext = ApplicationManager.getApplication().runReadAction<TreeContext> {
-            TreeConverter.getTree(psiInFile, true)
+            inFilePsi.preOrderNumbering()
+            TreeConverter.convertTree(inFilePsi)
         }
-        TestCase.assertTrue(psiInFile.equalTreeStructure(inContext))
+        TestCase.assertTrue(inFilePsi.equalTreeStructure(inContext))
     }
 }

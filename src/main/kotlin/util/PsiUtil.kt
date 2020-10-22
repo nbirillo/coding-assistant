@@ -37,8 +37,9 @@ object PsiUtil {
     }
 
     private fun numbering(iterable: Iterable<PsiElement>) {
-        var i = 0
-        for (t in iterable) t.putCopyableUserData(psiId, i++)
+        iterable.forEachIndexed { i, t ->
+            t.putCopyableUserData(psiId, i)
+        }
     }
 
     fun PsiElement.preOrderNumbering() {
