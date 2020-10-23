@@ -9,9 +9,9 @@ import com.github.gumtreediff.tree.TreeContext
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.psi.PsiElement
 import com.intellij.psi.util.elementType
-import util.PsiUtil.id
-import util.PsiUtil.label
-import util.PsiUtil.preOrder
+import org.jetbrains.research.ml.coding.assistant.tree.Numbering.PsiTreeUtils.Companion.id
+import org.jetbrains.research.ml.coding.assistant.util.psi.label
+import org.jetbrains.research.ml.coding.assistant.util.psi.preOrder
 
 object PsiTestUtil {
     fun PsiElement.equalTreeStructure(treeCtx: TreeContext, toCompareNumbering: Boolean = true): Boolean {
