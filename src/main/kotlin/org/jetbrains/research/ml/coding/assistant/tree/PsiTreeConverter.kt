@@ -7,7 +7,7 @@ package org.jetbrains.research.ml.coding.assistant.tree
 import com.github.gumtreediff.tree.ITree
 import com.github.gumtreediff.tree.TreeContext
 import com.intellij.psi.PsiElement
-import org.jetbrains.research.ml.coding.assistant.util.getLabel
+import org.jetbrains.research.ml.coding.assistant.util.label
 import java.util.*
 
 object PsiTreeConverter {
@@ -46,6 +46,6 @@ object PsiTreeConverter {
     // Create GumTree tree
     private fun TreeContext.createTree(psiTree: PsiElement): ITree {
         val typeLabel = psiTree.node.elementType.toString()
-        return this.createTree(typeLabel.hashCode(), psiTree.getLabel(), typeLabel)
+        return this.createTree(typeLabel.hashCode(), psiTree.label, typeLabel)
     }
 }

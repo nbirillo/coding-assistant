@@ -45,7 +45,7 @@ object PsiTestUtil {
             return false
         }
         // Compare labels
-        if (psi.getLabel() != tree.label) {
+        if (psi.label != tree.label) {
             return false
         }
         if (toCompareNumbering) {

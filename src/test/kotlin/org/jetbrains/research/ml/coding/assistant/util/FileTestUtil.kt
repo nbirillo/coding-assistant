@@ -18,4 +18,29 @@ object FileTestUtil {
         }
         return files.asSequence()
     }
+
+    fun getInAndOutFilesMap(folder: String): Map<File, File> {
+        val inFileRegEx = "in_\\d*.py".toRegex()
+        val inOutFileRegEx = "(in|out)_\\d*.(py|xml)".toRegex()
+        val (inFiles, outFiles) = getNestedFiles(folder)
+            .filter { it.isFile && inOutFileRegEx.containsMatchIn(it.name) }
+            .partition { inFileRegEx.containsMatchIn(it.name) }
+        if (inFiles.size != outFiles.size) {
+            throw IllegalArgumentException(
+                "Size of the list of in files does not equal size of the list of out files if the folder: $folder"
+            )
+        }
+        return inFiles.associateWith { inFile ->
+            // TODO: can I do it better?
+            val outFileName = inFile.name.replace("in", "out").replace("py", "xml")
+            val outFile = File("${inFile.parent}/$outFileName")
+            if (!outFile.exists()) {
+                throw IllegalArgumentException("Out file $outFile does not exist!")
+            }
+            outFile
+        }
+    }
+
+    val File.content: String
+        get() = this.readLines().joinToString(separator = "\n") { it }.removeSuffix("\n")
 }
