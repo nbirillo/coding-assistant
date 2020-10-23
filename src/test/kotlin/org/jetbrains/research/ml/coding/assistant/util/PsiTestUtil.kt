@@ -10,6 +10,8 @@ import com.intellij.openapi.application.ApplicationManager
 import com.intellij.psi.PsiElement
 import com.intellij.psi.util.elementType
 import org.jetbrains.research.ml.coding.assistant.tree.Numbering.PsiTreeUtils.Companion.id
+import org.jetbrains.research.ml.coding.assistant.util.psi.label
+import org.jetbrains.research.ml.coding.assistant.util.psi.preOrder
 
 object PsiTestUtil {
     fun PsiElement.equalTreeStructure(treeCtx: TreeContext, toCompareNumbering: Boolean = true): Boolean {
@@ -45,7 +47,7 @@ object PsiTestUtil {
             return false
         }
         // Compare labels
-        if (psi.getLabel() != tree.label) {
+        if (psi.label != tree.label) {
             return false
         }
         if (toCompareNumbering) {

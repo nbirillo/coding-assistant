@@ -1,10 +1,5 @@
-/*
- * Copyright (c) 2020.  Anastasiia Birillo
- */
+package org.jetbrains.research.ml.coding.assistant.util.psi
 
-package org.jetbrains.research.ml.coding.assistant.util
-
-import com.intellij.openapi.application.ApplicationManager
 import com.intellij.psi.PsiElement
 import java.util.*
 
@@ -64,11 +59,5 @@ fun PsiElement.postOrder(): Iterable<PsiElement> {
                 }
             }
         }
-    }
-}
-
-fun PsiElement.getLabel(): String {
-    return ApplicationManager.getApplication().runReadAction<String> {
-        if (this.children.isEmpty()) this.text else ""
     }
 }
