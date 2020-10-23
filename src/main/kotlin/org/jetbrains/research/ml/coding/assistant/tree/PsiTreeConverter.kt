@@ -6,7 +6,6 @@ package org.jetbrains.research.ml.coding.assistant.tree
 
 import com.github.gumtreediff.tree.ITree
 import com.github.gumtreediff.tree.TreeContext
-import com.github.gumtreediff.tree.TreeUtils
 import com.intellij.psi.PsiElement
 import org.jetbrains.research.ml.coding.assistant.util.getLabel
 import java.util.*
@@ -44,14 +43,6 @@ object PsiTreeConverter {
         return context
     }
 
-    private fun TreeContext.preOrderValidate() {
-        root.refresh()
-        postOrderNumbering(root)
-    }
-
-    private fun postOrderNumbering(tree: ITree) {
-        TreeUtils.numbering(tree.preOrder())
-    }
     // Create GumTree tree
     private fun TreeContext.createTree(psiTree: PsiElement): ITree {
         val typeLabel = psiTree.node.elementType.toString()
