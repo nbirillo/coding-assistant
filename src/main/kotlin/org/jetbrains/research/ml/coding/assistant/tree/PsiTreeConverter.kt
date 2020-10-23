@@ -58,5 +58,3 @@ object PsiTreeConverter {
         return this.createTree(typeLabel.hashCode(), psiTree.getLabel(), typeLabel)
     }
 }
-
-
