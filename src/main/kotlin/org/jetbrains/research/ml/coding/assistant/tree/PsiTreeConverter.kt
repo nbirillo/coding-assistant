@@ -7,7 +7,7 @@ package org.jetbrains.research.ml.coding.assistant.tree
 import com.github.gumtreediff.tree.ITree
 import com.github.gumtreediff.tree.TreeContext
 import com.intellij.psi.PsiElement
-import org.jetbrains.research.ml.coding.assistant.util.label
+import org.jetbrains.research.ml.coding.assistant.util.psi.label
 import java.util.*
 
 object PsiTreeConverter {
@@ -23,7 +23,7 @@ object PsiTreeConverter {
      *  On each iteration children from PSI are converted to GumTree format and added to GumTree parents one by one;
      *  their PSI children are added to the corresponding place in the PSI children collection.
      */
-    fun convertTree(psiRoot: PsiElement, numbering: Numbering? = null): TreeContext {
+    fun convertTree(psiRoot: PsiElement, numbering: Numbering): TreeContext {
         val context = TreeContext()
         context.root = context.createTree(psiRoot)
         val gumTreeParents: Queue<ITree> = LinkedList(listOf(context.root))
@@ -39,7 +39,7 @@ object PsiTreeConverter {
             }
         }
 
-        numbering?.number(psiRoot, context)
+        numbering.number(psiRoot, context)
         return context
     }
 

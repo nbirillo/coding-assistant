@@ -6,7 +6,6 @@ package org.jetbrains.research.ml.coding.assistant.util
 
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.psi.PsiElement
-import com.jetbrains.python.psi.impl.*
 import java.util.*
 
 fun PsiElement.preOrder(): Iterable<PsiElement> {

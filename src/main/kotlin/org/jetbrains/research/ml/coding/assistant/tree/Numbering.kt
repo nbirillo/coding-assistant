@@ -6,8 +6,8 @@ import com.github.gumtreediff.tree.TreeUtils
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.util.Key
 import com.intellij.psi.PsiElement
-import org.jetbrains.research.ml.coding.assistant.util.postOrder
-import org.jetbrains.research.ml.coding.assistant.util.preOrder
+import org.jetbrains.research.ml.coding.assistant.util.psi.postOrder
+import org.jetbrains.research.ml.coding.assistant.util.psi.preOrder
 
 abstract class Numbering {
 
