@@ -23,7 +23,6 @@ class PsiTreeConverterTest : ParametrizedBaseTest(getResourcesRootPath(::PsiTree
     companion object {
         @JvmStatic
         @Parameterized.Parameters(name = "{index}-{2}: ({0}, {1})")
-        // TODO: which tests cases should I have?
         fun getTestData(): List<Array<Any>> {
             val files = getInAndOutFilesMap(getResourcesRootPath(::PsiTreeConverterTest))
             val numberings = listOf(PreOrderNumbering, PostOrderNumbering)
