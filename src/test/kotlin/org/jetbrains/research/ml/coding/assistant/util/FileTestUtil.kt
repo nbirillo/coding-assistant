@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020.  Anastasiia Birillo
+ * Copyright (c) 2020.  Anastasiia Birillo, Elena Lyulina
  */
 
 package org.jetbrains.research.ml.coding.assistant.util
@@ -27,7 +27,8 @@ object FileTestUtil {
             .partition { inFileRegEx.containsMatchIn(it.name) }
         if (inFiles.size != outFiles.size) {
             throw IllegalArgumentException(
-                "Size of the list of in files does not equal size of the list of out files if the folder: $folder"
+                "Size of the list of \"in\" files does not equal to size of the list of \"out\" files if in the " +
+                    "folder: $folder"
             )
         }
         return inFiles.associateWith { inFile ->
@@ -42,5 +43,5 @@ object FileTestUtil {
     }
 
     val File.content: String
-        get() = this.readLines().joinToString(separator = "\n") { it }.removeSuffix("\n")
+        get() = this.readText().removeSuffix("\n")
 }

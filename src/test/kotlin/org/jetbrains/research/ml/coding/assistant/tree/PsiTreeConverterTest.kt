@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020.  Anastasiia Birillo
+ * Copyright (c) 2020.  Anastasiia Birillo, Elena Lyulina
  */
 
 package org.jetbrains.research.ml.coding.assistant.tree
@@ -12,7 +12,6 @@ import org.jetbrains.research.ml.coding.assistant.util.FileTestUtil.content
 import org.jetbrains.research.ml.coding.assistant.util.FileTestUtil.getInAndOutFilesMap
 import org.jetbrains.research.ml.coding.assistant.util.ParametrizedBaseTest
 import org.jetbrains.research.ml.coding.assistant.util.PsiTestUtil.equalTreeStructure
-import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
 import java.io.File
@@ -43,7 +42,6 @@ class PsiTreeConverterTest : ParametrizedBaseTest(getResourcesRootPath(::PsiTree
     @Parameterized.Parameter(2)
     var numbering: Numbering? = null
 
-    @Test
     fun `converting PSI to GumTree tree test`() {
         val inFilePsi = myFixture.configureByFile(inSourceFile!!.absolutePath.replace(testDataPath, ""))
         val inContext = ApplicationManager.getApplication().runReadAction<TreeContext> {
