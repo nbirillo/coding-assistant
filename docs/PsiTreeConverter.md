@@ -1,4 +1,9 @@
-# PsiTreeConverterTest test cases description
+# PsiTreeConverter description
+
+## Table of Contents:
+
+- [Short description](#short-description)
+- [GumTree labels](#gumtree-labels)
 
 ## Short description
 
@@ -64,3 +69,14 @@ Consider the following examples:
 We are not interested in the unconsidered vertices, since for them it is usually enough just to know the information 
 about their type. In this case we are sure that it is not `PyBaseElementImpl<*>`. 
 For example, it is true for the type `FILE`.
+
+### Unsupported cases
+
+**Note:** we don't support the following cases:
+- async keyword
+- type annotations
+
+It means, that if you use these cases, the converter will work, but the tree can be the same for the following cases:
+- `a: int = 1`
+- `a: float = 1`
+We are going to support these cases in the future.

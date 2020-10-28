@@ -34,6 +34,9 @@ val PsiElement.intermediateElementLabel: String
         }
     }
 
+/*
+* See the [docs/PsiTreeConverter.md] document for more details
+* */
 val PsiElement.label: String
     get() = ApplicationManager.getApplication().runReadAction<String> {
         val label = if (this.isLeaf) {
