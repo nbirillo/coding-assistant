@@ -79,6 +79,7 @@ For example, it is true for the type `FILE`.
 It means, that if you use these cases, the converter will work, but the tree can be the same for the following cases:
 - `a: int = 1`
 - `a: float = 1`
+
 We are going to support these cases in the future.
  
 
