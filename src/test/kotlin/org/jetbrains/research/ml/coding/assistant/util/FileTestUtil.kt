@@ -27,8 +27,8 @@ object FileTestUtil {
             .partition { inFileRegEx.containsMatchIn(it.name) }
         if (inFiles.size != outFiles.size) {
             throw IllegalArgumentException(
-                "Size of the list of \"in\" files does not equal to size of the list of \"out\" files if in the " +
-                    "folder: $folder"
+                "Size of the list of input files does not equal to size of the list of output files " +
+                    "in the folder: $folder"
             )
         }
         return inFiles.associateWith { inFile ->

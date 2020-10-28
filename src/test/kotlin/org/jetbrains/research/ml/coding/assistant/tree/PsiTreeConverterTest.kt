@@ -7,6 +7,7 @@ package org.jetbrains.research.ml.coding.assistant.tree
 import com.github.gumtreediff.io.TreeIoUtils
 import com.github.gumtreediff.tree.TreeContext
 import com.intellij.openapi.application.ApplicationManager
+import com.intellij.psi.PsiFile
 import junit.framework.TestCase
 import org.jetbrains.research.ml.coding.assistant.util.FileTestUtil.content
 import org.jetbrains.research.ml.coding.assistant.util.FileTestUtil.getInAndOutFilesMap
@@ -43,14 +44,26 @@ class PsiTreeConverterTest : ParametrizedBaseTest(getResourcesRootPath(::PsiTree
     var numbering: Numbering? = null
 
     @Test
-    fun `converting PSI to GumTree tree test`() {
-        val inFilePsi = myFixture.configureByFile(inSourceFile!!.absolutePath.replace(testDataPath, ""))
-        val inContext = ApplicationManager.getApplication().runReadAction<TreeContext> {
-            PsiTreeConverter.convertTree(inFilePsi, numbering!!)
-        }
-        TestCase.assertTrue(inFilePsi.equalTreeStructure(inContext))
+    fun `compare tree structure test`() {
+        val inFilePsi = getInFilePsi()
+        TestCase.assertTrue(inFilePsi.equalTreeStructure(getInTreeContext(inFilePsi)))
+    }
+
+    @Test
+    fun `compare xml test`() {
+        val inContext = getInTreeContext(getInFilePsi())
         val expectedXml = outXmlFile!!.content
         val actualXml = TreeIoUtils.toXml(inContext).toString().removeSuffix("\n")
         TestCase.assertEquals(actualXml, expectedXml)
+    }
+
+    private fun getInFilePsi(): PsiFile {
+        return myFixture.configureByFile(inSourceFile!!.absolutePath.replace(testDataPath, ""))
+    }
+
+    private fun getInTreeContext(psiFile: PsiFile): TreeContext {
+        return ApplicationManager.getApplication().runReadAction<TreeContext> {
+            PsiTreeConverter.convertTree(psiFile, numbering!!)
+        }
     }
 }
