@@ -25,11 +25,39 @@ The rules for generating label by PSI node:
 `PyReferenceExpression` and so on
 2. Else we should consider several cases. We can not store text in other cases, because it contains text from the
 current vertex and from all children. For example:
+
+Consider the following code:
 ```
 for i in range(100):
    pass
 ```
-In this case, we should consider the type of the current node.
+
+The PSI is:
+
+```
+PyFile:Dummy.py
+  PyForStatement
+    PyForPart
+      PyTargetExpression: i
+      PyCallExpression: range
+        PyReferenceExpression: range
+        PyArgumentList
+          PyNumericLiteralExpression
+      PyStatementList
+        PyPassStatement
+
+```
+
+The node `PyForStatement` has the text:
+
+```
+for i in range(100):
+   pass
+```
+
+But we don't want to store a big code snapshot in the GumTree tree.
+
+So in this case (number 2), we should consider the type of the current node.
  
 Since all code elements are inherited from the `PyBaseElementImpl<*>`, we need to consider special cases when we want
 to store not a name, because it is `null`, but something else, that characterizes this vertex.
@@ -69,11 +97,13 @@ Consider the following examples:
 We are not interested in the unconsidered vertices, since for them it is usually enough just to know the information
 about their type. In this case, we are sure that it is not `PyBaseElementImpl<*>`.
 For example, it is true for the type `FILE`.
+
+To create this list of the cases we considered all types of the Py PSI items and define which additional information we need.
  
 ### Unsupported cases
  
 **Note:** we don't support the following cases:
-- async keyword
+- `async` keyword
 - type annotations
  
 It means, that if you use these cases, the converter will work, but the tree can be the same for the following cases:
