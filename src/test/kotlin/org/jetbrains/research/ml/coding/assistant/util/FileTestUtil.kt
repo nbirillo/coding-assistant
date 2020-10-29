@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020.  Anastasiia Birillo
+ * Copyright (c) 2020.  Anastasiia Birillo, Elena Lyulina
  */
 
 package org.jetbrains.research.ml.coding.assistant.util
@@ -18,4 +18,30 @@ object FileTestUtil {
         }
         return files.asSequence()
     }
+
+    fun getInAndOutFilesMap(folder: String): Map<File, File> {
+        val inFileRegEx = "in_\\d*.py".toRegex()
+        val inOutFileRegEx = "(in|out)_\\d*.(py|xml)".toRegex()
+        val (inFiles, outFiles) = getNestedFiles(folder)
+            .filter { it.isFile && inOutFileRegEx.containsMatchIn(it.name) }
+            .partition { inFileRegEx.containsMatchIn(it.name) }
+        if (inFiles.size != outFiles.size) {
+            throw IllegalArgumentException(
+                "Size of the list of input files does not equal to size of the list of output files " +
+                    "in the folder: $folder"
+            )
+        }
+        return inFiles.associateWith { inFile ->
+            // TODO: can I do it better?
+            val outFileName = inFile.name.replace("in", "out").replace("py", "xml")
+            val outFile = File("${inFile.parent}/$outFileName")
+            if (!outFile.exists()) {
+                throw IllegalArgumentException("Out file $outFile does not exist!")
+            }
+            outFile
+        }
+    }
+
+    val File.content: String
+        get() = this.readText().removeSuffix("\n")
 }

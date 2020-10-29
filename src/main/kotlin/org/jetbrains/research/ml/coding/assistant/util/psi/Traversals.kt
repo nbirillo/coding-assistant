@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2020.  Anastasiia Birillo, Elena Lyulina
+ */
+
 package org.jetbrains.research.ml.coding.assistant.util.psi
 
 import com.intellij.psi.PsiElement

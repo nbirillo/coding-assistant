@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2020.  Anastasiia Birillo, Elena Lyulina
+ */
+
 package org.jetbrains.research.ml.coding.assistant.tree
 
 import com.github.gumtreediff.tree.ITree
