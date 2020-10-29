@@ -2,7 +2,7 @@
 <root>
   <context></context>
   <tree type="2157948" typeLabel="FILE">
-    <tree type="624590884" typeLabel="Py:FUNCTION_DECLARATION">
+    <tree type="624590884" label="foo" typeLabel="Py:FUNCTION_DECLARATION">
       <tree type="-233915131" typeLabel="Py:PARAMETER_LIST">
         <tree type="-2114376046" label="a" typeLabel="Py:NAMED_PARAMETER"></tree>
         <tree type="-2114376046" label="b" typeLabel="Py:NAMED_PARAMETER"></tree>
