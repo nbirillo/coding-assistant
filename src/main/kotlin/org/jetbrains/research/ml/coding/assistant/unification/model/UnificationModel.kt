@@ -4,10 +4,11 @@ import com.intellij.psi.PsiElement
 import org.jetbrains.research.ml.ast.transformations.PerformedCommandStorage
 import org.jetbrains.research.ml.coding.assistant.dataset.model.RecordMetaInfo
 import java.time.ZoneOffset
+import java.util.concurrent.atomic.AtomicInteger
 
 data class IntermediateSolution(
     val taskSolution: PsiElement,
-    val commandsStorage: PerformedCommandStorage,
+    val commandsStorage: PerformedCommandStorage?,
     val metaInfo: RecordMetaInfo
 ) {
     override fun equals(other: Any?): Boolean {
@@ -22,12 +23,16 @@ data class IntermediateSolution(
     }
 
     override fun hashCode(): Int {
-        return taskSolution.hashCode()
+        return taskSolution.text.hashCode()
     }
 
-    private val label = metaInfo.date?.toInstant(ZoneOffset.UTC)?.epochSecond.toString()
+    val label = counter.incrementAndGet().toString()
     override fun toString(): String {
-        return "$label-${metaInfo.timestamp}"
+        return "Vertex $label"
+    }
+
+    companion object {
+        val counter = AtomicInteger(0)
     }
 }
 

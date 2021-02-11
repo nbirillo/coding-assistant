@@ -13,6 +13,7 @@ import org.jetbrains.research.ml.ast.util.SdkConfigurer
 import org.junit.Before
 import org.junit.Ignore
 
+@Ignore
 open class ParametrizedBaseWithSdkTest(testDataRoot: String) : ParametrizedBaseTest(testDataRoot) {
 
     /**

@@ -10,6 +10,7 @@ import org.junit.After
 import org.junit.Before
 import org.junit.BeforeClass
 import org.junit.Ignore
+import java.io.File
 import java.util.logging.Logger
 import kotlin.reflect.KFunction
 
@@ -21,6 +22,16 @@ open class ParametrizedBaseTest(private val testDataRoot: String) : BasePlatform
     override fun getTestDataPath() = testDataRoot
 
     companion object {
+        fun getInAndOutArray(
+            cls: KFunction<ParametrizedBaseTest>,
+            resourcesRootName: String = resourcesRoot,
+        ): List<Array<File>> {
+            val inAndOutFilesMap = FileTestUtil.getInAndOutFilesMap(
+                getResourcesRootPath(cls, resourcesRootName),
+                outFormat = TestFileFormat("out", Extension.Py, Type.Output)
+            )
+            return inAndOutFilesMap.entries.map { (inFile, outFile) -> arrayOf(inFile, outFile!!) }
+        }
         // We can not get the root of the class resources automatically
         private const val resourcesRoot: String = "data"
 

@@ -2,24 +2,25 @@ package org.jetbrains.research.ml.coding.assistant.dataset.model
 
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
+import java.util.concurrent.atomic.AtomicInteger
 
 data class RecordMetaInfo(
-    val date: LocalDateTime?,
-    val timestamp: Int?,
-    val filename: String?,
-    val fileHashCode: String?,
-    val documentHashCode: Int?,
-    val chosenTask: String?,
-    val writtenTask: String?,
-    val age: Int?,
-    val programExperience: String?, // TODO: enum
-    val taskStatus: String?, // TODO: enum
-    val activePane: String?,  // TODO: enum
-    val testsResults: List<Int>,
-    val language: String?,
-    val timestampAti: LocalDateTime?,
-    val eventType: String?, // TODO: enum
-    val eventData: String? // TODO: enum
+    val date: LocalDateTime? = null,
+    val timestamp: Int? = null,
+    val filename: String? = null,
+    val fileHashCode: String? = null,
+    val documentHashCode: Int? = null,
+    val chosenTask: String? = null,
+    val writtenTask: String? = null,
+    val age: Int? = null,
+    val programExperience: String? = null, // TODO: enum
+    val taskStatus: String? = null, // TODO: enum
+    val activePane: String? = null,  // TODO: enum
+    val testsResults: List<Int> = listOf(),
+    val language: String? = null,
+    val timestampAti: LocalDateTime? = null,
+    val eventType: String? = null, // TODO: enum
+    val eventData: String? = null // TODO: enum
 ) {
     internal constructor(record: Map<String, String>) : this(
         date = localDateFromString(record[DATE]),
@@ -68,7 +69,9 @@ data class DatasetRecord(
 
     companion object Keys {
         private const val FRAGMENT = "fragment"
+        private val counter = AtomicInteger(0)
     }
+    val label: String = counter.incrementAndGet().toString()
 }
 
 private fun localDateFromString(string: String?): LocalDateTime? = string.takeUnless { it.isNullOrEmpty() }?.let {

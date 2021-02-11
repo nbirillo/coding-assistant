@@ -35,12 +35,18 @@ object CompositeTransformation : Transformation() {
     override fun forwardApply(psiTree: PsiElement, commandsStorage: PerformedCommandStorage?) {
         LOG.info { "Tree Started: ${psiTree.text}" }
 
+        var iterationNumber = 0
         loop@ do {
+            ++iterationNumber
             val previousTree = psiTree.copy()
             try {
                 transformations.forEach {
                     LOG.info { "Transformation Started: ${it.key}" }
-                    it.forwardApply(psiTree, commandsStorage)
+                    try {
+                        it.forwardApply(psiTree, commandsStorage)
+                    } catch (e: Throwable) {
+                        throw e
+                    }
                     LOG.info { "Transformation Ended: ${it.key}" }
                 }
             } catch (e: Throwable) {
@@ -52,10 +58,10 @@ object CompositeTransformation : Transformation() {
                 }
                 break
             }
-            LOG.info { "Previous text: ${previousTree.text}" }
-            LOG.info { "Current text: ${psiTree.text}" }
 
+            LOG.info { "Previous text[$iterationNumber]:\n${previousTree.text}\n" }
+            LOG.info { "Current text[$iterationNumber]:\n${psiTree.text}\n\n" }
         } while (!previousTree.textMatches(psiTree.text))
-        LOG.info { "Tree Ended: ${psiTree.text}" }
+        LOG.info { "Tree Ended[[${iterationNumber}]]: ${psiTree.text}\n\n\n" }
     }
 }

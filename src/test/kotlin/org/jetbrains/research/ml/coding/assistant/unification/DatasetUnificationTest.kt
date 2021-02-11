@@ -1,33 +1,27 @@
 package org.jetbrains.research.ml.coding.assistant.unification
 
-import com.mxgraph.layout.hierarchical.mxHierarchicalLayout
-import com.mxgraph.layout.mxIGraphLayout
-import com.mxgraph.util.mxCellRenderer
-import com.mxgraph.util.mxConstants.DEFAULT_FONTSIZE
-import com.mxgraph.util.mxConstants.STYLE_FONTSIZE
-import com.mxgraph.view.mxStylesheet
+import com.intellij.openapi.application.ApplicationManager
+import com.intellij.psi.PsiFile
+import com.intellij.psi.PsiFileFactory
+import com.jetbrains.python.PythonLanguage
 import org.jetbrains.research.ml.coding.assistant.dataset.TaskTrackerDatasetFetcher
 import org.jetbrains.research.ml.coding.assistant.dataset.model.DynamicSolutionDataset
+import org.jetbrains.research.ml.coding.assistant.dataset.model.RecordMetaInfo
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpace
+import org.jetbrains.research.ml.coding.assistant.unification.model.DynamicSolution
+import org.jetbrains.research.ml.coding.assistant.unification.model.IntermediateSolution
 import org.jetbrains.research.ml.coding.assistant.util.ParametrizedBaseWithSdkTest
-import org.jgrapht.ext.JGraphXAdapter
 import org.junit.Before
 import org.junit.BeforeClass
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
-import java.awt.Color
 import java.io.File
 import javax.imageio.ImageIO
 
 
 @RunWith(Parameterized::class)
 class DatasetUnificationTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(::DatasetUnificationTest)) {
-    @Before
-    override fun mySetUp() {
-        super.mySetUp()
-    }
-
     @JvmField
     @Parameterized.Parameter(0)
     var inFile: String? = null
@@ -39,29 +33,55 @@ class DatasetUnificationTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(
     @Test
     fun testBasic() {
         val datasetUnification = DatasetUnification(project)
-        for (task in taskTrackerDataset.tasks.take(1)) {
+        for (task in taskTrackerDataset.tasks) {
             val imgFile = File("${task.taskName}_graph.png").apply { createNewFile() }
             val graph = SolutionSpace()
-            task.solutions.take(1).map { datasetUnification.transform(it) }.forEach {
-                synchronized(graph) {
-                    graph.add(
-                        it
-                    )
+            task.solutions.parallelStream()
+                .map { datasetUnification.transform(it) }
+                .forEach {
+                    synchronized(graph) {
+                        graph.add(
+                            it
+                        )
+                    }
                 }
-            }
-            val graphAdapter = JGraphXAdapter(graph.graph)
-            graphAdapter.stylesheet.defaultVertexStyle[STYLE_FONTSIZE] = 6
-            graphAdapter.stylesheet.defaultEdgeStyle[STYLE_FONTSIZE] = 6
-            graphAdapter.isAutoSizeCells = true
-            graphAdapter.updateCellSize(graphAdapter)
-            val layout: mxIGraphLayout = mxHierarchicalLayout(graphAdapter)
-            layout.execute(graphAdapter.defaultParent)
-            val image =
-                mxCellRenderer.createBufferedImage(
-                    graphAdapter, null, 2.0, Color.WHITE, true, null
-                )
+
+            val image = graph.generateImage()
             ImageIO.write(image, "PNG", imgFile)
         }
+    }
+
+    @Test
+    fun testSolutionSpace() {
+        val factory = PsiFileFactory.getInstance(project)
+        fun getPsiFile(text: String) = ApplicationManager.getApplication().runReadAction<PsiFile> {
+            factory.createFileFromText(
+                PythonLanguage.getInstance(),
+                text
+            )
+        }
+
+        val graph = SolutionSpace()
+        graph.add(
+            DynamicSolution(
+                listOf(
+                    IntermediateSolution(getPsiFile("a=1"), null, RecordMetaInfo()),
+                    IntermediateSolution(getPsiFile("a=11"), null, RecordMetaInfo()),
+                )
+            )
+        )
+        graph.add(
+            DynamicSolution(
+                listOf(
+                    IntermediateSolution(getPsiFile("a=2"), null, RecordMetaInfo()),
+                    IntermediateSolution(getPsiFile("a=11"), null, RecordMetaInfo()),
+                )
+            )
+        )
+
+        val imgFile = File("testSolutionSpace_graph.png").apply { createNewFile() }
+        val image = graph.generateImage()
+        ImageIO.write(image, "PNG", imgFile)
     }
 
     companion object {
