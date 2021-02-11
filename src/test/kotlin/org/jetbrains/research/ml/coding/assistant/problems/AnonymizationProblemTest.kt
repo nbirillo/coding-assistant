@@ -32,6 +32,12 @@ class AnonymizationProblemTest : ParametrizedBaseWithSdkTest(getResourcesRootPat
     }
 
     private fun createPsiFile(text: String): PsiFile {
+        /*
+        в доке написанно
+        The process of resolving references is distinct from parsing and is not performed at the same time.
+        https://plugins.jetbrains.com/docs/intellij/psi-references.html#contributed-references
+        хз, как сделать, чтобы работали
+         */
 //        return myFixture.configureByText(PythonFileType.INSTANCE, text) // так всё работает
         val factory = PsiFileFactory.getInstance(project)
         return ApplicationManager.getApplication().runReadAction<PsiFile> {
