@@ -6,4 +6,5 @@
     <description><![CDATA[
     A PyCharm plugin for generating the personalized hints
     ]]></description>
+    <depends>com.intellij.modules.python</depends>
 </idea-plugin>

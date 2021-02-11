@@ -18,7 +18,14 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
-
+    implementation("io.github.nbirillo.ast.transformations:ast-transformations") {
+        version {
+            branch = "master"
+        }
+    }
+    implementation("org.jgrapht:jgrapht-core:1.0.1")
+    implementation("org.jgrapht:jgrapht-ext:1.0.1")
+    implementation("com.github.doyaaaaaken:kotlin-csv-jvm:0.15.0")
     implementation("com.github.gumtreediff", "core", "2.1.2")
 }
 
