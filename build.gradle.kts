@@ -1,9 +1,9 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id("org.jetbrains.intellij") version "0.4.22"
     java
-    kotlin("jvm") version "1.4.0"
+    kotlin("jvm") version "1.4.20"
+    id("org.jetbrains.intellij") version "0.6.3"
     id("com.github.johnrengelman.shadow") version "5.1.0"
     id("org.jetbrains.dokka") version "0.10.1"
     id("org.jlleitschuh.gradle.ktlint") version "9.4.1"
@@ -18,8 +18,6 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
-
-    implementation("com.github.gumtreediff", "core", "2.1.2")
 }
 
 intellij {
