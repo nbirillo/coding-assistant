@@ -44,7 +44,6 @@ object CompositeTransformation : Transformation() {
                     LOG.info { "Transformation Ended: ${it.key}" }
                 }
             } catch (e: Throwable) {
-                throw e
                 LOG.severe {
                     """Transformation error {$e}: 
                         |Previous Code=${previousTree.text}

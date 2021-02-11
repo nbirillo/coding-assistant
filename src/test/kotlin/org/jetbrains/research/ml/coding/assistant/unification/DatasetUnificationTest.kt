@@ -42,7 +42,7 @@ class DatasetUnificationTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(
         for (task in taskTrackerDataset.tasks.take(1)) {
             val imgFile = File("${task.taskName}_graph.png").apply { createNewFile() }
             val graph = SolutionSpace()
-            task.solutions.take(10).parallelStream().map { datasetUnification.transform(it) }.forEach {
+            task.solutions.take(1).map { datasetUnification.transform(it) }.forEach {
                 synchronized(graph) {
                     graph.add(
                         it
