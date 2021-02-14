@@ -1,15 +1,15 @@
 package org.jetbrains.research.ml.coding.assistant.unification.model
 
-import com.intellij.psi.PsiElement
+import com.intellij.openapi.application.ApplicationManager
+import com.intellij.psi.PsiFile
 import org.jetbrains.research.ml.ast.transformations.PerformedCommandStorage
-import org.jetbrains.research.ml.coding.assistant.dataset.model.RecordMetaInfo
-import java.time.ZoneOffset
-import java.util.concurrent.atomic.AtomicInteger
+import org.jetbrains.research.ml.coding.assistant.dataset.model.DatasetRecord
 
 data class IntermediateSolution(
-    val taskSolution: PsiElement,
+    val id: String,
+    val psiFragment: PsiFile,
     val commandsStorage: PerformedCommandStorage?,
-    val metaInfo: RecordMetaInfo
+    val metaInfo: DatasetRecord.MetaInfo
 ) {
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
@@ -17,25 +17,22 @@ data class IntermediateSolution(
 
         other as IntermediateSolution
 
-        if (!taskSolution.textMatches(other.taskSolution)) return false
+        var isEquals = false
+        ApplicationManager.getApplication().invokeAndWait {
+            isEquals = psiFragment.textMatches(other.psiFragment)
+        }
+        if (!isEquals) return false
 
         return true
     }
 
+    val isFinal: Boolean = metaInfo.testsResults == 1.0
+
     override fun hashCode(): Int {
-        return taskSolution.text.hashCode()
+        return psiFragment.text.hashCode()
     }
 
-    val label = counter.incrementAndGet().toString()
     override fun toString(): String {
-        return "Vertex $label"
-    }
-
-    companion object {
-        val counter = AtomicInteger(0)
+        return "Vertex $id"
     }
 }
-
-data class DynamicSolution(
-    val solutions: List<IntermediateSolution>
-)

@@ -1,35 +1,37 @@
 package org.jetbrains.research.ml.coding.assistant.dataset
 
 import com.github.doyaaaaaken.kotlincsv.dsl.csvReader
+import org.jetbrains.research.ml.coding.assistant.dataset.model.Dataset
 import org.jetbrains.research.ml.coding.assistant.dataset.model.DatasetRecord
-import org.jetbrains.research.ml.coding.assistant.dataset.model.DynamicSolutionDataset
-import org.jetbrains.research.ml.coding.assistant.dataset.model.DynamicSolutionTaskDataset
-import org.jetbrains.research.ml.coding.assistant.dataset.model.TaskDynamicSolution
+import org.jetbrains.research.ml.coding.assistant.dataset.model.DynamicSolution
+import org.jetbrains.research.ml.coding.assistant.dataset.model.TaskSolutions
 import java.io.File
 import kotlin.streams.toList
 
 object TaskTrackerDatasetFetcher : DatasetFetcher {
-    override fun fetchDataset(file: File): DynamicSolutionDataset {
+    override fun fetchDataset(file: File): Dataset {
         require(file.isDirectory)
         val taskDirectories: List<File> = file.listFiles()?.toList() ?: listOf()
         val taskSolutions = taskDirectories.parallelStream()
             .filter { it.isDirectory }
             .map(this::fetchTaskSolutions).toList()
-        return DynamicSolutionDataset(taskSolutions)
+        return Dataset(taskSolutions)
     }
 
 
-    private fun fetchTaskSolutions(file: File): DynamicSolutionTaskDataset {
+    private fun fetchTaskSolutions(file: File): TaskSolutions {
         val solutions = file.listFiles()?.asList()?.parallelStream()?.map(this::fetchDynamicSolution)
-        return DynamicSolutionTaskDataset(
+        return TaskSolutions(
             taskName = file.name,
             solutions?.toList() ?: listOf()
         )
     }
 
-    private fun fetchDynamicSolution(file: File): TaskDynamicSolution {
+    private fun fetchDynamicSolution(file: File): DynamicSolution {
         require(file.isFile)
-        val records = csvReader().readAllWithHeader(file).map { DatasetRecord(it) }
-        return TaskDynamicSolution(records)
+        val records = csvReader().readAllWithHeader(file).mapNotNull { map ->
+            DatasetRecord(map).takeIf { it.isMeaningful }
+        }
+        return DynamicSolution(records)
     }
 }

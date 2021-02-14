@@ -5,13 +5,12 @@ import com.intellij.psi.PsiFile
 import com.intellij.psi.PsiFileFactory
 import com.jetbrains.python.PythonLanguage
 import org.jetbrains.research.ml.coding.assistant.dataset.TaskTrackerDatasetFetcher
-import org.jetbrains.research.ml.coding.assistant.dataset.model.DynamicSolutionDataset
-import org.jetbrains.research.ml.coding.assistant.dataset.model.RecordMetaInfo
-import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpace
-import org.jetbrains.research.ml.coding.assistant.unification.model.DynamicSolution
+import org.jetbrains.research.ml.coding.assistant.dataset.model.Dataset
+import org.jetbrains.research.ml.coding.assistant.dataset.model.DatasetRecord
+import org.jetbrains.research.ml.coding.assistant.graph.generateImage
+import org.jetbrains.research.ml.coding.assistant.graph.solutionSpace.SolutionSpace
 import org.jetbrains.research.ml.coding.assistant.unification.model.IntermediateSolution
 import org.jetbrains.research.ml.coding.assistant.util.ParametrizedBaseWithSdkTest
-import org.junit.Before
 import org.junit.BeforeClass
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -33,18 +32,11 @@ class DatasetUnificationTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(
     @Test
     fun testBasic() {
         val datasetUnification = DatasetUnification(project)
-        for (task in taskTrackerDataset.tasks) {
-            val imgFile = File("${task.taskName}_graph.png").apply { createNewFile() }
-            val graph = SolutionSpace()
-            task.solutions.parallelStream()
-                .map { datasetUnification.transform(it) }
-                .forEach {
-                    synchronized(graph) {
-                        graph.add(
-                            it
-                        )
-                    }
-                }
+
+        for (taskSolutions in taskTrackerDataset.tasks) {
+            val imgFile = File("${taskSolutions.taskName}_graph.png").apply { createNewFile() }
+            val intermediateSolutions = datasetUnification.transform(taskSolutions)
+            val graph = SolutionSpace(intermediateSolutions)
 
             val image = graph.generateImage()
             ImageIO.write(image, "PNG", imgFile)
@@ -61,31 +53,44 @@ class DatasetUnificationTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(
             )
         }
 
-        val graph = SolutionSpace()
-        graph.add(
-            DynamicSolution(
-                listOf(
-                    IntermediateSolution(getPsiFile("a=1"), null, RecordMetaInfo()),
-                    IntermediateSolution(getPsiFile("a=11"), null, RecordMetaInfo()),
-                )
-            )
-        )
-        graph.add(
-            DynamicSolution(
-                listOf(
-                    IntermediateSolution(getPsiFile("a=2"), null, RecordMetaInfo()),
-                    IntermediateSolution(getPsiFile("a=11"), null, RecordMetaInfo()),
-                )
+        fun metaInfo() = DatasetRecord.MetaInfo(null, null, 0.0, "")
+
+        val intermediateSolutions = listOf(
+            IntermediateSolution(
+                "1",
+                getPsiFile("a=1+1"),
+                null,
+                metaInfo()
+            ),
+            IntermediateSolution(
+                "2",
+                getPsiFile("a=11"),
+                null,
+                metaInfo()
+            ),
+            IntermediateSolution(
+                "3",
+                getPsiFile("a=2+4*3"),
+                null,
+                metaInfo()
+            ),
+            IntermediateSolution(
+                "4",
+                getPsiFile("a=11"),
+                null,
+                DatasetRecord.MetaInfo(21.0f, null, 0.0, "")
             )
         )
 
+//        val graph = createHeuristicsSupportGraph(intermediateSolutions)
+        val graph = SolutionSpace(intermediateSolutions)
         val imgFile = File("testSolutionSpace_graph.png").apply { createNewFile() }
         val image = graph.generateImage()
         ImageIO.write(image, "PNG", imgFile)
     }
 
     companion object {
-        lateinit var taskTrackerDataset: DynamicSolutionDataset
+        lateinit var taskTrackerDataset: Dataset
 
         @BeforeClass
         @JvmStatic
