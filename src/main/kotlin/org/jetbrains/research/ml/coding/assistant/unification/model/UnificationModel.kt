@@ -3,13 +3,15 @@ package org.jetbrains.research.ml.coding.assistant.unification.model
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.psi.PsiFile
 import org.jetbrains.research.ml.ast.transformations.PerformedCommandStorage
-import org.jetbrains.research.ml.coding.assistant.dataset.model.DatasetRecord
+import org.jetbrains.research.ml.coding.assistant.dataset.model.MetaInfo
+
 
 data class IntermediateSolution(
     val id: String,
+    // TODO: store TreeContext, equals <==> root.isIsomorphicTo
     val psiFragment: PsiFile,
     val commandsStorage: PerformedCommandStorage?,
-    val metaInfo: DatasetRecord.MetaInfo
+    val metaInfo: MetaInfo
 ) {
     override fun equals(other: Any?): Boolean {
         if (this === other) return true

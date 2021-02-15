@@ -29,9 +29,7 @@ object TaskTrackerDatasetFetcher : DatasetFetcher {
 
     private fun fetchDynamicSolution(file: File): DynamicSolution {
         require(file.isFile)
-        val records = csvReader().readAllWithHeader(file).mapNotNull { map ->
-            DatasetRecord(map).takeIf { it.isMeaningful }
-        }
+        val records = csvReader().readAllWithHeader(file).map { DatasetRecord(it) }
         return DynamicSolution(records)
     }
 }

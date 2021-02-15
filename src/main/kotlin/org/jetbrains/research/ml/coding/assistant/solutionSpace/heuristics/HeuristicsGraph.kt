@@ -1,23 +1,26 @@
-package org.jetbrains.research.ml.coding.assistant.graph
+package org.jetbrains.research.ml.coding.assistant.solutionSpace.heuristics
 
-import org.jetbrains.research.ml.coding.assistant.graph.heuristics.HeuristicsVertex
-import org.jetbrains.research.ml.coding.assistant.graph.heuristics.WeightedEdge
-import org.jetbrains.research.ml.coding.assistant.unification.model.IntermediateSolution
+import org.jetbrains.research.ml.coding.assistant.solutionSpace.WeightedEdge
 import org.jgrapht.graph.DirectedWeightedMultigraph
 import kotlin.math.abs
 
+typealias HeuristicsVertex = org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpaceVertex
 typealias HeuristicsEdge = WeightedEdge
 typealias HeuristicsGraph = DirectedWeightedMultigraph<HeuristicsVertex, HeuristicsEdge>
 
 
 fun createHeuristicsSupportGraph(
-    intermediateSolutions: List<IntermediateSolution>
+    vertices: List<HeuristicsVertex>
 ): HeuristicsGraph {
     val graph = HeuristicsGraph(HeuristicsEdge::class.java)
-    val vertices = intermediateSolutions.map { HeuristicsVertex(it) }
     graph.addVertices(vertices)
-    graph.completeGraph()
+    graph.completeGraph { source, target -> calculateWeight(source, target) }
     return graph
+}
+
+
+private fun calculateWeight(source: HeuristicsVertex, target: HeuristicsVertex): Double {
+    return abs(source.psiNodesCount - target.psiNodesCount).toDouble()
 }
 
 private fun HeuristicsGraph.addVertices(vertices: List<HeuristicsVertex>) {
@@ -36,13 +39,13 @@ private fun HeuristicsGraph.addVertices(vertices: List<HeuristicsVertex>) {
     }
 }
 
-
-private fun HeuristicsGraph.completeGraph() {
-    for (source in vertexSet()) {
-        for (target in vertexSet()) {
+private fun HeuristicsGraph.completeGraph(metric: (HeuristicsVertex, HeuristicsVertex) -> Double) {
+    val vertices = vertexSet()
+    for (source in vertices) {
+        for (target in vertices) {
             if (System.identityHashCode(source) == System.identityHashCode(target))
                 continue
-            val weight = abs(source.psiNodesCount - target.psiNodesCount).toDouble()
+            val weight = metric(source, target)
             val edge = addEdge(source, target)
 
             setEdgeWeight(edge, weight)

@@ -1,4 +1,4 @@
-package org.jetbrains.research.ml.coding.assistant.graph.heuristics
+package org.jetbrains.research.ml.coding.assistant.solutionSpace
 
 import org.jgrapht.graph.DefaultWeightedEdge
 import java.text.DecimalFormat

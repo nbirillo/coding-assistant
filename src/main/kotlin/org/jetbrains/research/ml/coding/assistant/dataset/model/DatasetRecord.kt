@@ -10,26 +10,24 @@ data class DatasetRecord(
 ) {
 
     internal constructor(record: Record) : this(
-        id = record[ID]!!,
-        fragment = record[FRAGMENT] ?: "",
+        id = record[Keys.ID]!!,
+        fragment = record[Keys.FRAGMENT] ?: "",
         metaInfo = MetaInfo(record)
     )
+}
 
-    data class MetaInfo(
-        val age: Float?,
-        val programExperience: ProgramExperience?,
-        val testsResults: Double,
-        val task: String
-    ) {
-        internal constructor(record: Record) : this(
-            age = record[AGE]?.toFloatOrNull(),
-            programExperience = record[PROGRAM_EXPERIENCE].toProgramExperience(),
-            testsResults = record[TESTS_RESULTS]!!.toDouble(),
-            task = record[TASK]!!
-        )
-    }
-
-    val isMeaningful: Boolean get() = fragment.trim(' ', '\n').isNotEmpty()
+data class MetaInfo(
+    val age: Float?,
+    val programExperience: ProgramExperience?,
+    val testsResults: Double,
+    val task: String
+) {
+    internal constructor(record: Record) : this(
+        age = record[Keys.AGE]?.toFloatOrNull(),
+        programExperience = record[Keys.PROGRAM_EXPERIENCE].toProgramExperience(),
+        testsResults = record[Keys.TESTS_RESULTS]!!.toDouble(),
+        task = record[Keys.TASK]!!
+    )
 
     enum class ProgramExperience {
         LESS_THAN_HALF_YEAR,
@@ -39,23 +37,23 @@ data class DatasetRecord(
         FROM_FOUR_TO_SIX_YEARS,
         MORE_THAN_SIX
     }
-
-
-    companion object {
-        private const val FRAGMENT = "fragment"
-        private const val AGE = "age"
-        private const val PROGRAM_EXPERIENCE = "programExperience"
-        private const val TESTS_RESULTS = "testsResults"
-        private const val TASK = "task"
-        private const val ID = "id"
-    }
 }
 
-private fun String?.toProgramExperience(): DatasetRecord.ProgramExperience? =
+private fun String?.toProgramExperience(): MetaInfo.ProgramExperience? =
     this?.let {
         try {
-            DatasetRecord.ProgramExperience.valueOf(it)
+            MetaInfo.ProgramExperience.valueOf(it)
         } catch (e: IllegalArgumentException) {
             null
         }
     }
+
+
+private object Keys {
+    const val FRAGMENT = "fragment"
+    const val AGE = "age"
+    const val PROGRAM_EXPERIENCE = "programExperience"
+    const val TESTS_RESULTS = "testsResults"
+    const val TASK = "task"
+    const val ID = "id"
+}

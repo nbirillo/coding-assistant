@@ -1,7 +1,6 @@
-package org.jetbrains.research.ml.coding.assistant.graph.solutionSpace
+package org.jetbrains.research.ml.coding.assistant.solutionSpace
 
 import com.github.gumtreediff.actions.model.Action
-import org.jetbrains.research.ml.coding.assistant.graph.heuristics.WeightedEdge
 
 class SolutionSpaceEdge(private val actions: List<Action>) : WeightedEdge() {
     val calculatedWeight: Double get() = getWeight(this)
@@ -16,9 +15,9 @@ class SolutionSpaceEdge(private val actions: List<Action>) : WeightedEdge() {
             if (targetTestScore < sourceTestScore)
                 return Double.POSITIVE_INFINITY
 
-            val coefficient: Double = (targetTestScore - sourceTestScore + 1.0) * 10.0
-
-            return edge.actions.map { it.node.size }.sum().toDouble() * coefficient
+            val testScoreCoefficient: Double = (targetTestScore - sourceTestScore + 1.0) * 10.0
+            val editNodesSizeCoefficient: Double = edge.actions.map { it.node.size }.sum().toDouble()
+            return editNodesSizeCoefficient / testScoreCoefficient
         }
     }
 }

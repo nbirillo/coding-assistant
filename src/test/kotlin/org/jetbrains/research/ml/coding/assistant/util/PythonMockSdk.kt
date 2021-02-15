@@ -1,4 +1,4 @@
-package org.jetbrains.research.ml.ast.util
+package org.jetbrains.research.ml.coding.assistant.util
 
 import com.intellij.openapi.projectRoots.Sdk
 import com.intellij.openapi.projectRoots.SdkAdditionalData

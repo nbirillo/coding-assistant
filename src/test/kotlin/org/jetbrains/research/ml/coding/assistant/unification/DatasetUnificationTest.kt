@@ -6,9 +6,12 @@ import com.intellij.psi.PsiFileFactory
 import com.jetbrains.python.PythonLanguage
 import org.jetbrains.research.ml.coding.assistant.dataset.TaskTrackerDatasetFetcher
 import org.jetbrains.research.ml.coding.assistant.dataset.model.Dataset
-import org.jetbrains.research.ml.coding.assistant.dataset.model.DatasetRecord
-import org.jetbrains.research.ml.coding.assistant.graph.generateImage
-import org.jetbrains.research.ml.coding.assistant.graph.solutionSpace.SolutionSpace
+import org.jetbrains.research.ml.coding.assistant.dataset.model.MetaInfo
+import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpace
+import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpaceVertex
+import org.jetbrains.research.ml.coding.assistant.solutionSpace.heuristics.createHeuristicsSupportGraph
+import org.jetbrains.research.ml.coding.assistant.solutionSpace.heuristics.createSolutionSpaceSupportGraph
+import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.generateImage
 import org.jetbrains.research.ml.coding.assistant.unification.model.IntermediateSolution
 import org.jetbrains.research.ml.coding.assistant.util.ParametrizedBaseWithSdkTest
 import org.junit.BeforeClass
@@ -17,6 +20,8 @@ import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
 import java.io.File
 import javax.imageio.ImageIO
+import kotlin.time.ExperimentalTime
+import kotlin.time.measureTime
 
 
 @RunWith(Parameterized::class)
@@ -34,17 +39,32 @@ class DatasetUnificationTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(
         val datasetUnification = DatasetUnification(project)
 
         for (taskSolutions in taskTrackerDataset.tasks) {
-            val imgFile = File("${taskSolutions.taskName}_graph.png").apply { createNewFile() }
             val intermediateSolutions = datasetUnification.transform(taskSolutions)
             val graph = SolutionSpace(intermediateSolutions)
 
+            val imgFile = File("${taskSolutions.taskName}_graph.png").apply { createNewFile() }
             val image = graph.generateImage()
             ImageIO.write(image, "PNG", imgFile)
         }
     }
 
+    @ExperimentalTime
     @Test
-    fun testSolutionSpace() {
+    fun testTime() {
+        val datasetUnification = DatasetUnification(project)
+
+        for (taskSolutions in taskTrackerDataset.tasks) {
+            val time = measureTime {
+                val intermediateSolutions = datasetUnification.transform(taskSolutions)
+                val graph = SolutionSpace(intermediateSolutions)
+            }
+            val textFile = File("${taskSolutions.taskName}_time.text").apply { createNewFile() }
+            textFile.writeText("Time to create ss ${taskSolutions.taskName} is $time")
+        }
+    }
+
+    @Test
+    fun testSolutionSpaceSupportConnectedComponent() {
         val factory = PsiFileFactory.getInstance(project)
         fun getPsiFile(text: String) = ApplicationManager.getApplication().runReadAction<PsiFile> {
             factory.createFileFromText(
@@ -53,40 +73,36 @@ class DatasetUnificationTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(
             )
         }
 
-        fun metaInfo() = DatasetRecord.MetaInfo(null, null, 0.0, "")
+        var id = 0
 
-        val intermediateSolutions = listOf(
-            IntermediateSolution(
-                "1",
-                getPsiFile("a=1+1"),
-                null,
-                metaInfo()
-            ),
-            IntermediateSolution(
-                "2",
-                getPsiFile("a=11"),
-                null,
-                metaInfo()
-            ),
-            IntermediateSolution(
-                "3",
-                getPsiFile("a=2+4*3"),
-                null,
-                metaInfo()
-            ),
-            IntermediateSolution(
-                "4",
-                getPsiFile("a=11"),
-                null,
-                DatasetRecord.MetaInfo(21.0f, null, 0.0, "")
-            )
+        fun metaInfo(score: Double = 0.0) = MetaInfo(null, null, score, "")
+        fun intermediateSolution(code: String, score: Double = 0.0) = IntermediateSolution(
+            (id++).toString(),
+            getPsiFile(code),
+            null,
+            metaInfo(score)
         )
 
-//        val graph = createHeuristicsSupportGraph(intermediateSolutions)
-        val graph = SolutionSpace(intermediateSolutions)
-        val imgFile = File("testSolutionSpace_graph.png").apply { createNewFile() }
-        val image = graph.generateImage()
-        ImageIO.write(image, "PNG", imgFile)
+        val intermediateSolutions = listOf(
+            intermediateSolution("a=1+1", 0.7),
+            intermediateSolution("a=11"),
+            intermediateSolution("a=2+4*3", 1.0),
+            intermediateSolution("a=11"),
+            intermediateSolution("a=1+1+1+11+11+11+11+11+11+11+11+11+11+11+11+11+11+11+11+11+11+11+11+11+1"),
+            intermediateSolution("a=1+1+1+11+11+11+11+11+11+11+11+11+11+11+11+11+11+11+11+11+11+11+11+11+11"),
+        )
+
+        val vertices = intermediateSolutions.map { SolutionSpaceVertex(it) }
+        val heuristicsSupportGraph = createHeuristicsSupportGraph(vertices)
+        val solutionSpaceSupportGraph = createSolutionSpaceSupportGraph(heuristicsSupportGraph, 1)
+        File("heuristicsSupportGraph.png").apply {
+            createNewFile()
+            ImageIO.write(heuristicsSupportGraph.generateImage(), "PNG", this)
+        }
+        File("solutionSpaceSupportGraph.png").apply {
+            createNewFile()
+            ImageIO.write(solutionSpaceSupportGraph.generateImage(), "PNG", this)
+        }
     }
 
     companion object {

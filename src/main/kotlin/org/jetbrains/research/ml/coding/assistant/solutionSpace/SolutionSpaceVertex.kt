@@ -1,11 +1,11 @@
-package org.jetbrains.research.ml.coding.assistant.graph.heuristics
+package org.jetbrains.research.ml.coding.assistant.solutionSpace
 
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.psi.PsiElement
 import com.jetbrains.python.psi.PyRecursiveElementVisitor
 import org.jetbrains.research.ml.coding.assistant.unification.model.IntermediateSolution
 
-data class HeuristicsVertex(
+data class SolutionSpaceVertex(
     val psiNodesCount: Int,
     val intermediateSolutions: List<IntermediateSolution>,
 ) {
@@ -24,13 +24,13 @@ data class HeuristicsVertex(
 
     val representativeSolution: IntermediateSolution get() = intermediateSolutions.first()
 
-    val isFinal: Boolean = intermediateSolutions.firstOrNull { it.isFinal } != null
+    val isFinal: Boolean = intermediateSolutions.any { it.isFinal }
 
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
         if (javaClass != other?.javaClass) return false
 
-        other as HeuristicsVertex
+        other as SolutionSpaceVertex
 
         if (intermediateSolutions != other.intermediateSolutions) return false
 

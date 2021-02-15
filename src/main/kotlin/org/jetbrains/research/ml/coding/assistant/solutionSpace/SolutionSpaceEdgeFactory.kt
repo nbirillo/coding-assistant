@@ -1,4 +1,4 @@
-package org.jetbrains.research.ml.coding.assistant.graph.solutionSpace
+package org.jetbrains.research.ml.coding.assistant.solutionSpace
 
 import com.github.gumtreediff.tree.TreeContext
 import com.intellij.openapi.application.ApplicationManager
@@ -7,7 +7,7 @@ import org.jetbrains.research.ml.ast.gumtree.diff.Matcher
 import org.jetbrains.research.ml.ast.gumtree.tree.Numbering
 import org.jetbrains.research.ml.ast.gumtree.tree.PostOrderNumbering
 import org.jetbrains.research.ml.ast.gumtree.tree.PsiTreeConverter
-import org.jetbrains.research.ml.coding.assistant.graph.getOrCreate
+import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.getOrCreate
 import org.jgrapht.EdgeFactory
 
 class SolutionSpaceEdgeFactory(
@@ -22,13 +22,11 @@ class SolutionSpaceEdgeFactory(
         val targetTreeContext = cache.getOrCreate(targetVertex) {
             Util.getTreeContext(targetVertex.representativeSolution.psiFragment, PostOrderNumbering)
         }
-
         val matcher = Matcher(sourceTreeContext, targetTreeContext)
 
         return SolutionSpaceEdge(matcher.getEditActions())
     }
 }
-
 
 object Util {
     fun getTreeContext(psiFile: PsiFile, numbering: Numbering): TreeContext {

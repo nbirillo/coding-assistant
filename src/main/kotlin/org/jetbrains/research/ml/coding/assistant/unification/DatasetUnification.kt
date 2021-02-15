@@ -25,8 +25,6 @@ class DatasetUnification(private val project: Project) {
 
         val counter = AtomicInteger(0)
         return datasetRecords
-            .shuffled()
-            .take(20)
             .map {
                 val counterValue = counter.incrementAndGet()
                 logger.info { "Start unify $counterValue/${datasetRecords.size}" }
