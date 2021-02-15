@@ -9,9 +9,10 @@ class SolutionSpaceEdge(private val actions: List<Action>) : WeightedEdge() {
     companion object {
         private fun getWeight(edge: SolutionSpaceEdge): Double {
             val targetVertex = edge.target as SolutionSpaceVertex
-            val sourceVertex = edge.target as SolutionSpaceVertex
+            val sourceVertex = edge.source as SolutionSpaceVertex
             val sourceTestScore = sourceVertex.representativeSolution.metaInfo.testsResults
             val targetTestScore = targetVertex.representativeSolution.metaInfo.testsResults
+            // TODO: wip
             if (targetTestScore < sourceTestScore)
                 return Double.POSITIVE_INFINITY
 
