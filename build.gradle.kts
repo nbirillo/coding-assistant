@@ -27,6 +27,8 @@ dependencies {
     implementation("org.jgrapht:jgrapht-ext:1.0.1")
     implementation("com.github.doyaaaaaken:kotlin-csv-jvm:0.15.0")
     implementation("com.github.gumtreediff", "core", "2.1.2")
+
+    implementation("com.xenomachina:kotlin-argparser:2.0.7")
 }
 
 intellij {
@@ -46,4 +48,23 @@ tasks.withType<KotlinCompile> {
 
 ktlint {
     enableExperimentalRules.set(true)
+}
+
+tasks {
+    runIde {
+        val input: String? by project
+        val output: String? by project
+        args = listOfNotNull(
+            "solution-space",
+            input?.let { "--input_path=$it" },
+            output?.let { "--output_path=$it" }
+        )
+        jvmArgs = listOf("-Djava.awt.headless=true", "--add-exports", "java.base/jdk.internal.vm=ALL-UNNAMED")
+        standardInput = System.`in`
+        standardOutput = System.`out`
+    }
+
+    register("solution-space-cli") {
+        dependsOn("runIde")
+    }
 }

@@ -62,6 +62,6 @@ object CompositeTransformation : Transformation() {
             LOG.info { "Previous text[$iterationNumber]:\n${previousTree.text}\n" }
             LOG.info { "Current text[$iterationNumber]:\n${psiTree.text}\n\n" }
         } while (!previousTree.textMatches(psiTree.text))
-        LOG.info { "Tree Ended[[${iterationNumber}]]: ${psiTree.text}\n\n\n" }
+        LOG.info { "Tree Ended[[$iterationNumber]]: ${psiTree.text}\n\n\n" }
     }
 }

@@ -22,10 +22,14 @@ fun <V, E> Graph<V, E>.generateImage(): BufferedImage {
     layout.execute(graphAdapter.defaultParent)
 
     return mxCellRenderer.createBufferedImage(
-        graphAdapter, null, 3.0, Color.WHITE, true, null
+        graphAdapter,
+        null,
+        3.0,
+        Color.WHITE,
+        true,
+        null
     )
 }
-
 
 fun SolutionSpace.generateImage(): BufferedImage {
     val graphAdapter = JGraphXAdapter(graph)
@@ -44,7 +48,12 @@ fun SolutionSpace.generateImage(): BufferedImage {
     layout.execute(graphAdapter.defaultParent)
 
     return mxCellRenderer.createBufferedImage(
-        graphAdapter, null, 3.0, Color.WHITE, true, null
+        graphAdapter,
+        null,
+        3.0,
+        Color.WHITE,
+        true,
+        null
     )
 }
 

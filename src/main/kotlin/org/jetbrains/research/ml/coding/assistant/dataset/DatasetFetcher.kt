@@ -6,4 +6,3 @@ import java.io.File
 interface DatasetFetcher {
     fun fetchDataset(file: File): Dataset
 }
-

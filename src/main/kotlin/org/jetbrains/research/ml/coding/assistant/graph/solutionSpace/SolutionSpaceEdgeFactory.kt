@@ -29,7 +29,6 @@ class SolutionSpaceEdgeFactory(
     }
 }
 
-
 object Util {
     fun getTreeContext(psiFile: PsiFile, numbering: Numbering): TreeContext {
         return ApplicationManager.getApplication().runReadAction<TreeContext> {

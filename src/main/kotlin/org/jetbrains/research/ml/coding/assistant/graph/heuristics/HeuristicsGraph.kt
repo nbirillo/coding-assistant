@@ -9,7 +9,6 @@ import kotlin.math.abs
 typealias HeuristicsEdge = WeightedEdge
 typealias HeuristicsGraph = DirectedWeightedMultigraph<HeuristicsVertex, HeuristicsEdge>
 
-
 fun createHeuristicsSupportGraph(
     intermediateSolutions: List<IntermediateSolution>
 ): HeuristicsGraph {
@@ -36,12 +35,12 @@ private fun HeuristicsGraph.addVertices(vertices: List<HeuristicsVertex>) {
     }
 }
 
-
 private fun HeuristicsGraph.completeGraph() {
     for (source in vertexSet()) {
         for (target in vertexSet()) {
-            if (System.identityHashCode(source) == System.identityHashCode(target))
+            if (System.identityHashCode(source) == System.identityHashCode(target)) {
                 continue
+            }
             val weight = abs(source.psiNodesCount - target.psiNodesCount).toDouble()
             val edge = addEdge(source, target)
 

@@ -10,7 +10,6 @@ import com.intellij.testFramework.fixtures.impl.CodeInsightTestFixtureImpl
 import com.intellij.testFramework.fixtures.impl.LightTempDirTestFixtureImpl
 import org.jetbrains.research.ml.ast.util.PythonMockSdk
 import org.jetbrains.research.ml.ast.util.SdkConfigurer
-import org.junit.Before
 import org.junit.Ignore
 
 @Ignore

@@ -14,3 +14,8 @@ To run the plugin run `runIde` Gradle task provided by [gradle-intellij-plugin](
 
 To add `git hook` for auto-formatting the project according to the code style guide before each commit 
 run `./gradlew addKtlintFormatGitPreCommitHook`. As the result, the `.git` folder will contain the necessary hook.
+
+
+## Build a solution space
+
+Run the command `./gradlew :solution-space-cli -Pinput=<Input directory with csv files> -Poutput=<Output directory>`.

@@ -22,7 +22,6 @@ class DatasetUnification(private val project: Project) {
     fun transform(taskSolutions: TaskSolutions): List<IntermediateSolution> {
         val datasetRecords = taskSolutions.dynamicSolutions.flatMap { it.records }
 
-
         val counter = AtomicInteger(0)
         return datasetRecords
             .shuffled()

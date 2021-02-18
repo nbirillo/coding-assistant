@@ -12,13 +12,14 @@ import org.jetbrains.research.ml.coding.assistant.graph.solutionSpace.SolutionSp
 import org.jetbrains.research.ml.coding.assistant.unification.model.IntermediateSolution
 import org.jetbrains.research.ml.coding.assistant.util.ParametrizedBaseWithSdkTest
 import org.junit.BeforeClass
+import org.junit.Ignore
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
 import java.io.File
 import javax.imageio.ImageIO
 
-
+@Ignore
 @RunWith(Parameterized::class)
 class DatasetUnificationTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(::DatasetUnificationTest)) {
     @JvmField
@@ -95,8 +96,8 @@ class DatasetUnificationTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(
         @BeforeClass
         @JvmStatic
         fun setup() {
-            taskTrackerDataset =
-                TaskTrackerDatasetFetcher.fetchDataset(File("/Users/artembobrov/Documents/masters/ast-transform/python"))
+            val path = "/Users/artembobrov/Documents/masters/ast-transform/python"
+            taskTrackerDataset = TaskTrackerDatasetFetcher.fetchDataset(File(path))
         }
 
         @JvmStatic

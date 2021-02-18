@@ -2,11 +2,9 @@ package org.jetbrains.research.ml.coding.assistant.graph
 
 import org.jgrapht.DirectedGraph
 import org.jgrapht.Graph
-import org.jgrapht.GraphPath
 import org.jgrapht.alg.shortestpath.DijkstraShortestPath
 import org.jgrapht.graph.EdgeReversedGraph
 import org.jgrapht.traverse.ClosestFirstIterator
-
 
 fun <V, E> Graph<V, E>.takeClosest(
     maxN: Int,
@@ -22,16 +20,15 @@ fun <V, E> Graph<V, E>.takeClosest(
     return closest
 }
 
-
 fun <K, V> MutableMap<K, V>.getOrCreate(key: K, supplier: () -> V): V {
     var value = this[key]
-    if (value != null)
+    if (value != null) {
         return value
+    }
     value = supplier()
     this[key] = value
     return value
 }
-
 
 fun <V, E> DirectedGraph<V, E>.pathsTo(vertices: Collection<V>): List<List<V>> {
     val inverted = EdgeReversedGraph(this)

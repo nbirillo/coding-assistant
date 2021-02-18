@@ -2,7 +2,6 @@ package org.jetbrains.research.ml.coding.assistant.dataset.model
 
 typealias Record = Map<String, String>
 
-
 data class DatasetRecord(
     val id: String,
     val fragment: String,
@@ -39,7 +38,6 @@ data class DatasetRecord(
         FROM_FOUR_TO_SIX_YEARS,
         MORE_THAN_SIX
     }
-
 
     companion object {
         private const val FRAGMENT = "fragment"

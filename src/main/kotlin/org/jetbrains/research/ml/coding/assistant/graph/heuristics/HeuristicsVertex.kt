@@ -47,13 +47,14 @@ data class HeuristicsVertex(
 private fun PsiElement.nodesCount(): Int {
     var counter = 0
     ApplicationManager.getApplication().invokeAndWait {
-        accept(object : PyRecursiveElementVisitor() {
-            override fun visitElement(element: PsiElement) {
-                counter++
-                super.visitElement(element)
+        accept(
+            object : PyRecursiveElementVisitor() {
+                override fun visitElement(element: PsiElement) {
+                    counter++
+                    super.visitElement(element)
+                }
             }
-        })
+        )
     }
     return counter
 }
-

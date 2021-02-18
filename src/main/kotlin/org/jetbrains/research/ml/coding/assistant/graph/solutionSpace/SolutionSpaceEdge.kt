@@ -13,8 +13,9 @@ class SolutionSpaceEdge(private val actions: List<Action>) : WeightedEdge() {
             val sourceTestScore = sourceVertex.representativeSolution.metaInfo.testsResults
             val targetTestScore = targetVertex.representativeSolution.metaInfo.testsResults
             // TODO: wip
-            if (targetTestScore < sourceTestScore)
+            if (targetTestScore < sourceTestScore) {
                 return Double.POSITIVE_INFINITY
+            }
 
             val coefficient: Double = (targetTestScore - sourceTestScore + 1.0) * 10.0
 
