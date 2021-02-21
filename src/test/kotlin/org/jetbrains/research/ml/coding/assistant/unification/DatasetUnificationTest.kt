@@ -6,6 +6,8 @@ import org.jetbrains.research.ml.coding.assistant.dataset.model.Dataset
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpace
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.builder.SolutionSpaceGraphBuilder
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.generateImage
+import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreator
+import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.impl.TestPsiCreator
 import org.jetbrains.research.ml.coding.assistant.util.ParametrizedBaseWithSdkTest
 import org.jgrapht.Graph
 import org.junit.BeforeClass
@@ -27,13 +29,16 @@ class DatasetUnificationTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(
     @Parameterized.Parameter(1)
     var outFile: String? = null
 
+    override fun mySetUp() {
+        super.mySetUp()
+        (project.service<PsiCreator>() as? TestPsiCreator)?.fixture = myFixture
+    }
+
     @Test
     fun testBasic() {
         val datasetUnification = project.service<DatasetUnification>()
 
         for (taskSolutions in taskTrackerDataset.tasks) {
-            if (taskSolutions.taskName != "max_digit")
-                continue
             val builder = SolutionSpaceGraphBuilder()
             taskSolutions.dynamicSolutions
                 .map {
@@ -52,7 +57,7 @@ class DatasetUnificationTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(
 
     @Test
     fun testStuff() {
-        val inputDir = "/Users/artembobrov/Documents/masters/ast-transform/python/max_digit/"
+        val inputDir = "/Users/artembobrov/Documents/masters/ast-transform/python/zero/"
         val taskSolutions = TaskTrackerDatasetFetcher.fetchTaskSolutions(File(inputDir))
         println(taskSolutions.dynamicSolutions.size)
         val datasetUnification = project.service<DatasetUnification>()

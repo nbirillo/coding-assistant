@@ -39,11 +39,10 @@ class DatasetUnificationImpl(private val project: Project) : DatasetUnification 
         WriteCommandAction.runWriteCommandAction(project) { // reformat the expected file
             codeStyleManager.reformat(psiFile)
         }
-        val commandStorage = PerformedCommandStorage(psiFile)
 
         ApplicationManager.getApplication().invokeAndWait {
             logger.info { "Unification Started: ${psiFile.text}" }
-            CompositeTransformation.forwardApply(psiFile, commandStorage)
+            CompositeTransformation.forwardApply(psiFile, null)
             logger.info { "Unification Ended: ${psiFile.text}" }
         }
 

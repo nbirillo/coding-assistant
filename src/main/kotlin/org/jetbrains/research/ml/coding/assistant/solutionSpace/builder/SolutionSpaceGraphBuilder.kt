@@ -37,6 +37,11 @@ class SolutionSpaceGraphBuilder {
         for (simpleCycle in simpleCyclesDetector.findSimpleCycles()) {
             graph.removeVertexList(simpleCycle)
         }
+        graph.vertexSet()
+            .filter {
+                graph.edgesOf(it).isEmpty() && !it.representativeSolution.metaInfo.isFinalSolution
+            }
+            .forEach(graph::removeVertex)
     }
 
     private fun clearPsiFiles() {
