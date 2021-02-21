@@ -12,7 +12,6 @@ typealias DynamicIntermediateSolution = List<DatasetPartialSolution>
 data class DatasetPartialSolution(
     val id: String,
     val psiFragment: PsiFileWrapper,
-    val commandsStorage: PerformedCommandStorage?,
     val metaInfo: MetaInfo
 ) {
     override fun equals(other: Any?): Boolean {

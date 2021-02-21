@@ -17,5 +17,9 @@
                 serviceInterface="org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreator"
                 serviceImplementation="org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.impl.PsiCreatorImpl"
         />
+        <projectService
+                serviceInterface="org.jetbrains.research.ml.coding.assistant.unification.DatasetUnification"
+                serviceImplementation="org.jetbrains.research.ml.coding.assistant.unification.impl.DatasetUnificationImpl"
+        />
     </extensions>
 </idea-plugin>
