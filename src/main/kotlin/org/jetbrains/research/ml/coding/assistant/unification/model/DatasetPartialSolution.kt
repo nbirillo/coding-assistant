@@ -1,15 +1,18 @@
+// ktlint-disable filename
+
 package org.jetbrains.research.ml.coding.assistant.unification.model
 
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.psi.PsiFile
 import org.jetbrains.research.ml.ast.transformations.PerformedCommandStorage
 import org.jetbrains.research.ml.coding.assistant.dataset.model.MetaInfo
+import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiFileWrapper
 
 typealias DynamicIntermediateSolution = List<DatasetPartialSolution>
 
 data class DatasetPartialSolution(
     val id: String,
-    val psiFragment: PsiFile,
+    val psiFragment: PsiFileWrapper,
     val commandsStorage: PerformedCommandStorage?,
     val metaInfo: MetaInfo
 ) {
@@ -27,8 +30,6 @@ data class DatasetPartialSolution(
 
         return true
     }
-
-    val isFinal: Boolean = metaInfo.testsResults == 1.0
 
     override fun hashCode(): Int {
         return psiFragment.text.hashCode()

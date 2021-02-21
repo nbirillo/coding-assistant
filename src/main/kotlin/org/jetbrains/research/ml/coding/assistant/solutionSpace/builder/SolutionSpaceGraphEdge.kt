@@ -12,8 +12,9 @@ class SolutionSpaceGraphEdge(internal val actions: List<Action>) : WeightedEdge(
             val sourceTestScore = sourceVertex.representativeSolution.metaInfo.testsResults
             val targetTestScore = targetVertex.representativeSolution.metaInfo.testsResults
             // TODO: wip
-            if (targetTestScore < sourceTestScore)
+            if (targetTestScore < sourceTestScore) {
                 return Double.POSITIVE_INFINITY
+            }
 
             val testScoreCoefficient: Double = (targetTestScore - sourceTestScore + 1.0) * 10.0
             val editNodesSizeCoefficient: Double = edge.actions.map { it.node.size }.sum().toDouble()

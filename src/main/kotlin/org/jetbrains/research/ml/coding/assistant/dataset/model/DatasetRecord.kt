@@ -2,7 +2,6 @@ package org.jetbrains.research.ml.coding.assistant.dataset.model
 
 typealias Record = Map<String, String>
 
-
 data class DatasetRecord(
     val id: String,
     val fragment: String,

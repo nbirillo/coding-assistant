@@ -38,9 +38,19 @@ class SolutionSpaceGraphBuilder {
         }
     }
 
+    private fun clearPsiFiles() {
+        val psiFiles = graph.vertexSet()
+            .flatMap { vertex -> vertex.partialSolutions.map { it.psiFragment } }
+        psiFiles
+            .forEach { it.deleteFile() }
+        psiFiles.takeWhile { !it.forceDeleteTmpData() }
+    }
+
     fun build(): SolutionSpace {
         clearCycles()
-        return SolutionSpace(this)
+        val solutionSpace = SolutionSpace(this)
+        clearPsiFiles()
+        return solutionSpace
     }
 }
 

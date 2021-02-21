@@ -2,22 +2,21 @@ package org.jetbrains.research.ml.coding.assistant.unification
 
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.command.WriteCommandAction
+import com.intellij.openapi.components.service
 import com.intellij.openapi.project.Project
-import com.intellij.psi.PsiFile
-import com.intellij.psi.PsiFileFactory
 import com.intellij.psi.codeStyle.CodeStyleManager
-import com.jetbrains.python.PythonLanguage
 import org.jetbrains.research.ml.ast.transformations.PerformedCommandStorage
 import org.jetbrains.research.ml.coding.assistant.dataset.model.DatasetRecord
 import org.jetbrains.research.ml.coding.assistant.dataset.model.DynamicSolution
-import org.jetbrains.research.ml.coding.assistant.unification.model.DynamicIntermediateSolution
+import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreator
 import org.jetbrains.research.ml.coding.assistant.unification.model.DatasetPartialSolution
+import org.jetbrains.research.ml.coding.assistant.unification.model.DynamicIntermediateSolution
 import java.util.concurrent.atomic.AtomicInteger
 import java.util.logging.Logger
 
 class DatasetUnification(private val project: Project) {
     private val logger = Logger.getLogger(javaClass.name)
-    private val fileFactory = PsiFileFactory.getInstance(project)
+    private val fileFactory: PsiCreator = project.service()
     private val codeStyleManager = CodeStyleManager.getInstance(project)
 
     fun transform(dynamicSolution: DynamicSolution): DynamicIntermediateSolution {
@@ -34,9 +33,7 @@ class DatasetUnification(private val project: Project) {
     }
 
     private fun unifyRecord(datasetRecord: DatasetRecord): DatasetPartialSolution {
-        val psiFile = ApplicationManager.getApplication().runReadAction<PsiFile> {
-            fileFactory.createFileFromText(PythonLanguage.getInstance(), datasetRecord.fragment)
-        }
+        val psiFile = fileFactory.initFileToPsi(datasetRecord.fragment)
         WriteCommandAction.runWriteCommandAction(project) { // reformat the expected file
             codeStyleManager.reformat(psiFile)
         }

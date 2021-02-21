@@ -1,11 +1,14 @@
 package org.jetbrains.research.ml.coding.assistant.problems
 
 import com.intellij.openapi.application.ApplicationManager
+import com.intellij.openapi.components.service
 import com.intellij.psi.PsiFile
 import com.intellij.psi.PsiFileFactory
 import com.jetbrains.python.PythonLanguage
 import org.jetbrains.research.ml.ast.transformations.anonymization.AnonymizationTransformation
+import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreator
 import org.jetbrains.research.ml.coding.assistant.util.ParametrizedBaseWithSdkTest
+import org.junit.Ignore
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
@@ -32,17 +35,7 @@ class AnonymizationProblemTest : ParametrizedBaseWithSdkTest(getResourcesRootPat
     }
 
     private fun createPsiFile(text: String): PsiFile {
-        /*
-        в доке написанно
-        The process of resolving references is distinct from parsing and is not performed at the same time.
-        https://plugins.jetbrains.com/docs/intellij/psi-references.html#contributed-references
-        хз, как сделать, чтобы работали
-         */
-//        return myFixture.configureByText(PythonFileType.INSTANCE, text) // так всё работает
-        val factory = PsiFileFactory.getInstance(project)
-        return ApplicationManager.getApplication().runReadAction<PsiFile> {
-            factory.createFileFromText(PythonLanguage.getInstance(), text)
-        }
+        return project.service<PsiCreator>().initFileToPsi(text)
     }
 
     companion object {

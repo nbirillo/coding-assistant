@@ -6,11 +6,13 @@ import com.intellij.psi.PsiFileFactory
 import com.jetbrains.python.PythonLanguage
 import org.jetbrains.research.ml.coding.assistant.unification.CompositeTransformation
 import org.jetbrains.research.ml.coding.assistant.util.ParametrizedBaseWithSdkTest
+import org.junit.Ignore
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
 import java.io.File
 
+@Ignore
 @RunWith(Parameterized::class)
 class CompositeTransformationTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(::CompositeTransformationTest)) {
     @JvmField
