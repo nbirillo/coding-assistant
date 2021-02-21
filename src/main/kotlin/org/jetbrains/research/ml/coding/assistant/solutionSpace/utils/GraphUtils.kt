@@ -34,10 +34,10 @@ fun <V, E> Graph<V, E>.pathsTo(vertices: Collection<V>): List<List<V>> {
         }
 }
 
-
 fun <V, E> Graph<V, E>.removeVertexList(vertices: Collection<V>) {
-    if (vertices.isEmpty())
+    if (vertices.isEmpty()) {
         return
+    }
     val cycledVertices = vertices.plus(vertices.first())
     for ((sourceVertex, targetVertex) in cycledVertices.windowed(2)) {
         removeEdge(sourceVertex, targetVertex)

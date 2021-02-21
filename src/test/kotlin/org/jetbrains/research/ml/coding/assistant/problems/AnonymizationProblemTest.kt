@@ -3,12 +3,9 @@ package org.jetbrains.research.ml.coding.assistant.problems
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.components.service
 import com.intellij.psi.PsiFile
-import com.intellij.psi.PsiFileFactory
-import com.jetbrains.python.PythonLanguage
 import org.jetbrains.research.ml.ast.transformations.anonymization.AnonymizationTransformation
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreator
 import org.jetbrains.research.ml.coding.assistant.util.ParametrizedBaseWithSdkTest
-import org.junit.Ignore
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized

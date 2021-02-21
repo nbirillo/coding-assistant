@@ -1,6 +1,5 @@
 package org.jetbrains.research.ml.coding.assistant.solutionSpace.builder
 
-import com.github.gumtreediff.tree.TreeContext
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpace
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.removeVertexList
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.replaceVertex
@@ -21,12 +20,14 @@ class SolutionSpaceGraphBuilder {
         for ((source, target) in dynamicVertices.windowed(2)) {
             val sourceVertex = graph.fetchVertex(source)
             val targetVertex = graph.fetchVertex(target)
-            if (sourceVertex == targetVertex)
+            if (sourceVertex == targetVertex) {
                 continue
-            val edge = if (graph.containsEdge(sourceVertex, targetVertex))
+            }
+            val edge = if (graph.containsEdge(sourceVertex, targetVertex)) {
                 graph.getEdge(sourceVertex, targetVertex)
-            else
+            } else {
                 graph.addEdge(sourceVertex, targetVertex)
+            }
             graph.setEdgeWeight(edge, edge.calculatedWeight)
         }
     }
@@ -55,8 +56,9 @@ class SolutionSpaceGraphBuilder {
 }
 
 private fun SolutionSpaceGraph.fetchVertex(vertex: SolutionSpaceGraphVertex): SolutionSpaceGraphVertex {
-    if (containsVertex(vertex))
+    if (containsVertex(vertex)) {
         return vertex
+    }
     return vertexSet().first { it.partialSolutions.containsAll(vertex.partialSolutions) }
 }
 

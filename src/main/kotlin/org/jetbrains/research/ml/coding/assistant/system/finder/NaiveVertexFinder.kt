@@ -5,7 +5,6 @@ import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpaceVer
 import org.jetbrains.research.ml.coding.assistant.system.PartialSolution
 import org.jetbrains.research.ml.coding.assistant.system.matcher.BooleanPartialSolutionMatcher
 
-
 class NaiveVertexFinder(override val matcher: BooleanPartialSolutionMatcher) : VertexFinder {
     override fun findCorrespondingVertex(
         solutionSpace: SolutionSpace,

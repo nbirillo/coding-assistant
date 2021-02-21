@@ -49,7 +49,6 @@ private fun String?.toProgramExperience(): MetaInfo.ProgramExperience? =
         }
     }
 
-
 private object Keys {
     const val FRAGMENT = "fragment"
     const val AGE = "age"

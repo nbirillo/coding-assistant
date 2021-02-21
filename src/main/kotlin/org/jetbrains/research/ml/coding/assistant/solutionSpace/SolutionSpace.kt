@@ -1,6 +1,5 @@
 package org.jetbrains.research.ml.coding.assistant.solutionSpace
 
-
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.builder.SolutionSpaceGraphBuilder
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.builder.SolutionSpaceGraphEdge
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.builder.SolutionSpaceGraphVertex
@@ -24,16 +23,18 @@ private fun transferGraph(builder: SolutionSpaceGraphBuilder): Graph<SolutionSpa
     for ((oldVertex, newVertex) in oldVertices zip newVertices) {
         fun transferEdges(edges: Iterable<SolutionSpaceGraphEdge>, isOutgoing: Boolean) {
             for (outgoingEdge in edges) {
-                val neighbour = if (isOutgoing)
+                val neighbour = if (isOutgoing) {
                     builder.graph.getEdgeTarget(outgoingEdge)
-                else
+                } else {
                     builder.graph.getEdgeSource(outgoingEdge)
+                }
                 val newTarget = mapping[neighbour]!!
                 val newEdge = SolutionSpaceEdge(outgoingEdge.calculatedWeight, outgoingEdge.actions)
-                if (isOutgoing)
+                if (isOutgoing) {
                     graph.addEdge(newVertex, newTarget, newEdge)
-                else
+                } else {
                     graph.addEdge(newTarget, newVertex, newEdge)
+                }
                 graph.setEdgeWeight(newEdge, newEdge.calculatedWeight)
             }
         }

@@ -6,7 +6,6 @@ import com.intellij.openapi.application.ApplicationStarter
 import com.intellij.openapi.components.service
 import com.intellij.openapi.diagnostic.Logger
 import com.xenomachina.argparser.ArgParser
-import org.jetbrains.research.ml.ast.transformations.anonymization.AnonymizationTransformation
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreator
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreatorUtil
 import org.jetbrains.research.ml.coding.assistant.unification.CompositeTransformation
@@ -42,35 +41,34 @@ object SolutionSpaceRunner : ApplicationStarter {
                 inputDir = Paths.get(input).toString().removeSuffix("/")
                 outputDir = Paths.get(output).toString().removeSuffix("/")
             }
-            val project = ProjectUtil.openOrImport(PsiCreatorUtil.PROJECT_DIR, null, true)
-            project?.let {
-                val psiCreator = project.service<PsiCreator>()
+            val project = ProjectUtil.openOrImport(PsiCreatorUtil.PROJECT_DIR, null, true)!!
 
-                // TODO: to create psi file you should use: psiCreator.initFileToPsi(pythonCode)
-                //  Don't forget call psiCreator.deleteFile() to delete new file
+            val psiCreator = project.service<PsiCreator>()
 
-                // TODO: create solution space
+            // TODO: to create psi file you should use: psiCreator.initFileToPsi(pythonCode)
+            //  Don't forget call psiCreator.deleteFile() to delete new file
 
-                val wrapper = psiCreator.initFileToPsi(
-                    """
-a=int(input())
-b=int(input())
-c=int(input())
-k=a
-if k<b:
-    k=b
-                """.trimIndent()
-                )
+            // TODO: create solution space
 
-                println("Start: ${wrapper.text}")
+            val wrapper = psiCreator.initFileToPsi(
+                """
+        a=int(input())
+        b=int(input())
+        c=int(input())
+        k=a
+        if k<b:
+            k=b
+                            """.trimIndent()
+            )
 
-                ApplicationManager.getApplication().invokeAndWait {
-                    CompositeTransformation.forwardApply(wrapper, null)
-                }
-                createFolder(outputDir)
-                println(wrapper.text)
-                // TODO: save solution space
+            println("Start: ${wrapper.text}")
+
+            ApplicationManager.getApplication().invokeAndWait {
+                CompositeTransformation.forwardApply(wrapper, null)
             }
+            createFolder(outputDir)
+            println(wrapper.text)
+            // TODO: save solution space
         } catch (ex: Exception) {
             logger.error(ex)
         } finally {

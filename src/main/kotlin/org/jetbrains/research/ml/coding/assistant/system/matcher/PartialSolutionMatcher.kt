@@ -7,7 +7,6 @@ interface PartialSolutionMatcher {
     fun matchScore(vertex: SolutionSpaceVertex, partialSolution: PartialSolution): Double
 }
 
-
 interface BooleanPartialSolutionMatcher : PartialSolutionMatcher {
     fun isMatched(vertex: SolutionSpaceVertex, partialSolution: PartialSolution): Boolean
 

@@ -14,7 +14,6 @@ data class SolutionSpaceVertex(
     val isFinal: Boolean = info.any { it.metaInfo.isFinalSolution }
 }
 
-
 data class StudentInfo(
     val id: String,
     val metaInfo: MetaInfo

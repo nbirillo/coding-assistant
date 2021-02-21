@@ -17,7 +17,6 @@ import javax.imageio.ImageIO
 import kotlin.time.ExperimentalTime
 import kotlin.time.measureTime
 
-@Ignore
 @RunWith(Parameterized::class)
 class DatasetUnificationTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(::DatasetUnificationTest)) {
     @JvmField
@@ -56,11 +55,11 @@ class DatasetUnificationTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(
                 Edge count: ${graph.edgeSet().size}
                 Vertices: ${graph.vertexSet().map { it.toString() }.sorted().joinToString()}
                 Edges: ${
-            graph.edgeSet().map {
-                "| (${graph.getEdgeSource(it)}, ${graph.getEdgeTarget(it)})  ${it.toString()}|"
-            }.sorted().joinToString()
+        graph.edgeSet().map {
+            "| (${graph.getEdgeSource(it)}, ${graph.getEdgeTarget(it)})  $it|"
+        }.sorted().joinToString()
         }
-                """.trimIndent()
+        """.trimIndent()
     }
 
     @ExperimentalTime
@@ -82,7 +81,6 @@ class DatasetUnificationTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(
                         builder.addDynamicSolution(it)
                     }
 
-
                 space = builder.build()
             }
 
@@ -94,8 +92,6 @@ class DatasetUnificationTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(
             }
 
             textFile.writeText(text)
-
-
         }
     }
 

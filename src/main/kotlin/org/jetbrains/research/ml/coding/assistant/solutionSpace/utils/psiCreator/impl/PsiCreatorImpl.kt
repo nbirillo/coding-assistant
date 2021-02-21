@@ -1,6 +1,5 @@
 package org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.impl
 
-
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.components.service
 import com.intellij.openapi.project.Project
@@ -27,7 +26,7 @@ class PsiCreatorImpl(project: Project) : PsiCreator {
     // TODO: should we rename it?
     inner class PsiFileWrapperImpl(private val file: File, val psi: PsiFile) : PsiFile by psi, PsiFileWrapper {
         constructor(file: File) : this(file, createPsi(file))
-        constructor(code: String) : this(createFile("$tmpDataPath/tmp_${counter}$extension", code))
+        constructor(code: String) : this(createFile("$tmpDataPath/tmp_${counter++}$extension", code))
 
         override fun deleteFile() {
             ApplicationManager.getApplication().invokeAndWait {
