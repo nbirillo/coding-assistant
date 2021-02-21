@@ -1,10 +1,13 @@
 package org.jetbrains.research.ml.coding.assistant.system.matcher
 
+import org.jetbrains.research.ml.ast.gumtree.diff.Matcher
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpaceVertex
 import org.jetbrains.research.ml.coding.assistant.system.PartialSolution
 
-class EditPartialSolutionMatcher : PartialSolutionMatcher {
-    override fun matchScore(vertex: SolutionSpaceVertex, partialSolution: PartialSolution): Double {
-        TODO("Not yet implemented")
+object EditPartialSolutionMatcher : PartialSolutionMatcher {
+    override fun differScore(vertex: SolutionSpaceVertex, partialSolution: PartialSolution): Double {
+        val matcher = Matcher(partialSolution.context, vertex.fragment)
+        val actions = matcher.getEditActions()
+        return actions.size.toDouble()
     }
 }

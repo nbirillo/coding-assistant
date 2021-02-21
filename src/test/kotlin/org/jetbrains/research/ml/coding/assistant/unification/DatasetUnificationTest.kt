@@ -57,7 +57,7 @@ class DatasetUnificationTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(
 
     @Test
     fun testStuff() {
-        val inputDir = "/Users/artembobrov/Documents/masters/ast-transform/python/zero/"
+        val inputDir = "/Users/artembobrov/Documents/masters/ast-transform/python/max_digit/"
         val taskSolutions = TaskTrackerDatasetFetcher.fetchTaskSolutions(File(inputDir))
         println(taskSolutions.dynamicSolutions.size)
         val datasetUnification = project.service<DatasetUnification>()
