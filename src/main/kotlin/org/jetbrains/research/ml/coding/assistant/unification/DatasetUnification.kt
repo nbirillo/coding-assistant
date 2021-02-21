@@ -9,8 +9,9 @@ import com.intellij.psi.codeStyle.CodeStyleManager
 import com.jetbrains.python.PythonLanguage
 import org.jetbrains.research.ml.ast.transformations.PerformedCommandStorage
 import org.jetbrains.research.ml.coding.assistant.dataset.model.DatasetRecord
-import org.jetbrains.research.ml.coding.assistant.dataset.model.TaskSolutions
-import org.jetbrains.research.ml.coding.assistant.unification.model.IntermediateSolution
+import org.jetbrains.research.ml.coding.assistant.dataset.model.DynamicSolution
+import org.jetbrains.research.ml.coding.assistant.unification.model.DynamicIntermediateSolution
+import org.jetbrains.research.ml.coding.assistant.unification.model.DatasetPartialSolution
 import java.util.concurrent.atomic.AtomicInteger
 import java.util.logging.Logger
 
@@ -19,9 +20,8 @@ class DatasetUnification(private val project: Project) {
     private val fileFactory = PsiFileFactory.getInstance(project)
     private val codeStyleManager = CodeStyleManager.getInstance(project)
 
-    fun transform(taskSolutions: TaskSolutions): List<IntermediateSolution> {
-        val datasetRecords = taskSolutions.dynamicSolutions.flatMap { it.records }
-
+    fun transform(dynamicSolution: DynamicSolution): DynamicIntermediateSolution {
+        val datasetRecords = dynamicSolution.records
 
         val counter = AtomicInteger(0)
         return datasetRecords
@@ -33,7 +33,7 @@ class DatasetUnification(private val project: Project) {
             .toList()
     }
 
-    private fun unifyRecord(datasetRecord: DatasetRecord): IntermediateSolution {
+    private fun unifyRecord(datasetRecord: DatasetRecord): DatasetPartialSolution {
         val psiFile = ApplicationManager.getApplication().runReadAction<PsiFile> {
             fileFactory.createFileFromText(PythonLanguage.getInstance(), datasetRecord.fragment)
         }
@@ -48,6 +48,6 @@ class DatasetUnification(private val project: Project) {
             logger.info { "Unification Ended: ${psiFile.text}" }
         }
 
-        return IntermediateSolution(datasetRecord.id, psiFile, commandStorage, datasetRecord.metaInfo)
+        return DatasetPartialSolution(datasetRecord.id, psiFile, commandStorage, datasetRecord.metaInfo)
     }
 }

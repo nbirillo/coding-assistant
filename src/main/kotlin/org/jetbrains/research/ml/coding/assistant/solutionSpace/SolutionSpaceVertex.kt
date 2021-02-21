@@ -1,59 +1,21 @@
 package org.jetbrains.research.ml.coding.assistant.solutionSpace
 
-import com.intellij.openapi.application.ApplicationManager
-import com.intellij.psi.PsiElement
-import com.jetbrains.python.psi.PyRecursiveElementVisitor
-import org.jetbrains.research.ml.coding.assistant.unification.model.IntermediateSolution
+import com.github.gumtreediff.tree.TreeContext
+import org.jetbrains.research.ml.coding.assistant.dataset.model.MetaInfo
 
 data class SolutionSpaceVertex(
-    val psiNodesCount: Int,
-    val intermediateSolutions: List<IntermediateSolution>,
+    val fragment: TreeContext,
+    val info: List<StudentInfo>
 ) {
-    constructor(intermediateSolution: IntermediateSolution) : this(
-        intermediateSolution.psiFragment.nodesCount(),
-        listOf(intermediateSolution)
-    )
-
-    init {
-        require(intermediateSolutions.isNotEmpty()) { "Associated solutions set cannot be empty." }
+    override fun toString(): String {
+        return info.joinToString { "Vertex ${it.id}" }
     }
 
-    fun containsAll(solutions: List<IntermediateSolution>): Boolean {
-        return intermediateSolutions.containsAll(solutions)
-    }
-
-    val representativeSolution: IntermediateSolution get() = intermediateSolutions.first()
-
-    val isFinal: Boolean = intermediateSolutions.any { it.isFinal }
-
-    override fun equals(other: Any?): Boolean {
-        if (this === other) return true
-        if (javaClass != other?.javaClass) return false
-
-        other as SolutionSpaceVertex
-
-        if (intermediateSolutions != other.intermediateSolutions) return false
-
-        return true
-    }
-
-    override fun hashCode(): Int {
-        return intermediateSolutions.hashCode()
-    }
-
-    override fun toString(): String = intermediateSolutions.joinToString { it.toString() }
+    val isFinal: Boolean = info.any { it.metaInfo.isFinalSolution }
 }
 
-private fun PsiElement.nodesCount(): Int {
-    var counter = 0
-    ApplicationManager.getApplication().invokeAndWait {
-        accept(object : PyRecursiveElementVisitor() {
-            override fun visitElement(element: PsiElement) {
-                counter++
-                super.visitElement(element)
-            }
-        })
-    }
-    return counter
-}
 
+data class StudentInfo(
+    val id: String,
+    val metaInfo: MetaInfo
+)

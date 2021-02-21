@@ -29,6 +29,8 @@ data class MetaInfo(
         task = record[Keys.TASK]!!
     )
 
+    val isFinalSolution: Boolean get() = testsResults == 1.0
+
     enum class ProgramExperience {
         LESS_THAN_HALF_YEAR,
         FROM_HALF_TO_ONE_YEAR,

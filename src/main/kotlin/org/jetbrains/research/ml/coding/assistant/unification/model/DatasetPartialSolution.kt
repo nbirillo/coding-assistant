@@ -5,10 +5,10 @@ import com.intellij.psi.PsiFile
 import org.jetbrains.research.ml.ast.transformations.PerformedCommandStorage
 import org.jetbrains.research.ml.coding.assistant.dataset.model.MetaInfo
 
+typealias DynamicIntermediateSolution = List<DatasetPartialSolution>
 
-data class IntermediateSolution(
+data class DatasetPartialSolution(
     val id: String,
-    // TODO: store TreeContext, equals <==> root.isIsomorphicTo
     val psiFragment: PsiFile,
     val commandsStorage: PerformedCommandStorage?,
     val metaInfo: MetaInfo
@@ -17,7 +17,7 @@ data class IntermediateSolution(
         if (this === other) return true
         if (javaClass != other?.javaClass) return false
 
-        other as IntermediateSolution
+        other as DatasetPartialSolution
 
         var isEquals = false
         ApplicationManager.getApplication().invokeAndWait {

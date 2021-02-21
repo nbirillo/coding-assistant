@@ -1,33 +1,56 @@
 package org.jetbrains.research.ml.coding.assistant.solutionSpace
 
-import com.github.gumtreediff.tree.TreeContext
-import org.jetbrains.research.ml.coding.assistant.solutionSpace.heuristics.createHeuristicsSupportGraph
-import org.jetbrains.research.ml.coding.assistant.solutionSpace.heuristics.createSolutionSpaceSupportGraph
+
+import org.jetbrains.research.ml.coding.assistant.solutionSpace.builder.SolutionSpaceGraphBuilder
+import org.jetbrains.research.ml.coding.assistant.solutionSpace.builder.SolutionSpaceGraphEdge
+import org.jetbrains.research.ml.coding.assistant.solutionSpace.builder.SolutionSpaceGraphVertex
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.addVertices
-import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.pathsTo
-import org.jetbrains.research.ml.coding.assistant.unification.model.IntermediateSolution
+import org.jgrapht.Graph
+import org.jgrapht.graph.AsUnmodifiableGraph
 import org.jgrapht.graph.SimpleDirectedWeightedGraph
 
-typealias TreeContextCache = HashMap<SolutionSpaceVertex, TreeContext>
+class SolutionSpace internal constructor(graphBuilder: SolutionSpaceGraphBuilder) {
+    val graph = transferGraph(graphBuilder)
+}
 
-class SolutionSpace(intermediateSolutions: List<IntermediateSolution>) {
-    private val cache = TreeContextCache()
-    val graph = SimpleDirectedWeightedGraph(SolutionSpaceEdgeFactory(cache))
+private fun transferGraph(builder: SolutionSpaceGraphBuilder): Graph<SolutionSpaceVertex, SolutionSpaceEdge> {
+    val graph = SimpleDirectedWeightedGraph(SolutionSpaceEdgeFactory)
+    val oldVertices = builder.graph.vertexSet().toList()
+    val newVertices = oldVertices.map { it.toSolutionSpaceVertex(builder) }
+    graph.addVertices(newVertices)
 
-    init {
-        val completeGraph = createHeuristicsSupportGraph(intermediateSolutions.map { SolutionSpaceVertex(it) })
-        val solutionSpaceSupportGraph = createSolutionSpaceSupportGraph(completeGraph, cache = cache)
-        val finalSolutionVertices = solutionSpaceSupportGraph.vertexSet().filter { it.isFinal }
+    val mapping = (oldVertices zip newVertices).toMap()
 
-        val pathToFinalSolutions = solutionSpaceSupportGraph.pathsTo(finalSolutionVertices)
-        graph.addVertices(solutionSpaceSupportGraph.vertexSet())
-
-        for (vertexList in pathToFinalSolutions) {
-            for ((source, target) in vertexList.windowed(2)) {
-                val edge = solutionSpaceSupportGraph.getEdge(source, target)
-                graph.addEdge(source, target, edge)
+    for ((oldVertex, newVertex) in oldVertices zip newVertices) {
+        fun transferEdges(edges: Iterable<SolutionSpaceGraphEdge>, isOutgoing: Boolean) {
+            for (outgoingEdge in edges) {
+                val neighbour = if (isOutgoing)
+                    builder.graph.getEdgeTarget(outgoingEdge)
+                else
+                    builder.graph.getEdgeSource(outgoingEdge)
+                val newTarget = mapping[neighbour]!!
+                val newEdge = SolutionSpaceEdge(outgoingEdge.calculatedWeight, outgoingEdge.actions)
+                if (isOutgoing)
+                    graph.addEdge(newVertex, newTarget, newEdge)
+                else
+                    graph.addEdge(newTarget, newVertex, newEdge)
+                graph.setEdgeWeight(newEdge, newEdge.calculatedWeight)
             }
         }
-        cache.clear()
+
+        val outgoingEdges = builder.graph.outgoingEdgesOf(oldVertex).toSet()
+        transferEdges(outgoingEdges, isOutgoing = true)
+
+        val incomingEdges = builder.graph.incomingEdgesOf(oldVertex).toSet()
+        transferEdges(incomingEdges, isOutgoing = false)
     }
+
+    return AsUnmodifiableGraph(graph)
+}
+
+private fun SolutionSpaceGraphVertex.toSolutionSpaceVertex(builder: SolutionSpaceGraphBuilder): SolutionSpaceVertex {
+    return SolutionSpaceVertex(
+        builder.cache[this],
+        partialSolutions.map { StudentInfo(it.id, it.metaInfo) }
+    )
 }
