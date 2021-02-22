@@ -5,7 +5,6 @@ import com.intellij.openapi.command.WriteCommandAction
 import com.intellij.openapi.components.service
 import com.intellij.openapi.project.Project
 import com.intellij.psi.codeStyle.CodeStyleManager
-import org.jetbrains.research.ml.ast.transformations.PerformedCommandStorage
 import org.jetbrains.research.ml.coding.assistant.dataset.model.DatasetRecord
 import org.jetbrains.research.ml.coding.assistant.dataset.model.DynamicSolution
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreator

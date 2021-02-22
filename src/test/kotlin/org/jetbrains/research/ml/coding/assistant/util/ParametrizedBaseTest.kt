@@ -4,8 +4,11 @@
 
 package org.jetbrains.research.ml.coding.assistant.util
 
+import com.intellij.openapi.components.service
 import com.intellij.testFramework.fixtures.BasePlatformTestCase
 import org.apache.log4j.PropertyConfigurator
+import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreator
+import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.impl.TestPsiCreator
 import org.junit.After
 import org.junit.Before
 import org.junit.BeforeClass

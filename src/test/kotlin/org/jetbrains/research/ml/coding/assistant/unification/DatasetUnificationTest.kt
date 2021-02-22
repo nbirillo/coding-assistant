@@ -6,8 +6,7 @@ import org.jetbrains.research.ml.coding.assistant.dataset.model.Dataset
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpace
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.builder.SolutionSpaceGraphBuilder
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.generateImage
-import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreator
-import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.impl.TestPsiCreator
+import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreatorUtil
 import org.jetbrains.research.ml.coding.assistant.util.ParametrizedBaseWithSdkTest
 import org.jgrapht.Graph
 import org.junit.BeforeClass
@@ -28,11 +27,6 @@ class DatasetUnificationTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(
     @JvmField
     @Parameterized.Parameter(1)
     var outFile: String? = null
-
-    override fun mySetUp() {
-        super.mySetUp()
-        (project.service<PsiCreator>() as? TestPsiCreator)?.fixture = myFixture
-    }
 
     @Test
     fun testBasic() {
@@ -64,7 +58,9 @@ class DatasetUnificationTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(
 
         val solutionSpaceBuilder = SolutionSpaceGraphBuilder()
         taskSolutions.dynamicSolutions
-            .map { datasetUnification.transform(it) }
+            .map {
+                datasetUnification.transform(it)
+            }
             .forEach { solutionSpaceBuilder.addDynamicSolution(it) }
 
         val solutionSpace = solutionSpaceBuilder.build()
@@ -120,6 +116,8 @@ class DatasetUnificationTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(
             textFile.writeText(text)
         }
     }
+
+    override fun getTestDataPath(): String = PsiCreatorUtil.PROJECT_DIR
 
     companion object {
         lateinit var taskTrackerDataset: Dataset
