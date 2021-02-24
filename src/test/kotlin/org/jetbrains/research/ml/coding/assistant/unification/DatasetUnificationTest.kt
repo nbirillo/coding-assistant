@@ -10,6 +10,7 @@ import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator
 import org.jetbrains.research.ml.coding.assistant.util.ParametrizedBaseWithSdkTest
 import org.jgrapht.Graph
 import org.junit.BeforeClass
+import org.junit.Ignore
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
@@ -18,6 +19,7 @@ import javax.imageio.ImageIO
 import kotlin.time.ExperimentalTime
 import kotlin.time.measureTime
 
+@Ignore
 @RunWith(Parameterized::class)
 class DatasetUnificationTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(::DatasetUnificationTest)) {
     @JvmField

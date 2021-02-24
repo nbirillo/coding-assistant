@@ -21,6 +21,7 @@ object TaskTrackerDatasetFetcher : DatasetFetcher {
     fun fetchTaskSolutions(file: File): TaskSolutions {
         val files = file.listFiles()
         println("files in dir: ${files.joinToString("\n") { it.name }}")
+        println()
         val solutions = files?.asList()?.parallelStream()
             ?.map(this::fetchDynamicSolution)
             ?.filter { it.hasFinalSolution() }

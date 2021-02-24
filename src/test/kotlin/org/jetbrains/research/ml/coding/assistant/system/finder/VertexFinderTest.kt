@@ -15,11 +15,13 @@ import org.jetbrains.research.ml.coding.assistant.system.matcher.EditPartialSolu
 import org.jetbrains.research.ml.coding.assistant.unification.CompositeTransformation
 import org.jetbrains.research.ml.coding.assistant.unification.DatasetUnification
 import org.jetbrains.research.ml.coding.assistant.util.ParametrizedBaseWithSdkTest
+import org.junit.Ignore
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
 import java.io.File
 
+@Ignore
 @RunWith(Parameterized::class)
 class VertexFinderTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(::VertexFinderTest)) {
     @JvmField
@@ -34,6 +36,7 @@ class VertexFinderTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(::Vert
         super.mySetUp()
         (project.service<PsiCreator>() as? TestPsiCreator)?.fixture = myFixture
     }
+
     @Test
     fun testBasic() {
         val inputDir = "/Users/artembobrov/Documents/masters/ast-transform/python/max_digit"
