@@ -60,7 +60,7 @@ object SolutionSpaceRunner : ApplicationStarter {
 
             val solutionSpace = solutionSpaceBuilder.build()
 
-            val imgFile = File("${taskSolutions.taskName}_graph_runner.png").apply { createNewFile() }
+            val imgFile = File("${taskSolutions.taskName}_graph_runner1.png").apply { createNewFile() }
             val image = solutionSpace.generateImage()
             ImageIO.write(image, "PNG", imgFile)
         } catch (ex: Exception) {

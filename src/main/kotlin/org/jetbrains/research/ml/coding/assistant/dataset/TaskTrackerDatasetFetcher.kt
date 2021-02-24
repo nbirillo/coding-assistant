@@ -19,7 +19,9 @@ object TaskTrackerDatasetFetcher : DatasetFetcher {
     }
 
     fun fetchTaskSolutions(file: File): TaskSolutions {
-        val solutions = file.listFiles()?.asList()?.parallelStream()
+        val files = file.listFiles()
+        println("files in dir: ${files.joinToString("\n") { it.name }}")
+        val solutions = files?.asList()?.parallelStream()
             ?.map(this::fetchDynamicSolution)
             ?.filter { it.hasFinalSolution() }
         return TaskSolutions(
@@ -32,6 +34,7 @@ object TaskTrackerDatasetFetcher : DatasetFetcher {
         require(file.isFile)
         val records = csvReader().readAllWithHeader(file).map { DatasetRecord(it) }
         return DynamicSolution(records).run {
+            println("processed file: ${file.name}")
             copy(records = records.dropLastWhile { !it.metaInfo.isFinalSolution })
         }
     }
