@@ -8,7 +8,6 @@ import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator
 import org.jetbrains.research.ml.coding.assistant.util.createFile
 import java.io.File
 
-
 class TestPsiCreator : PsiCreator {
     var fixture: CodeInsightTestFixture? = null
     private var counter = 0

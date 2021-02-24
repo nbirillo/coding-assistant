@@ -20,7 +20,7 @@ dependencies {
     implementation(kotlin("stdlib-jdk8"))
     implementation("io.github.nbirillo.ast.transformations:ast-transformations") {
         version {
-            branch = "bugfix/unification"
+            branch = "master"
         }
     }
     implementation("org.jgrapht:jgrapht-core:1.1.0")

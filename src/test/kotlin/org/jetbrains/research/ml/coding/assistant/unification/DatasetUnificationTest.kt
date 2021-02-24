@@ -70,16 +70,15 @@ class DatasetUnificationTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(
         ImageIO.write(image, "PNG", imgFile)
     }
 
-
     private fun <V, E> getInfo(graph: Graph<V, E>): String {
         return """
                 Vertex count: ${graph.vertexSet().size}
                 Edge count: ${graph.edgeSet().size}
                 Vertices: ${graph.vertexSet().map { it.toString() }.sorted().joinToString()}
                 Edges: ${
-            graph.edgeSet().map {
-                "| (${graph.getEdgeSource(it)}, ${graph.getEdgeTarget(it)})  $it|"
-            }.sorted().joinToString()
+            graph.edgeSet().map { "| (${graph.getEdgeSource(it)}, ${graph.getEdgeTarget(it)})  $it|" }
+                .sorted()
+                .joinToString()
         }
         """.trimIndent()
     }

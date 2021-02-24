@@ -3,7 +3,6 @@
 package org.jetbrains.research.ml.coding.assistant.unification.model
 
 import com.intellij.openapi.application.ApplicationManager
-import org.jetbrains.research.ml.ast.transformations.PerformedCommandStorage
 import org.jetbrains.research.ml.coding.assistant.dataset.model.MetaInfo
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiFileWrapper
 

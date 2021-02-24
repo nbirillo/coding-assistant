@@ -54,7 +54,8 @@ class VertexFinderTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(::Vert
                 """
                     x = input()
                 """.trimIndent()
-            ), PostOrderNumbering
+            ),
+            PostOrderNumbering
         )
         val partialSolution = PartialSolution(
             context,
@@ -63,7 +64,6 @@ class VertexFinderTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(::Vert
         val vertex = finder.findCorrespondingVertex(solutionSpace, partialSolution)
         print(vertex)
     }
-
 
     private fun createPsiFile(text: String): PsiFile {
         return project.service<PsiCreator>().initFileToPsi(text).apply {
