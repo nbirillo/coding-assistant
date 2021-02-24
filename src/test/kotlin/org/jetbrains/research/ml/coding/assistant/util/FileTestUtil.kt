@@ -1,7 +1,3 @@
-/*
- * Copyright (c) 2020.  Anastasiia Birillo, Elena Lyulina
- */
-
 package org.jetbrains.research.ml.coding.assistant.util
 
 import java.io.File
