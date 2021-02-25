@@ -25,7 +25,9 @@ dependencies {
     }
     implementation("org.jgrapht:jgrapht-core:1.1.0")
     implementation("org.jgrapht:jgrapht-ext:1.1.0")
-    implementation("com.github.doyaaaaaken:kotlin-csv-jvm:0.15.0")
+    implementation("com.github.doyaaaaaken:kotlin-csv-jvm:0.15.0") {
+        exclude("org.slf4j")
+    }
     implementation("com.github.gumtreediff", "core", "2.1.2")
 
     implementation("com.xenomachina:kotlin-argparser:2.0.7")

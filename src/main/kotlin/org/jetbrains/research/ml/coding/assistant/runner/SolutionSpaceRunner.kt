@@ -53,12 +53,12 @@ object SolutionSpaceRunner : ApplicationStarter {
             taskSolutions.dynamicSolutions
                 .map { datasetUnification.transform(it) }
                 .forEach { solutionSpaceBuilder.addDynamicSolution(it) }
-
             val solutionSpace = solutionSpaceBuilder.build()
 
-            val imgFile = File("${taskSolutions.taskName}_graph_runner1.png").apply { createNewFile() }
+            val outputFile =
+                File(outputDir).resolve("${taskSolutions.taskName}_graph_runner1.png").apply { createNewFile() }
             val image = solutionSpace.generateImage()
-            ImageIO.write(image, "PNG", imgFile)
+            ImageIO.write(image, "PNG", outputFile)
         } catch (ex: Exception) {
             logger.error(ex)
         } finally {

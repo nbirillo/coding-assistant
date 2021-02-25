@@ -21,15 +21,15 @@ object CompositeTransformation : Transformation() {
     override val key: String = "CompositeTransformation"
     private val transformations = arrayListOf(
         CommentsRemovalTransformation,
-        AnonymizationTransformation,
-        AugmentedAssignmentTransformation,
-        DeadCodeRemovalTransformation,
-        ConstantFoldingTransformation,
-        MultipleOperatorComparisonTransformation,
-        MultipleTargetAssignmentTransformation,
-        IfRedundantLinesRemovalTransformation,
-        ComparisonUnificationTransformation,
-        OuterNotEliminationTransformation
+//        AnonymizationTransformation,
+//        AugmentedAssignmentTransformation,
+//        DeadCodeRemovalTransformation,
+//        ConstantFoldingTransformation,
+//        MultipleOperatorComparisonTransformation,
+//        MultipleTargetAssignmentTransformation,
+//        IfRedundantLinesRemovalTransformation,
+//        ComparisonUnificationTransformation,
+//        OuterNotEliminationTransformation
     )
 
     override fun forwardApply(psiTree: PsiElement, commandsStorage: PerformedCommandStorage?) {
