@@ -7,9 +7,7 @@ import org.jetbrains.research.ml.ast.transformations.anonymization.Anonymization
 import org.jetbrains.research.ml.ast.transformations.augmentedAssignment.AugmentedAssignmentTransformation
 import org.jetbrains.research.ml.ast.transformations.commentsRemoval.CommentsRemovalTransformation
 import org.jetbrains.research.ml.ast.transformations.comparisonUnification.ComparisonUnificationTransformation
-import org.jetbrains.research.ml.ast.transformations.constantfolding.ConstantFoldingTransformation
 import org.jetbrains.research.ml.ast.transformations.deadcode.DeadCodeRemovalTransformation
-import org.jetbrains.research.ml.ast.transformations.if_redundant_lines_removal.IfRedundantLinesRemovalTransformation
 import org.jetbrains.research.ml.ast.transformations.multipleOperatorComparison.MultipleOperatorComparisonTransformation
 import org.jetbrains.research.ml.ast.transformations.multipleTargetAssignment.MultipleTargetAssignmentTransformation
 import org.jetbrains.research.ml.ast.transformations.outerNotElimination.OuterNotEliminationTransformation
@@ -21,15 +19,15 @@ object CompositeTransformation : Transformation() {
     override val key: String = "CompositeTransformation"
     private val transformations = arrayListOf(
         CommentsRemovalTransformation,
-//        AnonymizationTransformation,
-//        AugmentedAssignmentTransformation,
-//        DeadCodeRemovalTransformation,
+        AnonymizationTransformation,
+        AugmentedAssignmentTransformation,
+        DeadCodeRemovalTransformation,
 //        ConstantFoldingTransformation,
-//        MultipleOperatorComparisonTransformation,
-//        MultipleTargetAssignmentTransformation,
+        MultipleOperatorComparisonTransformation,
+        MultipleTargetAssignmentTransformation,
 //        IfRedundantLinesRemovalTransformation,
-//        ComparisonUnificationTransformation,
-//        OuterNotEliminationTransformation
+        ComparisonUnificationTransformation,
+        OuterNotEliminationTransformation
     )
 
     override fun forwardApply(psiTree: PsiElement, commandsStorage: PerformedCommandStorage?) {
