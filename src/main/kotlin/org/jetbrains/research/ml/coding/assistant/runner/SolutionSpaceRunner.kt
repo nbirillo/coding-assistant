@@ -46,11 +46,11 @@ object SolutionSpaceRunner : ApplicationStarter {
             }
 
             val project = ProjectUtil.openOrImport(getTmpProjectDir(), null, true)
-            project?.let { project ->
-                setSdkToProject(project, getTmpProjectDir(toCreateFolder = false))
+            project?.let { p ->
+                setSdkToProject(p, getTmpProjectDir(toCreateFolder = false))
                 val taskSolutions = TaskTrackerDatasetFetcher.fetchTaskSolutions(File(inputDir))
                 println(taskSolutions.dynamicSolutions.size)
-                val datasetUnification = project.service<DatasetUnification>()
+                val datasetUnification = p.service<DatasetUnification>()
 
                 val solutionSpaceBuilder = SolutionSpaceGraphBuilder()
                 taskSolutions.dynamicSolutions
