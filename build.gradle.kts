@@ -68,7 +68,7 @@ tasks {
         standardOutput = System.`out`
     }
 
-    register("solution-space-cli") {
+    register("cli") {
         dependsOn("runIde")
     }
 }

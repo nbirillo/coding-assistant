@@ -22,7 +22,7 @@ object SolutionSpaceRunner : ApplicationStarter {
 
     private val logger = Logger.getInstance(this::class.java)
 
-    override fun getCommandName(): String = "solution-space-cli"
+    override fun getCommandName(): String = "solution-space"
 
     class TransformationsRunnerArgs(parser: ArgParser) {
         val input by parser.storing(
@@ -46,8 +46,8 @@ object SolutionSpaceRunner : ApplicationStarter {
             }
 
             val project = ProjectUtil.openOrImport(getTmpProjectDir(), null, true)
-            project?.let {
-                setSdkToProject(it, getTmpProjectDir(toCreateFolder = false))
+            project?.let { project ->
+                setSdkToProject(project, getTmpProjectDir(toCreateFolder = false))
                 val taskSolutions = TaskTrackerDatasetFetcher.fetchTaskSolutions(File(inputDir))
                 println(taskSolutions.dynamicSolutions.size)
                 val datasetUnification = project.service<DatasetUnification>()
