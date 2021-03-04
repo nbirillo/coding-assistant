@@ -2,8 +2,8 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     java
-    kotlin("jvm") version "1.4.20"
-    id("org.jetbrains.intellij") version "0.6.3"
+    kotlin("jvm") version "1.4.30"
+    id("org.jetbrains.intellij") version "0.7.2"
     id("com.github.johnrengelman.shadow") version "5.1.0"
     id("org.jetbrains.dokka") version "0.10.1"
     id("org.jlleitschuh.gradle.ktlint") version "9.4.1"
@@ -14,11 +14,12 @@ version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
-    implementation("io.github.nbirillo.ast.transformations:ast-transformations") {
+    implementation("org.jetbrains.research.ml.ast.transformations:ast-transformations") {
         version {
             branch = "master"
         }
@@ -35,17 +36,10 @@ dependencies {
 
 intellij {
     type = "PC"
-    version = "2020.2.3"
+    version = "2020.3.3"
     downloadSources = false
-    setPlugins("PythonCore:202.7660.27")
-}
-
-configure<JavaPluginConvention> {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-}
-
-tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "1.8"
+    setPlugins("PythonCore")
+    updateSinceUntilBuild = true
 }
 
 ktlint {
@@ -53,6 +47,14 @@ ktlint {
 }
 
 tasks {
+    withType<JavaCompile> {
+        sourceCompatibility = "11"
+        targetCompatibility = "11"
+    }
+    withType<KotlinCompile> {
+        kotlinOptions.jvmTarget = "11"
+    }
+
     runIde {
         val input: String? by project
         val output: String? by project
@@ -70,3 +72,6 @@ tasks {
         dependsOn("runIde")
     }
 }
+
+tasks.withType<org.jetbrains.intellij.tasks.BuildSearchableOptionsTask>()
+    .forEach { it.enabled = false }

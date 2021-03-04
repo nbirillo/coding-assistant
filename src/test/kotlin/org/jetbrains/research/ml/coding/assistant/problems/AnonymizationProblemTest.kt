@@ -4,8 +4,8 @@ import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.components.service
 import com.intellij.psi.PsiFile
 import org.jetbrains.research.ml.ast.transformations.anonymization.AnonymizationTransformation
+import org.jetbrains.research.ml.ast.util.getTmpProjectDir
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreator
-import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreatorUtil
 import org.jetbrains.research.ml.coding.assistant.util.ParametrizedBaseWithSdkTest
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -44,5 +44,5 @@ class AnonymizationProblemTest : ParametrizedBaseWithSdkTest(getResourcesRootPat
         }
     }
 
-    override fun getTestDataPath(): String = PsiCreatorUtil.PROJECT_DIR
+    override fun getTestDataPath(): String = getTmpProjectDir(toCreateFolder = false)
 }

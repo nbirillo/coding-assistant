@@ -5,48 +5,34 @@ import com.intellij.openapi.components.service
 import com.intellij.openapi.projectRoots.ProjectJdkTable
 import com.intellij.openapi.projectRoots.Sdk
 import com.intellij.openapi.roots.ProjectRootManager
-import com.intellij.testFramework.TestApplicationManager
-import com.intellij.testFramework.fixtures.TempDirTestFixture
-import com.intellij.testFramework.fixtures.impl.CodeInsightTestFixtureImpl
-import com.intellij.testFramework.fixtures.impl.LightTempDirTestFixtureImpl
+import org.jetbrains.research.ml.ast.util.sdk.PythonMockSdk
+import org.jetbrains.research.ml.ast.util.sdk.SdkConfigurer
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreator
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.impl.TestPsiCreator
 import org.junit.Ignore
 
 @Ignore
 open class ParametrizedBaseWithSdkTest(testDataRoot: String) : ParametrizedBaseTest(testDataRoot) {
+    private lateinit var sdk: Sdk
 
-    /**
-     * @return fixture to be used as temporary dir.
-     */
-    protected open fun createTempDirFixture(): TempDirTestFixture {
-        return LightTempDirTestFixtureImpl(true) // "tmp://" dir by default
-    }
-
-    override fun mySetUp() {
-        TestApplicationManager.getInstance()
+    override fun setUp() {
         super.setUp()
         setupSdk()
         (project.service<PsiCreator>() as? TestPsiCreator)?.fixture = myFixture // for anonymization
     }
 
+    override fun tearDown() {
+        ApplicationManager.getApplication().runWriteAction {
+            ProjectJdkTable.getInstance().removeJdk(sdk)
+        }
+        super.tearDown()
+    }
+
     private fun setupSdk() {
         val project = myFixture.project
         val projectManager = ProjectRootManager.getInstance(project)
+        sdk = PythonMockSdk(testDataPath).create("3.8")
         val sdkConfigurer = SdkConfigurer(project, projectManager)
-        sdkConfigurer.setProjectSdk(createMockSdk())
-    }
-
-    private fun createMockSdk(): Sdk {
-        val sdk = PythonMockSdk(testDataPath).create("3.8")
-        ApplicationManager.getApplication().invokeLater {
-            ApplicationManager.getApplication().runWriteAction {
-                ProjectJdkTable.getInstance().addJdk(
-                    sdk,
-                    CodeInsightTestFixtureImpl(myFixture, myFixture.tempDirFixture).projectDisposable
-                )
-            }
-        }
-        return sdk
+        sdkConfigurer.setProjectSdk(sdk)
     }
 }

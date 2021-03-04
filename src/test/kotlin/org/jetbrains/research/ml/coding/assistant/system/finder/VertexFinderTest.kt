@@ -32,8 +32,8 @@ class VertexFinderTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(::Vert
     @Parameterized.Parameter(1)
     var outFile: String? = null
 
-    override fun mySetUp() {
-        super.mySetUp()
+    override fun setUp() {
+        super.setUp()
         (project.service<PsiCreator>() as? TestPsiCreator)?.fixture = myFixture
     }
 
