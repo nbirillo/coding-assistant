@@ -38,7 +38,7 @@ object SolutionSpaceRunner : ApplicationStarter {
         )
     }
 
-    override fun main(args: Array<out String>) {
+    override fun main(args: List<String>) {
         try {
             ArgParser(args.drop(1).toTypedArray()).parseInto(SolutionSpaceRunner::TransformationsRunnerArgs).run {
                 inputDir = Paths.get(input).toString().removeSuffix("/")
