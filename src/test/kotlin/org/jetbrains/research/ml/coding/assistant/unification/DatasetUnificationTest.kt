@@ -1,12 +1,12 @@
 package org.jetbrains.research.ml.coding.assistant.unification
 
 import com.intellij.openapi.components.service
+import org.jetbrains.research.ml.ast.util.getTmpProjectDir
 import org.jetbrains.research.ml.coding.assistant.dataset.TaskTrackerDatasetFetcher
 import org.jetbrains.research.ml.coding.assistant.dataset.model.Dataset
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpace
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.builder.SolutionSpaceGraphBuilder
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.generateImage
-import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreatorUtil
 import org.jetbrains.research.ml.coding.assistant.util.ParametrizedBaseWithSdkTest
 import org.jgrapht.Graph
 import org.junit.BeforeClass
@@ -118,7 +118,7 @@ class DatasetUnificationTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(
         }
     }
 
-    override fun getTestDataPath(): String = PsiCreatorUtil.PROJECT_DIR
+    override fun getTestDataPath(): String = getTmpProjectDir(toCreateFolder = false)
 
     companion object {
         lateinit var taskTrackerDataset: Dataset

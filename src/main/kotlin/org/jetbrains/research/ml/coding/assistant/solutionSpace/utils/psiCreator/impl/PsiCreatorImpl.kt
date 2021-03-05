@@ -7,10 +7,10 @@ import com.intellij.openapi.util.io.FileUtil
 import com.intellij.openapi.vfs.LocalFileSystem
 import com.intellij.psi.PsiFile
 import com.intellij.psi.PsiManager
+import org.jetbrains.research.ml.ast.util.createFile
+import org.jetbrains.research.ml.ast.util.getTmpProjectDir
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreator
-import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreatorUtil
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiFileWrapper
-import org.jetbrains.research.ml.coding.assistant.util.createFile
 import java.io.File
 
 /*
@@ -19,7 +19,7 @@ import java.io.File
  */
 class PsiCreatorImpl(project: Project) : PsiCreator {
     private val extension: String = ".py"
-    private val tmpDataPath: String = PsiCreatorUtil.PROJECT_DIR
+    private val tmpDataPath: String = getTmpProjectDir(toCreateFolder = false)
     private val psiManager: PsiManager = project.service()
     private var counter: Int = 0
 
