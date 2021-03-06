@@ -1,3 +1,3 @@
-def m():
-    return 3
+def m(x):
+    return 3 + x + 1
     print('hello')

@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     java
     kotlin("jvm") version "1.4.30"
+    kotlin("plugin.serialization") version "1.4.30"
     id("org.jetbrains.intellij") version "0.7.2"
     id("com.github.johnrengelman.shadow") version "5.1.0"
     id("org.jetbrains.dokka") version "0.10.1"
@@ -19,6 +20,7 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
+
     implementation("org.jetbrains.research.ml.ast.transformations:ast-transformations") {
         version {
             branch = "master"
@@ -26,6 +28,9 @@ dependencies {
     }
     implementation("org.jgrapht:jgrapht-core:1.1.0")
     implementation("org.jgrapht:jgrapht-ext:1.1.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.1.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-protobuf:1.1.0")
+
     implementation("com.github.doyaaaaaken:kotlin-csv-jvm:0.15.0") {
         exclude("org.slf4j")
     }
@@ -59,7 +64,8 @@ tasks {
         val input: String? by project
         val output: String? by project
         args = listOfNotNull(
-            "solution-space",
+//            "solution-space",
+            "hint-generate",
             input?.let { "--input_path=$it" },
             output?.let { "--output_path=$it" }
         )

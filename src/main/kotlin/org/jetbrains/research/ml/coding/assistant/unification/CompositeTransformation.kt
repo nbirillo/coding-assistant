@@ -7,7 +7,10 @@ import org.jetbrains.research.ml.ast.transformations.anonymization.Anonymization
 import org.jetbrains.research.ml.ast.transformations.augmentedAssignment.AugmentedAssignmentTransformation
 import org.jetbrains.research.ml.ast.transformations.commentsRemoval.CommentsRemovalTransformation
 import org.jetbrains.research.ml.ast.transformations.comparisonUnification.ComparisonUnificationTransformation
+import org.jetbrains.research.ml.ast.transformations.constantfolding.ConstantFoldingTransformation
 import org.jetbrains.research.ml.ast.transformations.deadcode.DeadCodeRemovalTransformation
+import org.jetbrains.research.ml.ast.transformations.expressionUnification.ExpressionUnificationTransformation
+import org.jetbrains.research.ml.ast.transformations.ifRedundantLinesRemoval.IfRedundantLinesRemovalTransformation
 import org.jetbrains.research.ml.ast.transformations.multipleOperatorComparison.MultipleOperatorComparisonTransformation
 import org.jetbrains.research.ml.ast.transformations.multipleTargetAssignment.MultipleTargetAssignmentTransformation
 import org.jetbrains.research.ml.ast.transformations.outerNotElimination.OuterNotEliminationTransformation
@@ -22,10 +25,11 @@ object CompositeTransformation : Transformation() {
         AnonymizationTransformation,
         AugmentedAssignmentTransformation,
         DeadCodeRemovalTransformation,
-//        ConstantFoldingTransformation,
+        ConstantFoldingTransformation,
         MultipleOperatorComparisonTransformation,
         MultipleTargetAssignmentTransformation,
-//        IfRedundantLinesRemovalTransformation,
+        IfRedundantLinesRemovalTransformation,
+        ExpressionUnificationTransformation,
         ComparisonUnificationTransformation,
         OuterNotEliminationTransformation
     )
@@ -40,11 +44,7 @@ object CompositeTransformation : Transformation() {
             try {
                 transformations.forEach {
                     LOG.info { "Transformation Started: ${it.key}" }
-                    try {
-                        it.forwardApply(psiTree, commandsStorage)
-                    } catch (e: Throwable) {
-                        throw e
-                    }
+                    it.forwardApply(psiTree, commandsStorage)
                     LOG.info { "Transformation Ended: ${it.key}" }
                 }
             } catch (e: Throwable) {

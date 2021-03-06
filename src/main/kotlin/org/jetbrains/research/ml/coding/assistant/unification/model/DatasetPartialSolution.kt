@@ -19,9 +19,8 @@ data class DatasetPartialSolution(
 
         other as DatasetPartialSolution
 
-        var isEquals = false
-        ApplicationManager.getApplication().invokeAndWait {
-            isEquals = psiFragment.textMatches(other.psiFragment)
+        val isEquals = ApplicationManager.getApplication().runReadAction<Boolean> {
+            psiFragment.textMatches(other.psiFragment)
         }
         if (!isEquals) return false
 

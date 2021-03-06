@@ -11,8 +11,7 @@ typealias DynamicIntermediateSolutionVertexChain = List<SolutionSpaceGraphVertex
 internal typealias SolutionSpaceGraph = SimpleDirectedWeightedGraph<SolutionSpaceGraphVertex, SolutionSpaceGraphEdge>
 
 class SolutionSpaceGraphBuilder {
-    internal val cache = TreeContextCache()
-    internal val graph = SolutionSpaceGraph(SolutionSpaceGraphEdgeFactory(cache))
+    internal val graph = SolutionSpaceGraph(SolutionSpaceGraphEdge::class.java)
 
     fun addDynamicSolution(dynamic: DynamicIntermediateSolution) {
         val chain = dynamic.map { SolutionSpaceGraphVertex(it) }
@@ -23,12 +22,9 @@ class SolutionSpaceGraphBuilder {
             if (sourceVertex == targetVertex) {
                 continue
             }
-            val edge = if (graph.containsEdge(sourceVertex, targetVertex)) {
-                graph.getEdge(sourceVertex, targetVertex)
-            } else {
+            if (!graph.containsEdge(sourceVertex, targetVertex)) {
                 graph.addEdge(sourceVertex, targetVertex)
             }
-            graph.setEdgeWeight(edge, edge.calculatedWeight)
         }
     }
 
@@ -37,6 +33,8 @@ class SolutionSpaceGraphBuilder {
         for (simpleCycle in simpleCyclesDetector.findSimpleCycles()) {
             graph.removeVertexList(simpleCycle)
         }
+
+        // remove non-final singleton vertices
         graph.vertexSet()
             .filter {
                 graph.edgesOf(it).isEmpty() && !it.representativeSolution.metaInfo.isFinalSolution

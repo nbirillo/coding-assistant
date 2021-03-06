@@ -25,7 +25,7 @@ class PsiCreatorImpl(project: Project) : PsiCreator {
 
     // TODO: should we rename it?
     inner class PsiFileWrapperImpl(private val file: File, val psi: PsiFile) : PsiFile by psi, PsiFileWrapper {
-        constructor(file: File) : this(file, createPsi(file))
+        private constructor(file: File) : this(file, createPsi(file))
         constructor(code: String) : this(createFile("$tmpDataPath/tmp_${counter++}$extension", code))
 
         override fun deleteFile() {

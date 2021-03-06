@@ -13,6 +13,7 @@
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
         <appStarter implementation="org.jetbrains.research.ml.coding.assistant.runner.SolutionSpaceRunner"/>
+        <appStarter implementation="org.jetbrains.research.ml.coding.assistant.runner.HintGenerateRunner"/>
         <projectService
                 serviceInterface="org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreator"
                 serviceImplementation="org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.impl.PsiCreatorImpl"

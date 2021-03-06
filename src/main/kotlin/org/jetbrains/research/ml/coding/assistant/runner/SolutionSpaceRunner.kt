@@ -5,18 +5,24 @@ import com.intellij.openapi.application.ApplicationStarter
 import com.intellij.openapi.components.service
 import com.intellij.openapi.diagnostic.Logger
 import com.xenomachina.argparser.ArgParser
+import kotlinx.serialization.encodeToString
+import kotlinx.serialization.json.Json
 import org.jetbrains.research.ml.ast.util.getTmpProjectDir
 import org.jetbrains.research.ml.ast.util.sdk.setSdkToProject
 import org.jetbrains.research.ml.coding.assistant.dataset.TaskTrackerDatasetFetcher
+import org.jetbrains.research.ml.coding.assistant.report.CodeRepository
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.builder.SolutionSpaceGraphBuilder
+import org.jetbrains.research.ml.coding.assistant.solutionSpace.serialization.SolutionSpaceSerializer
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.generateImage
 import org.jetbrains.research.ml.coding.assistant.unification.DatasetUnification
+import org.jetbrains.research.ml.coding.assistant.unification.model.DatasetPartialSolution
 import java.io.File
 import java.nio.file.Paths
 import javax.imageio.ImageIO
 import kotlin.system.exitProcess
 
 object SolutionSpaceRunner : ApplicationStarter {
+    private val json = Json { prettyPrint = true }
     private lateinit var inputDir: String
     private lateinit var outputDir: String
 
@@ -48,25 +54,48 @@ object SolutionSpaceRunner : ApplicationStarter {
             val project = ProjectUtil.openOrImport(getTmpProjectDir(), null, true)
             project?.let { p ->
                 setSdkToProject(p, getTmpProjectDir(toCreateFolder = false))
-                val taskSolutions = TaskTrackerDatasetFetcher.fetchTaskSolutions(File(inputDir))
-                println(taskSolutions.dynamicSolutions.size)
+                val outputDirFile = File(outputDir).apply { mkdirs() }
+                val inputDirFile = File(inputDir)
+                val taskSolutions = TaskTrackerDatasetFetcher.fetchTaskSolutions(inputDirFile)
                 val datasetUnification = p.service<DatasetUnification>()
 
                 val solutionSpaceBuilder = SolutionSpaceGraphBuilder()
-                taskSolutions.dynamicSolutions
+                val unifiedSolutions = taskSolutions.dynamicSolutions
                     .map { datasetUnification.transform(it) }
+
+                unifiedSolutions
                     .forEach { solutionSpaceBuilder.addDynamicSolution(it) }
                 val solutionSpace = solutionSpaceBuilder.build()
 
-                val outputFile =
-                    File(outputDir).resolve("${taskSolutions.taskName}_graph_runner0.png").apply { createNewFile() }
+
+                // dump debug info for report
+                dumpCodeMap(outputDirFile, taskSolutions.taskName, unifiedSolutions.flatten())
+
+                // dump solution space
+                val solutionSpaceFile = outputDirFile.resolve("${taskSolutions.taskName}_solution_space.json")
+                    .apply { createNewFile() }
+                val encodedSolutionSpace = json
+                    .encodeToString(SolutionSpaceSerializer, solutionSpace)
+                solutionSpaceFile.writeText(encodedSolutionSpace)
+
+                // dump solution space graph image
+                val imageFile = outputDirFile
+                    .resolve("${taskSolutions.taskName}_graph.png")
+                    .apply { createNewFile() }
                 val image = solutionSpace.generateImage()
-                ImageIO.write(image, "PNG", outputFile)
+                ImageIO.write(image, "PNG", imageFile)
             } ?: error("Internal error: the temp project was not created")
         } catch (ex: Exception) {
             logger.error(ex)
         } finally {
             exitProcess(0)
         }
+    }
+
+    private fun dumpCodeMap(dirFile: File, taskName: String, unifiedSolutions: List<DatasetPartialSolution>) {
+        val file = dirFile.resolve(CodeRepository.filename(taskName)).apply { createNewFile() }
+        val content = unifiedSolutions.map { it.id to it.psiFragment.text }.toMap()
+        val jsonString = json.encodeToString(content)
+        file.writeText(jsonString)
     }
 }

@@ -6,8 +6,8 @@ import com.intellij.psi.PsiFile
 import org.jetbrains.research.ml.ast.gumtree.tree.PostOrderNumbering
 import org.jetbrains.research.ml.coding.assistant.dataset.TaskTrackerDatasetFetcher
 import org.jetbrains.research.ml.coding.assistant.dataset.model.MetaInfo
+import org.jetbrains.research.ml.coding.assistant.solutionSpace.Util
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.builder.SolutionSpaceGraphBuilder
-import org.jetbrains.research.ml.coding.assistant.solutionSpace.builder.Util
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreator
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.impl.TestPsiCreator
 import org.jetbrains.research.ml.coding.assistant.system.PartialSolution
@@ -24,24 +24,10 @@ import java.io.File
 @Ignore
 @RunWith(Parameterized::class)
 class VertexFinderTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(::VertexFinderTest)) {
-    @JvmField
-    @Parameterized.Parameter(0)
-    var inFile: String? = null
-
-    @JvmField
-    @Parameterized.Parameter(1)
-    var outFile: String? = null
-
-    override fun setUp() {
-        super.setUp()
-        (project.service<PsiCreator>() as? TestPsiCreator)?.fixture = myFixture
-    }
-
     @Test
     fun testBasic() {
         val inputDir = "/Users/artembobrov/Documents/masters/ast-transform/python/max_digit"
         val taskSolutions = TaskTrackerDatasetFetcher.fetchTaskSolutions(File(inputDir))
-        println(taskSolutions.dynamicSolutions.size)
         val datasetUnification = project.service<DatasetUnification>()
 
         val solutionSpaceBuilder = SolutionSpaceGraphBuilder()
@@ -58,7 +44,6 @@ class VertexFinderTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(::Vert
                     x = input()
                 """.trimIndent()
             ),
-            PostOrderNumbering
         )
         val partialSolution = PartialSolution(
             context,

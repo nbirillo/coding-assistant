@@ -1,5 +1,7 @@
 package org.jetbrains.research.ml.coding.assistant.dataset.model
 
+import kotlinx.serialization.Serializable
+
 typealias Record = Map<String, String>
 
 data class DatasetRecord(
@@ -15,6 +17,7 @@ data class DatasetRecord(
     )
 }
 
+@Serializable
 data class MetaInfo(
     val age: Float?,
     val programExperience: ProgramExperience?,
