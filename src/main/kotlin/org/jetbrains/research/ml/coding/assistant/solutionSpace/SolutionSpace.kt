@@ -62,8 +62,9 @@ private fun transferGraph(
                 } else {
                     graph.addEdge(newTarget, newVertex)
                 }
-                if (newEdge == null)
+                if (newEdge == null) {
                     continue
+                }
                 val calculatedWeight = weightCalculator.getWeight(newEdge)
                 graph.setEdgeWeight(newEdge, calculatedWeight)
             }
@@ -115,4 +116,3 @@ object Util {
         }
     }
 }
-

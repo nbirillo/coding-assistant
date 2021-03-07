@@ -68,12 +68,13 @@ object SolutionSpaceRunner : ApplicationStarter {
                     .forEach { solutionSpaceBuilder.addDynamicSolution(it) }
                 val solutionSpace = solutionSpaceBuilder.build()
 
-
                 // dump debug info for report
-                dumpCodeMap(outputDirFile, taskSolutions.taskName, unifiedSolutions.flatten())
+                dumpCodeMap(outputDirFile, taskSolutions.datasetTask, unifiedSolutions.flatten())
 
                 // dump solution space
-                val solutionSpaceFile = outputDirFile.resolve("${taskSolutions.taskName}_solution_space.json")
+                val solutionSpaceFile = outputDirFile.resolve(
+                    "${taskSolutions.datasetTask.taskName}_solution_space.json"
+                )
                     .apply { createNewFile() }
                 val encodedSolutionSpace = json
                     .encodeToString(SolutionSpaceSerializer, solutionSpace)
@@ -81,7 +82,7 @@ object SolutionSpaceRunner : ApplicationStarter {
 
                 // dump solution space graph image
                 val imageFile = outputDirFile
-                    .resolve("${taskSolutions.taskName}_graph.png")
+                    .resolve("${taskSolutions.datasetTask.taskName}_graph.png")
                     .apply { createNewFile() }
                 val image = solutionSpace.generateImage()
                 ImageIO.write(image, "PNG", imageFile)

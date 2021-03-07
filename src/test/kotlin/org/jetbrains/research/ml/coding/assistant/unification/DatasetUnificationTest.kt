@@ -45,7 +45,7 @@ class DatasetUnificationTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(
                 }
 
             val graph = builder.build()
-            val imgFile = File("${taskSolutions.taskName}_graph.png").apply { createNewFile() }
+            val imgFile = File("${taskSolutions.datasetTask.taskName}_graph.png").apply { createNewFile() }
             val image = graph.generateImage()
             ImageIO.write(image, "PNG", imgFile)
         }
@@ -67,7 +67,7 @@ class DatasetUnificationTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(
 
         val solutionSpace = solutionSpaceBuilder.build()
 
-        val imgFile = File("${taskSolutions.taskName}_graph_runner.png").apply { createNewFile() }
+        val imgFile = File("${taskSolutions.datasetTask.taskName}_graph_runner.png").apply { createNewFile() }
         val image = solutionSpace.generateImage()
         ImageIO.write(image, "PNG", imgFile)
     }
@@ -107,7 +107,7 @@ class DatasetUnificationTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(
                 space = builder.build()
             }
 
-            val textFile = File("${taskSolutions.taskName}_time.text").apply { createNewFile() }
+            val textFile = File("${taskSolutions.datasetTask.taskName}_time.text").apply { createNewFile() }
             val text = buildString {
                 appendLine("Time: $time")
                 appendLine(getInfo(builder.graph))

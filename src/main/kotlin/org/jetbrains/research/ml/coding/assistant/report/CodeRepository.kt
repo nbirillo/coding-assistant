@@ -5,7 +5,6 @@ import kotlinx.serialization.json.Json
 import org.jetbrains.research.ml.coding.assistant.dataset.model.DatasetTask
 import java.io.File
 
-
 interface CodeRepository {
     fun getCode(id: String): String
 

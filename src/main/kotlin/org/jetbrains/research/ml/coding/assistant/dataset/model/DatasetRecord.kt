@@ -45,8 +45,9 @@ data class MetaInfo(
 
 private fun String?.toFloatOrNullWithDefault(default: Float): Float? {
     val value = this?.toFloatOrNull()
-    if (value == default)
+    if (value == default) {
         return null
+    }
     return value
 }
 

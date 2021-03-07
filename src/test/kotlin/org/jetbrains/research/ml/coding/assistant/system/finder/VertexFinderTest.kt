@@ -3,14 +3,12 @@ package org.jetbrains.research.ml.coding.assistant.system.finder
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.components.service
 import com.intellij.psi.PsiFile
-import org.jetbrains.research.ml.ast.gumtree.tree.PostOrderNumbering
 import org.jetbrains.research.ml.coding.assistant.dataset.TaskTrackerDatasetFetcher
 import org.jetbrains.research.ml.coding.assistant.dataset.model.DatasetTask
 import org.jetbrains.research.ml.coding.assistant.dataset.model.MetaInfo
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.Util
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.builder.SolutionSpaceGraphBuilder
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreator
-import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.impl.TestPsiCreator
 import org.jetbrains.research.ml.coding.assistant.system.PartialSolution
 import org.jetbrains.research.ml.coding.assistant.system.matcher.EditPartialSolutionMatcher
 import org.jetbrains.research.ml.coding.assistant.unification.CompositeTransformation

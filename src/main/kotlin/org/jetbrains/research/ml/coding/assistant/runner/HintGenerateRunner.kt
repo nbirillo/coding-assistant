@@ -77,7 +77,7 @@ print(max(input()))
                 val closestVertex = finder.findCorrespondingVertex(solutionSpace, partialSolution)
 
                 val reportGenerator = MarkdownHintReportGenerator(codeRepository)
-                val reportFile = inputDirFile.resolve("${datasetTask}_report.md").apply { createNewFile() }
+                val reportFile = inputDirFile.resolve("${datasetTask.taskName}_report.md").apply { createNewFile() }
 
                 val nextVertex = solutionSpace.graph
                     .outgoingEdgesOf(closestVertex)
@@ -87,8 +87,6 @@ print(max(input()))
                     reportFile,
                     HintReport(datasetTask, "ParallelVertexFinder", code, solutionSpace, closestVertex!!, nextVertex)
                 )
-                println(solutionSpace.graph.vertexSet().size)
-                println(solutionSpace.graph.edgeSet().size)
             } ?: error("Internal error: the temp project was not created")
         } catch (ex: Exception) {
             logger.error(ex)
@@ -96,7 +94,6 @@ print(max(input()))
             exitProcess(0)
         }
     }
-
 
     private fun createCodeRepository(dirFile: File, task: DatasetTask): CodeRepository {
         return CodeRepositoryImpl(dirFile.resolve(CodeRepository.filename(task)))

@@ -1,5 +1,3 @@
-// ktlint-disable filename
-
 package org.jetbrains.research.ml.coding.assistant.unification.model
 
 import com.intellij.openapi.application.ApplicationManager

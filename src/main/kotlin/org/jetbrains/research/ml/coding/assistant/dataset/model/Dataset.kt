@@ -7,7 +7,7 @@ data class DynamicSolution(
 }
 
 data class TaskSolutions(
-    val taskName: DatasetTask,
+    val datasetTask: DatasetTask,
     val dynamicSolutions: List<DynamicSolution>
 )
 

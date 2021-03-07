@@ -35,7 +35,6 @@ data class StudentInfo(
     val metaInfo: MetaInfo
 )
 
-
 object SolutionSpaceEdgeFactory : EdgeFactory<SolutionSpaceVertex, SolutionSpaceEdge> {
     override fun createEdge(sourceVertex: SolutionSpaceVertex, targetVertex: SolutionSpaceVertex): SolutionSpaceEdge {
         val matcher = Matcher(sourceVertex.fragment, targetVertex.fragment)

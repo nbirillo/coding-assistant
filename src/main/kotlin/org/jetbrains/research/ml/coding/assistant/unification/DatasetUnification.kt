@@ -36,7 +36,7 @@ class DatasetUnificationImpl(private val project: Project) : DatasetUnification 
         return datasetRecords
             .map {
                 val counterValue = counter.incrementAndGet()
-                logger.info { "Start unify $counterValue/${datasetRecords.size}" }
+                logger.info { "Start unify(id=${it.id}) $counterValue/${datasetRecords.size}" }
                 unifyRecord(it)
             }
             .toList()

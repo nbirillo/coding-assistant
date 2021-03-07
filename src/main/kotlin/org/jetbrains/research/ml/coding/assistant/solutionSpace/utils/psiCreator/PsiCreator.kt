@@ -17,7 +17,6 @@ interface PsiFileWrapper : PsiFile {
     fun forceDeleteTmpData(): Boolean
 }
 
-
 interface PsiCreator {
     fun initFileToPsi(code: String): PsiFileWrapper
 }

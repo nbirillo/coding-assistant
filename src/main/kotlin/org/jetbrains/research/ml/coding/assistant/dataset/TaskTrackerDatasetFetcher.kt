@@ -21,7 +21,7 @@ object TaskTrackerDatasetFetcher : DatasetFetcher {
             .map(this::fetchDynamicSolution)
             .filter { it.hasFinalSolution() }
         return TaskSolutions(
-            taskName = DatasetTask.createFromString(file.name),
+            datasetTask = DatasetTask.createFromString(file.name),
             solutions?.toList() ?: listOf()
         )
     }
