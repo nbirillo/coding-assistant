@@ -15,11 +15,11 @@ class CustomEdgeWeightCalculator(
 ) :
     EdgeWeightCalculator<SolutionSpaceVertex, SolutionSpaceEdge>(graph) {
     override fun getWeight(edge: SolutionSpaceEdge): Double {
+        // TODO: think about more features.
         val targetVertex = graph.getEdgeTarget(edge)
         val sourceVertex = graph.getEdgeSource(edge)
         val sourceTestScore = sourceVertex.studentInfo.metaInfo.testsResults
         val targetTestScore = targetVertex.studentInfo.metaInfo.testsResults
-        // TODO: wip
         if (targetTestScore < sourceTestScore) {
             return Double.POSITIVE_INFINITY
         }

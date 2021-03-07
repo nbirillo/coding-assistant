@@ -10,6 +10,7 @@ import kotlinx.serialization.json.Json
 import org.jetbrains.research.ml.ast.util.getTmpProjectDir
 import org.jetbrains.research.ml.ast.util.sdk.setSdkToProject
 import org.jetbrains.research.ml.coding.assistant.dataset.TaskTrackerDatasetFetcher
+import org.jetbrains.research.ml.coding.assistant.dataset.model.DatasetTask
 import org.jetbrains.research.ml.coding.assistant.report.CodeRepository
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.builder.SolutionSpaceGraphBuilder
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.serialization.SolutionSpaceSerializer
@@ -92,7 +93,7 @@ object SolutionSpaceRunner : ApplicationStarter {
         }
     }
 
-    private fun dumpCodeMap(dirFile: File, taskName: String, unifiedSolutions: List<DatasetPartialSolution>) {
+    private fun dumpCodeMap(dirFile: File, taskName: DatasetTask, unifiedSolutions: List<DatasetPartialSolution>) {
         val file = dirFile.resolve(CodeRepository.filename(taskName)).apply { createNewFile() }
         val content = unifiedSolutions.map { it.id to it.psiFragment.text }.toMap()
         val jsonString = json.encodeToString(content)

@@ -28,12 +28,14 @@ class SolutionSpaceGraphBuilder {
         }
     }
 
-    private fun clearCycles() {
+    private fun removeSimpleCycles() {
         val simpleCyclesDetector = SzwarcfiterLauerSimpleCycles(graph)
         for (simpleCycle in simpleCyclesDetector.findSimpleCycles()) {
             graph.removeVertexList(simpleCycle)
         }
+    }
 
+    private fun removeSingletonVertices() {
         // remove non-final singleton vertices
         graph.vertexSet()
             .filter {
@@ -42,7 +44,7 @@ class SolutionSpaceGraphBuilder {
             .forEach(graph::removeVertex)
     }
 
-    private fun clearPsiFiles() {
+    private fun deletePsiFiles() {
         val psiFiles = graph.vertexSet()
             .flatMap { vertex -> vertex.partialSolutions.map { it.psiFragment } }
         psiFiles
@@ -51,9 +53,10 @@ class SolutionSpaceGraphBuilder {
     }
 
     fun build(): SolutionSpace {
-        clearCycles()
+        removeSimpleCycles()
+        removeSingletonVertices()
         val solutionSpace = SolutionSpace(this)
-        clearPsiFiles()
+        deletePsiFiles()
         return solutionSpace
     }
 }

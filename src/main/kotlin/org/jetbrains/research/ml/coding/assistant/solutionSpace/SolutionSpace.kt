@@ -16,6 +16,14 @@ import org.jgrapht.Graph
 import org.jgrapht.graph.AsUnmodifiableGraph
 import org.jgrapht.graph.SimpleDirectedWeightedGraph
 
+/**
+ * Solution space structure.
+ * This structure designed to be immutable.
+ * Vertices are identifiable with student's code and meta information.
+ * Edges store list of edits to transform source vertex code into target vertex code.
+ * EdgeWeightCalculatorFactory is a factory to calculate edge's weight base on its stored information.
+ * @property graph inner solution space's graph
+ */
 class SolutionSpace(val graph: Graph<SolutionSpaceVertex, SolutionSpaceEdge>) {
     internal constructor(graphBuilder: SolutionSpaceGraphBuilder) : this(
         transferGraph({ CustomEdgeWeightCalculator(it) }, graphBuilder)
@@ -37,9 +45,10 @@ private fun transferGraph(
     val newVertices = oldVertices.map { it.toSolutionSpaceVertex() }
     graph.addVertices(newVertices)
 
-    val mapping = (oldVertices zip newVertices).toMap()
+    val zippedVertices = oldVertices zip newVertices
+    val mapping = zippedVertices.toMap()
 
-    for ((oldVertex, newVertex) in oldVertices zip newVertices) {
+    for ((oldVertex, newVertex) in zippedVertices) {
         fun transferEdges(edges: Iterable<SolutionSpaceGraphEdge>, isOutgoing: Boolean) {
             for (outgoingEdge in edges) {
                 val neighbour = if (isOutgoing) {

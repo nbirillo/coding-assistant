@@ -7,10 +7,22 @@ data class DynamicSolution(
 }
 
 data class TaskSolutions(
-    val taskName: String,
+    val taskName: DatasetTask,
     val dynamicSolutions: List<DynamicSolution>
 )
 
 data class Dataset(
     val tasks: List<TaskSolutions>
 )
+
+enum class DatasetTask {
+    MAX_DIGIT, BRACKETS, MAX_3, PIES, VOTING, ZERO;
+
+    val taskName: String get() = name.toLowerCase()
+
+    companion object {
+        fun createFromString(string: String): DatasetTask {
+            return valueOf(string.toUpperCase())
+        }
+    }
+}

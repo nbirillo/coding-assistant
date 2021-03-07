@@ -8,6 +8,7 @@ import com.xenomachina.argparser.ArgParser
 import kotlinx.serialization.json.Json
 import org.jetbrains.research.ml.ast.util.getTmpProjectDir
 import org.jetbrains.research.ml.ast.util.sdk.setSdkToProject
+import org.jetbrains.research.ml.coding.assistant.dataset.model.DatasetTask
 import org.jetbrains.research.ml.coding.assistant.dataset.model.MetaInfo
 import org.jetbrains.research.ml.coding.assistant.report.CodeRepository
 import org.jetbrains.research.ml.coding.assistant.report.CodeRepositoryImpl
@@ -26,7 +27,7 @@ import kotlin.time.ExperimentalTime
 
 object HintGenerateRunner : ApplicationStarter {
     private lateinit var inputDir: String
-    private lateinit var taskName: String
+    private lateinit var datasetTask: DatasetTask
 
     private val logger = Logger.getInstance(this::class.java)
 
@@ -51,16 +52,16 @@ object HintGenerateRunner : ApplicationStarter {
         try {
             ArgParser(args.drop(1).toTypedArray()).parseInto(::TransformationsRunnerArgs).run {
                 inputDir = Paths.get(output).toString().removeSuffix("/")
-                this@HintGenerateRunner.taskName = this.taskName
+                this@HintGenerateRunner.datasetTask = DatasetTask.createFromString(this.taskName)
             }
 
             val project = ProjectUtil.openOrImport(getTmpProjectDir(), null, true)
             project?.let { p ->
                 setSdkToProject(p, getTmpProjectDir(toCreateFolder = false))
                 val inputDirFile = File(inputDir)
-                val solutionSpaceFile = inputDirFile.resolve("${taskName}_solution_space.json")
+                val solutionSpaceFile = inputDirFile.resolve("${datasetTask}_solution_space.json")
 
-                val codeRepository = createCodeRepository(inputDirFile, taskName)
+                val codeRepository = createCodeRepository(inputDirFile, datasetTask)
                 val solutionSpace = Json.decodeFromString(SolutionSpaceSerializer, solutionSpaceFile.readText())
 
                 val finder = ParallelVertexFinder(EditPartialSolutionMatcher)
@@ -71,19 +72,20 @@ print(max(input()))
                 val file = psiCreator.initFileToPsi(code)
                 val partialSolution = PartialSolution(
                     Util.getTreeContext(file),
-                    MetaInfo(123.0f, null, 0.32, taskName)
+                    MetaInfo(123.0f, null, 0.32, datasetTask)
                 )
                 val closestVertex = finder.findCorrespondingVertex(solutionSpace, partialSolution)
 
                 val reportGenerator = MarkdownHintReportGenerator(codeRepository)
-                val reportFile = inputDirFile.resolve("${taskName}_report.md").apply { createNewFile() }
+                val reportFile = inputDirFile.resolve("${datasetTask}_report.md").apply { createNewFile() }
 
-//                val nextVertex = solutionSpace.graph.getEdgeTarget(
-//                    solutionSpace.graph.outgoingEdgesOf(closestVertex).first()
-//                ) // TODO:
+                val nextVertex = solutionSpace.graph
+                    .outgoingEdgesOf(closestVertex)
+                    .firstOrNull()
+                    ?.let(solutionSpace.graph::getEdgeTarget)
                 reportGenerator.generate(
                     reportFile,
-                    HintReport(taskName, "ParallelVertexFinder", code, solutionSpace, closestVertex!!, closestVertex)
+                    HintReport(datasetTask, "ParallelVertexFinder", code, solutionSpace, closestVertex!!, nextVertex)
                 )
                 println(solutionSpace.graph.vertexSet().size)
                 println(solutionSpace.graph.edgeSet().size)
@@ -96,7 +98,7 @@ print(max(input()))
     }
 
 
-    private fun createCodeRepository(dirFile: File, taskName: String): CodeRepository {
-        return CodeRepositoryImpl(dirFile.resolve(CodeRepository.filename(taskName)))
+    private fun createCodeRepository(dirFile: File, task: DatasetTask): CodeRepository {
+        return CodeRepositoryImpl(dirFile.resolve(CodeRepository.filename(task)))
     }
 }

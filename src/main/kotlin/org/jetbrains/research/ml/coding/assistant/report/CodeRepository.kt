@@ -1,8 +1,8 @@
 package org.jetbrains.research.ml.coding.assistant.report
 
 import kotlinx.serialization.decodeFromString
-import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
+import org.jetbrains.research.ml.coding.assistant.dataset.model.DatasetTask
 import java.io.File
 
 
@@ -10,7 +10,7 @@ interface CodeRepository {
     fun getCode(id: String): String
 
     companion object {
-        fun filename(taskName: String): String = "${taskName}_code_repo.json"
+        fun filename(datasetTask: DatasetTask): String = "${datasetTask.taskName}_code_repo.json"
     }
 }
 

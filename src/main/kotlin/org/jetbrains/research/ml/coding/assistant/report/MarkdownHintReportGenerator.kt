@@ -22,7 +22,7 @@ ${fetchCode(report.closestVertex)}
 ### Hint node's code 
 
 ```python
-${fetchCode(report.nextNode)}
+${report.nextNode?.let(this::fetchCode) ?: "No Hint Code"}
 ```
 """.trimIndent()
         intoFile.appendText(text)

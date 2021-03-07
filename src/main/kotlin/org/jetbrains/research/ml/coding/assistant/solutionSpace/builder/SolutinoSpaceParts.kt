@@ -5,6 +5,8 @@ import com.intellij.psi.PsiElement
 import com.jetbrains.python.psi.PyRecursiveElementVisitor
 import org.jetbrains.research.ml.coding.assistant.unification.model.DatasetPartialSolution
 
+typealias SolutionSpaceGraphEdge = WeightedEdge
+
 data class SolutionSpaceGraphVertex(
     val psiNodesCount: Int,
     val partialSolutions: List<DatasetPartialSolution>,

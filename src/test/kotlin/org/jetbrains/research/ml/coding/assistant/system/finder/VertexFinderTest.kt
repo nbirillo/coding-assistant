@@ -5,6 +5,7 @@ import com.intellij.openapi.components.service
 import com.intellij.psi.PsiFile
 import org.jetbrains.research.ml.ast.gumtree.tree.PostOrderNumbering
 import org.jetbrains.research.ml.coding.assistant.dataset.TaskTrackerDatasetFetcher
+import org.jetbrains.research.ml.coding.assistant.dataset.model.DatasetTask
 import org.jetbrains.research.ml.coding.assistant.dataset.model.MetaInfo
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.Util
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.builder.SolutionSpaceGraphBuilder
@@ -47,7 +48,7 @@ class VertexFinderTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(::Vert
         )
         val partialSolution = PartialSolution(
             context,
-            MetaInfo(10.0f, null, 0.1, "test")
+            MetaInfo(10.0f, null, 0.1, DatasetTask.BRACKETS)
         )
         val vertex = finder.findCorrespondingVertex(solutionSpace, partialSolution)
         print(vertex)

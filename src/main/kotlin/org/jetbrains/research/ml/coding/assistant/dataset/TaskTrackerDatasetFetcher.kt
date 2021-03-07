@@ -1,35 +1,33 @@
 package org.jetbrains.research.ml.coding.assistant.dataset
 
 import com.github.doyaaaaaken.kotlincsv.dsl.csvReader
-import org.jetbrains.research.ml.coding.assistant.dataset.model.Dataset
-import org.jetbrains.research.ml.coding.assistant.dataset.model.DatasetRecord
-import org.jetbrains.research.ml.coding.assistant.dataset.model.DynamicSolution
-import org.jetbrains.research.ml.coding.assistant.dataset.model.TaskSolutions
+import org.jetbrains.research.ml.coding.assistant.dataset.model.*
+import org.jetbrains.research.ml.coding.assistant.utils.getListFiles
 import java.io.File
 import kotlin.streams.toList
 
 object TaskTrackerDatasetFetcher : DatasetFetcher {
     override fun fetchDataset(file: File): Dataset {
-        require(file.isDirectory)
-        val taskDirectories: List<File> = file.listFiles()?.toList() ?: listOf()
-        val taskSolutions = taskDirectories.parallelStream()
+        require(file.isDirectory) { "Argument has to be directory with tasks" }
+        val taskSolutions = file.getListFiles().parallelStream()
             .filter { it.isDirectory }
             .map(this::fetchTaskSolutions).toList()
         return Dataset(taskSolutions)
     }
 
     fun fetchTaskSolutions(file: File): TaskSolutions {
-        val solutions = file.listFiles()?.asList()?.parallelStream()
-            ?.map(this::fetchDynamicSolution)
-            ?.filter { it.hasFinalSolution() }
+        require(file.isDirectory) { "Argument has to be directory with solution files" }
+        val solutions = file.getListFiles().parallelStream()
+            .map(this::fetchDynamicSolution)
+            .filter { it.hasFinalSolution() }
         return TaskSolutions(
-            taskName = file.name,
+            taskName = DatasetTask.createFromString(file.name),
             solutions?.toList() ?: listOf()
         )
     }
 
     private fun fetchDynamicSolution(file: File): DynamicSolution {
-        require(file.isFile)
+        require(file.isFile && file.extension == "csv") { "The file has to be csv" }
         val records = csvReader().readAllWithHeader(file).map { DatasetRecord(it) }
         return DynamicSolution(records).run {
             copy(records = records.dropLastWhile { !it.metaInfo.isFinalSolution })

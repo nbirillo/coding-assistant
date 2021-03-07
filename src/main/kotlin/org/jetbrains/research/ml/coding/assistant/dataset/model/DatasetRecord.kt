@@ -22,13 +22,13 @@ data class MetaInfo(
     val age: Float?,
     val programExperience: ProgramExperience?,
     val testsResults: Double,
-    val task: String
+    val task: DatasetTask
 ) {
     internal constructor(record: Record) : this(
-        age = record[Keys.AGE]?.toFloatOrNull(),
+        age = record[Keys.AGE]?.toFloatOrNullWithDefault(-1.0f),
         programExperience = record[Keys.PROGRAM_EXPERIENCE].toProgramExperience(),
         testsResults = record[Keys.TESTS_RESULTS]!!.toDouble(),
-        task = record[Keys.TASK]!!
+        task = DatasetTask.createFromString(record[Keys.TASK]!!)
     )
 
     val isFinalSolution: Boolean get() = testsResults == 1.0
@@ -41,6 +41,13 @@ data class MetaInfo(
         FROM_FOUR_TO_SIX_YEARS,
         MORE_THAN_SIX
     }
+}
+
+private fun String?.toFloatOrNullWithDefault(default: Float): Float? {
+    val value = this?.toFloatOrNull()
+    if (value == default)
+        return null
+    return value
 }
 
 private fun String?.toProgramExperience(): MetaInfo.ProgramExperience? =

@@ -19,12 +19,9 @@ data class DatasetPartialSolution(
 
         other as DatasetPartialSolution
 
-        val isEquals = ApplicationManager.getApplication().runReadAction<Boolean> {
+        return ApplicationManager.getApplication().runReadAction<Boolean> {
             psiFragment.textMatches(other.psiFragment)
         }
-        if (!isEquals) return false
-
-        return true
     }
 
     override fun hashCode(): Int {

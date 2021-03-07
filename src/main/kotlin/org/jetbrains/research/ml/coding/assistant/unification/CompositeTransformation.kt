@@ -54,7 +54,7 @@ object CompositeTransformation : Transformation() {
                         |Current Code=${psiTree.text}
                         |""".trimMargin()
                 }
-                break
+                throw e
             }
 
             LOG.info { "Previous text[$iterationNumber]:\n${previousTree.text}\n" }
