@@ -31,7 +31,7 @@ object HintGenerateRunner : ApplicationStarter {
 
     private val logger = Logger.getInstance(this::class.java)
 
-    override fun getCommandName(): String = "hint-generate"
+    override fun getCommandName(): String = "hint-generation"
 
     class TransformationsRunnerArgs(parser: ArgParser) {
         val taskName by parser.storing(

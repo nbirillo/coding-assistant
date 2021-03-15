@@ -51,6 +51,36 @@ ktlint {
     enableExperimentalRules.set(true)
 }
 
+open class SolutionSpaceCliTask : org.jetbrains.intellij.tasks.RunIdeTask() {
+    // Input directory with csv files
+    @get:Input
+    val input: String? by project
+    // Output directory
+    @get:Input
+    val output: String? by project
+
+    init {
+        jvmArgs = listOf("-Djava.awt.headless=true", "--add-exports", "java.base/jdk.internal.vm=ALL-UNNAMED")
+        standardInput = System.`in`
+        standardOutput = System.`out`
+    }
+}
+
+open class HintGenerationCliTask : org.jetbrains.intellij.tasks.RunIdeTask() {
+    // Path to the serialized solution space
+    @get:Input
+    val solutionSpacePath: String? by project
+    // Output directory
+    @get:Input
+    val output: String? by project
+
+    init {
+        jvmArgs = listOf("-Djava.awt.headless=true", "--add-exports", "java.base/jdk.internal.vm=ALL-UNNAMED")
+        standardInput = System.`in`
+        standardOutput = System.`out`
+    }
+}
+
 tasks {
     withType<JavaCompile> {
         sourceCompatibility = "11"
@@ -59,25 +89,22 @@ tasks {
     withType<KotlinCompile> {
         kotlinOptions.jvmTarget = "11"
     }
+    withType<org.jetbrains.intellij.tasks.BuildSearchableOptionsTask>()
+        .forEach { it.enabled = false }
 
-    runIde {
-        val input: String? by project
-        val output: String? by project
+    register<SolutionSpaceCliTask>("solutionSpaceCli") {
         args = listOfNotNull(
-//            "solution-space",
-            "hint-generate",
+            "solution-space",
             input?.let { "--input_path=$it" },
             output?.let { "--output_path=$it" }
         )
-        jvmArgs = listOf("-Djava.awt.headless=true", "--add-exports", "java.base/jdk.internal.vm=ALL-UNNAMED")
-        standardInput = System.`in`
-        standardOutput = System.`out`
     }
 
-    register("cli") {
-        dependsOn("runIde")
+    register<HintGenerationCliTask>("hintGenerationCli") {
+        args = listOfNotNull(
+            "hint-generation",
+            solutionSpacePath?.let { "--input_path=$it" },
+            output?.let { "--output_path=$it" }
+        )
     }
 }
-
-tasks.withType<org.jetbrains.intellij.tasks.BuildSearchableOptionsTask>()
-    .forEach { it.enabled = false }
