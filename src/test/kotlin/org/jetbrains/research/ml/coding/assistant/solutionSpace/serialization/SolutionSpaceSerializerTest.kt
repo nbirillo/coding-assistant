@@ -26,8 +26,7 @@ class SolutionSpaceSerializerTest : ParametrizedBaseWithSdkTest(getTmpProjectDir
 
     @Test
     fun testBasic() {
-        val inputDir = "/Users/artembobrov/Documents/masters/ast-transform/python/max_digit"
-        val taskSolutions = TaskTrackerDatasetFetcher.fetchTaskSolutions(File(inputDir))
+        val taskSolutions = TaskTrackerDatasetFetcher.fetchTaskSolutions(File(INPUT_DIR))
         val datasetUnification = project.service<DatasetUnification>()
 
         val solutionSpaceBuilder = SolutionSpaceGraphBuilder()
@@ -64,5 +63,6 @@ print(max(input()))
         @JvmStatic
         @Parameterized.Parameters(name = "{index}: ({0}, {1})")
         fun getTestData() = listOf(arrayOf("", ""))
+        const val INPUT_DIR: String = "specify your path the dataset task's solution"
     }
 }
