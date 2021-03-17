@@ -16,6 +16,10 @@ object TreeContextSerializer : KSerializer<TreeContext> {
 
     override fun deserialize(decoder: Decoder): TreeContext {
         val xmlString = decoder.decodeString()
+        /*
+        FIXME: newlines transforms into whitespaces while parsing the xml (XMLEventReader.nextEvent()).
+          label="\n" --> label=" "
+         */
         return TreeIoUtils.fromXml().generateFromString(xmlString)
     }
 
