@@ -4,10 +4,17 @@ import org.jgrapht.Graph
 import org.jgrapht.alg.shortestpath.DijkstraShortestPath
 import org.jgrapht.graph.EdgeReversedGraph
 
+
+/**
+ * Adds list of vertices to the graph.
+ */
 fun <V, E> Graph<V, E>.addVertices(vertices: Iterable<V>) {
     vertices.forEach(this::addVertex)
 }
 
+/**
+ * Replaces vertex with the new one with reconnecting the edges
+ */
 fun <V, E> Graph<V, E>.replaceVertex(vertex: V, newVertex: V) {
     addVertex(newVertex)
     val outgoingEdges = outgoingEdgesOf(vertex).toSet()
@@ -23,18 +30,11 @@ fun <V, E> Graph<V, E>.replaceVertex(vertex: V, newVertex: V) {
     removeVertex(vertex)
 }
 
-fun <V, E> Graph<V, E>.pathsTo(vertices: Collection<V>): List<List<V>> {
-    val inverted = EdgeReversedGraph(this)
-    val dijkstraShortestPath = DijkstraShortestPath(inverted)
-    val otherGraphVertices = vertexSet().minus(vertices)
-    return vertices
-        .map { dijkstraShortestPath.getPaths(it) }
-        .flatMap { singleSourcePaths ->
-            otherGraphVertices.map { singleSourcePaths.getPath(it).vertexList.reversed() }
-        }
-}
 
-fun <V, E> Graph<V, E>.removeVertexList(vertices: Collection<V>) {
+/**
+ * Removes all vertices from the graph
+ */
+fun <V, E> Graph<V, E>.removeVertices(vertices: Collection<V>) {
     if (vertices.isEmpty()) {
         return
     }

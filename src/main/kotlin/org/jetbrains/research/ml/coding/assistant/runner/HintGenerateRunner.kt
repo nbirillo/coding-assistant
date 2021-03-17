@@ -84,7 +84,7 @@ print(max(input()))
                     .firstOrNull()
                     ?.let(solutionSpace.graph::getEdgeTarget)
                 reportGenerator.generate(
-                    reportFile,
+                    reportFile.outputStream(),
                     HintReport(datasetTask, "ParallelVertexFinder", code, solutionSpace, closestVertex!!, nextVertex)
                 )
             } ?: error("Internal error: the temp project was not created")

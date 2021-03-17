@@ -13,6 +13,10 @@ class SolutionSpaceEdge(val actions: List<Action>) : WeightedEdge()
 
 typealias SolutionSpaceVertexID = Int
 
+
+/**
+ * Solution space vertex
+ */
 @Serializable
 data class SolutionSpaceVertex(
     val id: SolutionSpaceVertexID,

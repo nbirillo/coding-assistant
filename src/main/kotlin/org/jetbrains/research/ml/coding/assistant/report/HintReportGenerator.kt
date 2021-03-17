@@ -1,22 +1,18 @@
 package org.jetbrains.research.ml.coding.assistant.report
 
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpaceVertex
-import org.jetbrains.research.ml.coding.assistant.solutionSpace.builder.SolutionSpaceGraphBuilder
-import java.io.File
+import java.io.OutputStream
 
+
+/**
+ *  Generates algorithm's result report and writes it into outputStream
+ */
 interface HintReportGenerator {
-    fun generate(intoFile: File, report: HintReport)
-}
-
-// for report only. very bad complexity
-internal fun SolutionSpaceGraphBuilder.getCode(id: String): String {
-    return graph.vertexSet()
-        .first { vertex -> vertex.partialSolutions.any { it.id == id } }
-        .representativeSolution.psiFragment.text
+    fun generate(outputStream: OutputStream, report: HintReport)
 }
 
 class MarkdownHintReportGenerator(private val codeRepository: CodeRepository) : HintReportGenerator {
-    override fun generate(intoFile: File, report: HintReport) {
+    override fun generate(outputStream: OutputStream, report: HintReport) {
         val text = """
 ## ${report.algorithmName}
 
@@ -29,9 +25,7 @@ ${report.studentCode}
 `vertex` = ${report.closestVertex}
 
 ```python
-${fetchCode(
-            report.closestVertex
-        )}
+${fetchCode(report.closestVertex)}
 ```
 
 ### Hint node's code 
@@ -40,10 +34,22 @@ ${fetchCode(
 ${report.nextNode?.let(this::fetchCode) ?: "No Hint Code"}
 ```
 """.trimIndent()
-        intoFile.appendText(text)
+        outputStream.write(text.toByteArray())
     }
 
     private fun fetchCode(vertex: SolutionSpaceVertex): String {
         return codeRepository.getCode(vertex.info.first().id)
+    }
+}
+
+class CompositeMarkdownHintReportGenerator(private val generator: HintReportGenerator) {
+    fun generate(outputStream: OutputStream, reports: Collection<HintReport>) {
+        val firstReport = reports.firstOrNull() ?: return
+        outputStream.write(
+            "# ${firstReport.taskName}\n".toByteArray()
+        )
+        for (report in reports) {
+            generator.generate(outputStream, report)
+        }
     }
 }

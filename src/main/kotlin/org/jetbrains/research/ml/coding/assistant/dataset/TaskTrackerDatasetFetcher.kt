@@ -15,7 +15,7 @@ object TaskTrackerDatasetFetcher : DatasetFetcher {
         return Dataset(taskSolutions)
     }
 
-    fun fetchTaskSolutions(file: File): TaskSolutions {
+    override fun fetchTaskSolutions(file: File): TaskSolutions {
         require(file.isDirectory) { "Argument has to be directory with solution files" }
         val solutions = file.getListFiles().parallelStream()
             .map(this::fetchDynamicSolution)

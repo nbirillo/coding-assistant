@@ -4,6 +4,10 @@ import kotlinx.serialization.Serializable
 
 typealias Record = Map<String, String>
 
+/**
+ *  Model represents a single record entry in dataset
+ *  Model for a row in .csv file
+ */
 data class DatasetRecord(
     val id: String,
     val fragment: String,
@@ -17,6 +21,9 @@ data class DatasetRecord(
     )
 }
 
+/**
+ *  Model represents meta information attached to the dataset record
+ */
 @Serializable
 data class MetaInfo(
     val age: Float?,

@@ -6,6 +6,10 @@ import org.jgrapht.Graph
 
 typealias EdgeWeightCalculatorFactory<V, E> = (Graph<V, E>) -> EdgeWeightCalculator<V, E>
 
+
+/**
+ * Calculates the edge weight
+ */
 abstract class EdgeWeightCalculator<V, E>(val graph: Graph<V, E>) {
     abstract fun getWeight(edge: E): Double
 }

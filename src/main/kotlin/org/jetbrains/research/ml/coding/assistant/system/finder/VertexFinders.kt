@@ -6,6 +6,10 @@ import org.jetbrains.research.ml.coding.assistant.system.PartialSolution
 import org.jetbrains.research.ml.coding.assistant.system.matcher.BooleanPartialSolutionMatcher
 import org.jetbrains.research.ml.coding.assistant.system.matcher.PartialSolutionMatcher
 
+
+/**
+ * Finds the closest vertex to a given student's partial solution
+ */
 interface VertexFinder {
     val matcher: PartialSolutionMatcher
 

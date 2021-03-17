@@ -1,7 +1,7 @@
 package org.jetbrains.research.ml.coding.assistant.solutionSpace.builder
 
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpace
-import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.removeVertexList
+import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.removeVertices
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.replaceVertex
 import org.jetbrains.research.ml.coding.assistant.unification.model.DynamicIntermediateSolution
 import org.jgrapht.alg.cycle.SzwarcfiterLauerSimpleCycles
@@ -10,6 +10,11 @@ import org.jgrapht.graph.SimpleDirectedWeightedGraph
 typealias DynamicIntermediateSolutionVertexChain = List<SolutionSpaceGraphVertex>
 internal typealias SolutionSpaceGraph = SimpleDirectedWeightedGraph<SolutionSpaceGraphVertex, SolutionSpaceGraphEdge>
 
+
+/**
+ * Builder for solution space.
+ * Able to add sequence of student's solutions (dynamic solution)
+ */
 class SolutionSpaceGraphBuilder {
     internal val graph = SolutionSpaceGraph(SolutionSpaceGraphEdge::class.java)
 
@@ -31,7 +36,7 @@ class SolutionSpaceGraphBuilder {
     private fun removeSimpleCycles() {
         val simpleCyclesDetector = SzwarcfiterLauerSimpleCycles(graph)
         for (simpleCycle in simpleCyclesDetector.findSimpleCycles()) {
-            graph.removeVertexList(simpleCycle)
+            graph.removeVertices(simpleCycle)
         }
     }
 

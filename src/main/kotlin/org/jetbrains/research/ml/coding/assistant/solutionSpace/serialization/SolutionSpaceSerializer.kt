@@ -22,23 +22,26 @@ object SolutionSpaceSerializer : KSerializer<SolutionSpace> {
             var edgePairs: List<Pair<SolutionSpaceVertexID, SolutionSpaceVertexID>>? = null
             while (true) {
                 when (val index = decodeElementIndex(descriptor)) {
-                    0 -> vertices = decodeSerializableElement(descriptor, 0, serializer())
-                    1 -> edgePairs = decodeSerializableElement(descriptor, 1, serializer())
+                    ElementIndex.VERTICES -> vertices = decodeSerializableElement(descriptor, 0, serializer())
+                    ElementIndex.EDGES -> edgePairs = decodeSerializableElement(descriptor, 1, serializer())
                     CompositeDecoder.DECODE_DONE -> break
                     else -> error("Unexpected index: $index")
                 }
             }
+            if (vertices == null || edgePairs == null) {
+                error("Serialization error")
+            }
             SolutionSpace(
-                vertices!!,
-                edgePairs!!
+                vertices,
+                edgePairs
             )
         }
     }
 
     override fun serialize(encoder: Encoder, value: SolutionSpace) {
         encoder.encodeStructure(descriptor) {
-            encodeSerializableElement(descriptor, 0, serializer(), value.graph.vertexSet())
-            encodeSerializableElement(descriptor, 1, serializer(), value.edgesIdPairs())
+            encodeSerializableElement(descriptor, ElementIndex.VERTICES, serializer(), value.graph.vertexSet())
+            encodeSerializableElement(descriptor, ElementIndex.EDGES, serializer(), value.edgesIdPairs())
         }
     }
 
@@ -46,5 +49,10 @@ object SolutionSpaceSerializer : KSerializer<SolutionSpace> {
         return graph.edgeSet().map { edge ->
             graph.getEdgeSource(edge).id to graph.getEdgeTarget(edge).id
         }
+    }
+
+    object ElementIndex {
+        const val VERTICES = 0
+        const val EDGES = 1
     }
 }
