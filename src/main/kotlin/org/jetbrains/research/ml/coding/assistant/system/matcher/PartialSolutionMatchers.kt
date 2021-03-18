@@ -4,7 +4,6 @@ import org.jetbrains.research.ml.ast.gumtree.diff.Matcher
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpaceVertex
 import org.jetbrains.research.ml.coding.assistant.system.PartialSolution
 
-
 /**
  * Matches the student's partial solution to the solution space's vertex
  * Returns the difference score >= 0.0

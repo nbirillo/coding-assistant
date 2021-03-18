@@ -7,7 +7,6 @@ import org.jetbrains.research.ml.coding.assistant.unification.model.DatasetParti
 
 typealias SolutionSpaceGraphEdge = WeightedEdge
 
-
 /**
  * Builder's graph vertex.
  * Able to store multiple student's code fragments.

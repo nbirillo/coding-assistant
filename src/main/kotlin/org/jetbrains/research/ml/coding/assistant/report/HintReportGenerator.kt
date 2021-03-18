@@ -3,7 +3,6 @@ package org.jetbrains.research.ml.coding.assistant.report
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpaceVertex
 import java.io.OutputStream
 
-
 /**
  *  Generates algorithm's result report and writes it into outputStream
  */
@@ -25,7 +24,9 @@ ${report.studentCode}
 `vertex` = ${report.closestVertex}
 
 ```python
-${fetchCode(report.closestVertex)}
+${fetchCode(
+            report.closestVertex
+        )}
 ```
 
 ### Hint node's code 

@@ -5,7 +5,6 @@ import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpaceEdg
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpaceVertex
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.removeVertices
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.replaceVertex
-import org.jetbrains.research.ml.coding.assistant.solutionSpace.weightCalculator.CustomEdgeWeightCalculator
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.weightCalculator.EdgeWeightCalculatorFactory
 import org.jetbrains.research.ml.coding.assistant.unification.model.DynamicIntermediateSolution
 import org.jgrapht.alg.cycle.SzwarcfiterLauerSimpleCycles
@@ -13,7 +12,6 @@ import org.jgrapht.graph.SimpleDirectedWeightedGraph
 
 typealias DynamicIntermediateSolutionVertexChain = List<SolutionSpaceGraphVertex>
 internal typealias SolutionSpaceGraph = SimpleDirectedWeightedGraph<SolutionSpaceGraphVertex, SolutionSpaceGraphEdge>
-
 
 /**
  * Builder for solution space.

@@ -10,7 +10,6 @@ class SolutionSpaceEdge : WeightedEdge()
 
 typealias SolutionSpaceVertexID = Int
 
-
 /**
  * Solution space vertex
  */

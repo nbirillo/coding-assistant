@@ -12,7 +12,6 @@ import org.jgrapht.ext.JGraphXAdapter
 import java.awt.Color
 import java.awt.image.BufferedImage
 
-
 /**
  * Generates the image of the graph with highlighting the final ones.
  */

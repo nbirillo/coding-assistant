@@ -6,7 +6,6 @@ import org.jgrapht.Graph
 
 typealias EdgeWeightCalculatorFactory<V, E> = (Graph<V, E>) -> EdgeWeightCalculator<V, E>
 
-
 /**
  * Calculates the edge weight
  */

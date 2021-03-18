@@ -1,9 +1,6 @@
 package org.jetbrains.research.ml.coding.assistant.solutionSpace.utils
 
 import org.jgrapht.Graph
-import org.jgrapht.alg.shortestpath.DijkstraShortestPath
-import org.jgrapht.graph.EdgeReversedGraph
-
 
 /**
  * Adds list of vertices to the graph.
@@ -29,7 +26,6 @@ fun <V, E> Graph<V, E>.replaceVertex(vertex: V, newVertex: V) {
     }
     removeVertex(vertex)
 }
-
 
 /**
  * Removes all vertices from the graph

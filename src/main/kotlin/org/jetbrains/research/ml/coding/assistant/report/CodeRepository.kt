@@ -2,7 +2,6 @@ package org.jetbrains.research.ml.coding.assistant.report
 
 import org.jetbrains.research.ml.coding.assistant.dataset.model.DatasetTask
 
-
 /**
  * Repository to store and fetch the original code fragment by id
  */

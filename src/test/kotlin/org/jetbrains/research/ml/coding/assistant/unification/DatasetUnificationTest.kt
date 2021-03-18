@@ -11,7 +11,6 @@ import org.jetbrains.research.ml.coding.assistant.solutionSpace.weightCalculator
 import org.jetbrains.research.ml.coding.assistant.util.ParametrizedBaseWithSdkTest
 import org.jgrapht.Graph
 import org.junit.BeforeClass
-import org.junit.Ignore
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
