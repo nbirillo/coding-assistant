@@ -7,15 +7,14 @@ import org.jetbrains.research.ml.ast.util.getTmpProjectDir
 import org.jetbrains.research.ml.coding.assistant.dataset.TaskTrackerDatasetFetcher
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.Util
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.builder.SolutionSpaceGraphBuilder
+import org.jetbrains.research.ml.coding.assistant.solutionSpace.weightCalculator.CustomEdgeWeightCalculator
 import org.jetbrains.research.ml.coding.assistant.unification.DatasetUnification
 import org.jetbrains.research.ml.coding.assistant.util.ParametrizedBaseWithSdkTest
-import org.junit.Ignore
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
 import java.io.File
 
-@Ignore
 @RunWith(Parameterized::class)
 class SolutionSpaceSerializerTest : ParametrizedBaseWithSdkTest(getTmpProjectDir(true)) {
     @JvmField
@@ -35,9 +34,9 @@ class SolutionSpaceSerializerTest : ParametrizedBaseWithSdkTest(getTmpProjectDir
         taskSolutions.dynamicSolutions
             .take(1)
             .map { datasetUnification.transform(it) }
-            .forEach { solutionSpaceBuilder.addDynamicSolution(it.take(1)) }
+            .forEach { solutionSpaceBuilder.addDynamicSolution(it.take(3)) }
 
-        val solutionSpace = solutionSpaceBuilder.build()
+        val solutionSpace = solutionSpaceBuilder.build { CustomEdgeWeightCalculator(it) }
 
         val json = Json { prettyPrint = true }
         val encodedSolutionSpace = json.encodeToString(SolutionSpaceSerializer, solutionSpace)
@@ -65,6 +64,6 @@ print(max(input()))
         @JvmStatic
         @Parameterized.Parameters(name = "{index}: ({0}, {1})")
         fun getTestData() = listOf(arrayOf("", ""))
-        const val INPUT_DIR: String = "specify your path the dataset task's solution"
+        const val INPUT_DIR: String = "/Users/artembobrov/Documents/masters/ast-transform/python/max_3"
     }
 }

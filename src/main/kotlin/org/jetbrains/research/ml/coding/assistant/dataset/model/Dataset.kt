@@ -32,7 +32,10 @@ enum class DatasetTask {
 
     companion object {
         fun createFromString(string: String): DatasetTask {
-            return valueOf(string.toUpperCase())
+            return when (val upperString = string.toUpperCase()) {
+                "ZERO", "IS_ZERO" -> ZERO
+                else -> valueOf(upperString)
+            }
         }
     }
 }

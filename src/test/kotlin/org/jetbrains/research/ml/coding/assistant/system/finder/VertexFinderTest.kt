@@ -9,6 +9,7 @@ import org.jetbrains.research.ml.coding.assistant.dataset.model.MetaInfo
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.Util
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.builder.SolutionSpaceGraphBuilder
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreator
+import org.jetbrains.research.ml.coding.assistant.solutionSpace.weightCalculator.CustomEdgeWeightCalculator
 import org.jetbrains.research.ml.coding.assistant.system.PartialSolution
 import org.jetbrains.research.ml.coding.assistant.system.matcher.EditPartialSolutionMatcher
 import org.jetbrains.research.ml.coding.assistant.unification.CompositeTransformation
@@ -34,7 +35,7 @@ class VertexFinderTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(::Vert
             .map { datasetUnification.transform(it) }
             .forEach { solutionSpaceBuilder.addDynamicSolution(it) }
 
-        val solutionSpace = solutionSpaceBuilder.build()
+        val solutionSpace = solutionSpaceBuilder.build { CustomEdgeWeightCalculator(it) }
         val finder = ParallelVertexFinder(EditPartialSolutionMatcher)
 
         val context = Util.getTreeContext(

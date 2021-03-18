@@ -1,8 +1,12 @@
 package org.jetbrains.research.ml.coding.assistant.solutionSpace.builder
 
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpace
+import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpaceEdge
+import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpaceVertex
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.removeVertices
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.replaceVertex
+import org.jetbrains.research.ml.coding.assistant.solutionSpace.weightCalculator.CustomEdgeWeightCalculator
+import org.jetbrains.research.ml.coding.assistant.solutionSpace.weightCalculator.EdgeWeightCalculatorFactory
 import org.jetbrains.research.ml.coding.assistant.unification.model.DynamicIntermediateSolution
 import org.jgrapht.alg.cycle.SzwarcfiterLauerSimpleCycles
 import org.jgrapht.graph.SimpleDirectedWeightedGraph
@@ -57,10 +61,10 @@ class SolutionSpaceGraphBuilder {
         psiFiles.takeWhile { !it.forceDeleteTmpData() }
     }
 
-    fun build(): SolutionSpace {
+    fun build(weightFactory: EdgeWeightCalculatorFactory<SolutionSpaceVertex, SolutionSpaceEdge>): SolutionSpace {
         removeSimpleCycles()
         removeSingletonVertices()
-        val solutionSpace = SolutionSpace(this)
+        val solutionSpace = SolutionSpace(weightFactory, this)
         deletePsiFiles()
         return solutionSpace
     }

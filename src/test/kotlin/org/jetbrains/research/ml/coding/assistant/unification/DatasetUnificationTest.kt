@@ -7,6 +7,7 @@ import org.jetbrains.research.ml.coding.assistant.dataset.model.Dataset
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpace
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.builder.SolutionSpaceGraphBuilder
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.generateImage
+import org.jetbrains.research.ml.coding.assistant.solutionSpace.weightCalculator.CustomEdgeWeightCalculator
 import org.jetbrains.research.ml.coding.assistant.util.ParametrizedBaseWithSdkTest
 import org.jgrapht.Graph
 import org.junit.BeforeClass
@@ -19,7 +20,6 @@ import javax.imageio.ImageIO
 import kotlin.time.ExperimentalTime
 import kotlin.time.measureTime
 
-@Ignore
 @RunWith(Parameterized::class)
 class DatasetUnificationTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(::DatasetUnificationTest)) {
     @JvmField
@@ -44,7 +44,7 @@ class DatasetUnificationTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(
                     builder.addDynamicSolution(it)
                 }
 
-            val graph = builder.build()
+            val graph = builder.build { CustomEdgeWeightCalculator(it) }
             val imgFile = File("${taskSolutions.datasetTask.taskName}_graph.png").apply { createNewFile() }
             val image = graph.generateImage()
             ImageIO.write(image, "PNG", imgFile)
@@ -60,12 +60,13 @@ class DatasetUnificationTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(
 
         val solutionSpaceBuilder = SolutionSpaceGraphBuilder()
         taskSolutions.dynamicSolutions
+            .take(1)
             .map {
                 datasetUnification.transform(it)
             }
             .forEach { solutionSpaceBuilder.addDynamicSolution(it) }
 
-        val solutionSpace = solutionSpaceBuilder.build()
+        val solutionSpace = solutionSpaceBuilder.build { CustomEdgeWeightCalculator(it) }
 
         val imgFile = File("${taskSolutions.datasetTask.taskName}_graph_runner.png").apply { createNewFile() }
         val image = solutionSpace.generateImage()
@@ -104,14 +105,14 @@ class DatasetUnificationTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(
                         builder.addDynamicSolution(it)
                     }
 
-                space = builder.build()
+                space = builder.build { CustomEdgeWeightCalculator(it) }
             }
 
             val textFile = File("${taskSolutions.datasetTask.taskName}_time.text").apply { createNewFile() }
             val text = buildString {
                 appendLine("Time: $time")
                 appendLine(getInfo(builder.graph))
-//                appendLine(getInfo(space.graph))
+                appendLine(getInfo(space.graph))
             }
 
             textFile.writeText(text)

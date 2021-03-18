@@ -12,7 +12,7 @@ import java.io.ByteArrayOutputStream
 import java.nio.charset.StandardCharsets
 
 object TreeContextSerializer : KSerializer<TreeContext> {
-    override val descriptor: SerialDescriptor = PrimitiveSerialDescriptor("treeContext", PrimitiveKind.STRING)
+    override val descriptor: SerialDescriptor = PrimitiveSerialDescriptor("TreeContext", PrimitiveKind.STRING)
 
     override fun deserialize(decoder: Decoder): TreeContext {
         val xmlString = decoder.decodeString()

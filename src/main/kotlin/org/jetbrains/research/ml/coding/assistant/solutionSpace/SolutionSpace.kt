@@ -9,8 +9,8 @@ import org.jetbrains.research.ml.ast.gumtree.tree.PsiTreeConverter
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.builder.SolutionSpaceGraphBuilder
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.builder.SolutionSpaceGraphEdge
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.builder.SolutionSpaceGraphVertex
+import org.jetbrains.research.ml.coding.assistant.solutionSpace.serialization.SolutionSpaceEdgeModel
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.addVertices
-import org.jetbrains.research.ml.coding.assistant.solutionSpace.weightCalculator.CustomEdgeWeightCalculator
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.weightCalculator.EdgeWeightCalculatorFactory
 import org.jgrapht.Graph
 import org.jgrapht.graph.AsUnmodifiableGraph
@@ -21,26 +21,29 @@ import org.jgrapht.graph.SimpleDirectedWeightedGraph
  * This structure designed to be immutable.
  * Vertices are identifiable with student's code and meta information.
  * Edges store list of edits to transform source vertex code into target vertex code.
- * EdgeWeightCalculatorFactory is a factory to calculate edge's weight base on its stored information.
+ * EdgeWeightCalculatorFactory is a factory to calculate edge's weight based on its stored information.
  * @property graph inner solution space's graph
  */
 class SolutionSpace(val graph: Graph<SolutionSpaceVertex, SolutionSpaceEdge>) {
-    internal constructor(graphBuilder: SolutionSpaceGraphBuilder) : this(
-        transferGraph({ CustomEdgeWeightCalculator(it) }, graphBuilder)
+    internal constructor(
+        weightFactory: EdgeWeightCalculatorFactory<SolutionSpaceVertex, SolutionSpaceEdge>,
+        graphBuilder: SolutionSpaceGraphBuilder
+    ) : this(
+        transferGraph(weightFactory, graphBuilder)
     )
 
     internal constructor(
         vertices: Collection<SolutionSpaceVertex>,
-        edgePairs: Collection<Pair<SolutionSpaceVertexID, SolutionSpaceVertexID>>
-    ) : this(buildGraph({ CustomEdgeWeightCalculator(it) }, vertices, edgePairs))
+        edgePairs: Collection<SolutionSpaceEdgeModel>
+    ) : this(buildGraph(vertices, edgePairs))
 }
 
 private fun transferGraph(
-    weightCalculatorFactory: EdgeWeightCalculatorFactory<SolutionSpaceVertex, SolutionSpaceEdge>,
+    weightFactory: EdgeWeightCalculatorFactory<SolutionSpaceVertex, SolutionSpaceEdge>,
     builder: SolutionSpaceGraphBuilder
 ): Graph<SolutionSpaceVertex, SolutionSpaceEdge> {
-    val graph = SimpleDirectedWeightedGraph(SolutionSpaceEdgeFactory)
-    val weightCalculator = weightCalculatorFactory(graph)
+    val graph = SimpleDirectedWeightedGraph<SolutionSpaceVertex, SolutionSpaceEdge>(SolutionSpaceEdge::class.java)
+    val weightCalculator = weightFactory(graph)
     val oldVertices = builder.graph.vertexSet().toList()
     val newVertices = oldVertices.map { it.toSolutionSpaceVertex() }
     graph.addVertices(newVertices)
@@ -81,18 +84,15 @@ private fun transferGraph(
 }
 
 private fun buildGraph(
-    weightCalculatorFactory: EdgeWeightCalculatorFactory<SolutionSpaceVertex, SolutionSpaceEdge>,
     vertices: Collection<SolutionSpaceVertex>,
-    edgePairs: Collection<Pair<SolutionSpaceVertexID, SolutionSpaceVertexID>>
+    edges: Collection<SolutionSpaceEdgeModel>
 ): Graph<SolutionSpaceVertex, SolutionSpaceEdge> {
-    val graph = SimpleDirectedWeightedGraph(SolutionSpaceEdgeFactory)
-    val weightCalculator = weightCalculatorFactory(graph)
+    val graph = SimpleDirectedWeightedGraph<SolutionSpaceVertex, SolutionSpaceEdge>(SolutionSpaceEdge::class.java)
     graph.addVertices(vertices)
     val idToVertex = vertices.map { it.id to it }.toMap()
-    for ((sourceId, targetId) in edgePairs) {
+    for ((sourceId, targetId, weight) in edges) {
         val newEdge = graph.addEdge(idToVertex[sourceId], idToVertex[targetId])
-        val calculatedWeight = weightCalculator.getWeight(newEdge)
-        graph.setEdgeWeight(newEdge, calculatedWeight)
+        graph.setEdgeWeight(newEdge, weight)
     }
 
     return AsUnmodifiableGraph(graph)

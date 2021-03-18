@@ -1,9 +1,6 @@
 package org.jetbrains.research.ml.coding.assistant.report
 
-import kotlinx.serialization.decodeFromString
-import kotlinx.serialization.json.Json
 import org.jetbrains.research.ml.coding.assistant.dataset.model.DatasetTask
-import java.io.File
 
 
 /**
@@ -17,7 +14,8 @@ interface CodeRepository {
     }
 }
 
-class CodeRepositoryImpl(file: File) : CodeRepository {
-    private val content = Json.decodeFromString<Map<String, String>>(file.readText())
-    override fun getCode(id: String): String = content[id]!!
+typealias OriginalCodeData = Map<String, String>
+
+class CodeRepositoryImpl(private val codeData: OriginalCodeData) : CodeRepository {
+    override fun getCode(id: String): String = codeData[id] ?: error("Identifier has to be in the repository")
 }

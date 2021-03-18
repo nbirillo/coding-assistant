@@ -5,16 +5,16 @@ import com.intellij.openapi.application.ApplicationStarter
 import com.intellij.openapi.components.service
 import com.intellij.openapi.diagnostic.Logger
 import com.xenomachina.argparser.ArgParser
-import kotlinx.serialization.encodeToString
-import kotlinx.serialization.json.Json
 import org.jetbrains.research.ml.ast.util.getTmpProjectDir
 import org.jetbrains.research.ml.ast.util.sdk.setSdkToProject
 import org.jetbrains.research.ml.coding.assistant.dataset.TaskTrackerDatasetFetcher
 import org.jetbrains.research.ml.coding.assistant.dataset.model.DatasetTask
 import org.jetbrains.research.ml.coding.assistant.report.CodeRepository
+import org.jetbrains.research.ml.coding.assistant.report.OriginalCodeData
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.builder.SolutionSpaceGraphBuilder
-import org.jetbrains.research.ml.coding.assistant.solutionSpace.serialization.SolutionSpaceSerializer
+import org.jetbrains.research.ml.coding.assistant.solutionSpace.serialization.SerializationUtils
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.generateImage
+import org.jetbrains.research.ml.coding.assistant.solutionSpace.weightCalculator.CustomEdgeWeightCalculator
 import org.jetbrains.research.ml.coding.assistant.unification.DatasetUnification
 import org.jetbrains.research.ml.coding.assistant.unification.model.DatasetPartialSolution
 import java.io.File
@@ -23,7 +23,6 @@ import javax.imageio.ImageIO
 import kotlin.system.exitProcess
 
 object SolutionSpaceRunner : ApplicationStarter {
-    private val json = Json { prettyPrint = true }
     private lateinit var inputDir: String
     private lateinit var outputDir: String
 
@@ -66,7 +65,7 @@ object SolutionSpaceRunner : ApplicationStarter {
 
                 unifiedSolutions
                     .forEach { solutionSpaceBuilder.addDynamicSolution(it) }
-                val solutionSpace = solutionSpaceBuilder.build()
+                val solutionSpace = solutionSpaceBuilder.build { CustomEdgeWeightCalculator(it) }
 
                 // dump debug info for report
                 dumpCodeMap(outputDirFile, taskSolutions.datasetTask, unifiedSolutions.flatten())
@@ -76,8 +75,7 @@ object SolutionSpaceRunner : ApplicationStarter {
                     "${taskSolutions.datasetTask.taskName}_solution_space.json"
                 )
                     .apply { createNewFile() }
-                val encodedSolutionSpace = json
-                    .encodeToString(SolutionSpaceSerializer, solutionSpace)
+                val encodedSolutionSpace = SerializationUtils.encodeSolutionSpace(solutionSpace)
                 solutionSpaceFile.writeText(encodedSolutionSpace)
 
                 // dump solution space graph image
@@ -96,8 +94,8 @@ object SolutionSpaceRunner : ApplicationStarter {
 
     private fun dumpCodeMap(dirFile: File, taskName: DatasetTask, unifiedSolutions: List<DatasetPartialSolution>) {
         val file = dirFile.resolve(CodeRepository.filename(taskName)).apply { createNewFile() }
-        val content = unifiedSolutions.map { it.id to it.psiFragment.text }.toMap()
-        val jsonString = json.encodeToString(content)
+        val content: OriginalCodeData = unifiedSolutions.map { it.id to it.psiFragment.text }.toMap()
+        val jsonString = SerializationUtils.encodeCodeData(content)
         file.writeText(jsonString)
     }
 }

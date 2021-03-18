@@ -70,9 +70,16 @@ open class HintGenerationCliTask : org.jetbrains.intellij.tasks.RunIdeTask() {
     // Path to the serialized solution space
     @get:Input
     val solutionSpacePath: String? by project
+    // Path to data with original code to generate report
+    @get:Input
+    val codeRepositoryPath: String? by project
     // Output directory
     @get:Input
-    val output: String? by project
+    val taskName: String? by project
+
+    @get:Input
+    val outputDir: String? by project
+
 
     init {
         jvmArgs = listOf("-Djava.awt.headless=true", "--add-exports", "java.base/jdk.internal.vm=ALL-UNNAMED")
@@ -103,8 +110,10 @@ tasks {
     register<HintGenerationCliTask>("hintGenerationCli") {
         args = listOfNotNull(
             "hint-generation",
-            solutionSpacePath?.let { "--input_path=$it" },
-            output?.let { "--output_path=$it" }
+            solutionSpacePath?.let { "--space_path=$it" },
+            codeRepositoryPath?.let { "--code_repository_path=$it" },
+            outputDir?.let { "--output_path=$it" },
+            taskName?.let { "--task_name=$it" }
         )
     }
 }
