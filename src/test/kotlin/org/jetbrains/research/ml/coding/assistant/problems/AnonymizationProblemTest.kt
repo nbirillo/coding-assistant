@@ -7,11 +7,13 @@ import org.jetbrains.research.ml.ast.transformations.anonymization.Anonymization
 import org.jetbrains.research.ml.ast.util.getTmpProjectDir
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreator
 import org.jetbrains.research.ml.coding.assistant.util.ParametrizedBaseWithSdkTest
+import org.junit.Ignore
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
 import java.io.File
 
+@Ignore
 @RunWith(Parameterized::class)
 class AnonymizationProblemTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(::AnonymizationProblemTest)) {
     @JvmField

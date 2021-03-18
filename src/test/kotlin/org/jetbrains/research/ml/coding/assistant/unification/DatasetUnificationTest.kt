@@ -11,6 +11,7 @@ import org.jetbrains.research.ml.coding.assistant.solutionSpace.weightCalculator
 import org.jetbrains.research.ml.coding.assistant.util.ParametrizedBaseWithSdkTest
 import org.jgrapht.Graph
 import org.junit.BeforeClass
+import org.junit.Ignore
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
@@ -19,6 +20,7 @@ import javax.imageio.ImageIO
 import kotlin.time.ExperimentalTime
 import kotlin.time.measureTime
 
+@Ignore
 @RunWith(Parameterized::class)
 class DatasetUnificationTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(::DatasetUnificationTest)) {
     @JvmField
@@ -52,7 +54,7 @@ class DatasetUnificationTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(
 
     @Test
     fun testStuff() {
-        val inputDir = "/Users/artembobrov/Documents/masters/ast-transform/python/max_digit/"
+        val inputDir = "path to your dataset task"
         val taskSolutions = TaskTrackerDatasetFetcher.fetchTaskSolutions(File(inputDir))
         println(taskSolutions.dynamicSolutions.size)
         val datasetUnification = project.service<DatasetUnification>()
@@ -126,7 +128,7 @@ class DatasetUnificationTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(
         @BeforeClass
         @JvmStatic
         fun setup() {
-            val path = "/Users/artembobrov/Documents/masters/ast-transform/python"
+            val path = "path to your dataset task"
             taskTrackerDataset = TaskTrackerDatasetFetcher.fetchDataset(File(path))
         }
 

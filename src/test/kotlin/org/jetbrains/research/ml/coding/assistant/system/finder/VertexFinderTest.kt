@@ -26,7 +26,7 @@ import java.io.File
 class VertexFinderTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(::VertexFinderTest)) {
     @Test
     fun testBasic() {
-        val inputDir = "/Users/artembobrov/Documents/masters/ast-transform/python/max_digit"
+        val inputDir = "path to your dataset task"
         val taskSolutions = TaskTrackerDatasetFetcher.fetchTaskSolutions(File(inputDir))
         val datasetUnification = project.service<DatasetUnification>()
 

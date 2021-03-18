@@ -31,7 +31,7 @@ class PsiCreatorImpl(project: Project) : PsiCreator {
     private val psiManager: PsiManager = project.service()
     private var counter: Int = 0
 
-    inner class PsiFileWrapperImpl(private val file: File, val psi: PsiFile) : PsiFile by psi, PsiFileWrapper {
+    inner class PsiFileWrapperImpl(private val file: File, private val psi: PsiFile) : PsiFile by psi, PsiFileWrapper {
         private constructor(file: File) : this(file, createPsi(file))
         constructor(code: String) : this(createFile("$tmpDataPath/tmp_${counter++}$extension", code))
 

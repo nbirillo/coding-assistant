@@ -10,7 +10,7 @@ import kotlin.reflect.KFunction
 
 @Ignore
 open class ParametrizedBaseTest(private val testDataRoot: String) : BasePlatformTestCase() {
-    protected val LOG = Logger.getLogger(javaClass.name)
+    protected val logger: Logger = Logger.getLogger(javaClass.name)
 
     // We should define the root resources folder
     override fun getTestDataPath() = testDataRoot

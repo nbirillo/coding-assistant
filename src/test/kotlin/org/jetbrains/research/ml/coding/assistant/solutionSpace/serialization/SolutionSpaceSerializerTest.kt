@@ -10,11 +10,13 @@ import org.jetbrains.research.ml.coding.assistant.solutionSpace.builder.Solution
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.weightCalculator.CustomEdgeWeightCalculator
 import org.jetbrains.research.ml.coding.assistant.unification.DatasetUnification
 import org.jetbrains.research.ml.coding.assistant.util.ParametrizedBaseWithSdkTest
+import org.junit.Ignore
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
 import java.io.File
 
+@Ignore
 @RunWith(Parameterized::class)
 class SolutionSpaceSerializerTest : ParametrizedBaseWithSdkTest(getTmpProjectDir(true)) {
     @JvmField
@@ -64,6 +66,6 @@ print(max(input()))
         @JvmStatic
         @Parameterized.Parameters(name = "{index}: ({0}, {1})")
         fun getTestData() = listOf(arrayOf("", ""))
-        const val INPUT_DIR: String = "/Users/artembobrov/Documents/masters/ast-transform/python/max_3"
+        const val INPUT_DIR: String = "path to your dataset task"
     }
 }
