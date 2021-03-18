@@ -80,7 +80,6 @@ open class HintGenerationCliTask : org.jetbrains.intellij.tasks.RunIdeTask() {
     @get:Input
     val outputDir: String? by project
 
-
     init {
         jvmArgs = listOf("-Djava.awt.headless=true", "--add-exports", "java.base/jdk.internal.vm=ALL-UNNAMED")
         standardInput = System.`in`
