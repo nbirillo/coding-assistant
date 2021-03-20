@@ -3,7 +3,6 @@ package org.jetbrains.research.ml.coding.assistant.system.finder
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.components.service
 import com.intellij.psi.PsiFile
-import org.jetbrains.research.ml.coding.assistant.dataset.TaskTrackerDatasetFetcher
 import org.jetbrains.research.ml.coding.assistant.dataset.model.DatasetTask
 import org.jetbrains.research.ml.coding.assistant.dataset.model.MetaInfo
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.Util
@@ -14,25 +13,24 @@ import org.jetbrains.research.ml.coding.assistant.system.PartialSolution
 import org.jetbrains.research.ml.coding.assistant.system.matcher.EditPartialSolutionMatcher
 import org.jetbrains.research.ml.coding.assistant.unification.CompositeTransformation
 import org.jetbrains.research.ml.coding.assistant.unification.DatasetUnification
+import org.jetbrains.research.ml.coding.assistant.util.DatasetUtils
 import org.jetbrains.research.ml.coding.assistant.util.ParametrizedBaseWithSdkTest
 import org.junit.Ignore
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
-import java.io.File
 
 @Ignore
 @RunWith(Parameterized::class)
 class VertexFinderTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(::VertexFinderTest)) {
     @Test
     fun testBasic() {
-        val inputDir = "path to your dataset task"
-        val taskSolutions = TaskTrackerDatasetFetcher.fetchTaskSolutions(File(inputDir))
+        val taskSolutions = DatasetUtils.DATASET.tasks.first()
         val datasetUnification = project.service<DatasetUnification>()
 
         val solutionSpaceBuilder = SolutionSpaceGraphBuilder()
         taskSolutions.dynamicSolutions
-            .map { datasetUnification.transform(it) }
+            .map { datasetUnification.unify(it) }
             .forEach { solutionSpaceBuilder.addDynamicSolution(it) }
 
         val solutionSpace = solutionSpaceBuilder.build { CustomEdgeWeightCalculator(it) }

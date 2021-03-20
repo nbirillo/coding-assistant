@@ -1,0 +1,267 @@
+id,fragment,age,programExperience,testsResults,task
+2400,"import sys
+
+if __name__ == ""__main__"":
+    v1 = sys.stdin.readline()
+    ",-1,MORE_THAN_SIX,0.0,brackets
+2401,"import sys
+
+if __name__ == ""__main__"":
+    v1 = sys.stdin.readline()
+    v2 = """"",-1,MORE_THAN_SIX,0.0,brackets
+2402,"import sys
+
+if __name__ == ""__main__"":
+    v1 = sys.stdin.readline()
+    if len(v1) % 2 != 0:
+        v2 = str",-1,MORE_THAN_SIX,0.0,brackets
+2403,"import sys
+
+if __name__ == ""__main__"":
+    v1 = sys.stdin.readline()
+    if len(v1) % 2 != 0:
+        v2 = v1[:]",-1,MORE_THAN_SIX,0.0,brackets
+2404,"import sys
+
+if __name__ == ""__main__"":
+    v1 = sys.stdin.readline()
+    if len(v1) % 2 != 0:
+    
+        v2 = v1[:]",-1,MORE_THAN_SIX,0.0,brackets
+2405,"import sys
+
+if __name__ == ""__main__"":
+    v1 = sys.stdin.readline()
+    if len(v1) % 2 != 0:
+        
+        v2 = v1[:]",-1,MORE_THAN_SIX,0.0,brackets
+2406,"import sys
+
+if __name__ == ""__main__"":
+    v1 = sys.stdin.readline()
+    if len(v1) % 2 != 0:
+        v2 = v1[:]",-1,MORE_THAN_SIX,0.0,brackets
+2408,"import sys
+
+if __name__ == ""__main__"":
+    v1 = sys.stdin.readline()
+    if len(v1) % 2 != 0:
+        v2 = v1[:(len(v1))]",-1,MORE_THAN_SIX,0.0,brackets
+2409,"import sys
+
+if __name__ == ""__main__"":
+    v1 = sys.stdin.readline()
+    if len(v1) % 2 != 0:
+        v2 = len(v1) / 2
+        v3 = v1[:]",-1,MORE_THAN_SIX,0.0,brackets
+2412,"import sys
+
+if __name__ == ""__main__"":
+    v1 = sys.stdin.readline()
+    if len(v1) % 2 != 0:
+        v2 = int(len(v1) / 2) + 1
+        v3 = v1[:]",-1,MORE_THAN_SIX,0.0,brackets
+2413,"import sys
+
+if __name__ == ""__main__"":
+    v1 = sys.stdin.readline()
+    if len(v1) % 2 != 0:
+        v2 = int(len(v1) / 2) + 1
+        v3 = v1[:v2]",-1,MORE_THAN_SIX,0.0,brackets
+2414,"import sys
+
+if __name__ == ""__main__"":
+    v1 = sys.stdin.readline()
+    if len(v1) % 2 != 0:
+        v2 = int(len(v1) / 2) 
+        v3 = v1[:v2]",-1,MORE_THAN_SIX,0.0,brackets
+2415,"import sys
+
+if __name__ == ""__main__"":
+    v1 = sys.stdin.readline()
+    if len(v1) % 2 != 0:
+        v2 = int(len(v1) / 2)
+        v3 = v1[:v2 + 1]",-1,MORE_THAN_SIX,0.0,brackets
+2417,"import sys
+
+if __name__ == ""__main__"":
+    v1 = sys.stdin.readline()
+    if len(v1) % 2 != 0:
+        v2 = int(len(v1) / 2)
+        v3 = v1[:v2 + 1]",-1,MORE_THAN_SIX,0.0,brackets
+2418,"import sys
+
+if __name__ == ""__main__"":
+    v1 = sys.stdin.readline()
+    if len(v1) % 2 != 0:
+        v2 = int(len(v1) / 2)
+        v3 = v1[:v2 + 1]
+        v4 = str",-1,MORE_THAN_SIX,0.0,brackets
+2426,"import sys
+
+if __name__ == ""__main__"":
+    v1 = sys.stdin.readline()
+    if len(v1) % 2 != 0:
+        v2 = int(len(v1) / 2)
+        v3 = v1[:v2 + 1]
+        v4 = v1[v2:]",-1,MORE_THAN_SIX,0.0,brackets
+2428,"import sys
+
+if __name__ == ""__main__"":
+    v1 = sys.stdin.readline()
+    if len(v1) % 2 != 0:
+        v2 = int(len(v1) / 2)
+        v3 = v1[:v2 + 1]
+        v4 = v1[v2:]
+        print()",-1,MORE_THAN_SIX,0.0,brackets
+2429,"import sys
+
+if __name__ == ""__main__"":
+    v1 = list(sys.stdin.readline())
+    if len(v1) % 2 != 0:
+        v2 = int(len(v1) / 2)
+        v3 = v1[:v2 + 1]
+        v4 = v1[v2:]
+        print(v3)",-1,MORE_THAN_SIX,0.0,brackets
+2445,"import sys
+
+if __name__ == ""__main__"":
+    v1 = list(sys.stdin.readline())
+    if len(v1) % 2 != 0:
+        v2 = int(len(v1) / 2)
+        v3 = v1[:v2 + 1]
+        v4 = v1[v2:]
+        print(""("".join(v3) + "")"".join(v4))",-1,MORE_THAN_SIX,0.0,brackets
+2446,"import sys
+
+if __name__ == ""__main__"":
+    v1 = list(sys.stdin.readline())
+    if len(v1) % 2 != 0:
+        v2 = int(len(v1) / 2)
+        v3 = v1[:v2 + 1]
+        v4 = v1[v2:]
+        print(""("".join(v3) + "")"".join(v4))
+    else:
+        v2 = int(len(v1) / 2)
+        v3 = v1[:v2]
+        v4 = v1[v2:]
+        print(""("".join(v3) + "")"".join(v4))",-1,MORE_THAN_SIX,0.0,brackets
+2447,"import sys
+
+if __name__ == ""__main__"":
+    v1 = list(sys.stdin.readline())
+    if len(v1) % 2 != 0:
+        v2 = int(len(v1) / 2)
+        v3 = v1[:v2 + 1]
+        v4 = v1[v2:]
+        print(""("".join(v3) + "")"".join(v4))
+    else:
+        v2 = int(len(v1) / 2)
+        v3 = v1[:v2]
+        v4 = v1[v2 + 1:]
+        print(""("".join(v3) + "")"".join(v4))",-1,MORE_THAN_SIX,0.0,brackets
+2448,"import sys
+
+if __name__ == ""__main__"":
+    v1 = list(sys.stdin.readline())[:-1]
+    if len(v1) % 2 != 0:
+        v2 = int(len(v1) / 2)
+        v3 = v1[:v2 + 1]
+        v4 = v1[v2:]
+        print(""("".join(v3) + "")"".join(v4))
+    else:
+        v2 = int(len(v1) / 2)
+        v3 = v1[:v2]
+        v4 = v1[v2 + 1:]
+        print(""("".join(v3) + "")"".join(v4))
+",-1,MORE_THAN_SIX,0.0,brackets
+2450,"import sys
+
+if __name__ == ""__main__"":
+    v1 = list(sys.stdin.readline())[:-1]
+    if len(v1) % 2 != 0:
+        v2 = int(len(v1) / 2)
+        v3 = v1[:v2 + 1]
+        v4 = v1[v2 + 1:]
+        print(""("".join(v3) + "")"".join(v4))
+    else:
+        v2 = int(len(v1) / 2)
+        v3 = v1[:v2]
+        v4 = v1[v2 + 1:]
+        print(""("".join(v3) + "")"".join(v4))
+",-1,MORE_THAN_SIX,0.0,brackets
+2452,"import sys
+
+if __name__ == ""__main__"":
+    v1 = list(sys.stdin.readline())[:-1]
+    if len(v1) % 2 != 0:
+        v2 = int(len(v1) / 2)
+        v3 = v1[:v2]
+        v4 = v1[v2 + 1:]
+        print(""("".join(v3) + "")"".join(v4))
+    else:
+        v2 = int(len(v1) / 2)
+        v3 = v1[:v2]
+        v4 = v1[v2 + 1:]
+        print(""("".join(v3) + "")"".join(v4))
+",-1,MORE_THAN_SIX,0.0,brackets
+2454,"import sys
+
+if __name__ == ""__main__"":
+    v1 = list(sys.stdin.readline())[:-1]
+    if len(v1) % 2 != 0:
+        v2 = int(len(v1) / 2)
+        v3 = v1[:v2]
+        v4 = v1[v2:]
+        print(""("".join(v3) + "")"".join(v4))
+    else:
+        v2 = int(len(v1) / 2)
+        v3 = v1[:v2]
+        v4 = v1[v2 + 1:]
+        print(""("".join(v3) + "")"".join(v4))
+",-1,MORE_THAN_SIX,0.0,brackets
+2456,"import sys
+
+if __name__ == ""__main__"":
+    v1 = list(sys.stdin.readline())[:-1]
+    if len(v1) % 2 != 0:
+        v2 = int(len(v1) / 2) + 1
+        v3 = v1[:v2]
+        v4 = v1[v2:]
+        print(""("".join(v3) + "")"".join(v4))
+    else:
+        v2 = int(len(v1) / 2)
+        v3 = v1[:v2]
+        v4 = v1[v2 + 1:]
+        print(""("".join(v3) + "")"".join(v4))
+",-1,MORE_THAN_SIX,0.0,brackets
+2458,"import sys
+
+if __name__ == ""__main__"":
+    v1 = list(sys.stdin.readline())[:-1]
+    if len(v1) % 2 != 0:
+        v2 = int(len(v1) / 2) + 1
+        v3 = v1[:v2]
+        v4 = v1[v2:]
+        print(""("".join(v3) + "")"".join(v4))
+    else:
+        v2 = int(len(v1) / 2)
+        v3 = v1[:v2]
+        v4 = v1[v2:]
+        print(""("".join(v3) + "")"".join(v4))
+",-1,MORE_THAN_SIX,0.0,brackets
+2461,"import sys
+
+if __name__ == ""__main__"":
+    v1 = list(sys.stdin.readline())[:-1]
+    if len(v1) % 2 != 0:
+        v2 = int(len(v1) / 2) + 1
+        v3 = v1[:v2]
+        v4 = v1[v2:]
+        print(""("".join(v3) + "")"" + "")"".join(v4))
+    else:
+        v2 = int(len(v1) / 2)
+        v3 = v1[:v2]
+        v4 = v1[v2:]
+        print(""("".join(v3) + "")"".join(v4))
+",-1,MORE_THAN_SIX,0.0,brackets

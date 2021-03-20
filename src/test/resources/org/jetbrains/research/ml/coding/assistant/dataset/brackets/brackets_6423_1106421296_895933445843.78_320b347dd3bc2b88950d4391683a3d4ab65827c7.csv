@@ -1,0 +1,247 @@
+id,fragment,age,programExperience,testsResults,task
+5257,"def f1():
+    f1_v1 = input()",-1,FROM_HALF_TO_ONE_YEAR,0.0,brackets
+5266,"def f1():
+    f1_v1 = input()
+    f1_v2 = (len(f1_v1) - 1) // 2",-1,FROM_HALF_TO_ONE_YEAR,0.0,brackets
+5283,"def f1():
+    f1_v1 = input()
+    f1_v2 = (len(f1_v1) - 1) // 2
+    f1_v3 = list(f1_v1)",-1,FROM_HALF_TO_ONE_YEAR,0.0,brackets
+5291,"def f1():
+    f1_v1 = input()
+    f1_v2 = (len(f1_v1) - 1) // 2
+    f1_v3 = list(f1_v1)
+    f1_v4 = []",-1,FROM_HALF_TO_ONE_YEAR,0.0,brackets
+5293,"def f1():
+    f1_v1 = input()
+    f1_v2 = (len(f1_v1) - 1) // 2
+    f1_v3 = list(f1_v1)
+    f1_v4 = []
+    for f1_v5 in range(f1_v2):
+        f1_v4.append(f1_v3[f1_v5])
+        f1_v4.append('(')
+        ",-1,FROM_HALF_TO_ONE_YEAR,0.0,brackets
+5296,"def f1():
+    f1_v1 = input()
+    f1_v2 = (len(f1_v1) - 1) // 2
+    f1_v3 = list(f1_v1)
+    f1_v4 = []
+    for f1_v5 in range(f1_v2):
+        f1_v4.append(f1_v3[f1_v5])
+        f1_v4.append('(')
+    f1_v4.append()",-1,FROM_HALF_TO_ONE_YEAR,0.0,brackets
+5300,"def f1():
+    f1_v1 = input()
+    f1_v2 = (len(f1_v1) - 1) // 2
+    f1_v3 = list(f1_v1)
+    f1_v4 = []
+    for f1_v5 in range(0, f1_v2 + 1):
+        f1_v4.append(f1_v3[f1_v5])
+        f1_v4.append('(')
+    f1_v4.append()",-1,FROM_HALF_TO_ONE_YEAR,0.0,brackets
+5314,"def f1():
+    f1_v1 = input()
+    f1_v2 = (len(f1_v1) - 1) // 2
+    f1_v3 = list(f1_v1)
+    f1_v4 = []
+    for f1_v5 in range(0, f1_v2 + 1):
+        f1_v4.append(f1_v3[f1_v5])
+        f1_v4.append('(')
+    f1_v4.append(f1_v3[f1_v2 + 1])",-1,FROM_HALF_TO_ONE_YEAR,0.0,brackets
+5323,"def f1():
+    f1_v1 = input()
+    f1_v2 = (len(f1_v1) - 1) // 2
+    f1_v3 = list(f1_v1)
+    f1_v4 = []
+    for f1_v5 in range(0, f1_v2 + 1):
+        f1_v4.append(f1_v3[f1_v5])
+        f1_v4.append('(')
+    f1_v4.append(f1_v3[f1_v2 + 1])
+    for f1_v5 in range(f1_v2 + 2, len(f1_v3)):
+        f1_v4.append(')')",-1,FROM_HALF_TO_ONE_YEAR,0.0,brackets
+5333,"def f1():
+    f1_v1 = input()
+    f1_v2 = (len(f1_v1) - 1) // 2
+    f1_v3 = list(f1_v1)
+    f1_v4 = []
+    for f1_v5 in range(0, f1_v2 + 1):
+        f1_v4.append(f1_v3[f1_v5])
+        f1_v4.append('(')
+    f1_v4.append(f1_v3[f1_v2 + 1])
+    for f1_v5 in range(f1_v2 + 2, len(f1_v3)):
+        f1_v4.append(')')
+        f1_v4.append(f1_v3[f1_v5])",-1,FROM_HALF_TO_ONE_YEAR,0.0,brackets
+5347,"def f1():
+    f1_v1 = input()
+    f1_v2 = (len(f1_v1) - 1) // 2
+    f1_v3 = list(f1_v1)
+    f1_v4 = []
+    for f1_v5 in range(0, f1_v2 + 1):
+        f1_v4.append(f1_v3[f1_v5])
+        f1_v4.append('(')
+    f1_v4.append(f1_v3[f1_v2 + 1])
+    for f1_v5 in range(f1_v2 + 2, len(f1_v3)):
+        f1_v4.append(')')
+        f1_v4.append(f1_v3[f1_v5])
+    print(''.join(f1_v4))",-1,FROM_HALF_TO_ONE_YEAR,0.0,brackets
+5348,"def f1():
+    f1_v1 = input()
+    f1_v2 = (len(f1_v1) - 1) // 2
+    f1_v3 = list(f1_v1)
+    f1_v4 = []
+    for f1_v5 in range(0, f1_v2):
+        f1_v4.append(f1_v3[f1_v5])
+        f1_v4.append('(')
+    f1_v4.append(f1_v3[f1_v2 + 1])
+    for f1_v5 in range(f1_v2 + 2, len(f1_v3)):
+        f1_v4.append(')')
+        f1_v4.append(f1_v3[f1_v5])
+    print(''.join(f1_v4))
+
+
+if __name__ == ""__main__"":
+    f1()",-1,FROM_HALF_TO_ONE_YEAR,0.0,brackets
+5350,"def f1():
+    f1_v1 = input()
+    f1_v2 = (len(f1_v1) - 1) // 2
+    f1_v3 = list(f1_v1)
+    f1_v4 = []
+    for f1_v5 in range(0, f1_v2):
+        f1_v4.append(f1_v3[f1_v5])
+        f1_v4.append('(')
+    f1_v4.append(f1_v3[f1_v2])
+    for f1_v5 in range(f1_v2 + 2, len(f1_v3)):
+        f1_v4.append(')')
+        f1_v4.append(f1_v3[f1_v5])
+    print(''.join(f1_v4))
+
+
+if __name__ == ""__main__"":
+    f1()",-1,FROM_HALF_TO_ONE_YEAR,0.125,brackets
+5351,"def f1():
+    f1_v1 = input()
+    f1_v2 = (len(f1_v1) - 1) // 2
+    f1_v3 = list(f1_v1)
+    f1_v4 = []
+    for f1_v5 in range(0, f1_v2):
+        f1_v4.append(f1_v3[f1_v5])
+        f1_v4.append('(')
+    f1_v4.append(f1_v3[f1_v2])
+    for f1_v5 in range(f1_v2 + 1, len(f1_v3)):
+        f1_v4.append(')')
+        f1_v4.append(f1_v3[f1_v5])
+    print(''.join(f1_v4))
+
+
+if __name__ == ""__main__"":
+    f1()",-1,FROM_HALF_TO_ONE_YEAR,0.125,brackets
+5352,"def f1():
+    f1_v1 = input()
+    f1_v2 = (len(f1_v1) - 1) // 2
+    f1_v3 = list(f1_v1)
+    f1_v4 = []
+    for f1_v5 in range(0, f1_v2):
+        f1_v4.append(f1_v3[f1_v5])
+        f1_v4.append('(')
+        
+    f1_v4.append(f1_v3[f1_v2])
+    for f1_v5 in range(f1_v2 + 1, len(f1_v3)):
+        f1_v4.append(')')
+        f1_v4.append(f1_v3[f1_v5])
+    print(''.join(f1_v4))
+
+
+if __name__ == ""__main__"":
+    f1()",-1,FROM_HALF_TO_ONE_YEAR,0.125,brackets
+5356,"def f1():
+    f1_v1 = input()
+    f1_v2 = (len(f1_v1) - 1) // 2
+    f1_v3 = list(f1_v1)
+    f1_v4 = []
+    for f1_v5 in range(0, f1_v2):
+        f1_v4.append(f1_v3[f1_v5])
+        f1_v4.append('(')
+
+    f1_v4.append(f1_v3[f1_v2])
+    for f1_v5 in range(f1_v2 + 1, len(f1_v3)):
+        f1_v4.append(')')
+        f1_v4.append(f1_v3[f1_v5])
+    print(''.join(f1_v4))
+
+
+if __name__ == ""__main__"":
+    f1()",-1,FROM_HALF_TO_ONE_YEAR,0.125,brackets
+5357,"def f1():
+    f1_v1 = input()
+    f1_v2 = (len(f1_v1) - 1) // 2
+    f1_v3 = list(f1_v1)
+    f1_v4 = []
+    for f1_v5 in range(0, f1_v2):
+        f1_v4.append(f1_v3[f1_v5])
+        f1_v4.append('(')
+    f1_v4.append(f1_v3[f1_v2])
+    for f1_v5 in range(f1_v2 + 1, len(f1_v3)):
+        f1_v4.append(')')
+        f1_v4.append(f1_v3[f1_v5])
+    print(''.join(f1_v4))
+
+
+if __name__ == ""__main__"":
+    f1()",-1,FROM_HALF_TO_ONE_YEAR,0.125,brackets
+5358,"def f1():
+    f1_v1 = input()
+    f1_v2 = (len(f1_v1) - 1) // 2
+    f1_v3 = list(f1_v1)
+    f1_v4 = []
+    for f1_v5 in range(0, f1_v2):
+        f1_v4.append(f1_v3[f1_v5])
+        f1_v4.append('(')
+    f1_v4.append(f1_v3[f1_v2])
+    
+    for f1_v5 in range(f1_v2 + 1, len(f1_v3)):
+        f1_v4.append(')')
+        f1_v4.append(f1_v3[f1_v5])
+    print(''.join(f1_v4))
+
+
+if __name__ == ""__main__"":
+    f1()",-1,FROM_HALF_TO_ONE_YEAR,0.125,brackets
+5370,"def f1():
+    f1_v1 = input()
+    f1_v2 = (len(f1_v1) - 1) // 2
+    f1_v3 = list(f1_v1)
+    f1_v4 = []
+    for f1_v5 in range(0, f1_v2):
+        f1_v4.append(f1_v3[f1_v5])
+        f1_v4.append('(')
+    f1_v4.append(f1_v3[f1_v2])
+    if len(f1_v3) % 2 == 0:
+        f1_v4.append(f1_v3[f1_v2 + 1])
+    for f1_v5 in range(f1_v2 + 1, len(f1_v3)):
+        f1_v4.append(')')
+        f1_v4.append(f1_v3[f1_v5])
+    print(''.join(f1_v4))
+
+
+if __name__ == ""__main__"":
+    f1()",-1,FROM_HALF_TO_ONE_YEAR,0.125,brackets
+5382,"def f1():
+    f1_v1 = input()
+    f1_v2 = (len(f1_v1) - 1) // 2
+    f1_v3 = list(f1_v1)
+    f1_v4 = []
+    for f1_v5 in range(0, f1_v2):
+        f1_v4.append(f1_v3[f1_v5])
+        f1_v4.append('(')
+    f1_v4.append(f1_v3[f1_v2])
+    if len(f1_v3) % 2 == 0:
+        f1_v4.append(f1_v3[f1_v2 + 1])
+    for f1_v5 in range(len(f1_v3) - f1_v2, len(f1_v3)):
+        f1_v4.append(')')
+        f1_v4.append(f1_v3[f1_v5])
+    print(''.join(f1_v4))
+
+
+if __name__ == ""__main__"":
+    f1()",-1,FROM_HALF_TO_ONE_YEAR,1.0,brackets

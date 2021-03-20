@@ -1,0 +1,40 @@
+id,fragment,age,programExperience,testsResults,task
+4199,"
+",20,MORE_THAN_SIX,0.0,pies
+4200,v1 = int,20,MORE_THAN_SIX,0.0,pies
+4202,v1 = int(input()),20,MORE_THAN_SIX,0.0,pies
+4203,"v1 = int(input())
+v2 = int",20,MORE_THAN_SIX,0.0,pies
+4205,"v1 = int(input())
+v2 = int(input())",20,MORE_THAN_SIX,0.0,pies
+4206,"v1 = int(input())
+v2 = int(input())",20,MORE_THAN_SIX,0.0,pies
+4207,"v1 = int(input())
+v2 = int(input())",20,MORE_THAN_SIX,0.0,pies
+4208,"v1 = int(input())
+v2 = int(input())
+v3 = int",20,MORE_THAN_SIX,0.0,pies
+4210,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())",20,MORE_THAN_SIX,0.0,pies
+4220,"v1 = int(input())
+v2 = 100 * v1 + int(input())
+v3 = int(input())
+
+",20,MORE_THAN_SIX,0.0,pies
+4221,"v1 = int(input()) * + int(input())
+v2 = int(input())
+
+",20,MORE_THAN_SIX,0.0,pies
+4226,"v1 = int(input()) * 100 + int(input())
+v2 = int(input())
+
+",20,MORE_THAN_SIX,0.0,pies
+4243,"v1 = int(input()) * 100 + int(input())
+v2 = int(input())
+
+print((v1 * v2) // 100, (v1 * v2) % 100)",20,MORE_THAN_SIX,1.0,pies
+4244,"v1, v2 = int(input()) * 100 + int(input()), int()
+print((v1 * v2) // 100, (v1 * v2) % 100)",20,MORE_THAN_SIX,0.0,pies
+4245,"v1, v2 = int(input()) * 100 + int(input()), int(input())
+print((v1 * v2) // 100, (v1 * v2) % 100)",20,MORE_THAN_SIX,1.0,pies

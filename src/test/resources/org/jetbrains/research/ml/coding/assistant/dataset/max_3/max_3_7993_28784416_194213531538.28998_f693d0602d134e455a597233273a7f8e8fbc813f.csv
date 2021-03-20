@@ -1,0 +1,33 @@
+id,fragment,age,programExperience,testsResults,task
+805,v1=int(input()),16.0,FROM_ONE_TO_TWO_YEARS,0.0,max_3
+806,"v1=int(input())
+v2=int",16.0,FROM_ONE_TO_TWO_YEARS,0.0,max_3
+808,"v1=int(input())
+v2=int(input())",16.0,FROM_ONE_TO_TWO_YEARS,0.0,max_3
+809,"v1=int(input())
+v2=int(input())
+v3=int",16.0,FROM_ONE_TO_TWO_YEARS,0.0,max_3
+811,"v1=int(input())
+v2=int(input())
+v3=int(input())",16.0,FROM_ONE_TO_TWO_YEARS,0.0,max_3
+814,print(max),16.0,FROM_ONE_TO_TWO_YEARS,0.0,max_3
+815,"v1=int(input())
+v2=int(input())
+v3=int(input())
+print(max(v1, v2, v3))",16.0,FROM_ONE_TO_TWO_YEARS,1.0,max_3
+817,"v1 = int(input())
+v2=int(input())
+v3=int(input())
+print(max(v1, v2, v3))",16.0,FROM_ONE_TO_TWO_YEARS,1.0,max_3
+819,"v1 = int(input())
+v2 = int(input())
+v3=int(input())
+print(max(v1, v2, v3))",16.0,FROM_ONE_TO_TWO_YEARS,1.0,max_3
+821,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+print(max(v1, v2, v3))",16.0,FROM_ONE_TO_TWO_YEARS,1.0,max_3
+823,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+print(max(v1, v2, v3))",16.0,FROM_ONE_TO_TWO_YEARS,1.0,max_3

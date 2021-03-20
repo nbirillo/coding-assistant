@@ -1,0 +1,52 @@
+id,fragment,age,programExperience,testsResults,task
+932,"v1 = [0, 0 , 0]",16.0,LESS_THAN_HALF_YEAR,0.0,voting
+936,"v1 = [0, 0 , 0]
+v1[0] = int(input())",16.0,LESS_THAN_HALF_YEAR,0.0,voting
+937,"v1 = [0, 0 , 0]
+v1[0] = int(input())
+v1[0] = int(input())",16.0,LESS_THAN_HALF_YEAR,0.0,voting
+938,"v1 = [0, 0 , 0]
+v1[0] = int(input())
+v1[1] = int(input())
+v1[0] = int(input())",16.0,LESS_THAN_HALF_YEAR,0.0,voting
+939,"v1 = [0, 0 , 0]
+v1[0] = int(input())
+v1[1] = int(input())
+v1[2] = int(input())
+",16.0,LESS_THAN_HALF_YEAR,0.0,voting
+942,"v1 = [0, 0 , 0]
+v2 = 0
+v1[0] = int(input())
+v1[1] = int(input())
+v1[2] = int(input())
+for v3 in v1:
+    if v1[v3] == 1:
+        v2 += 1",16.0,LESS_THAN_HALF_YEAR,0.0,voting
+943,"v1 = [0, 0 , 0]
+v2 = 0
+v3 = 0
+v1[0] = int(input())
+v1[1] = int(input())
+v1[2] = int(input())
+for v4 in v1:
+    if v1[v4] == 1:
+        v2 += 1
+    else:
+        v3 += 1
+if v2 > v3:
+    print(1)",16.0,LESS_THAN_HALF_YEAR,0.0,voting
+945,"v1 = [0, 0 , 0]
+v2 = 0
+v3 = 0
+v1[0] = int(input())
+v1[1] = int(input())
+v1[2] = int(input())
+for v4 in v1:
+    if v1[v4] == 1:
+        v2 += 1
+    else:
+        v3 += 1
+if v2 > v3:
+    print(1)
+else:
+    print()",16.0,LESS_THAN_HALF_YEAR,0.0,voting

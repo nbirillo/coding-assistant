@@ -1,0 +1,337 @@
+id,fragment,age,programExperience,testsResults,task
+304,"v1=int(input())
+v2=int(input())",13.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+305,"v1=int(input())
+v2=int(input())
+v1=int(input())
+v2=int(input())",13.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+306,"v1=int(input())
+v2=int(input())
+v1=int(input())
+",13.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+307,"v1=int(input())
+v2=int(input())
+v3=int(input())",13.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+309,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if(v1 > v2, v1 > v3):
+    print ()",13.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+310,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if(v1 > v2, v1 > v3):
+    print (v1)
+    ",13.0,FROM_HALF_TO_ONE_YEAR,0.125,max_3
+311,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if(v1 > v2, v1 > v3):
+    print (v1)
+if(v2 > v1, v2 > v3):
+    print ()",13.0,FROM_HALF_TO_ONE_YEAR,0.125,max_3
+312,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if(v1 > v2, v1 > v3):
+    print (v1)
+if(v2 > v1, v2 > v3):
+    print (v2)
+    ",13.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+313,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if(v1 > v2, v1 > v3):
+    print (v1)
+if(v2 > v1, v2 > v3):
+    print (v2)
+if(v3 > v1, v3 > v3):
+    print (v2)
+",13.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+314,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if(v1 > v2, v1 > v3):
+    print (v1)
+if(v2 > v1, v2 > v3):
+    print (v2)
+if(v3 > v1, v3 > v2):
+    print (v2)
+",13.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+316,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if(v1 > v2, v1 > v3):
+    print (v1)
+if(v2 > v1, v2 > v3):
+    print (v2)
+if(v3 > v1, v3 > v2):
+    print (v3)
+",13.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+317,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if(v1 > v2, v1 > v3):
+    print (v1)
+
+if(v2 > v1, v2 > v3):
+    print (v2)
+if(v3 > v1, v3 > v2):
+    print (v3)
+
+",13.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+319,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if(v1 > v2, v1 > v3):
+    print (v1)
+elif(v1 == v2, v1 > v3):
+    print(v1, )
+if(v2 > v1, v2 > v3):
+    print(v2)
+elif(v2 > v1, v2 == v3):
+    print(v2, v3)
+if(v3 > v1, v3 > v2):
+    print(v3)
+elif(v3 == v1, v3 > v2):
+    print(v1, v3)
+if(v1 == v2, v2 == v3):
+    print(v1, v2, v3)",13.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+320,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if(v1 > v2, v1 > v3):
+    print (v1)
+elif(v1 == v2, v1 > v3):
+    print(v1)
+if(v2 > v1, v2 > v3):
+    print(v2)
+elif(v2 > v1, v2 == v3):
+    print(v2, v3)
+if(v3 > v1, v3 > v2):
+    print(v3)
+elif(v3 == v1, v3 > v2):
+    print(v1, v3)
+if(v1 == v2, v2 == v3):
+    print(v1, v2, v3)",13.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+322,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if(v1 > v2, v1 > v3):
+    print (v1)
+elif(v1 == v2, v1 > v3):
+    print(v1)
+if(v2 > v1, v2 > v3):
+    print(v2)
+elif(v2 > v1, v2 == v3):
+    print(v2)
+if(v3 > v1, v3 > v2):
+    print(v3)
+elif(v3 == v1, v3 > v2):
+    print(v1, v3)
+if(v1 == v2, v2 == v3):
+    print(v1, v2, v3)",13.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+324,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if(v1 > v2, v1 > v3):
+    print (v1)
+elif(v1 == v2, v1 > v3):
+    print(v1)
+if(v2 > v1, v2 > v3):
+    print(v2)
+elif(v2 > v1, v2 == v3):
+    print(v2)
+if(v3 > v1, v3 > v2):
+    print(v3)
+elif(v3 == v1, v3 > v2):
+    print(v1)
+if(v1 == v2, v2 == v3):
+    print(v1, v2, v3)",13.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+328,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if(v1 > v2, v1 > v3):
+    print (v1)
+elif(v1 == v2, v1 > v3):
+    print(v1)
+if(v2 > v1, v2 > v3):
+    print(v2)
+elif(v2 > v1, v2 == v3):
+    print(v2)
+if(v3 > v1, v3 > v2):
+    print(v3)
+elif(v3 == v1, v3 > v2):
+    print(v1)
+if(v1 == v2, v2 == v3):
+    print(v1)",13.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+329,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if(v1 > v2, v1 > v3):
+    print (v1)
+elif(v1 == v2, v1 > v3):
+    print(v1)
+elif(v2 > v1, v2 > v3):
+    print(v2)
+elif(v2 > v1, v2 == v3):
+    print(v2)
+if(v3 > v1, v3 > v2):
+    print(v3)
+elif(v3 == v1, v3 > v2):
+    print(v1)
+if(v1 == v2, v2 == v3):
+    print(v1)",13.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+330,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if(v1 > v2, v1 > v3):
+    print (v1)
+elif(v1 == v2, v1 > v3):
+    print(v1)
+elif(v2 > v1, v2 > v3):
+    print(v2)
+elif(v2 > v1, v2 == v3):
+    print(v2)
+elif(v3 > v1, v3 > v2):
+    print(v3)
+elif(v3 == v1, v3 > v2):
+    print(v1)
+if(v1 == v2, v2 == v3):
+    print(v1)",13.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+331,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if(v1 > v2, v1 > v3):
+    print (v1)
+elif(v1 == v2, v1 > v3):
+    print(v1)
+elif(v2 > v1, v2 > v3):
+    print(v2)
+elif(v2 > v1, v2 == v3):
+    print(v2)
+elif(v3 > v1, v3 > v2):
+    print(v3)
+elif(v3 == v1, v3 > v2):
+    print(v1)
+elif(v1 == v2, v2 == v3):
+    print(v1)",13.0,FROM_HALF_TO_ONE_YEAR,0.125,max_3
+332,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if(v1>v2 and v1>v3):
+    print (v1)
+elif(v1 == v2, v1 > v3):
+    print(v1)
+elif(v2 > v1, v2 > v3):
+    print(v2)
+elif(v2 > v1, v2 == v3):
+    print(v2)
+elif(v3 > v1, v3 > v2):
+    print(v3)
+elif(v3 == v1, v3 > v2):
+    print(v1)
+elif(v1 == v2, v2 == v3):
+    print(v1)",13.0,FROM_HALF_TO_ONE_YEAR,0.125,max_3
+333,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if(v1>v2 and v1>v3):
+    print (v1)
+elif(v1 == v2, v1 > v3):
+    print(v1)
+elif(v2 > v1 and v2 > v3):
+    print(v2)
+elif(v2 > v1, v2 == v3):
+    print(v2)
+elif(v3 > v1, v3 > v2):
+    print(v3)
+elif(v3 == v1, v3 > v2):
+    print(v1)
+elif(v1 == v2, v2 == v3):
+    print(v1)",13.0,FROM_HALF_TO_ONE_YEAR,0.125,max_3
+334,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if(v1>v2 and v1>v3):
+    print (v1)
+elif(v1 == v2, v1 > v3):
+    print(v1)
+elif(v2 > v1 and v2 > v3):
+    print(v2)
+elif(v2 > v1 and v2 == v3):
+    print(v2)
+elif(v3 > v1, v3 > v2):
+    print(v3)
+elif(v3 == v1, v3 > v2):
+    print(v1)
+elif(v1 == v2, v2 == v3):
+    print(v1)",13.0,FROM_HALF_TO_ONE_YEAR,0.125,max_3
+335,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if(v1>v2 and v1>v3):
+    print (v1)
+elif(v1 == v2, v1 > v3):
+    print(v1)
+elif(v2 > v1 and v2 > v3):
+    print(v2)
+elif(v2 > v1 and v2 == v3):
+    print(v2)
+elif(v3 > v1 and v3 > v2):
+    print(v3)
+elif(v3 == v1, v3 > v2):
+    print(v1)
+elif(v1 == v2, v2 == v3):
+    print(v1)",13.0,FROM_HALF_TO_ONE_YEAR,0.125,max_3
+336,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if(v1>v2 and v1>v3):
+    print (v1)
+elif(v1 == v2, v1 > v3):
+    print(v1)
+elif(v2 > v1 and v2 > v3):
+    print(v2)
+elif(v2 > v1 and v2 == v3):
+    print(v2)
+elif(v3 > v1 and v3 > v2):
+    print(v3)
+elif(v3 == v1 and v3 > v2):
+    print(v1)
+elif(v1 == v2, v2 == v3):
+    print(v1)",13.0,FROM_HALF_TO_ONE_YEAR,0.125,max_3
+337,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if(v1>v2 and v1>v3):
+    print (v1)
+elif(v1 == v2, v1 > v3):
+    print(v1)
+elif(v2 > v1 and v2 > v3):
+    print(v2)
+elif(v2 > v1 and v2 == v3):
+    print(v2)
+elif(v3 > v1 and v3 > v2):
+    print(v3)
+elif(v3 == v1 and v3 > v2):
+    print(v1)
+elif(v1 == v2 and v2 == v3):
+    print(v1)",13.0,FROM_HALF_TO_ONE_YEAR,0.125,max_3
+340,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if(v1>v2 and v1>v3):
+    print (v1)
+elif(v1 == v2 and v1 > v3):
+    print(v1)
+elif(v2 > v1 and v2 > v3):
+    print(v2)
+elif(v2 > v1 and v2 == v3):
+    print(v2)
+elif(v3 > v1 and v3 > v2):
+    print(v3)
+elif(v3 == v1 and v3 > v2):
+    print(v1)
+elif(v1 == v2 and v2 == v3):
+    print(v1)",13.0,FROM_HALF_TO_ONE_YEAR,1.0,max_3

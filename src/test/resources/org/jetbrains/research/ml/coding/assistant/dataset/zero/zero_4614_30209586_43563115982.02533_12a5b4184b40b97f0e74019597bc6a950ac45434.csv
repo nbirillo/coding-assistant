@@ -1,0 +1,264 @@
+id,fragment,age,programExperience,testsResults,task
+653,v1=int(input()),16.0,FROM_HALF_TO_ONE_YEAR,0.0,is_zero
+654,"v1=int(input())
+v2=[]
+v3=0
+while v3!=v1:
+    v2.append(int())",16.0,FROM_HALF_TO_ONE_YEAR,0.0,is_zero
+655,"v1=int(input())
+v2=[]
+v3=0
+while v3!=v1:
+    v2.append(int(input()))",16.0,FROM_HALF_TO_ONE_YEAR,0.0,is_zero
+656,"v1=int(input())
+v2=[]
+v3=0
+while v3!=v1:
+    v2.append(int(input()))
+    v3+=1",16.0,FROM_HALF_TO_ONE_YEAR,0.0,is_zero
+657,"v1=int(input())
+v2=[v3 for v3 in range(v1)]
+v4=0
+",16.0,FROM_HALF_TO_ONE_YEAR,0.0,is_zero
+663,"v1=int(input())
+v2=[v3 for v3 in range(v1)]
+for v4 in v2:
+    if v4==0:
+        print(""YES"")",16.0,FROM_HALF_TO_ONE_YEAR,0.0,is_zero
+664,"v1=int(input())
+v2=[v3 for v3 in range(v1)]
+for v4 in v2:
+    if v4==0:
+        print(""YES"")
+    else:
+        print()",16.0,FROM_HALF_TO_ONE_YEAR,0.0,is_zero
+667,"v1=int(input())
+v2=[v3 for v3 in range(v1)]
+for v4 in v2:
+    if v4==0:
+        print(""YES"")
+    else:
+        print(""NO"")",16.0,FROM_HALF_TO_ONE_YEAR,0.0,is_zero
+668,"v1=int(input())
+v2=[]
+v3=0
+while v3!=v1:
+    v2.append(int(input()))
+    v3+=1
+for v4 in v2:
+    if v4==0:
+        print(""YES"")
+    else:
+        print(""NO"")",16.0,FROM_HALF_TO_ONE_YEAR,0.125,is_zero
+670,"v1=int(input())
+v2=[]
+v3=0
+while v3!=v1:
+    v2.append(int(input()))
+    v3+=1
+",16.0,FROM_HALF_TO_ONE_YEAR,0.0,is_zero
+674,"v1=int(input())
+v2=[]
+v3=0
+while v3!=v1:
+    v2.append(int(input()))
+    v3+=1
+for v4 in v2:
+    v4= v4 * v4",16.0,FROM_HALF_TO_ONE_YEAR,0.0,is_zero
+675,"v1=int(input())
+v2=[]
+v3=0
+while v3!=v1:
+    v2.append(int(input()))
+    v3+=1
+for v4 in v2:
+    v4= v4 * v4
+if v4==0:
+    print()",16.0,FROM_HALF_TO_ONE_YEAR,0.0,is_zero
+679,"v1=int(input())
+v2=[]
+v3=0
+while v3!=v1:
+    v2.append(int(input()))
+    v3+=1
+for v4 in v2:
+    v4= v4 * v4
+if v4==0:
+    print(""YES"")",16.0,FROM_HALF_TO_ONE_YEAR,0.0,is_zero
+680,"v1=int(input())
+v2=[]
+v3=0
+while v3!=v1:
+    v2.append(int(input()))
+    v3+=1
+for v4 in v2:
+    v4= v4 * v4
+if v4==0:
+    print(""YES"")
+else:
+    print()",16.0,FROM_HALF_TO_ONE_YEAR,0.0,is_zero
+683,"v1=int(input())
+v2=[]
+v3=0
+while v3!=v1:
+    v2.append(int(input()))
+    v3+=1
+for v4 in v2:
+    v4= v4 * v4
+if v4==0:
+    print(""YES"")
+else:
+    print(""NO"")",16.0,FROM_HALF_TO_ONE_YEAR,0.125,is_zero
+684,"v1=int(input())
+v2=[]
+v3=0
+while v3!=v1:
+    v2.append(int(input()))
+    v3+=1
+for v4 in v2:
+    v4= v4 * v4
+    if v4==0:
+        print(""YES"")
+else:
+    print(""NO"")",16.0,FROM_HALF_TO_ONE_YEAR,0.125,is_zero
+685,"v1=int(input())
+v2=[]
+v3=0
+while v3!=v1:
+    v2.append(int(input()))
+    v3+=1
+for v4 in v2:
+    v4= v4 * v4
+    if v4==0:
+        print(""YES"")
+    else:
+        print(""NO"")",16.0,FROM_HALF_TO_ONE_YEAR,0.125,is_zero
+686,"v1=int(input())
+v2=[]
+v3=0
+while v3!=v1:
+    v2.append(int(input()))
+    v3+=1
+for v4 in v2:
+    v4= v4 * v4
+if v4==0:
+    print(""YES"")
+else:
+        print(""NO"")",16.0,FROM_HALF_TO_ONE_YEAR,0.125,is_zero
+688,"v1=int(input())
+v2=[]
+v3=0
+while v3!=v1:
+    v2.append(int(input()))
+    v3+=1
+for v4 in v2:
+    v4= v4 * v4
+if v4==0:
+    print(""YES"")
+else:
+    print(""NO"")",16.0,FROM_HALF_TO_ONE_YEAR,0.125,is_zero
+689,"v1=int(input())
+v2=[]
+v3=0
+while v3!=v1:
+    v2.append(int(input()))
+    v3+=1
+for v4 in v2:
+    v4= v4 * v4
+    
+if v4==0:
+    print(""YES"")
+else:
+    print(""NO"")",16.0,FROM_HALF_TO_ONE_YEAR,0.125,is_zero
+690,"v1=int(input())
+v2=[]
+v3=0
+while v3!=v1:
+    v2.append(int(input()))
+    v3+=1
+for v4 in v2:
+    v4= v4 * v4
+    v5=v4
+if v4==0:
+    print(""YES"")
+else:
+    print(""NO"")",16.0,FROM_HALF_TO_ONE_YEAR,0.125,is_zero
+691,"v1=int(input())
+v2=[]
+v3=0
+while v3!=v1:
+    v2.append(int(input()))
+    v3+=1
+for v4 in v2:
+    v4= v4 * v4
+    v5=v4
+if v5==0:
+    print(""YES"")
+else:
+    print(""NO"")",16.0,FROM_HALF_TO_ONE_YEAR,0.125,is_zero
+693,"v1=int(input())
+v2=[]
+v3=0
+while v3!=v1:
+    v2.append(int(input()))
+    v3+=1
+for v4 in v2:
+    v4= v4 * v4
+    v5=v4
+if v5==0:
+    print(""YES"")
+",16.0,FROM_HALF_TO_ONE_YEAR,0.0,is_zero
+694,"v1=int(input())
+v2=[]
+v3=0
+while v3!=v1:
+    v2.append(int(input()))
+    v3+=1
+for v4 in v2:
+    v4= v4 * v4
+    v5=v4
+",16.0,FROM_HALF_TO_ONE_YEAR,0.0,is_zero
+695,"v1=int(input())
+v2=[]
+v3=0
+while v3!=v1:
+    v2.append(int(input()))
+    v3+=1
+for v4 in v2:
+    v4= v4 * v4
+   ",16.0,FROM_HALF_TO_ONE_YEAR,0.0,is_zero
+696,"v1=int(input())
+v2=[]
+v3=0
+while v3!=v1:
+    v2.append(int(input()))
+    v3+=1
+for v4 in v2:
+    v5= v4 * v4
+    ",16.0,FROM_HALF_TO_ONE_YEAR,0.0,is_zero
+697,"v1=int(input())
+v2=[]
+v3=0
+v4=0
+while v3!=v1:
+    v2.append(int(input()))
+    v3+=1
+for v5 in v2:
+    v4= v5 * v5",16.0,FROM_HALF_TO_ONE_YEAR,0.0,is_zero
+698,"v1=int(input())
+v2=[]
+v3=0
+
+while v3!=v1:
+    v2.append(int(input()))
+    v3+=1
+for v4 in v2:
+    v5= v4 * v4",16.0,FROM_HALF_TO_ONE_YEAR,0.0,is_zero
+699,"v1=int(input())
+v2=[]
+v3=0
+while v3!=v1:
+    v2.append(int(input()))
+    v3+=1
+for v4 in v2:
+    v5= v4 * v4",16.0,FROM_HALF_TO_ONE_YEAR,0.0,is_zero

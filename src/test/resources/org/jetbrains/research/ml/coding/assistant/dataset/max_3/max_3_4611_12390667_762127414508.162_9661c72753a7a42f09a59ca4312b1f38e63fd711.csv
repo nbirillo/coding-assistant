@@ -1,0 +1,21 @@
+id,fragment,age,programExperience,testsResults,task
+444,"v1 = [0, 0, 0]",16.0,LESS_THAN_HALF_YEAR,0.0,max_3
+448,"v1 = [0, 0, 0]
+v1[0] = int(input())",16.0,LESS_THAN_HALF_YEAR,0.0,max_3
+449,"v1 = [0, 0, 0]
+v1[0] = int(input())
+v1[0] = int(input())",16.0,LESS_THAN_HALF_YEAR,0.0,max_3
+450,"v1 = [0, 0, 0]
+v1[0] = int(input())
+v1[1] = int(input())
+v1[0] = int(input())",16.0,LESS_THAN_HALF_YEAR,0.0,max_3
+451,"v1 = [0, 0, 0]
+v1[0] = int(input())
+v1[1] = int(input())
+v1[2] = int(input())
+",16.0,LESS_THAN_HALF_YEAR,0.0,max_3
+454,"v1 = [0, 0, 0]
+v1[0] = int(input())
+v1[1] = int(input())
+v1[2] = int(input())
+print(max(v1))",16.0,LESS_THAN_HALF_YEAR,1.0,max_3

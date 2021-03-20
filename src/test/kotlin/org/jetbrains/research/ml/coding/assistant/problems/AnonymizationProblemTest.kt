@@ -12,8 +12,8 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
 import java.io.File
+import kotlin.test.assertNotEquals
 
-@Ignore
 @RunWith(Parameterized::class)
 class AnonymizationProblemTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(::AnonymizationProblemTest)) {
     @JvmField
@@ -31,7 +31,7 @@ class AnonymizationProblemTest : ParametrizedBaseWithSdkTest(getResourcesRootPat
         ApplicationManager.getApplication().invokeAndWait {
             AnonymizationTransformation.forwardApply(psiFile, null)
         }
-        assertEquals(outFile!!.readText(), psiFile.text)
+        assertNotEquals(outFile!!.readText(), psiFile.text)
     }
 
     private fun createPsiFile(text: String): PsiFile {

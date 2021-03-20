@@ -1,0 +1,30 @@
+id,fragment,age,programExperience,testsResults,task
+939,v1=int(input()),0.0,,0.0,is_zero
+940,"v1=int(input())
+for v2 in range(v1):
+    v3=v2",0.0,,0.0,is_zero
+944,"v1=int(input())
+for v2 in range(v1):
+    v3=int(input())",0.0,,0.0,is_zero
+946,"v1=int(input())
+for v2 in range(v1):
+    v3=int(input())
+    if v3==0:
+        print(""YES"")
+        ",0.0,,0.0,is_zero
+947,"v1=int(input())
+for v2 in range(v1):
+    v3=int(input())
+    if v3==0:
+        print(""YES"")
+        break
+        ",0.0,,0.0,is_zero
+949,"v1=int(input())
+for v2 in range(v1):
+    v3=int(input())
+    if v3==0:
+        print(""YES"")
+        break
+else:
+    print("""")
+        ",0.0,,0.0,is_zero

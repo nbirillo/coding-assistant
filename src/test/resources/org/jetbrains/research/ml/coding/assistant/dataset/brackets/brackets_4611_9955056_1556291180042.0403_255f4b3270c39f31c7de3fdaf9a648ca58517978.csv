@@ -1,0 +1,7 @@
+id,fragment,age,programExperience,testsResults,task
+4431,v1 = input(),14.0,LESS_THAN_HALF_YEAR,0,brackets
+4432,"v1 = input()
+v2 = len",14.0,LESS_THAN_HALF_YEAR,0,brackets
+4433,"v1 = input()
+v2 = len(v1)
+",14.0,LESS_THAN_HALF_YEAR,0,brackets

@@ -1,0 +1,33 @@
+id,fragment,age,programExperience,testsResults,task
+5555,"v1 = input()
+",16,LESS_THAN_HALF_YEAR,0.0,brackets
+5556,"v1 = input()
+v2 = ''",16,LESS_THAN_HALF_YEAR,0.0,brackets
+5557,"v1 = input()
+v2 = ''",16,LESS_THAN_HALF_YEAR,0.0,brackets
+5558,"v1 = input()
+v2 = len(v1) // 2
+v3 = []
+
+if len(v1) % 2 != 0:
+    for v4 in range(v2):
+        v3.append(v1[v4])
+        v3.append('(')
+
+else:
+    pass
+
+print(v3)",16,LESS_THAN_HALF_YEAR,0.0,brackets
+5559,"v1 = input()
+v2 = len(v1) // 2
+v3 = []
+
+if len(v1) % 2 != 0:
+    for v4 in range(v2):
+        v3.append(v1[v4])
+        v3.append('(')
+
+else:
+    pass
+
+print(v5 for v5 in v3)",16,LESS_THAN_HALF_YEAR,0.0,brackets

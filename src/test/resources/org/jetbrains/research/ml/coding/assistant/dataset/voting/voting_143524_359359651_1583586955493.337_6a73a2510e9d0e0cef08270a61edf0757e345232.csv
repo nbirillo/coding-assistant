@@ -1,0 +1,16 @@
+id,fragment,age,programExperience,testsResults,task
+154,"
+",22,FROM_ONE_TO_TWO_YEARS,0.0,voting
+155,v1 = [int],22,FROM_ONE_TO_TWO_YEARS,0.0,voting
+156,v1 = [int()],22,FROM_ONE_TO_TWO_YEARS,0.0,voting
+157,,22,FROM_ONE_TO_TWO_YEARS,0.0,voting
+158,v1 = [int(v2) for v2 in input()],22,FROM_ONE_TO_TWO_YEARS,0.0,voting
+159,v1 = [int(v2) for v2 in input().split()],22,FROM_ONE_TO_TWO_YEARS,0.0,voting
+166,"v1 = [int(v2) for v2 in input().split()]
+print([0 if v1.count(0) > 1 else 1][0])",22,FROM_ONE_TO_TWO_YEARS,1.0,voting
+167,"v1 = [v2 for v2 in input().split()]
+print([0 if v1.count("""") > 1 else 1][0])
+",22,FROM_ONE_TO_TWO_YEARS,0.125,voting
+168,"v1 = [v2 for v2 in input().split()]
+print([0 if v1.count(""0"") > 1 else 1][0])
+",22,FROM_ONE_TO_TWO_YEARS,1.0,voting

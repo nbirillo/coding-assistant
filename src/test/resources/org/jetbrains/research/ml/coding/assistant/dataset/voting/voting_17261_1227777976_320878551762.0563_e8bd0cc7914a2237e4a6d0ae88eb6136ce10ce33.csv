@@ -1,0 +1,32 @@
+id,fragment,age,programExperience,testsResults,task
+228,"
+",23,MORE_THAN_SIX,0.0,voting
+229,"if __name__ == '__main__':
+    v1 = [int]",23,MORE_THAN_SIX,0.0,voting
+233,"if __name__ == '__main__':
+    v1 = input()",23,MORE_THAN_SIX,0.0,voting
+234,"if __name__ == '__main__':
+    v1 = input()
+    v2 = v1",23,MORE_THAN_SIX,0.0,voting
+243,"if __name__ == '__main__':
+    v1 = input()
+    v2 = map(int, v1.split(' '))",23,MORE_THAN_SIX,0.0,voting
+248,"if __name__ == '__main__':
+    v1 = input()
+    v2 = map(int, v1.split(' '))
+    print(1 if sum(v2) >= 2 else 0)",23,MORE_THAN_SIX,1.0,voting
+249,"if __name__ == '__main__':
+    v1 = input()
+    v2 = map(int, v1.split(' '))
+               
+    print(1 if sum(v2) >= 2 else 0)
+
+
+",23,MORE_THAN_SIX,1.0,voting
+250,"if __name__ == '__main__':
+    v1 = input()
+    v2 = map(int, v1.split(' '))
+    print(1 if sum(v2) >= 2 else 0)
+
+
+",23,MORE_THAN_SIX,1.0,voting

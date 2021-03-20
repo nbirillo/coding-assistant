@@ -1,0 +1,33 @@
+id,fragment,age,programExperience,testsResults,task
+3071,v1 = int(),14.0,LESS_THAN_HALF_YEAR,0.0,pies
+3072,"v1 = input
+v2 = input
+v3 = input
+print(""a*n"" ""b*n"")",14.0,LESS_THAN_HALF_YEAR,0.0,pies
+3073,"v1 = input()
+v2 = input
+v3 = input
+print(""a*n"" ""b*n"")",14.0,LESS_THAN_HALF_YEAR,0.0,pies
+3074,"v1 = input()
+v2 = input()
+v3 = input
+print(""a*n"" ""b*n"")",14.0,LESS_THAN_HALF_YEAR,0.0,pies
+3075,"v1 = input()
+v2 = input()
+v3 = input()
+print(""a*n"" ""b*n"")",14.0,LESS_THAN_HALF_YEAR,0.0,pies
+3076,"v1 = input()
+v2 = input()
+v3 = int(input())
+print(v1 * v3)
+print(v2 * v3)",14.0,LESS_THAN_HALF_YEAR,0.0,pies
+3077,"v1 = input()
+v2 = int(input())
+v3 = int(input())
+print(v1 * v3)
+print(v2 * v3)",14.0,LESS_THAN_HALF_YEAR,0.0,pies
+3078,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+print(v1 * v3)
+print(v2 * v3)",14.0,LESS_THAN_HALF_YEAR,0.0,pies

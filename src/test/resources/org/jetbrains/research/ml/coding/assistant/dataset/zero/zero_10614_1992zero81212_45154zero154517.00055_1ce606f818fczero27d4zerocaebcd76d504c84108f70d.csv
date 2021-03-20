@@ -1,0 +1,113 @@
+id,fragment,age,programExperience,testsResults,task
+135,v1 = int(input()),17.0,FROM_TWO_TO_FOUR_YEARS,0.0,is_zero
+136,"v1 = int(input())
+for v2 in range(v1):
+    v3 = int(input())
+    if int(input()) == 0:
+        v4 = 1
+",17.0,FROM_TWO_TO_FOUR_YEARS,0.0,is_zero
+142,"v1 = int(input())
+for v2 in range(v1):
+    v3 = int(input())
+    if int(input()) == 0:
+        v4 = 1
+if v4 == 1:
+    print('YES')
+",17.0,FROM_TWO_TO_FOUR_YEARS,0.0,is_zero
+143,"v1 = int(input())
+for v2 in range(v1):
+    v3 = int(input())
+    if int(input()) == 0:
+        v4 = 1
+if v4 == 1:
+    print('YES')
+else:
+    print()
+",17.0,FROM_TWO_TO_FOUR_YEARS,0.0,is_zero
+146,"v1 = int(input())
+for v2 in range(v1):
+    v3 = int(input())
+    if int(input()) == 0:
+        v4 = 1
+if v4 == 1:
+    print('YES')
+else:
+    print('NO')
+",17.0,FROM_TWO_TO_FOUR_YEARS,0.0,is_zero
+147,"v1 = int(input())
+
+for v2 in range(v1):
+    v3 = int(input())
+    if int(input()) == 0:
+        v4 = 1
+if v4 == 1:
+    print('YES')
+else:
+    print('NO')
+",17.0,FROM_TWO_TO_FOUR_YEARS,0.0,is_zero
+150,"v1 = int(input())
+v2 = 0
+for v3 in range(v1):
+    v4 = int(input())
+    if int(input()) == 0:
+        v2 = 1
+if v2 == 1:
+    print('YES')
+else:
+    print('NO')
+",17.0,FROM_TWO_TO_FOUR_YEARS,0.0,is_zero
+151,"v1 = int(input())
+v2 = 0
+for v3 in range(v1):
+    v4 = int(input())
+    if int(input()) == 0:
+        v2 += 1
+if v2 == 1:
+    print('YES')
+else:
+    print('NO')
+",17.0,FROM_TWO_TO_FOUR_YEARS,0.0,is_zero
+152,"v1 = int(input())
+v2 = 0
+for v3 in range(v1):
+    v4 = int(input())
+    if int(input()) == 0:
+        v2 += 1
+if v2 == 0:
+    print('YES')
+else:
+    print('NO')
+",17.0,FROM_TWO_TO_FOUR_YEARS,0.0,is_zero
+155,"v1 = int(input())
+v2 = 0
+for v3 in range(v1):
+    v4 = int(input())
+    if int(input()) == 0:
+        v2 += 1
+if v2 == 0:
+    print('NO')
+else:
+    print('NO')
+",17.0,FROM_TWO_TO_FOUR_YEARS,0.0,is_zero
+161,"v1 = int(input())
+v2 = 0
+for v3 in range(v1):
+    v4 = int(input())
+    if int(input()) == 0:
+        v2 += 1
+if v2 == 0:
+    print('NO')
+else:
+    print('YES')
+",17.0,FROM_TWO_TO_FOUR_YEARS,0.0,is_zero
+163,"v1 = int(input())
+v2 = 0
+for v3 in range(v1):
+    v4 = int(input())
+    if v4 == 0:
+        v2 += 1
+if v2 == 0:
+    print('NO')
+else:
+    print('YES')
+",17.0,FROM_TWO_TO_FOUR_YEARS,1.0,is_zero

@@ -1,0 +1,6 @@
+id,fragment,age,programExperience,testsResults,task
+455,"v1 = []
+for v2 in range(3):
+    v1.append(int(input()))
+v1.sort()
+print(v1[-1])",14.0,LESS_THAN_HALF_YEAR,1.0,max_3

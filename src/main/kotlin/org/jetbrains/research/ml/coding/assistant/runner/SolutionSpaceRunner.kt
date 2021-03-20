@@ -61,7 +61,7 @@ object SolutionSpaceRunner : ApplicationStarter {
 
                 val solutionSpaceBuilder = SolutionSpaceGraphBuilder()
                 val unifiedSolutions = taskSolutions.dynamicSolutions
-                    .map { datasetUnification.transform(it) }
+                    .map { datasetUnification.unify(it) }
 
                 unifiedSolutions
                     .forEach { solutionSpaceBuilder.addDynamicSolution(it) }

@@ -1,0 +1,53 @@
+id,fragment,age,programExperience,testsResults,task
+4132,"
+",17,FROM_ONE_TO_TWO_YEARS,0.0,pies
+4136,"
+",17,FROM_ONE_TO_TWO_YEARS,0.0,pies
+4137,v1 = input,17,FROM_ONE_TO_TWO_YEARS,0.0,pies
+4142,"v1 =input(int)
+",17,FROM_ONE_TO_TWO_YEARS,0.0,pies
+4143,"v1 =input(int)
+v2 =input
+",17,FROM_ONE_TO_TWO_YEARS,0.0,pies
+4145,"v1 =input(int)
+v2 =input(int)
+",17,FROM_ONE_TO_TWO_YEARS,0.0,pies
+4146,"v1 =input(int)
+v2 =input(int)
+v3 =input",17,FROM_ONE_TO_TWO_YEARS,0.0,pies
+4148,"v1 =input(int)
+v2 =input(int)
+v3 =input(int)",17,FROM_ONE_TO_TWO_YEARS,0.0,pies
+4149,"v1 =input(int)
+v2 = input(int)
+v3 =input(int)",17,FROM_ONE_TO_TWO_YEARS,0.0,pies
+4150,"v1 = input(int)
+v2 = input(int)
+v3 =input(int)",17,FROM_ONE_TO_TWO_YEARS,0.0,pies
+4151,"v1 = input(int)
+v2 = input(int)
+v3 = input(int)",17,FROM_ONE_TO_TWO_YEARS,0.0,pies
+4152,"v1 = input(int)
+v2 = input(int)
+v3 = input(int)
+v4 =v1",17,FROM_ONE_TO_TWO_YEARS,0.0,pies
+4157,"v1 = input(int)
+v2 = input(int)
+v3 = input(int)
+v4 = v1 * 100 + v2
+",17,FROM_ONE_TO_TWO_YEARS,0.0,pies
+4160,"v1 = input(int)
+v2 = input(int)
+v3 = input(int)
+v4 = v1 * 100 + v2
+print(v4)",17,FROM_ONE_TO_TWO_YEARS,0.0,pies
+4161,"
+
+",17,FROM_ONE_TO_TWO_YEARS,0.0,pies
+4162,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = (v1 * 100 + v2) * v3
+print(v4)
+print(v4 // 100, v4 % 100)
+",17,FROM_ONE_TO_TWO_YEARS,0.0,pies
