@@ -27,7 +27,9 @@ ${report.partialSolution.fragment}
 ${report.closestVertex.toDebugString()}
 
 ```python
-${report.closestVertex?.let(this::fetchCode) ?: "No Hint Code"}
+${report.closestVertex?.let(
+            this::fetchCode
+        ) ?: "No Hint Code"}
 ```
 
 ### Hint node's code 
@@ -55,19 +57,20 @@ ${
 class CompositeMarkdownHintReportGenerator(private val generator: HintReportGenerator) {
     fun generate(outputStream: OutputStream, reports: Collection<HintReport>) {
         val firstReport = reports.firstOrNull() ?: return
-        outputStream.write(buildString {
-            appendLine("# ${firstReport.taskName}")
-            appendLine()
-            appendLine(firstReport.partialSolution.metaInfo.toDebugString())
-            appendLine()
-        }.toByteArray())
+        outputStream.write(
+            buildString {
+                appendLine("# ${firstReport.taskName}")
+appendLine()
+appendLine(firstReport.partialSolution.metaInfo.toDebugString())
+appendLine()
+            }.toByteArray()
+        )
 
         for (report in reports) {
             generator.generate(outputStream, report)
         }
     }
 }
-
 
 private fun SolutionSpaceVertex?.toDebugString(): String {
     return this?.info?.joinToString("\n") { it.metaInfo.toDebugString() } ?: "No meta information"

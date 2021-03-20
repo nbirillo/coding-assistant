@@ -1,12 +1,10 @@
 package org.jetbrains.research.ml.coding.assistant.system.finder
 
-import com.intellij.openapi.extensions.ExtensionPointName
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpace
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpaceVertex
 import org.jetbrains.research.ml.coding.assistant.system.PartialSolution
 import org.jetbrains.research.ml.coding.assistant.system.matcher.BooleanPartialSolutionMatcher
 import org.jetbrains.research.ml.coding.assistant.system.matcher.PartialSolutionMatcher
-
 
 /**
  * Finds the closest vertex to a given student's partial solution
