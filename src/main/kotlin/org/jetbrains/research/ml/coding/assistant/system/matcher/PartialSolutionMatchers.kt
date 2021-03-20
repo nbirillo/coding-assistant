@@ -13,6 +13,10 @@ interface PartialSolutionMatcher {
     fun differScore(vertex: SolutionSpaceVertex, partialSolution: PartialSolution): Double
 }
 
+/**
+ * Boolean partial solution matcher defines a predicate
+ * to match the vertex from the solution space and student's partial solution
+ */
 interface BooleanPartialSolutionMatcher : PartialSolutionMatcher {
     fun isMatched(vertex: SolutionSpaceVertex, partialSolution: PartialSolution): Boolean
 
@@ -21,12 +25,23 @@ interface BooleanPartialSolutionMatcher : PartialSolutionMatcher {
     }
 }
 
+
+/**
+ * Exact partial solution matcher matches the vertex from the solution space and student's partial solution
+ * only if their trees are isomorphic(see `ITree.isIsomorphicTo`)
+ */
 class ExactPartialSolutionMatcher : BooleanPartialSolutionMatcher {
     override fun isMatched(vertex: SolutionSpaceVertex, partialSolution: PartialSolution): Boolean {
         return vertex.fragment.root.isIsomorphicTo(partialSolution.context.root)
     }
 }
 
+
+/**
+ * Threshold solution matcher defines a predicate
+ * to match the vertex from the solution space and student's partial solution
+ * only if the differ score of the inner matcher is below the threshold.
+ */
 class ThresholdSolutionMatcher(
     private val threshold: Double,
     private val matcher: PartialSolutionMatcher
@@ -36,6 +51,11 @@ class ThresholdSolutionMatcher(
     }
 }
 
+/**
+ * Edit partial solution matcher defines a differ score
+ * between the vertex from the solution space and student's partial solution
+ * based on the list of edits between them.
+ */
 object EditPartialSolutionMatcher : PartialSolutionMatcher {
     override fun differScore(vertex: SolutionSpaceVertex, partialSolution: PartialSolution): Double {
         val matcher = Matcher(partialSolution.context, vertex.fragment)

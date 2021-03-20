@@ -15,6 +15,9 @@ interface VertexFinder {
     fun findCorrespondingVertex(solutionSpace: SolutionSpace, partialSolution: PartialSolution): SolutionSpaceVertex?
 }
 
+/**
+ * Naive vertex finder returns the first vertex that matcher predicate `BooleanPartialSolutionMatcher.isMatched`
+ */
 class NaiveVertexFinder(override val matcher: BooleanPartialSolutionMatcher) : VertexFinder {
     override fun findCorrespondingVertex(
         solutionSpace: SolutionSpace,
@@ -24,6 +27,9 @@ class NaiveVertexFinder(override val matcher: BooleanPartialSolutionMatcher) : V
     }
 }
 
+/**
+ * Parallel vertex finder returns the vertex which differ score is minimal using parallel stream.
+ */
 class ParallelVertexFinder(override val matcher: PartialSolutionMatcher) : VertexFinder {
     override fun findCorrespondingVertex(
         solutionSpace: SolutionSpace,
