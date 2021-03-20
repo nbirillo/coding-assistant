@@ -27,7 +27,7 @@ class ExactPartialSolutionMatcher : BooleanPartialSolutionMatcher {
     }
 }
 
-class TresholdSolutionMatcher(
+class ThresholdSolutionMatcher(
     private val threshold: Double,
     private val matcher: PartialSolutionMatcher
 ) : BooleanPartialSolutionMatcher {

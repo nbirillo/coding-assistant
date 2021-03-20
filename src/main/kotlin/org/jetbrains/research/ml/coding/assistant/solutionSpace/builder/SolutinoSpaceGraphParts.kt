@@ -30,6 +30,8 @@ data class SolutionSpaceGraphVertex(
 
     val representativeSolution: DatasetPartialSolution get() = partialSolutions.first()
 
+    val codeFragment: String = representativeSolution.psiFragment.text
+
     fun merged(other: SolutionSpaceGraphVertex): SolutionSpaceGraphVertex {
         val newIntermediateSolutions = partialSolutions.plus(other.partialSolutions)
         return copy(partialSolutions = newIntermediateSolutions)

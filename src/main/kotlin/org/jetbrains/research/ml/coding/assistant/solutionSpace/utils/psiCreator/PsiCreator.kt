@@ -9,14 +9,28 @@ import com.intellij.psi.PsiFile
 import com.intellij.psi.PsiManager
 import org.jetbrains.research.ml.ast.util.createFile
 import org.jetbrains.research.ml.ast.util.getTmpProjectDir
+import org.jetbrains.research.ml.coding.assistant.utils.FileExtension
 import java.io.File
 
+/**
+ * Wrapper for PsiFile with ability to delete physical file from the disk.
+ */
 interface PsiFileWrapper : PsiFile {
+    /**
+     * Deletes file from the disk.
+     */
     fun deleteFile()
 
+    /**
+     * Deletes the directory with all the temporary files.
+     */
     fun forceDeleteTmpData(): Boolean
 }
 
+/**
+ * Interface to handle creation of psi file based on fragment.
+ * It creates a physical file in project directory, so it is necessary to delete it after use.
+ */
 interface PsiCreator {
     fun initFileToPsi(code: String): PsiFileWrapper
 }
@@ -26,14 +40,14 @@ interface PsiCreator {
  To get PSI successfully all file names have to be unique.
  */
 class PsiCreatorImpl(project: Project) : PsiCreator {
-    private val extension: String = ".py"
+    private val extension = FileExtension.Py
     private val tmpDataPath: String = getTmpProjectDir(toCreateFolder = false)
     private val psiManager: PsiManager = project.service()
     private var counter: Int = 0
 
     inner class PsiFileWrapperImpl(private val file: File, private val psi: PsiFile) : PsiFile by psi, PsiFileWrapper {
         private constructor(file: File) : this(file, createPsi(file))
-        constructor(code: String) : this(createFile("$tmpDataPath/tmp_${counter++}$extension", code))
+        constructor(code: String) : this(createFile("$tmpDataPath/tmp_${counter++}.${extension.name}", code))
 
         override fun deleteFile() {
             ApplicationManager.getApplication().invokeAndWait {

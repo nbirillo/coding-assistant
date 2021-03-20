@@ -6,14 +6,19 @@ import com.intellij.psi.PsiFile
 import org.jetbrains.research.ml.ast.transformations.anonymization.AnonymizationTransformation
 import org.jetbrains.research.ml.ast.util.getTmpProjectDir
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreator
+import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiFileWrapper
 import org.jetbrains.research.ml.coding.assistant.util.ParametrizedBaseWithSdkTest
-import org.junit.Ignore
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
 import java.io.File
 import kotlin.test.assertNotEquals
 
+/**
+ * There are some issue with standalone PsiFile.
+ * To anonymize the code fragment for every symbol in fragment Intellij has to calculate it's usages.
+ * But without the physical file on a disk inside a project directory it cannot resolve references properly.
+ */
 @RunWith(Parameterized::class)
 class AnonymizationProblemTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(::AnonymizationProblemTest)) {
     @JvmField
@@ -32,9 +37,10 @@ class AnonymizationProblemTest : ParametrizedBaseWithSdkTest(getResourcesRootPat
             AnonymizationTransformation.forwardApply(psiFile, null)
         }
         assertNotEquals(outFile!!.readText(), psiFile.text)
+        psiFile.deleteFile()
     }
 
-    private fun createPsiFile(text: String): PsiFile {
+    private fun createPsiFile(text: String): PsiFileWrapper {
         return project.service<PsiCreator>().initFileToPsi(text)
     }
 

@@ -38,14 +38,18 @@ class SolutionSpace(val graph: Graph<SolutionSpaceVertex, SolutionSpaceEdge>) {
     ) : this(buildGraph(vertices, edgePairs))
 }
 
+/**
+ * Creates immutable solution space inner graph for `builder` with weights based on `weightFactory`
+ */
 private fun transferGraph(
     weightFactory: EdgeWeightCalculatorFactory<SolutionSpaceVertex, SolutionSpaceEdge>,
     builder: SolutionSpaceGraphBuilder
-): Graph<SolutionSpaceVertex, SolutionSpaceEdge> {
+): AsUnmodifiableGraph<SolutionSpaceVertex, SolutionSpaceEdge> {
     val graph = SimpleDirectedWeightedGraph<SolutionSpaceVertex, SolutionSpaceEdge>(SolutionSpaceEdge::class.java)
     val weightCalculator = weightFactory(graph)
     val oldVertices = builder.graph.vertexSet().toList()
-    val newVertices = oldVertices.map { it.toSolutionSpaceVertex() }
+    val idFactory = SolutionSpaceIdentifierFactoryImpl()
+    val newVertices = oldVertices.map { it.toSolutionSpaceVertex(idFactory) }
     graph.addVertices(newVertices)
 
     val zippedVertices = oldVertices zip newVertices
@@ -83,10 +87,13 @@ private fun transferGraph(
     return AsUnmodifiableGraph(graph)
 }
 
+/**
+ * Creates immutable solution space inner graph using vertex and edge information
+ */
 private fun buildGraph(
     vertices: Collection<SolutionSpaceVertex>,
     edges: Collection<SolutionSpaceEdgeModel>
-): Graph<SolutionSpaceVertex, SolutionSpaceEdge> {
+): AsUnmodifiableGraph<SolutionSpaceVertex, SolutionSpaceEdge> {
     val graph = SimpleDirectedWeightedGraph<SolutionSpaceVertex, SolutionSpaceEdge>(SolutionSpaceEdge::class.java)
     graph.addVertices(vertices)
     val idToVertex = vertices.map { it.id to it }.toMap()
@@ -98,13 +105,14 @@ private fun buildGraph(
     return AsUnmodifiableGraph(graph)
 }
 
-private var idCounter = 0
-
-private fun SolutionSpaceGraphVertex.toSolutionSpaceVertex(): SolutionSpaceVertex {
+private fun SolutionSpaceGraphVertex.toSolutionSpaceVertex(
+    idFactory: SolutionSpaceIdentifierFactoryImpl
+): SolutionSpaceVertex {
     val treeContext = Util.getTreeContext(representativeSolution.psiFragment)
     return SolutionSpaceVertex(
-        idCounter++,
+        idFactory.uniqueIdentifier(),
         treeContext,
+        codeFragment,
         partialSolutions.map { StudentInfo(it.id, it.metaInfo) }
     )
 }

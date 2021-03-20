@@ -12,12 +12,16 @@ typealias SolutionSpaceVertexID = Int
 
 /**
  * Solution space vertex
+ * Stores both gumtree TreeContext and string code representations.
+ * Student's meta information is also attached to the vertex.
+ * Every vertex has its unique identifier.
  */
 @Serializable
-data class SolutionSpaceVertex(
+data class SolutionSpaceVertex constructor(
     val id: SolutionSpaceVertexID,
     @Serializable(with = TreeContextSerializer::class)
     val fragment: TreeContext,
+    val code: String,
     val info: List<StudentInfo>
 ) {
     override fun toString(): String {

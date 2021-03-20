@@ -8,6 +8,7 @@ plugins {
     id("com.github.johnrengelman.shadow") version "5.1.0"
     id("org.jetbrains.dokka") version "0.10.1"
     id("org.jlleitschuh.gradle.ktlint") version "9.4.1"
+    id("io.gitlab.arturbosch.detekt") version "1.15.0"
 }
 
 group = "io.github.nbirillo.coding.assistant"
@@ -49,6 +50,17 @@ intellij {
 
 ktlint {
     enableExperimentalRules.set(true)
+}
+
+detekt {
+    config = files("./detekt-config.yml")
+    buildUponDefaultConfig = true
+
+    reports {
+        html.enabled = false
+        xml.enabled = false
+        txt.enabled = false
+    }
 }
 
 /**

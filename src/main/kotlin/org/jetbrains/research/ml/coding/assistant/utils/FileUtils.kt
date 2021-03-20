@@ -7,7 +7,8 @@ fun File.getListFiles(): List<File> {
 }
 
 enum class FileExtension(val extension: String) {
-    CSV("csv")
+    CSV("csv"),
+    Py("py")
 }
 
 fun File.isTypeOf(ext: FileExtension): Boolean = extension == ext.extension

@@ -2,20 +2,14 @@ package org.jetbrains.research.ml.coding.assistant.unification
 
 import com.intellij.openapi.components.service
 import org.jetbrains.research.ml.ast.util.getTmpProjectDir
-import org.jetbrains.research.ml.coding.assistant.dataset.TaskTrackerDatasetFetcher
-import org.jetbrains.research.ml.coding.assistant.dataset.model.Dataset
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.builder.SolutionSpaceGraphBuilder
-import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.generateImage
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.weightCalculator.CustomEdgeWeightCalculator
 import org.jetbrains.research.ml.coding.assistant.util.DatasetUtils
 import org.jetbrains.research.ml.coding.assistant.util.ParametrizedBaseWithSdkTest
-import org.jgrapht.Graph
-import org.junit.BeforeClass
 import org.junit.Ignore
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
-import java.io.File
 
 @Ignore
 @RunWith(Parameterized::class)
