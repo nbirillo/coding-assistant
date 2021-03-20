@@ -2,7 +2,9 @@ package org.jetbrains.research.ml.coding.assistant.dataset.model
 
 import kotlinx.serialization.Serializable
 
-typealias Record = Map<String, String>
+// Represents one record in .csv file.
+// Keys = columns. Map values = record values.
+typealias CSVRecord = Map<String, String>
 
 /**
  *  Model represents a single record entry in dataset
@@ -13,10 +15,9 @@ data class DatasetRecord(
     val fragment: String,
     val metaInfo: MetaInfo
 ) {
-
-    internal constructor(record: Record) : this(
-        id = record[Keys.ID]!!,
-        fragment = record[Keys.FRAGMENT] ?: "",
+    internal constructor(record: CSVRecord) : this(
+        id = record[Column.ID] ?: throwNullFieldError(Column.ID),
+        fragment = record[Column.FRAGMENT] ?: "",
         metaInfo = MetaInfo(record)
     )
 }
@@ -31,11 +32,11 @@ data class MetaInfo(
     val testsResults: Double,
     val task: DatasetTask
 ) {
-    internal constructor(record: Record) : this(
-        age = record[Keys.AGE]?.toFloatOrNullWithDefault(-1.0f),
-        programExperience = record[Keys.PROGRAM_EXPERIENCE].toProgramExperience(),
-        testsResults = record[Keys.TESTS_RESULTS]!!.toDouble(),
-        task = DatasetTask.createFromString(record[Keys.TASK]!!)
+    internal constructor(record: CSVRecord) : this(
+        age = record[Column.AGE]?.toFloatOrNullWithDefault(-1.0f),
+        programExperience = record[Column.PROGRAM_EXPERIENCE].toProgramExperience(),
+        testsResults = record[Column.TESTS_RESULTS]?.toDouble() ?: throwNullFieldError(Column.TESTS_RESULTS),
+        task = DatasetTask.createFromString(record[Column.TASK] ?: throwNullFieldError(Column.TASK))
     )
 
     val isFinalSolution: Boolean get() = testsResults == 1.0
@@ -67,7 +68,11 @@ private fun String?.toProgramExperience(): MetaInfo.ProgramExperience? =
         }
     }
 
-private object Keys {
+private fun throwNullFieldError(fieldName: String): Nothing {
+    throw IllegalArgumentException("Field \"$fieldName\" has to exist")
+}
+
+private object Column {
     const val FRAGMENT = "fragment"
     const val AGE = "age"
     const val PROGRAM_EXPERIENCE = "programExperience"

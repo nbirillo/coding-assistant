@@ -11,7 +11,7 @@ data class DynamicSolution(
 }
 
 /**
- * Model for all solution in dataset
+ * Model for all solutions in the dataset for one task
  */
 data class TaskSolutions(
     val datasetTask: DatasetTask,
@@ -19,7 +19,7 @@ data class TaskSolutions(
 )
 
 /**
- * Model for the whole dataset
+ * Model for all solutions in the dataset for several tasks
  */
 data class Dataset(
     val tasks: List<TaskSolutions>

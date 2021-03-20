@@ -51,6 +51,10 @@ ktlint {
     enableExperimentalRules.set(true)
 }
 
+/**
+ * Gradle task to build and serialize solution space into `output` directory.
+ * input is a directory with a name of the task containing dataset .csv files.
+ */
 open class SolutionSpaceCliTask : org.jetbrains.intellij.tasks.RunIdeTask() {
     // Input directory with csv files
     @get:Input
@@ -66,17 +70,21 @@ open class SolutionSpaceCliTask : org.jetbrains.intellij.tasks.RunIdeTask() {
     }
 }
 
+/**
+ * Generates hint report using implemented algorithm.
+ */
 open class HintGenerationCliTask : org.jetbrains.intellij.tasks.RunIdeTask() {
-    // Path to the serialized solution space
+    // Path to the serialized solution space file.
     @get:Input
     val solutionSpacePath: String? by project
-    // Path to data with original code to generate report
+    // Path to support information about dataset original code fragments.
+    // Needed for only report.
     @get:Input
     val codeRepositoryPath: String? by project
-    // Output directory
+    // Name of the task.
     @get:Input
     val taskName: String? by project
-
+    // Directory to store the report.
     @get:Input
     val outputDir: String? by project
 
@@ -99,6 +107,7 @@ tasks {
         .forEach { it.enabled = false }
 
     register<SolutionSpaceCliTask>("solutionSpaceCli") {
+        dependsOn("build")
         args = listOfNotNull(
             "solution-space",
             input?.let { "--input_path=$it" },
@@ -107,6 +116,7 @@ tasks {
     }
 
     register<HintGenerationCliTask>("hintGenerationCli") {
+        dependsOn("build")
         args = listOfNotNull(
             "hint-generation",
             solutionSpacePath?.let { "--space_path=$it" },
