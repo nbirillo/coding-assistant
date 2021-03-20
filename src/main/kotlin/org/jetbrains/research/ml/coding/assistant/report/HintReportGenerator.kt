@@ -43,6 +43,9 @@ ${report.nextNode?.let(this::fetchCode) ?: "No Hint Code"}
     }
 }
 
+/**
+ * Uses inner generator to generate report for multiple algorithms
+ */
 class CompositeMarkdownHintReportGenerator(private val generator: HintReportGenerator) {
     fun generate(outputStream: OutputStream, reports: Collection<HintReport>) {
         val firstReport = reports.firstOrNull() ?: return
