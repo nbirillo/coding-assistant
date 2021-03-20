@@ -26,6 +26,17 @@ open class ParametrizedBaseTest(private val testDataRoot: String) : BasePlatform
             )
             return inAndOutFilesMap.entries.map { (inFile, outFile) -> arrayOf(inFile, outFile!!) }
         }
+
+        fun getInArray(
+            cls: KFunction<ParametrizedBaseTest>,
+            resourcesRootName: String = resourcesRoot,
+        ): List<Array<File>> {
+            val inAndOutFilesMap = FileTestUtil.getInAndOutFilesMap(
+                getResourcesRootPath(cls, resourcesRootName),
+            )
+            return inAndOutFilesMap.keys.map { arrayOf(it) }
+        }
+
         // We can not get the root of the class resources automatically
         private const val resourcesRoot: String = "data"
 

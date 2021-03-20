@@ -12,16 +12,7 @@ import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
 
 @Ignore
-@RunWith(Parameterized::class)
 class DatasetUnificationTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(::DatasetUnificationTest)) {
-    @JvmField
-    @Parameterized.Parameter(0)
-    var inFile: String? = null
-
-    @JvmField
-    @Parameterized.Parameter(1)
-    var outFile: String? = null
-
     @Test
     fun testSolutionSpaceBuild() {
         val datasetUnification = project.service<DatasetUnification>()
@@ -38,10 +29,4 @@ class DatasetUnificationTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(
     }
 
     override fun getTestDataPath(): String = getTmpProjectDir(toCreateFolder = false)
-
-    companion object {
-        @JvmStatic
-        @Parameterized.Parameters(name = "{index}: ({0}, {1})")
-        fun getTestData() = listOf(arrayOf("", ""))
-    }
 }

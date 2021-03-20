@@ -1,15 +1,17 @@
 package org.jetbrains.research.ml.coding.assistant.unification
 
 import com.intellij.openapi.application.ApplicationManager
+import com.intellij.openapi.command.WriteCommandAction
 import com.intellij.openapi.components.Service
 import com.intellij.openapi.components.service
 import com.intellij.openapi.project.Project
+import com.intellij.psi.codeStyle.CodeStyleManager
 import org.jetbrains.research.ml.coding.assistant.dataset.model.DatasetRecord
 import org.jetbrains.research.ml.coding.assistant.dataset.model.DynamicSolution
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreator
 import org.jetbrains.research.ml.coding.assistant.unification.model.DatasetPartialSolution
 import org.jetbrains.research.ml.coding.assistant.unification.model.DynamicIntermediateSolution
-import org.jetbrains.research.ml.coding.assistant.utils.reformatInAction
+import org.jetbrains.research.ml.coding.assistant.utils.reformatInWriteAction
 import java.util.concurrent.atomic.AtomicInteger
 import java.util.logging.Logger
 
@@ -44,7 +46,7 @@ class DatasetUnificationImpl(project: Project) : DatasetUnification {
     }
 
     private fun unifyRecord(datasetRecord: DatasetRecord): DatasetPartialSolution {
-        val psiFile = fileFactory.initFileToPsi(datasetRecord.fragment).reformatInAction()
+        val psiFile = fileFactory.initFileToPsi(datasetRecord.fragment).reformatInWriteAction()
 
         ApplicationManager.getApplication().invokeAndWait {
             logger.finer { "Unification Started: ${psiFile.text}" }

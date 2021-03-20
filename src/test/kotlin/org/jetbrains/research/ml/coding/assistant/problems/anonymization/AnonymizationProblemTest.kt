@@ -1,8 +1,7 @@
-package org.jetbrains.research.ml.coding.assistant.problems
+package org.jetbrains.research.ml.coding.assistant.problems.anonymization
 
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.components.service
-import com.intellij.psi.PsiFile
 import org.jetbrains.research.ml.ast.transformations.anonymization.AnonymizationTransformation
 import org.jetbrains.research.ml.ast.util.getTmpProjectDir
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreator
@@ -44,6 +43,8 @@ class AnonymizationProblemTest : ParametrizedBaseWithSdkTest(getResourcesRootPat
         return project.service<PsiCreator>().initFileToPsi(text)
     }
 
+    override fun getTestDataPath(): String = getTmpProjectDir(toCreateFolder = false)
+
     companion object {
         @JvmStatic
         @Parameterized.Parameters(name = "{index}: ({0}, {1})")
@@ -51,6 +52,4 @@ class AnonymizationProblemTest : ParametrizedBaseWithSdkTest(getResourcesRootPat
             return getInAndOutArray(::AnonymizationProblemTest)
         }
     }
-
-    override fun getTestDataPath(): String = getTmpProjectDir(toCreateFolder = false)
 }

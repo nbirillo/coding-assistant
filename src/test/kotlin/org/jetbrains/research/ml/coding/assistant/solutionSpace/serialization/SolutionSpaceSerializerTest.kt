@@ -1,59 +1,24 @@
 package org.jetbrains.research.ml.coding.assistant.solutionSpace.serialization
 
-import com.intellij.openapi.components.service
 import com.jetbrains.python.PythonFileType
 import kotlinx.serialization.json.Json
 import org.jetbrains.research.ml.ast.util.getTmpProjectDir
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.Util
-import org.jetbrains.research.ml.coding.assistant.solutionSpace.builder.SolutionSpaceGraphBuilder
-import org.jetbrains.research.ml.coding.assistant.solutionSpace.weightCalculator.CustomEdgeWeightCalculator
-import org.jetbrains.research.ml.coding.assistant.unification.DatasetUnification
-import org.jetbrains.research.ml.coding.assistant.util.DatasetUtils
 import org.jetbrains.research.ml.coding.assistant.util.ParametrizedBaseWithSdkTest
-import org.junit.Ignore
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
+import java.io.File
 
-@Ignore
 @RunWith(Parameterized::class)
 class SolutionSpaceSerializerTest : ParametrizedBaseWithSdkTest(getTmpProjectDir(true)) {
     @JvmField
     @Parameterized.Parameter(0)
-    var inFile: String? = null
-
-    @JvmField
-    @Parameterized.Parameter(1)
-    var outFile: String? = null
-
-    @Test
-    fun testBasic() {
-        val taskSolutions = DatasetUtils.DATASET.tasks.first()
-        val datasetUnification = project.service<DatasetUnification>()
-
-        val solutionSpaceBuilder = SolutionSpaceGraphBuilder()
-        taskSolutions.dynamicSolutions
-            .take(1)
-            .map { datasetUnification.unify(it) }
-            .forEach { solutionSpaceBuilder.addDynamicSolution(it.take(3)) }
-
-        val solutionSpace = solutionSpaceBuilder.build { CustomEdgeWeightCalculator(it) }
-
-        val json = Json { prettyPrint = true }
-        val encodedSolutionSpace = json.encodeToString(SolutionSpaceSerializer, solutionSpace)
-        val decodedSolutionSpace = json.decodeFromString(SolutionSpaceSerializer, encodedSolutionSpace)
-        val encodedDecodedSolutionSpace = json.encodeToString(SolutionSpaceSerializer, decodedSolutionSpace)
-        assertEquals(encodedSolutionSpace, encodedDecodedSolutionSpace)
-        assertEquals(solutionSpace, decodedSolutionSpace)
-    }
+    var inFile: File? = null
 
     @Test
     fun testSerial() {
-        val code = """
-print(max(input()))
-
-    """.trimIndent()
-        val psiFile = myFixture.configureByText(PythonFileType.INSTANCE, code)
+        val psiFile = myFixture.configureByText(PythonFileType.INSTANCE, inFile!!.readText())
         val treeContext = Util.getTreeContext(psiFile)
         val json = Json { prettyPrint = true }
         val jsonString = json.encodeToString(TreeContextSerializer, treeContext)
@@ -63,7 +28,7 @@ print(max(input()))
 
     companion object {
         @JvmStatic
-        @Parameterized.Parameters(name = "{index}: ({0}, {1})")
-        fun getTestData() = listOf(arrayOf("", ""))
+        @Parameterized.Parameters(name = "{index}: {0}")
+        fun getTestData() = getInArray(::SolutionSpaceSerializerTest)
     }
 }

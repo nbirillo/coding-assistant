@@ -5,6 +5,7 @@ import com.intellij.openapi.application.ApplicationManager
 import com.intellij.psi.PsiFile
 import org.jetbrains.research.ml.ast.gumtree.tree.Numbering
 import org.jetbrains.research.ml.ast.gumtree.tree.PostOrderNumbering
+import org.jetbrains.research.ml.ast.gumtree.tree.PreOrderNumbering
 import org.jetbrains.research.ml.ast.gumtree.tree.PsiTreeConverter
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.builder.SolutionSpaceGraphBuilder
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.builder.SolutionSpaceGraphEdge
@@ -15,6 +16,7 @@ import org.jetbrains.research.ml.coding.assistant.solutionSpace.weightCalculator
 import org.jgrapht.Graph
 import org.jgrapht.graph.AsUnmodifiableGraph
 import org.jgrapht.graph.SimpleDirectedWeightedGraph
+import java.util.logging.Logger
 
 /**
  * Solution space structure.
@@ -118,7 +120,7 @@ private fun SolutionSpaceGraphVertex.toSolutionSpaceVertex(
 }
 
 object Util {
-    fun getTreeContext(psiFile: PsiFile, numbering: Numbering = PostOrderNumbering): TreeContext {
+    fun getTreeContext(psiFile: PsiFile, numbering: Numbering = PreOrderNumbering): TreeContext {
         return ApplicationManager.getApplication().runReadAction<TreeContext> {
             PsiTreeConverter.convertTree(psiFile, numbering)
         }
