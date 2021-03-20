@@ -1,10 +1,12 @@
 package org.jetbrains.research.ml.coding.assistant.system.finder
 
+import com.intellij.openapi.extensions.ExtensionPointName
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpace
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpaceVertex
 import org.jetbrains.research.ml.coding.assistant.system.PartialSolution
 import org.jetbrains.research.ml.coding.assistant.system.matcher.BooleanPartialSolutionMatcher
 import org.jetbrains.research.ml.coding.assistant.system.matcher.PartialSolutionMatcher
+
 
 /**
  * Finds the closest vertex to a given student's partial solution
@@ -25,6 +27,10 @@ class NaiveVertexFinder(override val matcher: BooleanPartialSolutionMatcher) : V
     ): SolutionSpaceVertex? {
         return solutionSpace.graph.vertexSet().firstOrNull { matcher.isMatched(it, partialSolution) }
     }
+
+    override fun toString(): String {
+        return "NaiveVertexFinder(matcher=$matcher)"
+    }
 }
 
 /**
@@ -39,5 +45,9 @@ class ParallelVertexFinder(override val matcher: PartialSolutionMatcher) : Verte
             .parallelStream()
             .min(compareBy { matcher.differScore(it, partialSolution) })
             .orElse(null)
+    }
+
+    override fun toString(): String {
+        return "ParallelVertexFinder(matcher=$matcher)"
     }
 }

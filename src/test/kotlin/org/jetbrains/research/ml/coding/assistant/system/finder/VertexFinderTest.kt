@@ -36,14 +36,14 @@ class VertexFinderTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(::Vert
         val solutionSpace = solutionSpaceBuilder.build { CustomEdgeWeightCalculator(it) }
         val finder = ParallelVertexFinder(EditPartialSolutionMatcher)
 
-        val psiFile = createPsiFile(
-            """
+        val fragment = """
             x = input()
             """.trimIndent()
-        )
+        val psiFile = createPsiFile(fragment)
         val context = Util.getTreeContext(psiFile)
         val partialSolution = PartialSolution(
             context,
+            fragment,
             MetaInfo(10.0f, null, 0.1, DatasetTask.BRACKETS)
         )
         assertNoThrowable {

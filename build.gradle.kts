@@ -119,7 +119,7 @@ tasks {
         .forEach { it.enabled = false }
 
     register<SolutionSpaceCliTask>("solutionSpaceCli") {
-        dependsOn("build")
+        dependsOn("buildPlugin")
         args = listOfNotNull(
             "solution-space",
             input?.let { "--input_path=$it" },
@@ -128,7 +128,7 @@ tasks {
     }
 
     register<HintGenerationCliTask>("hintGenerationCli") {
-        dependsOn("build")
+        dependsOn("buildPlugin")
         args = listOfNotNull(
             "hint-generation",
             solutionSpacePath?.let { "--space_path=$it" },

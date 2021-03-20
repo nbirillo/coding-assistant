@@ -8,5 +8,6 @@ import org.jetbrains.research.ml.coding.assistant.dataset.model.MetaInfo
  */
 data class PartialSolution(
     val context: TreeContext,
+    val fragment: String,
     val metaInfo: MetaInfo
 )

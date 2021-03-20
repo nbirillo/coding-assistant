@@ -1,12 +1,10 @@
 package org.jetbrains.research.ml.coding.assistant.runner
 
-import com.intellij.ide.impl.ProjectUtil
 import com.intellij.openapi.application.ApplicationStarter
 import com.intellij.openapi.components.service
 import com.intellij.openapi.diagnostic.Logger
 import com.xenomachina.argparser.ArgParser
 import org.jetbrains.research.ml.ast.util.getTmpProjectDir
-import org.jetbrains.research.ml.ast.util.sdk.setSdkToProject
 import org.jetbrains.research.ml.coding.assistant.dataset.TaskTrackerDatasetFetcher
 import org.jetbrains.research.ml.coding.assistant.dataset.model.DatasetTask
 import org.jetbrains.research.ml.coding.assistant.report.CodeRepository
@@ -17,14 +15,14 @@ import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.generateIm
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.weightCalculator.CustomEdgeWeightCalculator
 import org.jetbrains.research.ml.coding.assistant.unification.DatasetUnification
 import org.jetbrains.research.ml.coding.assistant.unification.model.DatasetPartialSolution
+import org.jetbrains.research.ml.coding.assistant.utils.ProjectUtils
 import java.io.File
-import java.nio.file.Paths
 import javax.imageio.ImageIO
 import kotlin.system.exitProcess
 
 object SolutionSpaceRunner : ApplicationStarter {
-    private lateinit var inputDir: String
-    private lateinit var outputDir: String
+    private lateinit var inputDir: File
+    private lateinit var outputDir: File
 
     private val logger = Logger.getInstance(this::class.java)
 
@@ -35,56 +33,52 @@ object SolutionSpaceRunner : ApplicationStarter {
             "-i",
             "--input_path",
             help = "Input directory with csv files"
-        )
+        ) { File(this) }
 
         val output by parser.storing(
             "-o",
             "--output_path",
             help = "Output directory"
-        )
+        ) { File(this) }
     }
 
     override fun main(args: List<String>) {
         try {
             ArgParser(args.drop(1).toTypedArray()).parseInto(SolutionSpaceRunner::TransformationsRunnerArgs).run {
-                inputDir = Paths.get(input).toString().removeSuffix("/")
-                outputDir = Paths.get(output).toString().removeSuffix("/")
+                inputDir = input
+                outputDir = output.apply { mkdirs() }
             }
 
-            val project = ProjectUtil.openOrImport(getTmpProjectDir(), null, true)
-            project?.let { p ->
-                setSdkToProject(p, getTmpProjectDir(toCreateFolder = false))
-                val outputDirFile = File(outputDir).apply { mkdirs() }
-                val inputDirFile = File(inputDir)
-                val taskSolutions = TaskTrackerDatasetFetcher.fetchTaskSolutions(inputDirFile)
-                val datasetUnification = p.service<DatasetUnification>()
+            val project = ProjectUtils.setUpProjectWithSdk(getTmpProjectDir())
 
-                val solutionSpaceBuilder = SolutionSpaceGraphBuilder()
-                val unifiedSolutions = taskSolutions.dynamicSolutions
-                    .map { datasetUnification.unify(it) }
+            val taskSolutions = TaskTrackerDatasetFetcher.fetchTaskSolutions(inputDir)
+            val datasetUnification = project.service<DatasetUnification>()
 
-                unifiedSolutions
-                    .forEach { solutionSpaceBuilder.addDynamicSolution(it) }
-                val solutionSpace = solutionSpaceBuilder.build { CustomEdgeWeightCalculator(it) }
+            val solutionSpaceBuilder = SolutionSpaceGraphBuilder()
+            val unifiedSolutions = taskSolutions.dynamicSolutions
+                .map { datasetUnification.unify(it) }
 
-                // dump debug info for report
-                dumpCodeMap(outputDirFile, taskSolutions.datasetTask, unifiedSolutions.flatten())
+            unifiedSolutions
+                .forEach { solutionSpaceBuilder.addDynamicSolution(it) }
+            val solutionSpace = solutionSpaceBuilder.build { CustomEdgeWeightCalculator(it) }
 
-                // dump solution space
-                val solutionSpaceFile = outputDirFile.resolve(
-                    "${taskSolutions.datasetTask.taskName}_solution_space.json"
-                )
-                    .apply { createNewFile() }
-                val encodedSolutionSpace = SerializationUtils.encodeSolutionSpace(solutionSpace)
-                solutionSpaceFile.writeText(encodedSolutionSpace)
+            // dump debug info for report
+            dumpCodeMap(outputDir, taskSolutions.datasetTask, unifiedSolutions.flatten())
 
-                // dump solution space graph image
-                val imageFile = outputDirFile
-                    .resolve("${taskSolutions.datasetTask.taskName}_graph.png")
-                    .apply { createNewFile() }
-                val image = solutionSpace.generateImage()
-                ImageIO.write(image, "PNG", imageFile)
-            } ?: error("Internal error: the temp project was not created")
+            // dump solution space
+            val solutionSpaceFile = outputDir.resolve(
+                "${taskSolutions.datasetTask.taskName}_solution_space.json"
+            )
+                .apply { createNewFile() }
+            val encodedSolutionSpace = SerializationUtils.encodeSolutionSpace(solutionSpace)
+            solutionSpaceFile.writeText(encodedSolutionSpace)
+
+            // dump solution space graph image
+            val imageFile = outputDir
+                .resolve("${taskSolutions.datasetTask.taskName}_graph.png")
+                .apply { createNewFile() }
+            val image = solutionSpace.generateImage()
+            ImageIO.write(image, "PNG", imageFile)
         } catch (ex: Exception) {
             logger.error(ex)
         } finally {

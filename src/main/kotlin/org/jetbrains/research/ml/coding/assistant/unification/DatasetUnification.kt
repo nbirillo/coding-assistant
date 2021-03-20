@@ -1,11 +1,9 @@
 package org.jetbrains.research.ml.coding.assistant.unification
 
 import com.intellij.openapi.application.ApplicationManager
-import com.intellij.openapi.command.WriteCommandAction
 import com.intellij.openapi.components.Service
 import com.intellij.openapi.components.service
 import com.intellij.openapi.project.Project
-import com.intellij.psi.codeStyle.CodeStyleManager
 import org.jetbrains.research.ml.coding.assistant.dataset.model.DatasetRecord
 import org.jetbrains.research.ml.coding.assistant.dataset.model.DynamicSolution
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreator

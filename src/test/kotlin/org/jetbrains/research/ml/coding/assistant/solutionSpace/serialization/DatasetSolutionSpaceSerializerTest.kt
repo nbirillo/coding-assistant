@@ -21,7 +21,6 @@ class DatasetSolutionSpaceSerializerTest : ParametrizedBaseWithSdkTest(getTmpPro
     fun testBasic() {
         val datasetUnification = project.service<DatasetUnification>()
         for (taskSolutions in DatasetUtils.DATASET.tasks.take(1)) {
-
             val solutionSpaceBuilder = SolutionSpaceGraphBuilder()
             taskSolutions.dynamicSolutions
                 .map(datasetUnification::unify)
@@ -44,5 +43,4 @@ class DatasetSolutionSpaceSerializerTest : ParametrizedBaseWithSdkTest(getTmpPro
             return listOf(arrayOf(""))
         }
     }
-
 }

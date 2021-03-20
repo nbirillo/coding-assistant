@@ -25,7 +25,6 @@ interface BooleanPartialSolutionMatcher : PartialSolutionMatcher {
     }
 }
 
-
 /**
  * Exact partial solution matcher matches the vertex from the solution space and student's partial solution
  * only if their trees are isomorphic(see `ITree.isIsomorphicTo`)
@@ -34,8 +33,11 @@ class ExactPartialSolutionMatcher : BooleanPartialSolutionMatcher {
     override fun isMatched(vertex: SolutionSpaceVertex, partialSolution: PartialSolution): Boolean {
         return vertex.fragment.root.isIsomorphicTo(partialSolution.context.root)
     }
-}
 
+    override fun toString(): String {
+        return "ExactPartialSolutionMatcher"
+    }
+}
 
 /**
  * Threshold solution matcher defines a predicate
@@ -49,6 +51,10 @@ class ThresholdSolutionMatcher(
     override fun isMatched(vertex: SolutionSpaceVertex, partialSolution: PartialSolution): Boolean {
         return matcher.differScore(vertex, partialSolution) < threshold
     }
+
+    override fun toString(): String {
+        return "ThresholdSolutionMatcher(threshold=$threshold, matcher=$matcher)"
+    }
 }
 
 /**
@@ -61,5 +67,9 @@ object EditPartialSolutionMatcher : PartialSolutionMatcher {
         val matcher = Matcher(partialSolution.context, vertex.fragment)
         val actions = matcher.getEditActions()
         return actions.size.toDouble()
+    }
+
+    override fun toString(): String {
+        return "EditPartialSolutionMatcher"
     }
 }
