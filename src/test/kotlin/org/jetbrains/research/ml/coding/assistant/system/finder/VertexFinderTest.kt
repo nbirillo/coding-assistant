@@ -2,6 +2,7 @@ package org.jetbrains.research.ml.coding.assistant.system.finder
 
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.components.service
+import org.jetbrains.research.ml.ast.util.getTmpProjectDir
 import org.jetbrains.research.ml.coding.assistant.dataset.model.DatasetTask
 import org.jetbrains.research.ml.coding.assistant.dataset.model.MetaInfo
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.Util
@@ -19,7 +20,6 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
 
-@RunWith(Parameterized::class)
 class VertexFinderTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(::VertexFinderTest)) {
     @Test
     fun testBasic() {
@@ -49,6 +49,8 @@ class VertexFinderTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(::Vert
         }
         psiFile.deleteFile()
     }
+
+    override fun getTestDataPath(): String = getTmpProjectDir(toCreateFolder = false)
 
     private fun createPsiFile(text: String): PsiFileWrapper {
         return project.service<PsiCreator>().initFileToPsi(text).apply {
