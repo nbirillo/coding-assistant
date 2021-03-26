@@ -31,7 +31,7 @@ interface BooleanPartialSolutionMatcher : PartialSolutionMatcher {
  */
 class ExactPartialSolutionMatcher : BooleanPartialSolutionMatcher {
     override fun isMatched(vertex: SolutionSpaceVertex, partialSolution: PartialSolution): Boolean {
-        return vertex.fragment.root.isIsomorphicTo(partialSolution.context.root)
+        return vertex.fragment.root.isIsomorphicTo(partialSolution.treeContext.root)
     }
 
     override fun toString(): String {
@@ -64,7 +64,7 @@ class ThresholdSolutionMatcher(
  */
 object EditPartialSolutionMatcher : PartialSolutionMatcher {
     override fun differScore(vertex: SolutionSpaceVertex, partialSolution: PartialSolution): Double {
-        val matcher = Matcher(partialSolution.context, vertex.fragment)
+        val matcher = Matcher(partialSolution.treeContext, vertex.fragment)
         val actions = matcher.getEditActions()
         return actions.size.toDouble()
     }

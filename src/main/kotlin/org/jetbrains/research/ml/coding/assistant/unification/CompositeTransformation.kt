@@ -17,7 +17,7 @@ import org.jetbrains.research.ml.ast.transformations.outerNotElimination.OuterNo
 import java.util.logging.Logger
 
 /**
- * Transformation that run all inner transformation until nothing is changed
+ * Transformation that run all inner transformations until nothing is changed
  */
 object CompositeTransformation : Transformation() {
     private val LOG = Logger.getLogger(javaClass.name)
