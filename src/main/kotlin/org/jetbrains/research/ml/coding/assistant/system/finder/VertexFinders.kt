@@ -9,32 +9,32 @@ import org.jetbrains.research.ml.coding.assistant.system.matcher.PartialSolution
 /**
  * Finds the closest vertex to a given student's partial solution
  */
-interface VertexFinder {
-    val matcher: PartialSolutionMatcher
+abstract class VertexFinder {
+    abstract val matcher: PartialSolutionMatcher
 
-    fun findCorrespondingVertex(solutionSpace: SolutionSpace, partialSolution: PartialSolution): SolutionSpaceVertex?
+    abstract fun findCorrespondingVertex(solutionSpace: SolutionSpace, partialSolution: PartialSolution): SolutionSpaceVertex?
+
+    override fun toString(): String {
+        return "${this::class.simpleName}(matcher=$matcher)"
+    }
 }
 
 /**
  * Naive vertex finder returns the first vertex that matcher predicate `BooleanPartialSolutionMatcher.isMatched`
  */
-class NaiveVertexFinder(override val matcher: BooleanPartialSolutionMatcher) : VertexFinder {
+class NaiveVertexFinder(override val matcher: BooleanPartialSolutionMatcher) : VertexFinder() {
     override fun findCorrespondingVertex(
         solutionSpace: SolutionSpace,
         partialSolution: PartialSolution
     ): SolutionSpaceVertex? {
         return solutionSpace.graph.vertexSet().firstOrNull { matcher.isMatched(it, partialSolution) }
     }
-
-    override fun toString(): String {
-        return "NaiveVertexFinder(matcher=$matcher)"
-    }
 }
 
 /**
  * Parallel vertex finder returns the vertex which differ score is minimal using parallel stream.
  */
-class ParallelVertexFinder(override val matcher: PartialSolutionMatcher) : VertexFinder {
+class ParallelVertexFinder(override val matcher: PartialSolutionMatcher) : VertexFinder() {
     override fun findCorrespondingVertex(
         solutionSpace: SolutionSpace,
         partialSolution: PartialSolution
@@ -43,9 +43,5 @@ class ParallelVertexFinder(override val matcher: PartialSolutionMatcher) : Verte
             .parallelStream()
             .min(compareBy { matcher.differScore(it, partialSolution) })
             .orElse(null)
-    }
-
-    override fun toString(): String {
-        return "ParallelVertexFinder(matcher=$matcher)"
     }
 }
