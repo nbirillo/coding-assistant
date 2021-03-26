@@ -17,8 +17,6 @@ import org.jetbrains.research.ml.coding.assistant.unification.DatasetUnification
 import org.jetbrains.research.ml.coding.assistant.util.DatasetUtils
 import org.jetbrains.research.ml.coding.assistant.util.ParametrizedBaseWithSdkTest
 import org.junit.Test
-import org.junit.runner.RunWith
-import org.junit.runners.Parameterized
 
 class VertexFinderTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(::VertexFinderTest)) {
     @Test
