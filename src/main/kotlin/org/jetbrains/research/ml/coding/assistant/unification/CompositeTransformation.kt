@@ -38,7 +38,7 @@ object CompositeTransformation : Transformation() {
     )
 
     override fun forwardApply(psiTree: PsiElement, commandsStorage: PerformedCommandStorage?) {
-        LOG.info { "Tree Started: ${psiTree.text}" }
+        LOG.fine { "Tree Started: ${psiTree.text}" }
 
         var iterationNumber = 0
         do {
@@ -46,9 +46,9 @@ object CompositeTransformation : Transformation() {
             val previousTree = psiTree.copy()
             try {
                 transformations.forEach {
-                    LOG.info { "Transformation Started: ${it.key}" }
+                    LOG.finer { "Transformation Started: ${it.key}" }
                     it.forwardApply(psiTree, commandsStorage)
-                    LOG.info { "Transformation Ended: ${it.key}" }
+                    LOG.finer { "Transformation Ended: ${it.key}" }
                 }
             } catch (e: Throwable) {
                 LOG.severe {
@@ -60,10 +60,10 @@ object CompositeTransformation : Transformation() {
                 break
             }
 
-            LOG.info { "Previous text[$iterationNumber]:\n${previousTree.text}\n" }
-            LOG.info { "Current text[$iterationNumber]:\n${psiTree.text}\n\n" }
+            LOG.finer { "Previous text[$iterationNumber]:\n${previousTree.text}\n" }
+            LOG.finer { "Current text[$iterationNumber]:\n${psiTree.text}\n\n" }
         } while (iterationNumber <= MAX_ITERATION_COUNT && !previousTree.textMatches(psiTree.text))
-        LOG.info { "Tree Ended[[$iterationNumber]]: ${psiTree.text}\n\n\n" }
+        LOG.fine { "Tree Ended[[$iterationNumber]]: ${psiTree.text}\n\n\n" }
     }
 
     private const val MAX_ITERATION_COUNT = 100

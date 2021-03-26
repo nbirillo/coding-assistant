@@ -141,14 +141,4 @@ tasks {
             taskName?.let { "--task_name=$it" }
         )
     }
-
-    register<Test>("localTest") {
-        filter {
-            // exclude all tests from these packages because of it's execution time.
-            excludeTestsMatching("org.jetbrains.research.ml.coding.assistant.system.*")
-            excludeTestsMatching("org.jetbrains.research.ml.coding.assistant.unification.*")
-            // exclude test case because of it's execution time.
-            excludeTestsMatching("*.DatasetSolutionSpaceSerializerTest.*")
-        }
-    }
 }

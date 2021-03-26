@@ -7,8 +7,10 @@ import org.jetbrains.research.ml.coding.assistant.solutionSpace.weightCalculator
 import org.jetbrains.research.ml.coding.assistant.unification.DatasetUnification
 import org.jetbrains.research.ml.coding.assistant.util.DatasetUtils
 import org.jetbrains.research.ml.coding.assistant.util.ParametrizedBaseWithSdkTest
+import org.junit.Ignore
 import org.junit.Test
 
+@Ignore
 class DatasetSolutionSpaceSerializerTest : ParametrizedBaseWithSdkTest(getTmpProjectDir(true)) {
     @Test
     fun testBasic() {
