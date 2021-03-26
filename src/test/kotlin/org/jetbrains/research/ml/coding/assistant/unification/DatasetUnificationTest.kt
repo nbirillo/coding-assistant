@@ -9,7 +9,6 @@ import org.jetbrains.research.ml.coding.assistant.util.ParametrizedBaseWithSdkTe
 import org.junit.Ignore
 import org.junit.Test
 
-@Ignore
 class DatasetUnificationTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(::DatasetUnificationTest)) {
     @Test
     fun testSolutionSpaceBuild() {

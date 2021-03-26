@@ -71,6 +71,7 @@ open class SolutionSpaceCliTask : org.jetbrains.intellij.tasks.RunIdeTask() {
     // Input directory with csv files
     @get:Input
     val input: String? by project
+
     // Output directory
     @get:Input
     val output: String? by project
@@ -89,13 +90,16 @@ open class HintGenerationCliTask : org.jetbrains.intellij.tasks.RunIdeTask() {
     // Path to the serialized solution space file.
     @get:Input
     val solutionSpacePath: String? by project
+
     // Path to support information about dataset original code fragments.
     // Needed for only report.
     @get:Input
     val codeRepositoryPath: String? by project
+
     // Name of the task.
     @get:Input
     val taskName: String? by project
+
     // Directory to store the report.
     @get:Input
     val outputDir: String? by project
@@ -136,5 +140,15 @@ tasks {
             outputDir?.let { "--output_path=$it" },
             taskName?.let { "--task_name=$it" }
         )
+    }
+
+    register<Test>("localTest") {
+        filter {
+            // exclude all tests from these packages because of it's execution time.
+            excludeTestsMatching("org.jetbrains.research.ml.coding.assistant.system.*")
+            excludeTestsMatching("org.jetbrains.research.ml.coding.assistant.unification.*")
+            // exclude test case because of it's execution time.
+            excludeTestsMatching("*.DatasetSolutionSpaceSerializerTest.*")
+        }
     }
 }
