@@ -70,7 +70,6 @@ data class MetaInfo(
     }
 }
 
-
 private fun throwNullFieldError(fieldName: String): Nothing {
     throw IllegalArgumentException("Field \"$fieldName\" has to exist")
 }

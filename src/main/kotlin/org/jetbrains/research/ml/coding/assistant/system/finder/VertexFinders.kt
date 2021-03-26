@@ -12,7 +12,10 @@ import org.jetbrains.research.ml.coding.assistant.system.matcher.PartialSolution
 abstract class VertexFinder {
     abstract val matcher: PartialSolutionMatcher
 
-    abstract fun findCorrespondingVertex(solutionSpace: SolutionSpace, partialSolution: PartialSolution): SolutionSpaceVertex?
+    abstract fun findCorrespondingVertex(
+        solutionSpace: SolutionSpace,
+        partialSolution: PartialSolution
+    ): SolutionSpaceVertex?
 
     override fun toString(): String {
         return "${this::class.simpleName}(matcher=$matcher)"
