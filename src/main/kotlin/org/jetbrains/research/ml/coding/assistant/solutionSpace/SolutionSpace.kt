@@ -55,33 +55,32 @@ private fun transferGraph(
     val zippedVertices = oldVertices zip newVertices
     val mapping = zippedVertices.toMap()
 
-    for ((oldVertex, newVertex) in zippedVertices) {
-        fun transferEdges(edges: Iterable<SolutionSpaceGraphEdge>, isOutgoing: Boolean) {
-            for (outgoingEdge in edges) {
-                val neighbour = if (isOutgoing) {
-                    builder.graph.getEdgeTarget(outgoingEdge)
-                } else {
-                    builder.graph.getEdgeSource(outgoingEdge)
-                }
-                val newTarget = mapping[neighbour]!!
-                val newEdge: SolutionSpaceEdge? = if (isOutgoing) {
-                    graph.addEdge(newVertex, newTarget)
-                } else {
-                    graph.addEdge(newTarget, newVertex)
-                }
-                if (newEdge == null) {
-                    continue
-                }
-                val calculatedWeight = weightCalculator.getWeight(newEdge)
-                graph.setEdgeWeight(newEdge, calculatedWeight)
+    fun transferEdges(newVertex: SolutionSpaceVertex, edges: Iterable<SolutionSpaceGraphEdge>, isOutgoing: Boolean) {
+        for (outgoingEdge in edges) {
+            val neighbour = if (isOutgoing) {
+                builder.graph.getEdgeTarget(outgoingEdge)
+            } else {
+                builder.graph.getEdgeSource(outgoingEdge)
             }
+            val newTarget = mapping[neighbour]!!
+            val newEdge: SolutionSpaceEdge? = if (isOutgoing) {
+                graph.addEdge(newVertex, newTarget)
+            } else {
+                graph.addEdge(newTarget, newVertex)
+            }
+            if (newEdge == null) {
+                continue
+            }
+            val calculatedWeight = weightCalculator.getWeight(newEdge)
+            graph.setEdgeWeight(newEdge, calculatedWeight)
         }
-
+    }
+    for ((oldVertex, newVertex) in zippedVertices) {
         val outgoingEdges = builder.graph.outgoingEdgesOf(oldVertex).toSet()
-        transferEdges(outgoingEdges, isOutgoing = true)
+        transferEdges(newVertex, outgoingEdges, isOutgoing = true)
 
         val incomingEdges = builder.graph.incomingEdgesOf(oldVertex).toSet()
-        transferEdges(incomingEdges, isOutgoing = false)
+        transferEdges(newVertex, incomingEdges, isOutgoing = false)
     }
 
     return AsUnmodifiableGraph(graph)

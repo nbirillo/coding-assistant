@@ -14,7 +14,7 @@ import java.io.File
 import kotlin.test.assertNotEquals
 
 /**
- * There are some issue with standalone PsiFile.
+ * There are some issue with a standalone PsiFile.
  * To anonymize the code fragment for every symbol in fragment Intellij has to calculate it's usages.
  * But without the physical file on a disk inside a project directory it cannot resolve references properly.
  */
