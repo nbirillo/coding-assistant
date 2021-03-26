@@ -49,24 +49,27 @@ data class MetaInfo(
         FROM_FOUR_TO_SIX_YEARS,
         MORE_THAN_SIX
     }
-}
 
-private fun String?.toFloatOrNullWithDefault(default: Float): Float? {
-    val value = this?.toFloatOrNull()
-    if (value == default) {
-        return null
-    }
-    return value
-}
-
-private fun String?.toProgramExperience(): MetaInfo.ProgramExperience? =
-    this?.let {
-        try {
-            MetaInfo.ProgramExperience.valueOf(it)
-        } catch (e: IllegalArgumentException) {
-            null
+    companion object {
+        private fun String?.toFloatOrNullWithDefault(default: Float): Float? {
+            val value = this?.toFloatOrNull()
+            if (value == default) {
+                return null
+            }
+            return value
         }
+
+        private fun String?.toProgramExperience(): ProgramExperience? =
+            this?.let {
+                try {
+                    ProgramExperience.valueOf(it)
+                } catch (e: IllegalArgumentException) {
+                    null
+                }
+            }
     }
+}
+
 
 private fun throwNullFieldError(fieldName: String): Nothing {
     throw IllegalArgumentException("Field \"$fieldName\" has to exist")

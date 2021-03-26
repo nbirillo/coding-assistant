@@ -73,7 +73,7 @@ appendLine()
 }
 
 private fun SolutionSpaceVertex?.toDebugString(): String {
-    return this?.info?.joinToString("\n") { it.metaInfo.toDebugString() } ?: "No meta information"
+    return this?.info?.joinToString("\n\n") { it.metaInfo.toDebugString() } ?: "No meta information"
 }
 
 private fun MetaInfo.toDebugString(): String {

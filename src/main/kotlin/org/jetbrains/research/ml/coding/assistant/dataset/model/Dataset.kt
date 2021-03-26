@@ -1,7 +1,7 @@
 package org.jetbrains.research.ml.coding.assistant.dataset.model
 
 /**
- *  Model that accumulates all record for single person
+ *  Model that accumulates all records for single person
  *  Model for one .csv file
  */
 data class DynamicSolution(
