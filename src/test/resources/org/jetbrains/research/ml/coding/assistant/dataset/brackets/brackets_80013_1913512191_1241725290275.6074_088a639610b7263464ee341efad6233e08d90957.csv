@@ -1,0 +1,82 @@
+id,fragment,age,programExperience,testsResults,task
+6163,v1 = input(),22,MORE_THAN_SIX,0.0,brackets
+6164,"v1 = input()
+v2 = len(v1)",22,MORE_THAN_SIX,0.0,brackets
+6179,"v1 = input()
+v2 = len(v1)
+for v3, v4 in enumerate(v1):
+    if v3 < v2 / 2 - 1:
+        print(f'{v4}(', end='')
+        ",22,MORE_THAN_SIX,0.0,brackets
+6180,"v1 = input()
+v2 = len(v1)
+for v3, v4 in enumerate(v1):
+    if v3 < v2 / 2 - 1:
+        print(f'{v4}(', end='')
+    elif v3 == v2 / 2 - 1:
+        print()
+        ",22,MORE_THAN_SIX,0.0,brackets
+6186,"v1 = input()
+v2 = len(v1)
+for v3, v4 in enumerate(v1):
+    if v3 < v2 / 2 - 1:
+        print(f'{v4}(', end='')
+    elif v3 == v2 / 2 - 1:
+        print(v4, end='')
+        ",22,MORE_THAN_SIX,0.0,brackets
+6187,"v1 = input()
+v2 = len(v1)
+for v3, v4 in enumerate(v1):
+    if v3 < v2 / 2 - 1:
+        print(f'{v4}(', end='')
+    elif v3 == v2 / 2 - 1:
+        print(v4, end='')
+    elif v3 != v2 - 1:
+        print()
+        ",22,MORE_THAN_SIX,0.0,brackets
+6189,"v1 = input()
+v2 = len(v1)
+for v3, v4 in enumerate(v1):
+    if v3 < v2 / 2 - 1:
+        print(f'{v4}(', end='')
+    elif v3 == v2 / 2 - 1:
+        print(v4, end='')
+    elif v3 != v2 - 1:
+        print(f'{v4})')
+        ",22,MORE_THAN_SIX,0.0,brackets
+6190,"v1 = input()
+v2 = len(v1)
+for v3, v4 in enumerate(v1):
+    if v3 < v2 / 2 - 1:
+        print(f'{v4}(', end='')
+    elif v3 == v2 / 2 - 1:
+        print(v4, end='')
+    elif v3 != v2 - 1:
+        print(f'{v4})')
+    else:
+        print()
+        ",22,MORE_THAN_SIX,0.0,brackets
+6194,"v1 = input()
+v2 = len(v1)
+for v3, v4 in enumerate(v1):
+    if v3 < v2 / 2 - 1:
+        print(f'{v4}(', end='')
+    elif v3 == v2 / 2 - 1:
+        print(v4, end='')
+    elif v3 != v2 - 1:
+        print(f'{v4})')
+    else:
+        print(v4, end='')
+        ",22,MORE_THAN_SIX,0.125,brackets
+6195,"v1 = input()
+v2 = len(v1)
+for v3, v4 in enumerate(v1):
+    if v3 < v2 / 2 - 1:
+        print(f'{v4}(', end='')
+    elif v3 == v2 / 2 - 1:
+        print(v4, end='')
+    elif v3 != v2 - 1:
+        print(f'{v4})', end='')
+    else:
+        print(v4, end='')
+        ",22,MORE_THAN_SIX,1.0,brackets

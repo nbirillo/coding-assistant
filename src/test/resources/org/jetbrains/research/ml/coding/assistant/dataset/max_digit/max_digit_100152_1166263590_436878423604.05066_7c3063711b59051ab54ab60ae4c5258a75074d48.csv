@@ -1,0 +1,14 @@
+id,fragment,age,programExperience,testsResults,task
+12,"def f1():
+    print(max(input()))
+
+if __name__ == '__main__':
+    f1()
+",-1,-1,1.0,max_digit
+13,"def f1():
+    print(max(input()))
+
+
+if __name__ == '__main__':
+    f1()
+",-1,-1,1.0,max_digit

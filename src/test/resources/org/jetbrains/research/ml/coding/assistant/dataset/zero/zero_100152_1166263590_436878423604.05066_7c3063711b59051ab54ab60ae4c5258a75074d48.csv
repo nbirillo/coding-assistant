@@ -1,0 +1,190 @@
+id,fragment,age,programExperience,testsResults,task
+24,"def f1():
+    f1_v1 = int(input())
+
+
+if __name__ == '__main__':
+    f1()
+",-1,-1,0.0,is_zero
+25,"def f1():
+    f1_v1 = int(input())
+    
+
+
+if __name__ == '__main__':
+    f1()
+",-1,-1,0.0,is_zero
+37,"def f1():
+    f1_v1 = int(input())
+    f1_v2 = False
+    for f1_v3 in range(f1_v1):
+        if not int(input()):
+            f1_v2 = True
+
+
+if __name__ == '__main__':
+    f1()
+",-1,-1,0.0,is_zero
+38,"def f1():
+    f1_v1 = int(input())
+    f1_v2 = False
+    for f1_v3 in range(f1_v1):
+        if not int(input()):
+            f1_v2 = True
+            
+
+
+if __name__ == '__main__':
+    f1()
+",-1,-1,0.0,is_zero
+48,"def f1():
+    f1_v1 = int(input())
+    f1_v2 = False
+    for f1_v3 in range(f1_v1):
+        if not int(input()):
+            f1_v2 = True
+            print(""YES"")
+
+
+if __name__ == '__main__':
+    f1()
+",-1,-1,0.0,is_zero
+49,"def f1():
+    f1_v1 = int(input())
+    f1_v2 = False
+    for f1_v3 in range(f1_v1):
+    
+        if not int(input()):
+            f1_v2 = True
+            print(""YES"")
+
+
+if __name__ == '__main__':
+    f1()
+",-1,-1,0.0,is_zero
+53,"def f1():
+    f1_v1 = int(input())
+    f1_v2 = False
+    for f1_v3 in range(f1_v1):
+        f1_v4 = int(input())
+        if not f1_v4:
+            f1_v2 = True
+            print(""YES"")
+
+
+if __name__ == '__main__':
+    f1()
+",-1,-1,0.0,is_zero
+54,"def f1():
+    f1_v1 = int(input())
+    f1_v2 = False
+    for f1_v3 in range(f1_v1):
+        f1_v4 = int(input())
+        
+        if not f1_v4:
+            f1_v2 = True
+            print(""YES"")
+
+
+if __name__ == '__main__':
+    f1()
+",-1,-1,0.0,is_zero
+59,"def f1():
+    f1_v1 = int(input())
+    f1_v2 = False
+    for f1_v3 in range(f1_v1):
+        f1_v4 = int(input())
+        if f1_v2:
+            continue
+        if not f1_v4:
+            f1_v2 = True
+            print(""YES"")
+
+
+if __name__ == '__main__':
+    f1()
+",-1,-1,0.0,is_zero
+60,"def f1():
+    f1_v1 = int(input())
+    f1_v2 = False
+    for f1_v3 in range(f1_v1):
+        f1_v4 = int(input())
+        if f1_v2:
+            continue
+        if not f1_v4:
+            f1_v2 = True
+            print(""YES"")
+            
+
+
+if __name__ == '__main__':
+    f1()
+",-1,-1,0.0,is_zero
+74,"def f1():
+    f1_v1 = int(input())
+    f1_v2 = False
+    for f1_v3 in range(f1_v1):
+        f1_v4 = int(input())
+        if f1_v2:
+            continue
+        if not f1_v4:
+            f1_v2 = True
+            print(""YES"")
+    if not f1_v2:
+        print(""NO"")
+
+
+if __name__ == '__main__':
+    f1()
+",-1,-1,1.0,is_zero
+75,"def f1():
+    f1_v1 = int(input())
+    f1_v2 = False
+    for f1_v3 in range(f1_v1):
+        f1_v4 = int(input())
+        if f1_v2:
+            continue
+        if not f1_v4:
+            f1_v2 = True
+    if not f1_v2:
+        print(""NO"")
+
+
+if __name__ == '__main__':
+    f1()
+",-1,-1,0.125,is_zero
+76,"def f1():
+    f1_v1 = int(input())
+    f1_v2 = False
+    for f1_v3 in range(f1_v1):
+        f1_v4 = int(input())
+        if f1_v2:
+            continue
+        if not f1_v4:
+            f1_v2 = True
+    if not f1_v2:
+        print(""NO"")
+        
+
+
+if __name__ == '__main__':
+    f1()
+",-1,-1,0.125,is_zero
+91,"def f1():
+    f1_v1 = int(input())
+    f1_v2 = False
+    for f1_v3 in range(f1_v1):
+        f1_v4 = int(input())
+        if f1_v2:
+            continue
+        if not f1_v4:
+            f1_v2 = True
+    if not f1_v2:
+        print(""NO"")
+    else:
+        print(""YES"")
+
+
+if __name__ == '__main__':
+    f1()
+",-1,-1,1.0,is_zero

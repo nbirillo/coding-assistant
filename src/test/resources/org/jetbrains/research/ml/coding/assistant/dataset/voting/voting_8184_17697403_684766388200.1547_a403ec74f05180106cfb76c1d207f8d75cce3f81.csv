@@ -1,0 +1,72 @@
+id,fragment,age,programExperience,testsResults,task
+1643,"v1=int(input())
+
+
+
+",15.0,LESS_THAN_HALF_YEAR,0.0,voting
+1644,"v1=int(input())
+v2=int()
+
+
+
+",15.0,LESS_THAN_HALF_YEAR,0.0,voting
+1647,"v1=int(input())
+v2=int(input())
+
+
+
+",15.0,LESS_THAN_HALF_YEAR,0.0,voting
+1648,"v1=int(input())
+v2=int(input())
+v3=int()
+
+
+
+",15.0,LESS_THAN_HALF_YEAR,0.0,voting
+1649,"v1=int(input())
+v2=int(input())
+v3=int(input())
+
+
+
+",15.0,LESS_THAN_HALF_YEAR,0.0,voting
+1652,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if v1==0 and v2==0 or v2==0 and v3==0 or v1==0 and v3==0:
+    print(""0"")
+
+
+
+",15.0,LESS_THAN_HALF_YEAR,0.0,voting
+1655,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if (v1 == 0 and v2 == 0) or (v2 == 0 and v3 == 0) or (v1 == 0 and v3 == 0):
+    print(""0"")
+
+
+
+",15.0,LESS_THAN_HALF_YEAR,0.0,voting
+1656,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if (v1 == 0 and v2 == 0) or (v2 == 0 and v3 == 0) or (v1 == 0 and v3 == 0):
+    print(""0"")
+else:
+    print()
+
+
+
+",15.0,LESS_THAN_HALF_YEAR,0.0,voting
+1658,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if (v1 == 0 and v2 == 0) or (v2 == 0 and v3 == 0) or (v1 == 0 and v3 == 0):
+    print(""0"")
+else:
+    print(""1"")
+
+
+
+",15.0,LESS_THAN_HALF_YEAR,0.0,voting

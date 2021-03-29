@@ -1,7 +1,7 @@
 package org.jetbrains.research.ml.coding.assistant.dataset.model
 
 /**
- *  Model that accumulates all record for single person
+ *  Model that accumulates all records for single person
  *  Model for one .csv file
  */
 data class DynamicSolution(
@@ -11,7 +11,7 @@ data class DynamicSolution(
 }
 
 /**
- * Model for all solution in dataset
+ * Model for all solutions in the dataset for one task
  */
 data class TaskSolutions(
     val datasetTask: DatasetTask,
@@ -19,7 +19,7 @@ data class TaskSolutions(
 )
 
 /**
- * Model for the whole dataset
+ * Model for all solutions in the dataset for several tasks
  */
 data class Dataset(
     val tasks: List<TaskSolutions>

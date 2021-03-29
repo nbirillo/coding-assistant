@@ -1,0 +1,359 @@
+id,fragment,age,programExperience,testsResults,task
+770,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+print(v1 * v3)
+print(v2 * v3)
+v1 = int(input())
+v2 = int(input())
+v4 = int(input())
+if v1>v2>v4:
+    print(v1)
+elif v2>v4>v1:
+    print(v2)
+elif v4>v2>v1:
+    print(v4)
+",14.0,LESS_THAN_HALF_YEAR,0.0,is_zero
+772,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+print(v1 * v3)
+print(v2 * v3)
+v1 = int(input())
+v2 = int(input())
+v4 = int(input())
+if v1>v2>v4:
+    print(v1)
+elif v2>v4>v1:
+    print(v2)
+elif v4>v2>v1:
+    print(v4)
+v1 = int(input())",14.0,LESS_THAN_HALF_YEAR,0.0,is_zero
+776,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+print(v1 * v3)
+print(v2 * v3)
+v1 = int(input())
+v2 = int(input())
+v4 = int(input())
+if v1>v2>v4:
+    print(v1)
+elif v2>v4>v1:
+    print(v2)
+elif v4>v2>v1:
+    print(v4)
+v1 = int(input())
+v2 = int(input())",14.0,LESS_THAN_HALF_YEAR,0.0,is_zero
+777,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+print(v1 * v3)
+print(v2 * v3)
+v1 = int(input())
+v2 = int(input())
+v4 = int(input())
+if v1>v2>v4:
+    print(v1)
+elif v2>v4>v1:
+    print(v2)
+elif v4>v2>v1:
+    print(v4)
+v1 = int(input())
+v2 = int(input())
+v5 = v1",14.0,LESS_THAN_HALF_YEAR,0.0,is_zero
+779,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+print(v1 * v3)
+print(v2 * v3)
+v1 = int(input())
+v2 = int(input())
+v4 = int(input())
+if v1>v2>v4:
+    print(v1)
+elif v2>v4>v1:
+    print(v2)
+elif v4>v2>v1:
+    print(v4)
+v1 = int(input())
+v2 = int(input())
+v5 = v1 * ""b""",14.0,LESS_THAN_HALF_YEAR,0.0,is_zero
+780,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+print(v1 * v3)
+print(v2 * v3)
+v1 = int(input())
+v2 = int(input())
+v4 = int(input())
+if v1>v2>v4:
+    print(v1)
+elif v2>v4>v1:
+    print(v2)
+elif v4>v2>v1:
+    print(v4)
+v1 = int(input())
+",14.0,LESS_THAN_HALF_YEAR,0.0,is_zero
+781,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+print(v1 * v3)
+print(v2 * v3)
+v1 = int(input())
+v2 = int(input())
+v4 = int(input())
+if v1>v2>v4:
+    print(v1)
+elif v2>v4>v1:
+    print(v2)
+elif v4>v2>v1:
+    print(v4)
+v1 = int(input())
+v5 = [int]",14.0,LESS_THAN_HALF_YEAR,0.0,is_zero
+783,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+print(v1 * v3)
+print(v2 * v3)
+v1 = int(input())
+v2 = int(input())
+v4 = int(input())
+if v1>v2>v4:
+    print(v1)
+elif v2>v4>v1:
+    print(v2)
+elif v4>v2>v1:
+    print(v4)
+v1 = int(input())
+v5 = [int(input())]",14.0,LESS_THAN_HALF_YEAR,0.0,is_zero
+785,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+print(v1 * v3)
+print(v2 * v3)
+v1 = int(input())
+v2 = int(input())
+v4 = int(input())
+if v1>v2>v4:
+    print(v1)
+elif v2>v4>v1:
+    print(v2)
+elif v4>v2>v1:
+    print(v4)
+v1 = int(input())
+v5 = [int(input())]
+v1 = len(v5)",14.0,LESS_THAN_HALF_YEAR,0.0,is_zero
+786,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+print(v1 * v3)
+print(v2 * v3)
+v4 = int(input())
+v2 = int(input())
+v5 = int(input())
+if v1>v2>v5:
+    print(v1)
+elif v2>v5>v1:
+    print(v2)
+elif v5>v2>v1:
+    print(v5)
+v1 = int(input())
+v6 = [int(input())]
+v1 = len(v6)",14.0,LESS_THAN_HALF_YEAR,0.0,is_zero
+787,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+print(v1 * v3)
+print(v2 * v3)
+v4 = int(input())
+v5 = int(input())
+v6 = int(input())
+if v1>v2>v6:
+    print(v1)
+elif v2>v6>v1:
+    print(v2)
+elif v6>v2>v1:
+    print(v6)
+v1 = int(input())
+v7 = [int(input())]
+v1 = len(v7)",14.0,LESS_THAN_HALF_YEAR,0.0,is_zero
+788,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+print(v1 * v3)
+print(v2 * v3)
+v4 = int(input())
+v5 = int(input())
+v6 = int(input())
+if v4>v5>v6:
+    print(v4)
+elif v5>v6>v4:
+    print(v5)
+elif v6>v5>v4:
+    print()
+v1 = int(input())
+v7 = [int(input())]
+v1 = len(v7)",14.0,LESS_THAN_HALF_YEAR,0.0,is_zero
+789,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+print(v1 * v3)
+print(v2 * v3)
+v4 = int(input())
+v5 = int(input())
+v6 = int(input())
+if v4>v5>v6:
+    print(v4)
+elif v5>v6>v4:
+    print(v5)
+elif v6>v5>v4:
+    print(v6)
+v1 = int(input())
+v7 = [int(input())]
+v1 = len(v7)",14.0,LESS_THAN_HALF_YEAR,0.0,is_zero
+790,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+print(v1 * v3)
+print(v2 * v3)
+v4 = int(input())
+v5 = int(input())
+v6 = int(input())
+if v4>v5>v6:
+    print(v4)
+elif v5>v6>v4:
+    print(v5)
+elif v6>v5>v4:
+    print(v6)
+v7 = int(input())
+v8 = [int(input())]
+v1 = len(v8)",14.0,LESS_THAN_HALF_YEAR,0.0,is_zero
+791,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+print(v1 * v3)
+print(v2 * v3)
+v4 = int(input())
+v5 = int(input())
+v6 = int(input())
+if v4>v5>v6:
+    print(v4)
+elif v5>v6>v4:
+    print(v5)
+elif v6>v5>v4:
+    print(v6)
+v7 = int(input())
+v8 = [int(input())]
+v3 = len(v8)",14.0,LESS_THAN_HALF_YEAR,0.0,is_zero
+792,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+print(v1 * v3)
+print(v2 * v3)
+v4 = int(input())
+v5 = int(input())
+v6 = int(input())
+if v4>v5>v6:
+    print(v4)
+elif v5>v6>v4:
+    print(v5)
+elif v6>v5>v4:
+    print(v6)
+v3 = int(input())
+v7 = [int(input())]
+v3 = len(v7)",14.0,LESS_THAN_HALF_YEAR,0.0,is_zero
+793,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+print(v1 * v3)
+print(v2 * v3)
+v4 = int(input())
+v5 = int(input())
+v6 = int(input())
+if v4>v5>v6:
+    print(v4)
+elif v5>v6>v4:
+    print(v5)
+elif v6>v5>v4:
+    print(v6)
+v3 = int(input())
+v7=[int(input()) for v8 in range(v3)]",14.0,LESS_THAN_HALF_YEAR,0.0,is_zero
+795,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+print(v1 * v3)
+print(v2 * v3)
+v4 = int(input())
+v5 = int(input())
+v6 = int(input())
+if v4>v5>v6:
+    print(v4)
+elif v5>v6>v4:
+    print(v5)
+elif v6>v5>v4:
+    print(v6)
+v3 = int(input())
+v7=[int(input()) for v8 in range(v3)]
+if v7 != 0 and v3 != 0:
+    print()",14.0,LESS_THAN_HALF_YEAR,0.0,is_zero
+796,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+print(v1 * v3)
+print(v2 * v3)
+v4 = int(input())
+v5 = int(input())
+v6 = int(input())
+if v4>v5>v6:
+    print(v4)
+elif v5>v6>v4:
+    print(v5)
+elif v6>v5>v4:
+    print(v6)
+v3 = int(input())
+v7=[int(input()) for v8 in range(v3)]
+if v7 != 0 and v3 != 0:
+    print(""NO"")
+else:
+    print(""YES"")    ",14.0,LESS_THAN_HALF_YEAR,0.0,is_zero
+797,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+print(v1 * v3)
+print(v2 * v3)
+v4 = int(input())
+v5 = int(input())
+v6 = int(input())
+if v4>v5>v6:
+    print(v4)
+elif v5>v6>v4:
+    print(v5)
+elif v6>v5>v4:
+    print(v6)
+v3 = int(input())
+v7=[int(input()) for v8 in range(v3)]
+if int:
+    print(""NO"")
+else:
+    print(""YES"")",14.0,LESS_THAN_HALF_YEAR,0.0,is_zero
+798,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+print(v1 * v3)
+print(v2 * v3)
+v4 = int(input())
+v5 = int(input())
+v6 = int(input())
+if v4>v5>v6:
+    print(v4)
+elif v5>v6>v4:
+    print(v5)
+elif v6>v5>v4:
+    print(v6)
+v3 = int(input())
+v7=[int(input()) for v8 in range(v3)]
+if int():
+    print(""NO"")
+else:
+    print(""YES"")",14.0,LESS_THAN_HALF_YEAR,0.0,is_zero

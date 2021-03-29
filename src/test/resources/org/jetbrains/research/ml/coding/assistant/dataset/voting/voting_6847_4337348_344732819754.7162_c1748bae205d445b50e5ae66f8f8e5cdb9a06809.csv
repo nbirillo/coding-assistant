@@ -1,0 +1,42 @@
+id,fragment,age,programExperience,testsResults,task
+1380,"def f1(f1_p1, f1_p2, f1_p3):
+    for f1_v1 in f1_p1, f1_p2, f1_p3:
+        if(f1_v1==0):
+            f1_v2= f1_v2 + 1
+        else:
+            f1_v3= f1_v3 + 1
+    if(f1_v2>f1_v3):
+        return 0
+    else:
+        return 1
+
+v1, v2, v3=map(int, input().split())
+print(f1(v1, v2, v3))",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1381,"def f1(f1_p1, f1_p2, f1_p3):
+    
+    for f1_v1 in f1_p1, f1_p2, f1_p3:
+        if(f1_v1==0):
+            f1_v2= f1_v2 + 1
+        else:
+            f1_v3= f1_v3 + 1
+    if(f1_v2>f1_v3):
+        return 0
+    else:
+        return 1
+
+v1, v2, v3=map(int, input().split())
+print(f1(v1, v2, v3))",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1386,"def f1(f1_p1, f1_p2, f1_p3):
+    f1_v1=0;f1_v2=0
+    for f1_v3 in f1_p1, f1_p2, f1_p3:
+        if(f1_v3==0):
+            f1_v1= f1_v1 + 1
+        else:
+            f1_v2= f1_v2 + 1
+    if(f1_v1>f1_v2):
+        return 0
+    else:
+        return 1
+
+v1, v2, v3=map(int, input().split())
+print(f1(v1, v2, v3))",13.0,FROM_TWO_TO_FOUR_YEARS,1.0,voting

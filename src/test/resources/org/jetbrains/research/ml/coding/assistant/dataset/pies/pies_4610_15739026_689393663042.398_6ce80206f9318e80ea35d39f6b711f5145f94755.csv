@@ -1,0 +1,17 @@
+id,fragment,age,programExperience,testsResults,task
+2655,v1=int(input()),16.0,FROM_HALF_TO_ONE_YEAR,0.0,pies
+2656,"v1=int(input())
+v2=int(input())",16.0,FROM_HALF_TO_ONE_YEAR,0.0,pies
+2657,"v1=int(input())
+v2=int(input())
+v3=int(input())",16.0,FROM_HALF_TO_ONE_YEAR,0.0,pies
+2678,"v1=int(input())
+v2=int(input())
+v3=int(input())
+v2 = v2 * v1
+v3= v3 * v1
+while v3>=100:
+    v2  = v2 + 1
+    v3 = v3 - 100
+print(v2, end="" "")
+print(v3)",16.0,FROM_HALF_TO_ONE_YEAR,0.0,pies

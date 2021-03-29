@@ -6,6 +6,11 @@ import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpaceEdg
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpaceVertex
 import org.jgrapht.Graph
 
+/**
+ * In memory cache to store for every edge in the `graph` a list of edits
+ * to transform source vertex into target vertex.
+ * Calculates a list of edits only if there is no already calculated edits list for this edge in cache.
+ */
 class EdgeActionsCache(
     private val graph: Graph<SolutionSpaceVertex, SolutionSpaceEdge>,
     private val map: MutableMap<SolutionSpaceEdge, List<Action>> = mutableMapOf()

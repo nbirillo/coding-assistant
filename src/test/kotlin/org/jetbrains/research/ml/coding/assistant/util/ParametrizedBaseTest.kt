@@ -10,7 +10,7 @@ import kotlin.reflect.KFunction
 
 @Ignore
 open class ParametrizedBaseTest(private val testDataRoot: String) : BasePlatformTestCase() {
-    protected val LOG = Logger.getLogger(javaClass.name)
+    protected val logger: Logger = Logger.getLogger(javaClass.name)
 
     // We should define the root resources folder
     override fun getTestDataPath() = testDataRoot
@@ -26,6 +26,17 @@ open class ParametrizedBaseTest(private val testDataRoot: String) : BasePlatform
             )
             return inAndOutFilesMap.entries.map { (inFile, outFile) -> arrayOf(inFile, outFile!!) }
         }
+
+        fun getInArray(
+            cls: KFunction<ParametrizedBaseTest>,
+            resourcesRootName: String = resourcesRoot,
+        ): List<Array<File>> {
+            val inAndOutFilesMap = FileTestUtil.getInAndOutFilesMap(
+                getResourcesRootPath(cls, resourcesRootName),
+            )
+            return inAndOutFilesMap.keys.map { arrayOf(it) }
+        }
+
         // We can not get the root of the class resources automatically
         private const val resourcesRoot: String = "data"
 

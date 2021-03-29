@@ -1,0 +1,93 @@
+id,fragment,age,programExperience,testsResults,task
+968,"
+",22,FROM_ONE_TO_TWO_YEARS,0.0,pies
+969,v1 = input,22,FROM_ONE_TO_TWO_YEARS,0.0,pies
+970,v1 = input(),22,FROM_ONE_TO_TWO_YEARS,0.0,pies
+971,"v1 = input()
+v2 = input",22,FROM_ONE_TO_TWO_YEARS,0.0,pies
+972,"v1 = input()
+v2 = input()",22,FROM_ONE_TO_TWO_YEARS,0.0,pies
+973,"v1 = input()
+v2 = input()
+v3 = input",22,FROM_ONE_TO_TWO_YEARS,0.0,pies
+974,"v1 = input()
+v2 = input()
+v3 = input()",22,FROM_ONE_TO_TWO_YEARS,0.0,pies
+975,"v1 = input()
+v2 = input()
+v3 = input()
+
+v4 = v1",22,FROM_ONE_TO_TWO_YEARS,0.0,pies
+985,"v1 = input()
+v2 = input()
+v3 = input()
+
+v4 = v1 + v2 * 100
+",22,FROM_ONE_TO_TWO_YEARS,0.0,pies
+988,"v1 = input()
+v2 = input()
+v3 = input()
+
+v4 = v1 + v2 * 100
+print(v1)",22,FROM_ONE_TO_TWO_YEARS,0.0,pies
+989,"v1 = input()
+v2 = input()
+v3 = input()
+
+v4 = v1 + v2 * 100
+print(v1 * int(v3))
+print()",22,FROM_ONE_TO_TWO_YEARS,0.0,pies
+990,"v1 = input()
+v2 = input()
+v3 = input()
+
+v4 = v1 + v2 * 100
+print(v4 * int(v3))
+print()",22,FROM_ONE_TO_TWO_YEARS,0.0,pies
+991,"v1 = input()
+v2 = input()
+v3 = input()
+
+v4 = v1 + v2 * 100
+print(v4 * int(v3))",22,FROM_ONE_TO_TWO_YEARS,0.0,pies
+995,"v1 = input()
+v2 = input()
+v3 = input()
+
+v4 = v1 + v2 * 100
+print(f""price/100 "")",22,FROM_ONE_TO_TWO_YEARS,0.0,pies
+996,"v1 = input()
+v2 = input()
+v3 = input()
+
+v4 = int(v1 + v2 * 100)
+print(f""{v4 / 100} {v4 % 100}"")
+",22,FROM_ONE_TO_TWO_YEARS,0.0,pies
+1005,"v1 = input()
+v2 = input()
+v3 = input()
+
+v4 = int(v1 + v2 * 100)
+print(f""{int(v4 / 100)} {v4 * v3 % 100}"")
+",22,FROM_ONE_TO_TWO_YEARS,0.0,pies
+1006,"v1 = input()
+v2 = input()
+v3 = int(input())
+
+v4 = int(v1 + v2 * 100)
+print(f""{int(v4 * v3 / 100)} {v4 * v3 % 100}"")
+",22,FROM_ONE_TO_TWO_YEARS,0.0,pies
+1007,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = int(v1 + v2 * 100)
+print(f""{int(v4 * v3 / 100)} {v4 * v3 % 100}"")
+",22,FROM_ONE_TO_TWO_YEARS,0.125,pies
+1021,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = v1 * 100 + v2
+print(f""{int(v4 * v3 / 100)} {v4 * v3 % 100}"")
+",22,FROM_ONE_TO_TWO_YEARS,1.0,pies
