@@ -1,0 +1,120 @@
+id,fragment,age,programExperience,testsResults,task
+2196,v1 = int (input()),13.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+2197,"v1 = int (input())
+v2 = int",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+2199,"v1 = int (input())
+v2 = int (input())",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+2200,"v1 = int (input())
+v2 = int (input())
+v3 = int",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+2202,"v1 = int (input())
+v2 = int (input())
+v3 = int (input())",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+2214,"v1 = int (input())
+v2 = int (input())
+v3 = int (input())
+",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+2219,"v1 = int (input())
+v2 = int (input())
+v3 = int (input())
+",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+2221,"v1 = int (input())
+v2 = int (input())
+v3 = int (input())
+",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+2222,"v1 = int (input())
+v2 = int (input())
+v3 = int (input())
+v4 = v1",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+2226,"v1 = int (input())
+v2 = int (input())
+v3 = int (input())
+v4 = v1 * 100 + v2",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+2227,"v1 = int (input())
+v2 = int (input())
+v3 = int (input())
+v4 = v1 * 100 + v2 
+v5 = v4",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+2228,"v1 = int (input())
+v2 = int (input())
+v3 = int (input())
+v4 = v1 * 100 + v2 
+v5 = v4 * v3",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+2229,"v1 = int (input())
+v2 = int (input())
+v3 = int (input())
+v4 = v1 / 100 + v2 
+v5 = v4 * v3
+",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+2230,"v1 = int (input())
+v2 = int (input())
+v3 = int (input())
+v4 = v1 / 100 + v2 
+v5 = v4 * v3
+v6 = v5",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+2233,"v1 = int (input())
+v2 = int (input())
+v3 = int (input())
+v4 = v1 / 100 + v2 
+v5 = v4 * v3
+v6 = v5 / 100",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+2234,"v1 = int (input())
+v2 = int (input())
+v3 = int (input())
+v4 = v1 / 100 + v2
+v5 = v4 * v3
+v6 = v5 / 100",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+2238,"v1 = int (input())
+v2 = int (input())
+v3 = int (input())
+v4 = v1 / 100 + v2
+v5 = v4 * v3
+v6 = v5 / 100
+print (v6)",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+2239,"v1 = int (input())
+v2 = int (input())
+v3 = int (input())
+v4 = v1 / 100 + v2
+v5 = v4 * v3
+v6 = v5 // 100
+print (v6)",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+2240,"v1 = int (input())
+v2 = int (input())
+v3 = int (input())
+v4 = v1 / 100 + v2
+v5 = v4 * v3
+v6 = v5 // 100
+
+print (v6)",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+2245,"v1 = int (input())
+v2 = int (input())
+v3 = int (input())
+v4 = v1 / 100 + v2
+v5 = v4 * v3
+v6 = v5 // 100
+v7 = v5 % 100
+print (v6)",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+2247,"v1 = int (input())
+v2 = int (input())
+v3 = int (input())
+v4 = v1 / 100 + v2
+v5 = v4 * v3
+v6 = v5 // 100
+v7 = v5 % 100
+print (v6 and v7)",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+2254,"v1 = int (input())
+v2 = int (input())
+v3 = int (input())
+v4 = v1 * 100 + v2
+v5 = v4 * v3
+v6 = v5 // 100
+v7 = v5 % 100
+print (v6 and v7)",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+2255,"v1 = int (input())
+v2 = int (input())
+v3 = int (input())
+v4 = v1 * 100 + v2
+v5 = v4 * v3
+v6 = v5 // 100
+v7 = v5 % 100
+print (v6, v7)",13.0,FROM_TWO_TO_FOUR_YEARS,1.0,pies

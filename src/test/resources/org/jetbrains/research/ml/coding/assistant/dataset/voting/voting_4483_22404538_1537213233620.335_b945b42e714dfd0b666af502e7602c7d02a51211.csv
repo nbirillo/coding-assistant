@@ -1,0 +1,19 @@
+id,fragment,age,programExperience,testsResults,task
+837,v1=int(input()),14.0,LESS_THAN_HALF_YEAR,0.0,voting
+838,"v1=int(input())
+v2=int(input())",14.0,LESS_THAN_HALF_YEAR,0.0,voting
+839,"v1=int(input())
+v2=int(input())
+v3=int(input())",14.0,LESS_THAN_HALF_YEAR,0.0,voting
+843,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if v1+v2+v3 == 1:
+    print(""0"")",14.0,LESS_THAN_HALF_YEAR,0.0,voting
+845,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if v1+v2+v3 == 1:
+    print(""0"")
+if v1+v2+v3 > 1:
+    print ("""")",14.0,LESS_THAN_HALF_YEAR,0.0,voting

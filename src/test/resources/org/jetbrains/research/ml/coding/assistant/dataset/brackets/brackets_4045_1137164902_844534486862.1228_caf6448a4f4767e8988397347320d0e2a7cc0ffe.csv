@@ -1,0 +1,75 @@
+id,fragment,age,programExperience,testsResults,task
+4161,v1 = input(),-1,FROM_TWO_TO_FOUR_YEARS,0.0,brackets
+4166,"v1 = input()
+v2 = list(v1[:len(v1)])",-1,FROM_TWO_TO_FOUR_YEARS,0.0,brackets
+4167,"v1 = input()
+v2 = list(v1[:len(v1) // 2])
+v3 = list(v1[len(v1) // 2:])
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,brackets
+4168,"v1 = input()
+v2 = list(v1[:len(v1) // 2])
+v3 = list(v1[len(v1) // 2:])
+v4 = """"",-1,FROM_TWO_TO_FOUR_YEARS,0.0,brackets
+4173,"v1 = input()
+v2 = list(v1[:len(v1) // 2])
+v3 = list(v1[len(v1) // 2:])
+v4 = ""("".join(v2) + "")"".join(v3)",-1,FROM_TWO_TO_FOUR_YEARS,0.0,brackets
+4174,"v1 = input()
+v2 = list(v1[:len(v1) // 2])
+v3 = list(v1[len(v1) // 2:])
+v4 = ""("".join(v2) + "")"".join(v3)
+print()",-1,FROM_TWO_TO_FOUR_YEARS,0.0,brackets
+4175,"v1 = input()
+v2 = list(v1[:len(v1) // 2])
+v3 = list(v1[len(v1) // 2:])
+v4 = ""("".join(v2) + "")"".join(v3)
+print(v4)",-1,FROM_TWO_TO_FOUR_YEARS,0.25,brackets
+4176,"v1 = input()
+v2 = list(v1[:len(v1) // 2 + 1])
+v3 = list(v1[len(v1) // 2:])
+v4 = ""("".join(v2) + "")"".join(v3)
+print(v4)
+
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,brackets
+4177,"v1 = input()
+v2 = list(v1[:len(v1) // 2 + 1])
+v3 = list(v1[len(v1) // 2:])
+
+v4 = ""("".join(v2) + "")"".join(v3)
+print(v4)
+
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,brackets
+4180,"v1 = input()
+v2 = ""("".join(list(v1[:len(v1) // 2 + 1]))
+v3 = list(v1[len(v1) // 2:])
+v2 = ""("".join(v2)
+v4 = ""("".join(v2) + "")"".join(v3)
+print(v4)
+
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,brackets
+4181,"v1 = input()
+v2 = ""("".join(list(v1[:len(v1) // 2 + 1]))
+v3 = "")"".join(list(v1[len(v1) // 2:]))
+v2 = ""("".join(v2)
+v4 = ""("".join(v2) + "")"".join(v3)
+print(v4)
+
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,brackets
+4182,"v1 = input()
+v2 = ""("".join(list(v1[:len(v1) // 2 + 1]))
+v3 = "")"".join(list(v1[len(v1) // 2:]))
+if (len(v1) % 2 == 1) & (len(v1) > 1):
+    v2 += ""(""
+
+print(v2 + v3)
+
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,brackets
+4184,"v1 = input()
+v2 = ""("".join(list(v1[:len(v1) // 2]))
+v3 = "")"".join(list(v1[len(v1) // 2:]))
+if (len(v1) % 2 == 1) & (len(v1) > 1):
+    v2 += ""(""
+
+print(v2 + v3)
+
+",-1,FROM_TWO_TO_FOUR_YEARS,1.0,brackets

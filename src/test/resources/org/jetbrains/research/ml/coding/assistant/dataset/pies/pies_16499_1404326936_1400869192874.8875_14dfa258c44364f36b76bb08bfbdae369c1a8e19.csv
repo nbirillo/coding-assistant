@@ -1,0 +1,400 @@
+id,fragment,age,programExperience,testsResults,task
+564,"def f1(f1_p1, f1_p2, f1_p3):
+    print(""ss"")",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+565,"def f1(f1_p1, f1_p2, f1_p3):
+    print(""ss"")
+
+f1(0, 0, 0)",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+566,"def f1(f1_p1, f1_p2, f1_p3):
+    print(""ss"")
+
+
+f1(0, 0, 0)",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+567,"def f1(f1_p1, f1_p2, f1_p3):
+    print(""ss"")
+
+
+
+f1(0, 0, 0)",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+589,"def f1(f1_p1, f1_p2, f1_p3):
+    print(""ss"")
+
+v1 = input(""Enter rub cost"")
+
+f1(0, 0, 0)",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+590,"def f1(f1_p1, f1_p2, f1_p3):
+    print(""ss"")
+
+v1 = input(""Enter rub cost"")
+v1 = input(""Enter rub cost"")
+
+f1(0, 0, 0)",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+603,"def f1(f1_p1, f1_p2, f1_p3):
+    print(""ss"")
+
+v1 = input(""Enter rub cost"")
+v2 = input(""Enter rub cost"")
+
+f1(0, 0, 0)",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+618,"def f1(f1_p1, f1_p2, f1_p3):
+    print(""ss"")
+
+v1 = input(""Enter rub cost"")
+v2 = input(""Enter kop cost"")
+
+f1(0, 0, 0)",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+619,"def f1(f1_p1, f1_p2, f1_p3):
+    print(""ss"")
+
+v1 = input(""Enter rub cost"")
+v2 = input(""Enter kop cost"")
+
+
+f1(0, 0, 0)",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+629,"def f1(f1_p1, f1_p2, f1_p3):
+    print(""ss"")
+
+v1 = input(""Enter rub cost"")
+v2 = input(""Enter kop cost"")
+v3 = input(""enter n"")
+
+f1(0, 0, 0)",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+630,"def f1(f1_p1, f1_p2, f1_p3):
+    print(""ss"")
+
+
+v1 = input(""Enter rub cost"")
+v2 = input(""Enter kop cost"")
+v3 = input(""enter n"")
+
+f1(0, 0, 0)",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+633,"def f1(f1_p1, f1_p2, f1_p3):
+    print(""ss"")
+
+
+v1 = input(""Enter rub cost"")
+v2 = input(""Enter kop cost"")
+v3 = input(""enter n"")
+
+print(f1(v1, v2, v3))
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+636,"def f1(f1_p1, f1_p2, f1_p3):
+    print(""ss"")
+
+
+v1 = input(""Enter rub cost"")
+v2 = input(""Enter kop cost"")
+v3 = input(""enter n"")
+
+print(f1(v1, v2, v3))
+
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+639,"def f1(f1_p1, f1_p2, f1_p3):
+    print(""ss"")
+
+
+v1 = input(""Enter rub cost"")
+v2 = input(""Enter kop cost"")
+v3 = input(""enter n"")
+
+print(f1(v1, v2, v3))
+
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+651,"def f1(f1_p1, f1_p2, f1_p3):
+    print(""ss"")
+    return 
+
+v1 = input(""Enter rub cost"")
+v2 = input(""Enter kop cost"")
+v3 = input(""enter n"")
+
+print(f1(v1, v2, v3))
+
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+652,"def f1(f1_p1, f1_p2, f1_p3):
+    print(""ss"")
+    
+    return 
+
+v1 = input(""Enter rub cost"")
+v2 = input(""Enter kop cost"")
+v3 = input(""enter n"")
+
+print(f1(v1, v2, v3))
+
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+667,"def f1(f1_p1, f1_p2, f1_p3):
+    print(""ss"")
+
+    return 
+
+v1 = input(""Enter rub cost"")
+v2 = input(""Enter kop cost"")
+v3 = input(""enter n"")
+
+print(f1(v1, v2, v3))
+
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+668,"def f1(f1_p1, f1_p2, f1_p3):
+    print(""ss"")
+    return 
+
+v1 = input(""Enter rub cost"")
+v2 = input(""Enter kop cost"")
+v3 = input(""enter n"")
+
+print(f1(v1, v2, v3))
+
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+671,"def f1(f1_p1, f1_p2, f1_p3):
+
+    return 
+
+v1 = input(""Enter rub cost"")
+v2 = input(""Enter kop cost"")
+v3 = input(""enter n"")
+
+print(f1(v1, v2, v3))
+
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+672,"def f1(f1_p1, f1_p2, f1_p3):
+    return 
+
+v1 = input(""Enter rub cost"")
+v2 = input(""Enter kop cost"")
+v3 = input(""enter n"")
+
+print(f1(v1, v2, v3))
+
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+686,"def f1(f1_p1, f1_p2, f1_p3):
+    return f1_p1 * f1_p3, f1_p2 * f1_p3
+
+v1 = input(""Enter rub cost"")
+v2 = input(""Enter kop cost"")
+v3 = input(""enter n"")
+
+print(f1(v1, v2, v3))
+
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+690,"def f1(f1_p1, f1_p2, f1_p3):
+    return f1_p1 * f1_p3, f1_p2 * f1_p3
+
+v1 = input(""Enter rub cost"")
+v2 = input(""Enter kop cost"")
+v3 = input(""enter n"")
+
+print()
+
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+691,"def f1(f1_p1, f1_p2, f1_p3):
+    return f1_p1 * f1_p3, f1_p2 * f1_p3
+
+v1 = input(""Enter rub cost"")
+v2 = input(""Enter kop cost"")
+v3 = input(""enter n"")
+
+
+print()
+
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+692,"def f1(f1_p1, f1_p2, f1_p3):
+    return f1_p1 * f1_p3, f1_p2 * f1_p3
+
+v1 = input(""Enter rub cost"")
+v2 = input(""Enter kop cost"")
+v3 = input(""enter n"")
+
+v4, v5 = f1(int(v1), int(v2), int(v3))
+print()
+
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+696,"def f1(f1_p1, f1_p2, f1_p3):
+    return f1_p1 * f1_p3, f1_p2 * f1_p3
+
+v1 = input(""Enter rub cost"")
+v2 = input(""Enter kop cost"")
+v3 = input(""enter n"")
+
+v4, v5 = f1(int(v1), int(v2), int(v3))
+print(v4, v5)
+
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+697,"def f1(f1_p1, f1_p2, f1_p3):
+
+    return f1_p1 * f1_p3, f1_p2 * f1_p3
+
+v1 = input(""Enter rub cost"")
+v2 = input(""Enter kop cost"")
+v3 = input(""enter n"")
+
+v4, v5 = f1(int(v1), int(v2), int(v3))
+print(v4, v5)
+
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+734,"def f1(f1_p1, f1_p2, f1_p3):
+    f1_v1 = f1_p1 * 100 + f1_p2
+    return f1_p1 * f1_p3, f1_p2 * f1_p3
+
+v1 = input(""Enter rub cost"")
+v2 = input(""Enter kop cost"")
+v3 = input(""enter n"")
+
+v4, v5 = f1(int(v1), int(v2), int(v3))
+print(v4, v5)
+
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+735,"def f1(f1_p1, f1_p2, f1_p3):
+    f1_v1 = f1_p1 * 100 + f1_p2
+    
+    return f1_p1 * f1_p3, f1_p2 * f1_p3
+
+v1 = input(""Enter rub cost"")
+v2 = input(""Enter kop cost"")
+v3 = input(""enter n"")
+
+v4, v5 = f1(int(v1), int(v2), int(v3))
+print(v4, v5)
+
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+766,"def f1(f1_p1, f1_p2, f1_p3):
+    f1_v1 = f1_p1 * 100 + f1_p2
+    f1_v2 = f1_v1 % 100
+    return f1_p1 * f1_p3, f1_p2 * f1_p3
+
+v1 = input(""Enter rub cost"")
+v2 = input(""Enter kop cost"")
+v3 = input(""enter n"")
+
+v4, v5 = f1(int(v1), int(v2), int(v3))
+print(v4, v5)
+
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+767,"def f1(f1_p1, f1_p2, f1_p3):
+    f1_v1 = f1_p1 * 100 + f1_p2
+    f1_v2 = f1_v1 % 100
+    
+    return f1_p1 * f1_p3, f1_p2 * f1_p3
+
+v1 = input(""Enter rub cost"")
+v2 = input(""Enter kop cost"")
+v3 = input(""enter n"")
+
+v4, v5 = f1(int(v1), int(v2), int(v3))
+print(v4, v5)
+
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+787,"def f1(f1_p1, f1_p2, f1_p3):
+    f1_v1 = f1_p1 * 100 + f1_p2
+    f1_v2 = f1_v1 % 100
+    f1_v3 = (f1_v1 - f1_v2) / 100
+    return f1_p1 * f1_p3, f1_p2 * f1_p3
+
+v1 = input(""Enter rub cost"")
+v2 = input(""Enter kop cost"")
+v3 = input(""enter n"")
+
+v4, v5 = f1(int(v1), int(v2), int(v3))
+print(v4, v5)
+
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+788,"def f1(f1_p1, f1_p2, f1_p3):
+    f1_v1 = f1_p1 * 100 + f1_p2
+    f1_v2 = f1_v1 % 100
+    f1_v3 = (f1_v1 - f1_v2) / 100
+    
+    return f1_p1 * f1_p3, f1_p2 * f1_p3
+
+v1 = input(""Enter rub cost"")
+v2 = input(""Enter kop cost"")
+v3 = input(""enter n"")
+
+v4, v5 = f1(int(v1), int(v2), int(v3))
+print(v4, v5)
+
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+790,"def f1(f1_p1, f1_p2, f1_p3):
+    f1_v1 = f1_p1 * 100 + f1_p2
+    f1_v2 = f1_v1 % 100
+    f1_v3 = (f1_v1 - f1_v2) / 100
+
+    return f1_p1 * f1_p3, f1_p2 * f1_p3
+
+v1 = input(""Enter rub cost"")
+v2 = input(""Enter kop cost"")
+v3 = input(""enter n"")
+
+v4, v5 = f1(int(v1), int(v2), int(v3))
+print(v4, v5)
+
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+791,"def f1(f1_p1, f1_p2, f1_p3):
+    f1_v1 = f1_p1 * 100 + f1_p2
+    f1_v2 = f1_v1 % 100
+    f1_v3 = (f1_v1 - f1_v2) / 100
+    return f1_p1 * f1_p3, f1_p2 * f1_p3
+
+v1 = input(""Enter rub cost"")
+v2 = input(""Enter kop cost"")
+v3 = input(""enter n"")
+
+v4, v5 = f1(int(v1), int(v2), int(v3))
+print(v4, v5)
+
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+802,"def f1(f1_p1, f1_p2, f1_p3):
+    f1_v1 = f1_p1 * 100 + f1_p2
+    f1_v2 = f1_v1 % 100
+    f1_v3 = (f1_v1 - f1_v2) / 100
+    return f1_v3, f1_v2
+
+v1 = input(""Enter rub cost"")
+v2 = input(""Enter kop cost"")
+v3 = input(""enter n"")
+
+v4, v5 = f1(int(v1), int(v2), int(v3))
+print(v4, v5)
+
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+831,"def f1(f1_p1, f1_p2, f1_p3):
+    f1_v1 = (f1_p1 * 100 + f1_p2) * f1_p3
+    f1_v2 = totalKop % 100
+    f1_v3 = (totalKop - f1_v2) / 100
+    return f1_v3, f1_v2
+
+v1 = input(""Enter rub cost"")
+v2 = input(""Enter kop cost"")
+v3 = input(""enter n"")
+
+v4, v5 = f1(int(v1), int(v2), int(v3))
+print(v4, v5)
+
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+839,"def f1(f1_p1, f1_p2, f1_p3):
+    f1_v1 = (f1_p1 * 100 + f1_p2) * f1_p3
+    f1_v2 = f1_v1 % 100
+    f1_v3 = (totalKop - f1_v2) / 100
+    return f1_v3, f1_v2
+
+v1 = input(""Enter rub cost"")
+v2 = input(""Enter kop cost"")
+v3 = input(""enter n"")
+
+v4, v5 = f1(int(v1), int(v2), int(v3))
+print(v4, v5)
+
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+846,"def f1(f1_p1, f1_p2, f1_p3):
+    f1_v1 = (f1_p1 * 100 + f1_p2) * f1_p3
+    f1_v2 = f1_v1 % 100
+    f1_v3 = f1_v1 // 100
+    return f1_v3, f1_v2
+
+v1 = input(""Enter rub cost"")
+v2 = input(""Enter kop cost"")
+v3 = input(""enter n"")
+
+v4, v5 = f1(int(v1), int(v2), int(v3))
+print(v4, v5)
+
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies

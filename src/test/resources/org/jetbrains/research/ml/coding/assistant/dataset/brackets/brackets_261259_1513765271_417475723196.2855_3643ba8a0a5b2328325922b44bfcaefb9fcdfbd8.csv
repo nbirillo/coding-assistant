@@ -1,0 +1,441 @@
+id,fragment,age,programExperience,testsResults,task
+3678,v1 = input(),40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3679,"v1 = input()
+if len(v1) > 2:
+    pass
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3682,"v1 = input()
+if len(v1) > 2:
+    pass
+print(v1)
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3683,"v1 = input()
+if len(v1) > 2:
+    pass
+print(v1
+      )
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3688,"v1 = input()
+if len(v1) > 2:
+    pass
+print(v1
+      )
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3689,"v1 = input()
+if len(v1) > 2:
+    pass
+print(v1)
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3690,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:
+        '_'.join('program')
+
+print(v1)
+
+
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3692,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:
+        '(())'.join('program')
+
+print(v1)
+
+
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3693,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:
+        '(()'.join(v1)
+
+print('(()'.join(v1))
+
+
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3702,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:
+        '(()'.join(v1)
+
+print('('.join(v1[0:len(v1)]))
+
+
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3703,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:
+        '(()'.join(v1)
+v2 = int(len(v1) / 2)
+print(v2)
+print('('.join(v1[0:v2]))
+
+
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3704,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:
+        '(()'.join(v1)
+v2 = int(len(v1) / 2)
+print(v2)
+print('('.join(v1[0:int(len(v1) / 2)]))
+
+
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3705,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:
+        '(()'.join(v1)
+
+print('('.join(v1[0:int(len(v1) / 2)]))
+
+
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3712,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:
+        '(()'.join(v1)
+
+print('('.join(v1[0:int(len(v1) / 2)]), ')'.join(v1[int(len(v1) / 2):-1]))
+
+
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3713,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:
+        '(()'.join(v1)
+
+
+
+
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3714,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:
+        print('('.join(v1[0:int(len(v1) / 2)]), ')'.join(v1[int(len(v1) / 2):-1]))
+
+
+
+
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3717,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:
+        print('('.join(v1[0:int(len(v1) / 2)]), ')'.join(v1[int(len(v1) / 2):-1]))
+else:
+    print(v1)
+
+
+
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3718,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:
+        print('('.join(v1[0:int(len(v1) / 2)]), ')'.join(v1[int(len(v1) / 2):-1]))
+
+    print(v1)
+
+
+
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3719,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:
+        print('('.join(v1[0:int(len(v1) / 2)]), ')'.join(v1[int(len(v1) / 2):-1]))
+    print(v1)
+
+
+
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3720,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:
+        ('('.join(v1[0:int(len(v1) / 2)]), ')'.join(v1[int(len(v1) / 2):-1]))
+    print(v1)
+
+
+
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3721,"v1 = input()
+if len(v1) > 2:
+    v1 = ('('.join(v1[0:int(len(v1) / 2)]) + ')'.join(v1[int(len(v1) / 2):-1]))
+print(v1)
+
+
+
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3723,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:v1 = ('('.join(v1[0:int(len(v1) / 2)]) + ')'.join(v1[int(len(v1) / 2):-1]))
+print(v1)
+
+
+
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3724,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:
+        v1 = ('('.join(v1[0:int(len(v1) / 2)]) + ')'.join(v1[int(len(v1) / 2):-1]))
+print(v1)
+
+
+
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3725,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:
+        v1 = ('('.join(v1[0:int(len(v1) / 2)]) + ')'.join(v1[int(len(v1) / 2):-1]))
+        
+print(v1)
+
+
+
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3727,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:
+        v1 = ('('.join(v1[0:int(len(v1) / 2)]) + ')'.join(v1[int(len(v1) / 2):-1]))
+    
+print(v1)
+
+
+
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3782,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:
+        v1 = ('('.join(v1[0:int(len(v1) / 2)]) + ')'.join(v1[int(len(v1) / 2):-1]))
+    else:
+        v1 = ('('.join(v1[:int(len(v1) / 2)]) + ')'.join(v1[int(len(v1) / 2) - 1:]))
+print(v1)
+
+
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3784,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:
+        v1 = ('('.join(v1[:int(len(v1) / 2)]) + ')'.join(v1[int(len(v1) / 2):]))
+    else:
+        v1 = ('('.join(v1[:int(len(v1) / 2)]) + ')'.join(v1[int(len(v1) / 2) - 1:]))
+print(v1)
+
+
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3785,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:
+        v1 = ('('.join(v1[:int(len(v1) / 2)]) + ')'.join(v1[int(len(v1) / 2):]))
+        v1 = ('('.join(v1[:int(len(v1) / 2)]) + ')'.join(v1[int(len(v1) / 2) - 1:]))
+print(v1)
+
+
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3786,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:
+        v1 = ('('.join(v1[:int(len(v1) / 2)]) + ')'.join(v1[int(len(v1) / 2):]))
+print(v1)
+
+
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3787,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:
+        v1 = ('('.join(v1[:int(len(v1) / 2)]) + ')'.join(v1[int(len(v1) / 2):]))
+
+print(v1)
+
+
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3788,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:
+        v1 = ('('.join(v1[:int(len(v1) / 2)]) + ')'.join(v1[int(len(v1) / 2):]))
+
+print(v1)
+
+
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3791,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:
+        v1 = ('('.join(v1[:int(len(v1) / 2)]) + ')'.join(v1[int(len(v1) / 2):]))
+
+print(int(len(v1) / 2))
+print(v1)
+
+
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3792,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:
+        v1 = ('('.join(v1[:int(len(v1) / 2)]) + ')'.join(v1[int(len(v1) / 2):]))
+
+print(int(len(v1) / 2))
+
+print(v1)
+
+
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3795,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:
+        v1 = ('('.join(v1[:int(len(v1) / 2)]) + ')'.join(v1[int(len(v1) / 2):]))
+
+print(int(len(v1) / 2))
+
+print(v1)
+
+
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3796,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:
+        v1 = ('('.join(v1[:int(len(v1) / 2)]) + ')'.join(v1[int(len(v1) / 2):]))
+
+print(int(len(v1) / 2))
+print(v1)
+
+
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3798,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:
+        v1 = ('('.join(v1[:int(len(v1) / 2)]) + ')'.join(v1[int(len(v1) / 2):]))
+print(int(len(v1)))
+print(int(len(v1) / 2))
+print(v1)
+
+
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3801,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:
+        v2 = ('('.join(v1[:int(len(v1) / 2)]) + ')'.join(v1[int(len(v1) / 2):]))
+print(int(len(v1)))
+print(int(len(v1) / 2))
+print(v1)
+
+
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3803,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:
+        v2 = ('('.join(v1[:int(len(v1) / 2)]) + ')'.join(v1[int(len(v1) / 2):]))
+print(int(len(v1)))
+print(int(len(v1) / 2))
+print(v2)
+
+
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3808,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:
+        v2 = ('('.join(v1[:int(len(v1) / 2)]) + ')'.join(v1[int(len(v1) / 2):]))
+print(int(len(v1)))
+print(int(len(v1) / 2))
+print(v2)
+
+
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3809,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:
+        v2 = ('('.join(v1[:int(len(v1) / 2)]) + ')'.join(v1[int(len(v1) / 2):]))
+print(int(len(v1)))
+print(int(len(v1) / 2))
+print(v2)
+
+
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3810,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:
+        v2 = ('('.join(v1[:int(len(v1) / 2)]) + ')'.join(v1[int(len(v1) / 2):]))
+    else:
+       v2 = ('('.join(v1[:int(len(v1) / 2)]) + ')'.join(v1[int(len(v1) / 2) - 1:]))
+print(int(len(v1)))
+print(int(len(v1) / 2))
+print(v2)
+
+
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3825,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:
+        v2 = ('('.join(v1[:int(len(v1) / 2)]) + ')'.join(v1[int(len(v1) / 2):]))
+    else:
+        v2 = ('('.join(v1[:int(len(v1) / 2) + 1]) + ')'.join(v1[int(len(v1) / 2):]))
+print(int(len(v1)))
+print(int(len(v1) / 2))
+print(v2)
+
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3829,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:
+        v2 = ('('.join(v1[:int(len(v1) / 2)]) + ')'.join(v1[int(len(v1) / 2):]))
+    else:
+        v2 = ('('.join(v1[:int(len(v1) / 2) + 1]) + ')'.join(v1[int(len(v1) / 2):]))
+print(int(len(v1)))
+print(int(len(v1) / 2) + 1)
+print(v2)
+
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3851,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:
+        v2 = ('('.join(v1[:int(len(v1) / 2)]) + ')'.join(v1[int(len(v1) / 2):]))
+    else:
+        v2 = ('('.join(v1[:int(len(v1) / 2) + 1]) + ')' + ')'.join(v1[int(len(v1) / 2 + 1):]))
+print(int(len(v1)))
+print(int(len(v1) / 2) + 1)
+print(v2)
+
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3852,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:
+        v2 = ('('.join(v1[:int(len(v1) / 2)]) + ')'.join(v1[int(len(v1) / 2):]))
+    else:
+        v2 = ('('.join(v1[:int(len(v1) / 2) + 1]) + ')' + ')'.join(v1[int(len(v1) / 2 + 1):]))
+
+print(v2)
+
+",40.0,LESS_THAN_HALF_YEAR,0.375,brackets
+3853,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:
+        v2 = ('('.join(v1[:int(len(v1) / 2)]) + ')'.join(v1[int(len(v1) / 2):]))
+    else:
+        v2 = ('('.join(v1[:int(len(v1) / 2) + 1]) + ')' + ')'.join(v1[int(len(v1) / 2 + 1):]))
+print(v2)
+
+",40.0,LESS_THAN_HALF_YEAR,0.375,brackets
+3854,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:
+        v1 = ('('.join(v1[:int(len(v1) / 2)]) + ')'.join(v1[int(len(v1) / 2):]))
+    else:
+        v2 = ('('.join(v1[:int(len(v1) / 2) + 1]) + ')' + ')'.join(v1[int(len(v1) / 2 + 1):]))
+print(v2)
+
+",40.0,LESS_THAN_HALF_YEAR,0.375,brackets
+3855,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:
+        v1 = ('('.join(v1[:int(len(v1) / 2)]) + ')'.join(v1[int(len(v1) / 2):]))
+    else:
+        v1 = ('('.join(v1[:int(len(v1) / 2) + 1]) + ')' + ')'.join(v1[int(len(v1) / 2 + 1):]))
+print()
+
+",40.0,LESS_THAN_HALF_YEAR,0.0,brackets
+3856,"v1 = input()
+if len(v1) > 2:
+    if len(v1) % 2 == 0:
+        v1 = ('('.join(v1[:int(len(v1) / 2)]) + ')'.join(v1[int(len(v1) / 2):]))
+    else:
+        v1 = ('('.join(v1[:int(len(v1) / 2) + 1]) + ')' + ')'.join(v1[int(len(v1) / 2 + 1):]))
+print(v1)
+
+",40.0,LESS_THAN_HALF_YEAR,1.0,brackets

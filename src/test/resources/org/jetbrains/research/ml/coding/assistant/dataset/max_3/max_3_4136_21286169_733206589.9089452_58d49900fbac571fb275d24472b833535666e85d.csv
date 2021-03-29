@@ -1,0 +1,64 @@
+id,fragment,age,programExperience,testsResults,task
+359,v1=int(input()),16.0,LESS_THAN_HALF_YEAR,0.0,max_3
+360,"v1=int(input())
+v2=int()",16.0,LESS_THAN_HALF_YEAR,0.0,max_3
+361,"v1=int(input())
+v2=int(input())",16.0,LESS_THAN_HALF_YEAR,0.0,max_3
+362,"v1=int(input())
+v2=int(input())
+v3=int()",16.0,LESS_THAN_HALF_YEAR,0.0,max_3
+363,"v1=int(input())
+v2=int(input())
+v3=int(input())",16.0,LESS_THAN_HALF_YEAR,0.0,max_3
+364,"v1=int(input())
+v2=int(input())
+v3=int(input())
+v4=0
+",16.0,LESS_THAN_HALF_YEAR,0.0,max_3
+365,"v1=int(input())
+v2=int(input())
+v3=int(input())
+v4=v1
+
+",16.0,LESS_THAN_HALF_YEAR,0.0,max_3
+366,"v1=int(input())
+v2=int(input())
+v3=int(input())
+v4=v1
+if v4<v2:
+    v4=v2
+",16.0,LESS_THAN_HALF_YEAR,0.0,max_3
+367,"v1=int(input())
+v2=int(input())
+v3=int(input())
+v4=v1
+if v4<v2:
+    v4=v2
+    if v4<v3:
+        v4=v3
+    
+",16.0,LESS_THAN_HALF_YEAR,0.0,max_3
+368,"v1=int(input())
+v2=int(input())
+v3=int(input())
+v4=v1
+if v4<v2:
+    v4=v2
+    if v4<v3:
+        v4=v3
+print()        
+        
+    
+",16.0,LESS_THAN_HALF_YEAR,0.0,max_3
+369,"v1=int(input())
+v2=int(input())
+v3=int(input())
+v4=v1
+if v4<v2:
+    v4=v2
+    if v4<v3:
+        v4=v3
+print(v4)        
+        
+    
+",16.0,LESS_THAN_HALF_YEAR,1.0,max_3

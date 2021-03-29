@@ -1,0 +1,112 @@
+id,fragment,age,programExperience,testsResults,task
+449,"
+",33,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+452,"if __name__ == '__main__':
+    v1 = int()",33,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+453,"import sys
+
+
+if __name__ == '__main__':
+    v1 = [int(v2) for v2 in sys.argv[1:]]
+    ",33,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+454,"import sys
+
+if __name__ == '__main__':
+    v1 = [int(v2) for v2 in sys.argv[1:]]
+    ",33,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+455,"import sys
+
+
+if __name__ == '__main__':
+    v1 = [int(v2) for v2 in sys.argv[1:]]
+    ",33,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+456,"import sys
+
+
+
+if __name__ == '__main__':
+    v1 = [int(v2) for v2 in sys.argv[1:]]
+    ",33,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+471,"import sys
+from collections import Counter
+
+def f1(*f1_p1):
+    f1_v1 = Counter(f1_p1)
+
+
+if __name__ == '__main__':
+    v1 = [int(v2) for v2 in sys.argv[1:]]
+",33,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+472,"import sys
+from collections import Counter
+
+def f1(*f1_p1):
+    f1_v1 = Counter(f1_p1)
+    
+
+
+if __name__ == '__main__':
+    v1 = [int(v2) for v2 in sys.argv[1:]]
+",33,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+486,"import sys
+from collections import Counter
+
+def f1(*f1_p1):
+    f1_v1 = Counter(f1_p1)
+    return f1_v1.most_common(1)[0][0]
+
+
+if __name__ == '__main__':
+    v1 = [int(v2) for v2 in sys.argv[1:]]
+",33,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+494,"import sys
+from collections import Counter
+
+def f1(*f1_p1):
+    f1_v1 = Counter(f1_p1)
+    return f1_v1.most_common(1)[0][0]
+
+
+if __name__ == '__main__':
+    v1 = [int(v2) for v2 in sys.argv[1:]]
+    print(f1(v1))
+",33,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+495,"import sys
+from collections import Counter
+
+def f1(f1_p1):
+    f1_v1 = Counter(f1_p1)
+    return f1_v1.most_common(1)[0][0]
+
+
+if __name__ == '__main__':
+    v1 = [int(v2) for v2 in sys.argv[1:]]
+    print(f1(v1))
+",33,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+496,"import sys
+from collections import Counter
+
+def f1(f1_p1):
+
+    f1_v1 = Counter(f1_p1)
+    return f1_v1.most_common(1)[0][0]
+
+
+if __name__ == '__main__':
+    v1 = [int(v2) for v2 in sys.argv[1:]]
+    print(f1(v1))
+",33,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+578,"import sys
+from collections import Counter
+
+def f1(f1_p1):
+    if len(f1_p1) != 3:
+        raise ValueError('Only three numbers is supported via task description.')
+    f1_v1 = Counter(f1_p1)
+    return f1_v1.most_common(1)[0][0]
+
+
+if __name__ == '__main__':
+    v1 = [int(v2) for v2 in sys.argv[1:]]
+    print(f1(v1))
+",33,FROM_TWO_TO_FOUR_YEARS,0.0,voting

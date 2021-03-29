@@ -1,0 +1,67 @@
+id,fragment,age,programExperience,testsResults,task
+5055,v1 = input(),-1,-1,0.0,brackets
+5058,"v1 = input()
+v2 = len(v1)
+for v3 in range(v2):
+    v4 = v2 - v3
+    if 0 <= v4 < v2 and v4 != v3:
+        if v3 < v2 / 2:
+            print()
+
+",-1,-1,0.0,brackets
+5067,"v1 = input()
+v2 = len(v1)
+for v3 in range(v2):
+    v4 = v2 - v3
+    if 0 <= v4 < v2 and v4 != v3:
+        if v3 < v2 / 2:
+            print('(', sep='', end='')
+
+",-1,-1,0.0,brackets
+5068,"v1 = input()
+v2 = len(v1)
+for v3 in range(v2):
+    v4 = v2 - v3
+    if 0 <= v4 < v2 and v4 != v3:
+        if v3 < v2 / 2:
+            print('(', sep='', end='')
+        else:
+            print(')')
+
+",-1,-1,0.0,brackets
+5075,"v1 = input()
+v2 = len(v1)
+for v3 in range(v2):
+    v4 = v2 - v3
+    if 0 <= v4 < v2 and v4 != v3:
+        if v3 < v2 / 2:
+            print('(', sep='', end='')
+        else:
+            print(')', sep='', end='')
+
+",-1,-1,0.0,brackets
+5076,"v1 = input()
+v2 = len(v1)
+for v3 in range(v2):
+    v4 = v2 - v3
+    if 0 <= v4 < v2 and v4 != v3:
+        if v3 < v2 / 2:
+            print('(', sep='', end='')
+        else:
+            print(')', sep='', end='')
+    print(v1[v3])
+
+",-1,-1,0.125,brackets
+5080,"v1 = input()
+v2 = len(v1)
+for v3 in range(v2):
+    v4 = v2 - v3
+    if 0 <= v4 < v2 and v4 != v3:
+        if v3 < v2 / 2:
+            print('(', sep='', end='')
+        else:
+            print(')', sep='', end='')
+    print(v1[v3], sep='', end='')
+
+
+",-1,-1,1.0,brackets

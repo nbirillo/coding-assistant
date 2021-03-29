@@ -1,0 +1,26 @@
+id,fragment,age,programExperience,testsResults,task
+591,"v1 = [int(v2) for v2 in input().split()]
+",40.0,LESS_THAN_HALF_YEAR,0.0,voting
+594,"v1 = [int(v2) for v2 in input().split()]
+
+print(v1)",40.0,LESS_THAN_HALF_YEAR,0.0,voting
+595,"v1 = [int(v2) for v2 in input().split()]
+if v1.count(1) >= 2:
+    print(v1)
+",40.0,LESS_THAN_HALF_YEAR,0.0,voting
+598,"v1 = [int(v2) for v2 in input().split()]
+if v1.count(1) >= 2:
+    print(""1"")
+",40.0,LESS_THAN_HALF_YEAR,0.125,voting
+599,"v1 = [int(v2) for v2 in input().split()]
+if v1.count(1) >= 2:
+    print(""1"")
+else:
+    print('')
+",40.0,LESS_THAN_HALF_YEAR,0.125,voting
+601,"v1 = [int(v2) for v2 in input().split()]
+if v1.count(1) >= 2:
+    print(""1"")
+else:
+    print(""0"")
+",40.0,LESS_THAN_HALF_YEAR,1.0,voting

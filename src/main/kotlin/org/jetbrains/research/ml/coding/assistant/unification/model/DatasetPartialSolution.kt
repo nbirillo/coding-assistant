@@ -7,7 +7,8 @@ import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator
 typealias DynamicIntermediateSolution = List<DatasetPartialSolution>
 
 /**
- * Dataset partial solution
+ * Intermediate representation of the dataset partial solution
+ * Stores the psiFile for easy processing
  */
 data class DatasetPartialSolution(
     val id: String,

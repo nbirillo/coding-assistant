@@ -59,11 +59,16 @@ class SolutionSpaceGraphBuilder {
         psiFiles.takeWhile { !it.forceDeleteTmpData() }
     }
 
-    fun build(weightFactory: EdgeWeightCalculatorFactory<SolutionSpaceVertex, SolutionSpaceEdge>): SolutionSpace {
+    fun build(
+        isFileDeletionNeeded: Boolean = true,
+        weightFactory: EdgeWeightCalculatorFactory<SolutionSpaceVertex, SolutionSpaceEdge>
+    ): SolutionSpace {
         removeSimpleCycles()
         removeSingletonVertices()
         val solutionSpace = SolutionSpace(weightFactory, this)
-        deletePsiFiles()
+        if (isFileDeletionNeeded) {
+            deletePsiFiles()
+        }
         return solutionSpace
     }
 }

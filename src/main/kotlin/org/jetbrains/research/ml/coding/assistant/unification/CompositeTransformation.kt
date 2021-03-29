@@ -17,7 +17,7 @@ import org.jetbrains.research.ml.ast.transformations.outerNotElimination.OuterNo
 import java.util.logging.Logger
 
 /**
- * Transformation that run all inner transformation until nothing is changed
+ * Transformation that run all inner transformations until nothing is changed
  */
 object CompositeTransformation : Transformation() {
     private val LOG = Logger.getLogger(javaClass.name)
@@ -38,17 +38,17 @@ object CompositeTransformation : Transformation() {
     )
 
     override fun forwardApply(psiTree: PsiElement, commandsStorage: PerformedCommandStorage?) {
-        LOG.info { "Tree Started: ${psiTree.text}" }
+        LOG.fine { "Tree Started: ${psiTree.text}" }
 
         var iterationNumber = 0
-        loop@ do {
+        do {
             ++iterationNumber
             val previousTree = psiTree.copy()
             try {
                 transformations.forEach {
-                    LOG.info { "Transformation Started: ${it.key}" }
+                    LOG.finer { "Transformation Started: ${it.key}" }
                     it.forwardApply(psiTree, commandsStorage)
-                    LOG.info { "Transformation Ended: ${it.key}" }
+                    LOG.finer { "Transformation Ended: ${it.key}" }
                 }
             } catch (e: Throwable) {
                 LOG.severe {
@@ -57,12 +57,14 @@ object CompositeTransformation : Transformation() {
                         |Current Code=${psiTree.text}
                         |""".trimMargin()
                 }
-                throw e
+                break
             }
 
-            LOG.info { "Previous text[$iterationNumber]:\n${previousTree.text}\n" }
-            LOG.info { "Current text[$iterationNumber]:\n${psiTree.text}\n\n" }
-        } while (!previousTree.textMatches(psiTree.text))
-        LOG.info { "Tree Ended[[$iterationNumber]]: ${psiTree.text}\n\n\n" }
+            LOG.finer { "Previous text[$iterationNumber]:\n${previousTree.text}\n" }
+            LOG.finer { "Current text[$iterationNumber]:\n${psiTree.text}\n\n" }
+        } while (iterationNumber <= MAX_ITERATION_COUNT && !previousTree.textMatches(psiTree.text))
+        LOG.fine { "Tree Ended[[$iterationNumber]]: ${psiTree.text}\n\n\n" }
     }
+
+    private const val MAX_ITERATION_COUNT = 100
 }

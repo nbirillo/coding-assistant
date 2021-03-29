@@ -1,0 +1,13 @@
+id,fragment,age,programExperience,testsResults,task
+674,"v1, v2, v3  = map (int, input().split())
+",13.0,FROM_HALF_TO_ONE_YEAR,0.0,voting
+675,"v1, v2, v3  = map (int, input().split())
+if (v1 - v2 - v3)>2:
+    print (0)
+else:
+    print (1)",13.0,FROM_HALF_TO_ONE_YEAR,0.125,voting
+678,"v1, v2, v3  = map (int, input().split())
+if -v1-v2-v3>-2:
+    print (0)
+else:
+    print (1)",13.0,FROM_HALF_TO_ONE_YEAR,1.0,voting

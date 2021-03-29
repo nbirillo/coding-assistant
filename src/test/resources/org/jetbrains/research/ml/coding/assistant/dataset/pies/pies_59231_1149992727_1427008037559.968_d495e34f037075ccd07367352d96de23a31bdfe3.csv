@@ -1,0 +1,21 @@
+id,fragment,age,programExperience,testsResults,task
+3640,v1 = int(input()),21.0,MORE_THAN_SIX,0.0,pies
+3641,"v1 = int(input())
+v1 = int(input())",21.0,MORE_THAN_SIX,0.0,pies
+3642,"v1 = int(input())
+v1 = int(input())
+v1 = int(input())",21.0,MORE_THAN_SIX,0.0,pies
+3643,"v1 = int(input())
+v2 = int(input())
+v1 = int(input())",21.0,MORE_THAN_SIX,0.0,pies
+3644,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())",21.0,MORE_THAN_SIX,0.0,pies
+3645,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+print()",21.0,MORE_THAN_SIX,0.0,pies
+3663,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+print(v1 * v3 + v2 * v3 // 100, v2 * v3 % 100)",21.0,MORE_THAN_SIX,1.0,pies

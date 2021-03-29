@@ -1,0 +1,2010 @@
+id,fragment,age,programExperience,testsResults,task
+445,"v1 = list(input())
+
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+448,"v1 = list(input())
+print(v1)
+
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+488,"def f1(f1_p1):
+    for f1_v1 in range(len(f1_p1)):
+        if f1_v1 < len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.push()
+v1 = list(input())",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+489,"def f1(f1_p1):
+    for f1_v1 in range(len(f1_p1)):
+        if f1_v1 < len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.push()
+
+v1 = list(input())",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+490,"def f1(f1_p1):
+    for f1_v1 in range(len(f1_p1)):
+        if f1_v1 < len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.push()
+
+
+v1 = list(input())
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+491,"def f1(f1_p1):
+    for f1_v1 in range(len(f1_p1)):
+        if f1_v1 < len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.push()
+
+
+v1 = list(input())
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+495,"def f1(f1_p1):
+    for f1_v1 in range(len(f1_p1)):
+        if f1_v1 < len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.push('(')
+
+
+v1 = list(input())
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+496,"def f1(f1_p1):
+    for f1_v1 in range(len(f1_p1)):
+        if f1_v1 < len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.push('(')
+            
+
+
+v1 = list(input())
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+511,"def f1(f1_p1):
+    for f1_v1 in range(len(f1_p1)):
+        if f1_v1 < len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.push('(')
+        elif f1_v1 > len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.push(')')
+
+v1 = list(input())
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+525,"def f1(f1_p1):
+    for f1_v1 in range(len(f1_p1)):
+        if f1_v1 < len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.insert(f1_v1 + 1)
+        elif f1_v1 > len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.push(')')
+
+v1 = list(input())
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+554,"def f1(f1_p1):
+    for f1_v1 in range(len(f1_p1)):
+        if f1_v1 < len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.insert(f1_v1 + 1, '(')
+        elif f1_v1 > len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.insert(f1_v1 + 1, ')')
+
+v1 = list(input())
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+555,"def f1(f1_p1):
+    for f1_v1 in range(len(f1_p1)):
+        if f1_v1 < len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.insert(f1_v1 + 1, '(')
+        elif f1_v1 > len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.insert(f1_v1 + 1, ')')
+
+
+v1 = list(input())
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+557,"def f1(f1_p1):
+    for f1_v1 in range(len(f1_p1)):
+        if f1_v1 < len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.insert(f1_v1 + 1, '(')
+        elif f1_v1 > len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.insert(f1_v1 + 1, ')')
+
+
+v1 = list(input())
+f1(v1)
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+558,"def f1(f1_p1):
+    for f1_v1 in range(len(f1_p1)):
+        if f1_v1 < len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.insert(f1_v1 + 1, '(')
+        elif f1_v1 > len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.insert(f1_v1 + 1, ')')
+            
+
+
+v1 = list(input())
+f1(v1)
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+573,"def f1(f1_p1):
+    for f1_v1 in range(len(f1_p1)):
+        if f1_v1 < len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.insert(f1_v1 + 1, '(')
+        elif f1_v1 > len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.insert(f1_v1 + 1, ')')
+    return f1_p1
+
+
+v1 = list(input())
+f1(v1)
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+575,"def f1(f1_p1):
+    for f1_v1 in range(len(f1_p1)):
+        if f1_v1 < len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.insert(f1_v1 + 1, '(')
+        elif f1_v1 > len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.insert(f1_v1 + 1, ')')
+    return f1_p1
+
+
+v1 = list(input())
+v2 = f1(v1)
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+578,"def f1(f1_p1):
+    for f1_v1 in range(len(f1_p1)):
+        if f1_v1 < len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.insert(f1_v1 + 1, '(')
+        elif f1_v1 > len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.insert(f1_v1 + 1, ')')
+    return f1_p1
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+582,"def f1(f1_p1):
+    for f1_v1 in range(len(f1_p1)):
+        if f1_v1 < len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.insert(f1_v1 + 1, '(')
+        elif f1_v1 > len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.insert(f1_v1 + 1, ')')
+    return str(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+584,"def f1(f1_p1):
+    for f1_v1 in range(len(f1_p1)):
+        if f1_v1 < len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.insert(f1_v1 + 1, '(')
+        elif f1_v1 > len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.insert(f1_v1 + 1, ')')
+    return str(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+600,"def f1(f1_p1):
+    for f1_v1 in range(len(f1_p1)):
+        if f1_v1 < len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.insert(f1_v1 + 1, '(')
+        elif f1_v1 > len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.insert(f1_v1 + 1, ')')
+    return str(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(str(['h', 'e']))
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+601,"def f1(f1_p1):
+    for f1_v1 in range(len(f1_p1)):
+        if f1_v1 < len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.insert(f1_v1 + 1, '(')
+        elif f1_v1 > len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.insert(f1_v1 + 1, ')')
+    return str(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+613,"def f1(f1_p1):
+    for f1_v1 in range(len(f1_p1)):
+        if f1_v1 < len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.insert(f1_v1 + 1, '(')
+        elif f1_v1 > len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.insert(f1_v1 + 1, ')')
+    return f1_p1.join('')
+
+
+v1 = list(input())
+v2 = f1(v1)
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+616,"def f1(f1_p1):
+    for f1_v1 in range(len(f1_p1)):
+        if f1_v1 < len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.insert(f1_v1 + 1, '(')
+        elif f1_v1 > len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.insert(f1_v1 + 1, ')')
+    return f1_p1.join('')
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+625,"def f1(f1_p1):
+    for f1_v1 in range(len(f1_p1)):
+        if f1_v1 < len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.insert(f1_v1 + 1, '(')
+        elif f1_v1 > len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.insert(f1_v1 + 1, ')')
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+627,"def f1(f1_p1):
+    for f1_v1 in range(len(f1_p1)):
+        if f1_v1 < len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.insert(f1_v1 + 1, '(')
+        elif f1_v1 > len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.insert(f1_v1 + 1, ')')
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+629,"def f1(f1_p1):
+    for f1_v1 in range(len(f1_p1)):
+        if f1_v1 < len(f1_p1) / 2 + 1 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.insert(f1_v1 + 1, '(')
+        elif f1_v1 > len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.insert(f1_v1 + 1, ')')
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+633,"def f1(f1_p1):
+    for f1_v1 in range(len(f1_p1)):
+        if f1_v1 < len(f1_p1) / 2 + 1 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.insert(f1_v1 + 1, '(')
+        elif f1_v1 > len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.insert(f1_v1 + 1, ')')
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+634,"def f1(f1_p1):
+
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.125,brackets
+636,"def f1(f1_p1):
+        
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.125,brackets
+637,"def f1(f1_p1):
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.125,brackets
+638,"def f1(f1_p1):
+    
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.125,brackets
+663,"def f1(f1_p1):
+    f1_v1 = 0
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.125,brackets
+664,"def f1(f1_p1):
+    f1_v1 = 0
+    
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.125,brackets
+672,"def f1(f1_p1):
+    f1_v1 = 0
+    
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.125,brackets
+673,"def f1(f1_p1):
+    f1_v1 = 0
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.125,brackets
+698,"def f1(f1_p1):
+    
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.125,brackets
+699,"def f1(f1_p1):
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.125,brackets
+700,"def f1(f1_p1):
+        
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.125,brackets
+702,"def f1(f1_p1):
+
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.125,brackets
+703,"def f1(f1_p1):
+    for f1_v1 in range(len(f1_p1)):
+        if f1_v1 < len(f1_p1) / 2 + 1 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.insert(f1_v1 + 1, '(')
+        elif f1_v1 > len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.insert(f1_v1 + 1, ')')
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+704,"def f1(f1_p1):
+    for f1_v1 in range(len(f1_p1)):
+        if f1_v1 < len(f1_p1) / 2 + 1 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.insert(f1_v1 + 1, '(')
+        elif f1_v1 > len(f1_p1) / 2 and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.insert(f1_v1 + 1, ')')
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+705,"def f1(f1_p1):
+    f1_v1 = 0
+    if len(f1_p1) % 2 == 0:
+        f1_v1 = len(f1_p1) - 2
+    for f1_v2 in range(len(f1_p1) + a):
+        if f1_v2 < len(f1_p1) / 2 + 1 and f1_p1[f1_v2] != '(' and f1_p1[f1_v2] != ')':
+            f1_p1.insert(f1_v2 + 1, '(')
+        elif f1_v2 > len(f1_p1) / 2 and f1_p1[f1_v2] != '(' and f1_p1[f1_v2] != ')':
+            f1_p1.insert(f1_v2 + 1, ')')
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+708,"def f1(f1_p1):
+    f1_v1 = 0
+    if len(f1_p1) % 2 == 0:
+        f1_v1 = len(f1_p1) - 2
+    for f1_v2 in range(len(f1_p1) + f1_v1):
+        if f1_v2 < len(f1_p1) / 2 + 1 and f1_p1[f1_v2] != '(' and f1_p1[f1_v2] != ')':
+            f1_p1.insert(f1_v2 + 1, '(')
+        elif f1_v2 > len(f1_p1) / 2 and f1_p1[f1_v2] != '(' and f1_p1[f1_v2] != ')':
+            f1_p1.insert(f1_v2 + 1, ')')
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+709,"def f1(f1_p1):
+    f1_v1 = 0
+    if len(f1_p1) % 2 == 0:
+        f1_v1 = len(f1_p1) - 2
+        
+    for f1_v2 in range(len(f1_p1) + f1_v1):
+        if f1_v2 < len(f1_p1) / 2 + 1 and f1_p1[f1_v2] != '(' and f1_p1[f1_v2] != ')':
+            f1_p1.insert(f1_v2 + 1, '(')
+        elif f1_v2 > len(f1_p1) / 2 and f1_p1[f1_v2] != '(' and f1_p1[f1_v2] != ')':
+            f1_p1.insert(f1_v2 + 1, ')')
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+728,"def f1(f1_p1):
+    f1_v1 = 0
+    if len(f1_p1) % 2 == 0:
+        f1_v1 = len(f1_p1) - 2
+    else:
+        f1_v1 = len(f1_p1) - 1
+    for f1_v2 in range(len(f1_p1) + f1_v1):
+        if f1_v2 < len(f1_p1) / 2 + 1 and f1_p1[f1_v2] != '(' and f1_p1[f1_v2] != ')':
+            f1_p1.insert(f1_v2 + 1, '(')
+        elif f1_v2 > len(f1_p1) / 2 and f1_p1[f1_v2] != '(' and f1_p1[f1_v2] != ')':
+            f1_p1.insert(f1_v2 + 1, ')')
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+730,"def f1(f1_p1):
+    f1_v1 = 0
+    if len(f1_p1) % 2 == 0:
+        f1_v1 = len(f1_p1) - 2
+    else:
+        f1_v1 = len(f1_p1) - 1
+    for f1_v2 in range(len(f1_p1) + f1_v1):
+        if f1_v2 < len(f1_p1) / 2 and f1_p1[f1_v2] != '(' and f1_p1[f1_v2] != ')':
+            f1_p1.insert(f1_v2 + 1, '(')
+        elif f1_v2 > len(f1_p1) / 2 and f1_p1[f1_v2] != '(' and f1_p1[f1_v2] != ')':
+            f1_p1.insert(f1_v2 + 1, ')')
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+740,"def f1(f1_p1):
+    f1_v1 = 0
+    if len(f1_p1) % 2 == 0:
+        f1_v1 = len(f1_p1) - 2
+    else:
+        f1_v1 = len(f1_p1) - 1
+    for f1_v2 in range(len(f1_p1) + f1_v1):
+        if f1_v2 < len(f1_p1) / 2 and f1_p1[f1_v2] != '(' and f1_p1[f1_v2] != ')':
+            f1_p1.insert(f1_v2 + 1, '(')
+        elif f1_v2 > len(f1_p1) / 2 and f1_p1[f1_v2] != '(' and f1_p1[f1_v2] != ')':
+            f1_p1.insert(f1_v2 + 1, ')')
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+742,"def f1(f1_p1):
+    f1_v1 = 0
+    if len(f1_p1) % 2 == 0:
+        f1_v1 = len(f1_p1) - 2
+    else:
+        f1_v1 = len(f1_p1) - 1
+    for f1_v2 in range(len(f1_p1) + f1_v1 - 1):
+        if f1_v2 < len(f1_p1) / 2 and f1_p1[f1_v2] != '(' and f1_p1[f1_v2] != ')':
+            f1_p1.insert(f1_v2 + 1, '(')
+        elif f1_v2 > len(f1_p1) / 2 and f1_p1[f1_v2] != '(' and f1_p1[f1_v2] != ')':
+            f1_p1.insert(f1_v2 + 1, ')')
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.125,brackets
+746,"def f1(f1_p1):
+    f1_v1 = 0
+    if len(f1_p1) % 2 == 0:
+        f1_v1 = len(f1_p1) - 2
+    else:
+        f1_v1 = len(f1_p1) - 1
+    for f1_v2 in range(len(f1_p1) + f1_v1 - 1):
+        if f1_v2 < int(len(f1_p1) / 2) and f1_p1[f1_v2] != '(' and f1_p1[f1_v2] != ')':
+            f1_p1.insert(f1_v2 + 1, '(')
+        elif f1_v2 > len(f1_p1) / 2 and f1_p1[f1_v2] != '(' and f1_p1[f1_v2] != ')':
+            f1_p1.insert(f1_v2 + 1, ')')
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.125,brackets
+751,"def f1(f1_p1):
+    f1_v1 = 0
+    if len(f1_p1) % 2 == 0:
+        f1_v1 = len(f1_p1) - 2
+    else:
+        f1_v1 = len(f1_p1) - 1
+    for f1_v2 in range(len(f1_p1) + f1_v1 - 1):
+        if f1_v2 < int(len(f1_p1) / 2) and f1_p1[f1_v2] != '(' and f1_p1[f1_v2] != ')':
+            f1_p1.insert(f1_v2 + 1, '(')
+        elif f1_v2 >= int(len(f1_p1) / 2) and f1_p1[f1_v2] != '(' and f1_p1[f1_v2] != ')':
+            f1_p1.insert(f1_v2 + 1, ')')
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.125,brackets
+752,"def f1(f1_p1):
+    f1_v1 = 0
+    if len(f1_p1) % 2 == 0:
+        f1_v1 = len(f1_p1) - 2
+    else:
+        f1_v1 = len(f1_p1) - 1
+    for f1_v2 in range(len(f1_p1) + f1_v1 - 1):
+        if f1_v2 <= int(len(f1_p1) / 2) and f1_p1[f1_v2] != '(' and f1_p1[f1_v2] != ')':
+            f1_p1.insert(f1_v2 + 1, '(')
+        elif f1_v2 >= int(len(f1_p1) / 2) and f1_p1[f1_v2] != '(' and f1_p1[f1_v2] != ')':
+            f1_p1.insert(f1_v2 + 1, ')')
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.125,brackets
+753,"def f1(f1_p1):
+    f1_v1 = 0
+    if len(f1_p1) % 2 == 0:
+        f1_v1 = len(f1_p1) - 2
+    else:
+        f1_v1 = len(f1_p1) - 1
+    for f1_v2 in range(len(f1_p1) + f1_v1 - 1):
+        if f1_v2 <= int(len(f1_p1) / 2) and f1_p1[f1_v2] != '(' and f1_p1[f1_v2] != ')':
+            f1_p1.insert(f1_v2 + 1, '(')
+        elif f1_v2 > int(len(f1_p1) / 2) and f1_p1[f1_v2] != '(' and f1_p1[f1_v2] != ')':
+            f1_p1.insert(f1_v2 + 1, ')')
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.125,brackets
+754,"def f1(f1_p1):
+    f1_v1 = 0
+    if len(f1_p1) % 2 == 0:
+        f1_v1 = len(f1_p1) - 2
+    else:
+        f1_v1 = len(f1_p1) - 1
+    for f1_v2 in range(len(f1_p1)):
+        if f1_v2 <= int(len(f1_p1) / 2) and f1_p1[f1_v2] != '(' and f1_p1[f1_v2] != ')':
+            f1_p1.insert(f1_v2 + 1, '(')
+        elif f1_v2 > int(len(f1_p1) / 2) and f1_p1[f1_v2] != '(' and f1_p1[f1_v2] != ')':
+            f1_p1.insert(f1_v2 + 1, ')')
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+755,"def f1(f1_p1):
+
+    for f1_v1 in range(len(f1_p1)):
+        if f1_v1 <= int(len(f1_p1) / 2) and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.insert(f1_v1 + 1, '(')
+        elif f1_v1 > int(len(f1_p1) / 2) and f1_p1[f1_v1] != '(' and f1_p1[f1_v1] != ')':
+            f1_p1.insert(f1_v1 + 1, ')')
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+771,"def f1(f1_p1):
+    f1_v1 = []
+    for f1_v2 in range(len(f1_p1)):
+        if f1_v2 <= int(len(f1_p1) / 2) and f1_p1[f1_v2] != '(' and f1_p1[f1_v2] != ')':
+            f1_p1.insert(f1_v2 + 1, '(')
+        elif f1_v2 > int(len(f1_p1) / 2) and f1_p1[f1_v2] != '(' and f1_p1[f1_v2] != ')':
+            f1_p1.insert(f1_v2 + 1, ')')
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+772,"def f1(f1_p1):
+    f1_v1 = []
+    for f1_v2 in range(len(f1_p1)):
+        if f1_v2 < int(len(f1_p1) / 2) and f1_p1[f1_v2] != '(' and f1_p1[f1_v2] != ')':
+            f1_p1.insert(f1_v2 + 1, '(')
+        elif f1_v2 > int(len(f1_p1) / 2) and f1_p1[f1_v2] != '(' and f1_p1[f1_v2] != ')':
+            f1_p1.insert(f1_v2 + 1, ')')
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.125,brackets
+801,"def f1(f1_p1):
+    f1_v1 = []
+    for f1_v2 in range(len(f1_p1)):
+        if f1_v2 < int(len(f1_p1) / 2) and f1_p1[f1_v2] != '(' and f1_p1[f1_v2] != ')':
+            f1_v1.append(f1_v2)
+        elif f1_v2 > int(len(f1_p1) / 2) and f1_p1[f1_v2] != '(' and f1_p1[f1_v2] != ')':
+            f1_p1.insert(f1_v2 + 1, ')')
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.125,brackets
+810,"def f1(f1_p1):
+    f1_v1 = []
+    for f1_v2 in range(len(f1_p1)):
+        if f1_v2 < int(len(f1_p1) / 2) and f1_p1[f1_v2] != '(' and f1_p1[f1_v2] != ')':
+            places_to_add.append(f1_v2)
+        elif f1_v2 > int(len(f1_p1) / 2) and f1_p1[f1_v2] != '(' and f1_p1[f1_v2] != ')':
+            f1_p1.insert(f1_v2 + 1, ')')
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.125,brackets
+819,"def f1(f1_p1):
+    f1_v1 = []
+    for f1_v2 in range(len(f1_p1)):
+        if f1_v2 < int(len(f1_p1) / 2) and f1_p1[f1_v2] != '(' and f1_p1[f1_v2] != ')':
+            f1_v1.append(f1_v2)
+        elif f1_v2 > int(len(f1_p1) / 2) and f1_p1[f1_v2] != '(' and f1_p1[f1_v2] != ')':
+            f1_p1.insert(f1_v2 + 1, ')')
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.125,brackets
+849,"def f1(f1_p1):
+    f1_v1 = []
+    for f1_v2 in range(len(f1_p1)):
+        if f1_v2 < int(len(f1_p1) / 2) and f1_p1[f1_v2] != '(' and f1_p1[f1_v2] != ')':
+            f1_v1.append(f1_v2)
+        elif f1_v2 > int(len(f1_p1) / 2) and f1_p1[f1_v2] != '(' and f1_p1[f1_v2] != ')':
+            places_to_add_back.append(f1_v2)
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.125,brackets
+850,"def f1(f1_p1):
+    f1_v1 = []
+    
+    for f1_v2 in range(len(f1_p1)):
+        if f1_v2 < int(len(f1_p1) / 2) and f1_p1[f1_v2] != '(' and f1_p1[f1_v2] != ')':
+            f1_v1.append(f1_v2)
+        elif f1_v2 > int(len(f1_p1) / 2) and f1_p1[f1_v2] != '(' and f1_p1[f1_v2] != ')':
+            places_to_add_back.append(f1_v2)
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.125,brackets
+871,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    for f1_v3 in range(len(f1_p1)):
+        if f1_v3 < int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+            f1_v1.append(f1_v3)
+        elif f1_v3 > int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+            f1_v2.append(f1_v3)
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.125,brackets
+872,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    for f1_v3 in range(len(f1_p1)):
+        if f1_v3 < int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+            f1_v1.append(f1_v3)
+        elif f1_v3 > int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+            f1_v2.append(f1_v3)
+            
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.125,brackets
+885,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    for f1_v3 in range(len(f1_p1)):
+        if f1_v3 < int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+            f1_v1.append(f1_v3)
+        elif f1_v3 > int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+            f1_v2.append(f1_v3)
+    print(f1_v1)
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+886,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    for f1_v3 in range(len(f1_p1)):
+        if f1_v3 < int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+            f1_v1.append(f1_v3)
+        elif f1_v3 > int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+            f1_v2.append(f1_v3)
+    print(f1_v1)
+    
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+896,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    for f1_v3 in range(len(f1_p1)):
+        if f1_v3 < int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+            f1_v1.append(f1_v3)
+        elif f1_v3 > int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+            f1_v2.append(f1_v3)
+    print(f1_v1)
+    print(f1_v2)
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+897,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    for f1_v3 in range(len(f1_p1)):
+        if f1_v3 < int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+            f1_v1.append(f1_v3)
+        elif f1_v3 > int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+            f1_v2.append(f1_v3)
+    print(f1_v1)
+    print(f1_v2)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+898,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    for f1_v3 in range(len(f1_p1)):
+        if f1_v3 < int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+            f1_v1.append(f1_v3)
+        elif f1_v3 > int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+            f1_v2.append(f1_v3)
+    print(f1_v1)
+    print(f1_v2)
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+899,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    for f1_v3 in range(len(f1_p1)):
+        if f1_v3 < int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+            f1_v1.append(f1_v3)
+        elif f1_v3 > int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+            f1_v2.append(f1_v3)
+    print(f1_v1)
+    print(f1_v2)
+    
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+900,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    for f1_v3 in range(len(f1_p1)):
+        if f1_v3 < int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+            f1_v1.append(f1_v3)
+        elif f1_v3 > int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+            f1_v2.append(f1_v3)
+    print(f1_v1)
+    print(f1_v2)
+    
+
+v1 = list(input())
+v2 = f1(v1)
+",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+901,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    for f1_v3 in range(len(f1_p1)):
+        if f1_v3 < int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+            f1_v1.append(f1_v3)
+        elif f1_v3 > int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+            f1_v2.append(f1_v3)
+    print(f1_v1)
+    print(f1_v2)
+
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+903,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    for f1_v3 in range(len(f1_p1) - 1):
+        if f1_v3 < int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+            f1_v1.append(f1_v3)
+        elif f1_v3 > int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+            f1_v2.append(f1_v3)
+    print(f1_v1)
+    print(f1_v2)
+
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+904,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    for f1_v3 in range(len(f1_p1) - 1):
+        if f1_v3 < int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+            f1_v1.append(f1_v3)
+        elif f1_v3 >= int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+            f1_v2.append(f1_v3)
+    print(f1_v1)
+    print(f1_v2)
+
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+906,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    for f1_v3 in range(len(f1_p1) - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v3 < int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                f1_v1.append(f1_v3)
+            elif f1_v3 >= int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                f1_v2.append(f1_v3)
+    print(f1_v1)
+    print(f1_v2)
+
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+907,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    for f1_v3 in range(len(f1_p1) - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v3 < int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                f1_v1.append(f1_v3)
+            elif f1_v3 > int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                f1_v2.append(f1_v3)
+    print(f1_v1)
+    print(f1_v2)
+
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+908,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    for f1_v3 in range(len(f1_p1) - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v3 < int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                f1_v1.append(f1_v3)
+            elif f1_v3 > int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                f1_v2.append(f1_v3)
+                
+    print(f1_v1)
+    print(f1_v2)
+
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+912,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    for f1_v3 in range(len(f1_p1) - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v3 < int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                f1_v1.append(f1_v3)
+            elif f1_v3 > int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                f1_v2.append(f1_v3)
+            else:
+                if f1_v3 < int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                    f1_v1.append(f1_v3)
+                elif f1_v3 >= int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                    f1_v2.append(f1_v3)
+    print(f1_v1)
+    print(f1_v2)
+
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+913,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    for f1_v3 in range(len(f1_p1) - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v3 < int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                f1_v1.append(f1_v3)
+            elif f1_v3 > int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                f1_v2.append(f1_v3)
+            else:
+                if f1_v3 < int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                    f1_v1.append(f1_v3)
+                elif f1_v3 >= int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[
+                    f1_v3] != ')':
+                    f1_v2.append(f1_v3)
+    print(f1_v1)
+    print(f1_v2)
+
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+923,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    for f1_v3 in range(len(f1_p1) - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v3 < int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                f1_v1.append(f1_v3)
+            elif f1_v3 > int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                f1_v2.append(f1_v3)
+            else:
+                if f1_v3 < int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                    f1_v1.append(f1_v3)
+                elif f1_v3 >= int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[
+f1_v3] != ')':
+                    f1_v2.append(f1_v3)
+    print(f1_v1)
+    print(f1_v2)
+
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+924,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    for f1_v3 in range(len(f1_p1) - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v3 < int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                f1_v1.append(f1_v3)
+            elif f1_v3 > int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                f1_v2.append(f1_v3)
+            else:
+                if f1_v3 < int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                    f1_v1.append(f1_v3)
+                elif f1_v3 >= int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                    f1_v2.append(f1_v3)
+    print(f1_v1)
+    print(f1_v2)
+
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+925,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    for f1_v3 in range(len(f1_p1) - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v3 < int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                f1_v1.append(f1_v3)
+            elif f1_v3 > int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                f1_v2.append(f1_v3)
+        else:
+                if f1_v3 < int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                    f1_v1.append(f1_v3)
+                elif f1_v3 >= int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                    f1_v2.append(f1_v3)
+    print(f1_v1)
+    print(f1_v2)
+
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+926,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    for f1_v3 in range(len(f1_p1) - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v3 < int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                f1_v1.append(f1_v3)
+            elif f1_v3 > int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                f1_v2.append(f1_v3)
+        else:
+            if f1_v3 < int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                    f1_v1.append(f1_v3)
+            elif f1_v3 >= int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                    f1_v2.append(f1_v3)
+    print(f1_v1)
+    print(f1_v2)
+
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+927,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    for f1_v3 in range(len(f1_p1) - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v3 < int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                f1_v1.append(f1_v3)
+            elif f1_v3 > int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                f1_v2.append(f1_v3)
+        else:
+            if f1_v3 < int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                f1_v1.append(f1_v3)
+            elif f1_v3 >= int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                    f1_v2.append(f1_v3)
+    print(f1_v1)
+    print(f1_v2)
+
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+928,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    for f1_v3 in range(len(f1_p1) - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v3 < int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                f1_v1.append(f1_v3)
+            elif f1_v3 > int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                f1_v2.append(f1_v3)
+        else:
+            if f1_v3 < int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                f1_v1.append(f1_v3)
+            elif f1_v3 >= int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                f1_v2.append(f1_v3)
+    print(f1_v1)
+    print(f1_v2)
+
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+930,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    for f1_v3 in range(len(f1_p1) - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v3 < int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                f1_v1.append(f1_v3)
+            elif f1_v3 > int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                f1_v2.append(f1_v3)
+        else:
+            if f1_v3 < int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                f1_v1.append(f1_v3)
+            elif f1_v3 >= int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                f1_v2.append(f1_v3)
+    print(f1_v1)
+    print(f1_v2)
+
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+934,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    for f1_v3 in range(len(f1_p1) - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v3 < int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                f1_v1.append(f1_v3)
+            elif f1_v3 > int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                f1_v2.append(f1_v3)
+        else:
+            if f1_v3 < int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                f1_v1.append(f1_v3)
+            elif f1_v3 >= int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                f1_v2.append(f1_v3)
+    print(f1_v1)
+    print(f1_v2)
+
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+935,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    for f1_v3 in range(len(f1_p1) - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v3 < int(len(f1_p1) / 2):
+                f1_v1.append(f1_v3)
+            elif f1_v3 > int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                f1_v2.append(f1_v3)
+        else:
+            if f1_v3 < int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                f1_v1.append(f1_v3)
+            elif f1_v3 >= int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                f1_v2.append(f1_v3)
+    print(f1_v1)
+    print(f1_v2)
+
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+936,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    for f1_v3 in range(len(f1_p1) - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v3 < int(len(f1_p1) / 2):
+                f1_v1.append(f1_v3)
+            elif f1_v3 > int(len(f1_p1) / 2):
+                f1_v2.append(f1_v3)
+        else:
+            if f1_v3 < int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                f1_v1.append(f1_v3)
+            elif f1_v3 >= int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                f1_v2.append(f1_v3)
+    print(f1_v1)
+    print(f1_v2)
+
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+937,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    for f1_v3 in range(len(f1_p1) - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v3 < int(len(f1_p1) / 2):
+                f1_v1.append(f1_v3)
+            elif f1_v3 > int(len(f1_p1) / 2):
+                f1_v2.append(f1_v3)
+        else:
+            if f1_v3 < int(len(f1_p1) / 2):
+                f1_v1.append(f1_v3)
+            elif f1_v3 >= int(len(f1_p1) / 2) and f1_p1[f1_v3] != '(' and f1_p1[f1_v3] != ')':
+                f1_v2.append(f1_v3)
+    print(f1_v1)
+    print(f1_v2)
+
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+938,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    for f1_v3 in range(len(f1_p1) - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v3 < int(len(f1_p1) / 2):
+                f1_v1.append(f1_v3)
+            elif f1_v3 > int(len(f1_p1) / 2):
+                f1_v2.append(f1_v3)
+        else:
+            if f1_v3 < int(len(f1_p1) / 2):
+                f1_v1.append(f1_v3)
+            elif f1_v3 >= int(len(f1_p1) / 2):
+                f1_v2.append(f1_v3)
+    print(f1_v1)
+    print(f1_v2)
+
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+940,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    for f1_v3 in range(len(f1_p1) - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v3 < int(len(f1_p1) / 2) - 1:
+                f1_v1.append(f1_v3)
+            elif f1_v3 > int(len(f1_p1) / 2):
+                f1_v2.append(f1_v3)
+        else:
+            if f1_v3 < int(len(f1_p1) / 2):
+                f1_v1.append(f1_v3)
+            elif f1_v3 >= int(len(f1_p1) / 2):
+                f1_v2.append(f1_v3)
+    print(f1_v1)
+    print(f1_v2)
+
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+942,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    for f1_v3 in range(len(f1_p1) - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v3 < int(len(f1_p1) / 2) - 1:
+                f1_v1.append(f1_v3)
+            elif f1_v3 > int(len(f1_p1) / 2) - 1:
+                f1_v2.append(f1_v3)
+        else:
+            if f1_v3 < int(len(f1_p1) / 2):
+                f1_v1.append(f1_v3)
+            elif f1_v3 >= int(len(f1_p1) / 2):
+                f1_v2.append(f1_v3)
+    print(f1_v1)
+    print(f1_v2)
+
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+944,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    for f1_v3 in range(len(f1_p1) - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v3 < int(len(f1_p1) / 2) - 1:
+                f1_v1.append(f1_v3)
+            elif f1_v3 > int(len(f1_p1) / 2) - 1:
+                f1_v2.append(f1_v3)
+        else:
+            if f1_v3 < int(len(f1_p1) / 2) - 1:
+                f1_v1.append(f1_v3)
+            elif f1_v3 >= int(len(f1_p1) / 2):
+                f1_v2.append(f1_v3)
+    print(f1_v1)
+    print(f1_v2)
+
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+947,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    for f1_v3 in range(len(f1_p1) - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v3 < int(len(f1_p1) / 2) - 1:
+                f1_v1.append(f1_v3)
+            elif f1_v3 > int(len(f1_p1) / 2) - 1:
+                f1_v2.append(f1_v3)
+        else:
+            if f1_v3 < int(len(f1_p1) / 2) - 1:
+                f1_v1.append(f1_v3)
+            elif f1_v3 > int(len(f1_p1) / 2) - 1:
+                f1_v2.append(f1_v3)
+    print(f1_v1)
+    print(f1_v2)
+
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+948,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    for f1_v3 in range(len(f1_p1) - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v3 < int(len(f1_p1) / 2) - 1:
+                f1_v1.append(f1_v3)
+            elif f1_v3 > int(len(f1_p1) / 2) - 1:
+                f1_v2.append(f1_v3)
+        else:
+            if f1_v3 <= int(len(f1_p1) / 2) - 1:
+                f1_v1.append(f1_v3)
+            elif f1_v3 > int(len(f1_p1) / 2) - 1:
+                f1_v2.append(f1_v3)
+    print(f1_v1)
+    print(f1_v2)
+
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+949,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    for f1_v3 in range(len(f1_p1) - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v3 < len(f1_p1) / 2 - 1:
+                f1_v1.append(f1_v3)
+            elif f1_v3 > int(len(f1_p1) / 2) - 1:
+                f1_v2.append(f1_v3)
+        else:
+            if f1_v3 <= int(len(f1_p1) / 2) - 1:
+                f1_v1.append(f1_v3)
+            elif f1_v3 > int(len(f1_p1) / 2) - 1:
+                f1_v2.append(f1_v3)
+    print(f1_v1)
+    print(f1_v2)
+
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+950,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    for f1_v3 in range(len(f1_p1) - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v3 < len(f1_p1) / 2 - 1:
+                f1_v1.append(f1_v3)
+            elif f1_v3 > len(f1_p1) / 2 - 1:
+                f1_v2.append(f1_v3)
+        else:
+            if f1_v3 <= int(len(f1_p1) / 2) - 1:
+                f1_v1.append(f1_v3)
+            elif f1_v3 > int(len(f1_p1) / 2) - 1:
+                f1_v2.append(f1_v3)
+    print(f1_v1)
+    print(f1_v2)
+
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+951,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    for f1_v3 in range(len(f1_p1) - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v3 < len(f1_p1) / 2 - 1:
+                f1_v1.append(f1_v3)
+            elif f1_v3 > len(f1_p1) / 2 - 1:
+                f1_v2.append(f1_v3)
+        else:
+            if f1_v3 <= len(f1_p1) / 2 - 1:
+                f1_v1.append(f1_v3)
+            elif f1_v3 > int(len(f1_p1) / 2) - 1:
+                f1_v2.append(f1_v3)
+    print(f1_v1)
+    print(f1_v2)
+
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+953,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    for f1_v3 in range(len(f1_p1) - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v3 < len(f1_p1) / 2 - 1:
+                f1_v1.append(f1_v3)
+            elif f1_v3 > len(f1_p1) / 2 - 1:
+                f1_v2.append(f1_v3)
+        else:
+            if f1_v3 <= len(f1_p1) / 2 - 1:
+                f1_v1.append(f1_v3)
+            elif f1_v3 > int(len(f1_p1) / 2) - 1:
+                f1_v2.append(f1_v3)
+    print(f1_v1)
+    print(f1_v2)
+
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+954,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    for f1_v3 in range(len(f1_p1) - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v3 < len(f1_p1) / 2 - 1:
+                f1_v1.append(f1_v3)
+            elif f1_v3 > len(f1_p1) / 2 - 1:
+                f1_v2.append(f1_v3)
+        else:
+            if f1_v3 <= int(len(f1_p1) / 2) - 1:
+                f1_v1.append(f1_v3)
+            elif f1_v3 > int(len(f1_p1) / 2) - 1:
+                f1_v2.append(f1_v3)
+    print(f1_v1)
+    print(f1_v2)
+
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+955,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    
+    for f1_v3 in range(len(f1_p1) - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v3 < len(f1_p1) / 2 - 1:
+                f1_v1.append(f1_v3)
+            elif f1_v3 > len(f1_p1) / 2 - 1:
+                f1_v2.append(f1_v3)
+        else:
+            if f1_v3 <= int(len(f1_p1) / 2) - 1:
+                f1_v1.append(f1_v3)
+            elif f1_v3 > int(len(f1_p1) / 2) - 1:
+                f1_v2.append(f1_v3)
+    print(f1_v1)
+    print(f1_v2)
+
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+977,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    f1_v3 = len(f1_p1)
+    for f1_v4 in range(len(f1_p1) - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v4 < len(f1_p1) / 2 - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > len(f1_p1) / 2 - 1:
+                f1_v2.append(f1_v4)
+        else:
+            if f1_v4 <= int(len(f1_p1) / 2) - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > int(len(f1_p1) / 2) - 1:
+                f1_v2.append(f1_v4)
+    print(f1_v1)
+    print(f1_v2)
+
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+978,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    f1_v3 = len(f1_p1)
+    for f1_v4 in range(f1_v3 - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v4 < len(f1_p1) / 2 - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > len(f1_p1) / 2 - 1:
+                f1_v2.append(f1_v4)
+        else:
+            if f1_v4 <= int(len(f1_p1) / 2) - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > int(len(f1_p1) / 2) - 1:
+                f1_v2.append(f1_v4)
+    print(f1_v1)
+    print(f1_v2)
+
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+979,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    f1_v3 = len(f1_p1)
+    for f1_v4 in range(f1_v3 - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v4 < f1_v3 / 2 - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > len(f1_p1) / 2 - 1:
+                f1_v2.append(f1_v4)
+        else:
+            if f1_v4 <= int(len(f1_p1) / 2) - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > int(len(f1_p1) / 2) - 1:
+                f1_v2.append(f1_v4)
+    print(f1_v1)
+    print(f1_v2)
+
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+980,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    f1_v3 = len(f1_p1)
+    for f1_v4 in range(f1_v3 - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v4 < f1_v3 / 2 - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > f1_v3 / 2 - 1:
+                f1_v2.append(f1_v4)
+        else:
+            if f1_v4 <= int(len(f1_p1) / 2) - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > int(len(f1_p1) / 2) - 1:
+                f1_v2.append(f1_v4)
+    print(f1_v1)
+    print(f1_v2)
+
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+981,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    f1_v3 = len(f1_p1)
+    for f1_v4 in range(f1_v3 - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v4 < f1_v3 / 2 - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > f1_v3 / 2 - 1:
+                f1_v2.append(f1_v4)
+        else:
+            if f1_v4 <= int(f1_v3 / 2) - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > int(len(f1_p1) / 2) - 1:
+                f1_v2.append(f1_v4)
+    print(f1_v1)
+    print(f1_v2)
+
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+982,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    f1_v3 = len(f1_p1)
+    for f1_v4 in range(f1_v3 - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v4 < f1_v3 / 2 - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > f1_v3 / 2 - 1:
+                f1_v2.append(f1_v4)
+        else:
+            if f1_v4 <= int(f1_v3 / 2) - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > int(f1_v3 / 2) - 1:
+                f1_v2.append(f1_v4)
+    print(f1_v1)
+    print(f1_v2)
+
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+983,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    f1_v3 = len(f1_p1)
+    for f1_v4 in range(f1_v3 - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v4 < f1_v3 / 2 - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > f1_v3 / 2 - 1:
+                f1_v2.append(f1_v4)
+        else:
+            if f1_v4 <= int(f1_v3 / 2) - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > int(f1_v3 / 2) - 1:
+                f1_v2.append(f1_v4)
+
+
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+996,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    f1_v3 = len(f1_p1)
+    for f1_v4 in range(f1_v3 - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v4 < f1_v3 / 2 - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > f1_v3 / 2 - 1:
+                f1_v2.append(f1_v4)
+        else:
+            if f1_v4 <= int(f1_v3 / 2) - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > int(f1_v3 / 2) - 1:
+                f1_v2.append(f1_v4)
+    f1_v5 = 0
+    for f1_v6 in f1_v1:
+        f1_v5 += 1
+
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+1014,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    f1_v3 = len(f1_p1)
+    for f1_v4 in range(f1_v3 - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v4 < f1_v3 / 2 - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > f1_v3 / 2 - 1:
+                f1_v2.append(f1_v4)
+        else:
+            if f1_v4 <= int(f1_v3 / 2) - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > int(f1_v3 / 2) - 1:
+                f1_v2.append(f1_v4)
+    f1_v5 = 0
+    for f1_v6 in f1_v1:
+        f1_p1.insert(f1_v6 + 1, '(')
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+1015,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    f1_v3 = len(f1_p1)
+    for f1_v4 in range(f1_v3 - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v4 < f1_v3 / 2 - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > f1_v3 / 2 - 1:
+                f1_v2.append(f1_v4)
+        else:
+            if f1_v4 <= int(f1_v3 / 2) - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > int(f1_v3 / 2) - 1:
+                f1_v2.append(f1_v4)
+    f1_v5 = 0
+    for f1_v6 in f1_v1:
+        f1_p1.insert(f1_v6 + 1, '(')
+        
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+1022,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    f1_v3 = len(f1_p1)
+    for f1_v4 in range(f1_v3 - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v4 < f1_v3 / 2 - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > f1_v3 / 2 - 1:
+                f1_v2.append(f1_v4)
+        else:
+            if f1_v4 <= int(f1_v3 / 2) - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > int(f1_v3 / 2) - 1:
+                f1_v2.append(f1_v4)
+    f1_v5 = 0
+    for f1_v6 in f1_v1:
+        f1_p1.insert(f1_v6 + 1, '(')
+        f1_v5 += 1
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+1023,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    f1_v3 = len(f1_p1)
+    for f1_v4 in range(f1_v3 - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v4 < f1_v3 / 2 - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > f1_v3 / 2 - 1:
+                f1_v2.append(f1_v4)
+        else:
+            if f1_v4 <= int(f1_v3 / 2) - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > int(f1_v3 / 2) - 1:
+                f1_v2.append(f1_v4)
+    f1_v5 = 1
+    for f1_v6 in f1_v1:
+        f1_p1.insert(f1_v6 + 1, '(')
+        f1_v5 += 1
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+1027,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    f1_v3 = len(f1_p1)
+    for f1_v4 in range(f1_v3 - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v4 < f1_v3 / 2 - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > f1_v3 / 2 - 1:
+                f1_v2.append(f1_v4)
+        else:
+            if f1_v4 <= int(f1_v3 / 2) - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > int(f1_v3 / 2) - 1:
+                f1_v2.append(f1_v4)
+    f1_v5 = 1
+    for f1_v6 in f1_v1:
+        f1_p1.insert(f1_v6 + f1_v5, '(')
+        f1_v5 += 1
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+1028,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    f1_v3 = len(f1_p1)
+    for f1_v4 in range(f1_v3 - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v4 < f1_v3 / 2 - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > f1_v3 / 2 - 1:
+                f1_v2.append(f1_v4)
+        else:
+            if f1_v4 <= int(f1_v3 / 2) - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > int(f1_v3 / 2) - 1:
+                f1_v2.append(f1_v4)
+    f1_v5 = 1
+    for f1_v6 in f1_v1:
+        f1_p1.insert(f1_v6 + f1_v5, '(')
+        f1_v5 += 1
+        
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+1050,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    f1_v3 = len(f1_p1)
+    for f1_v4 in range(f1_v3 - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v4 < f1_v3 / 2 - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > f1_v3 / 2 - 1:
+                f1_v2.append(f1_v4)
+        else:
+            if f1_v4 <= int(f1_v3 / 2) - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > int(f1_v3 / 2) - 1:
+                f1_v2.append(f1_v4)
+    f1_v5 = 1
+    for f1_v6 in f1_v1:
+        f1_p1.insert(f1_v6 + f1_v5, '(')
+        f1_v5 += 1
+    for f1_v6 in f1_v2:
+        f1_p1.insert(f1_v6 + f1_v5, ')')
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+1051,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    f1_v3 = len(f1_p1)
+    for f1_v4 in range(f1_v3 - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v4 < f1_v3 / 2 - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > f1_v3 / 2 - 1:
+                f1_v2.append(f1_v4)
+        else:
+            if f1_v4 <= int(f1_v3 / 2) - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > int(f1_v3 / 2) - 1:
+                f1_v2.append(f1_v4)
+    f1_v5 = 1
+    for f1_v6 in f1_v1:
+        f1_p1.insert(f1_v6 + f1_v5, '(')
+        f1_v5 += 1
+    for f1_v6 in f1_v2:
+        f1_p1.insert(f1_v6 + f1_v5, ')')
+        
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+1057,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    f1_v3 = len(f1_p1)
+    for f1_v4 in range(f1_v3 - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v4 < f1_v3 / 2 - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > f1_v3 / 2 - 1:
+                f1_v2.append(f1_v4)
+        else:
+            if f1_v4 <= int(f1_v3 / 2) - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > int(f1_v3 / 2) - 1:
+                f1_v2.append(f1_v4)
+    f1_v5 = 1
+    for f1_v6 in f1_v1:
+        f1_p1.insert(f1_v6 + f1_v5, '(')
+        f1_v5 += 1
+    for f1_v6 in f1_v2:
+        f1_p1.insert(f1_v6 + f1_v5, ')')
+        f1_v5 += 1
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+1058,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    f1_v3 = len(f1_p1)
+    for f1_v4 in range(f1_v3 - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v4 < f1_v3 / 2 - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > f1_v3 / 2 - 1:
+                f1_v2.append(f1_v4)
+        else:
+            if f1_v4 <= int(f1_v3 / 2) - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > int(f1_v3 / 2) - 1:
+                f1_v2.append(f1_v4)
+    f1_v5 = 1
+    for f1_v6 in f1_v1:
+        f1_p1.insert(f1_v6 + f1_v5, '(')
+        f1_v5 += 1
+    for f1_v6 in f1_v2:
+        f1_p1.insert(f1_v6 + f1_v5, ')')
+        f1_v5 += 1
+        
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+1059,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    f1_v3 = len(f1_p1)
+    for f1_v4 in range(f1_v3 - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v4 < f1_v3 / 2 - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > f1_v3 / 2 - 1:
+                f1_v2.append(f1_v4)
+        else:
+            if f1_v4 <= int(f1_v3 / 2) - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > int(f1_v3 / 2) - 1:
+                f1_v2.append(f1_v4)
+    f1_v5 = 1
+    for f1_v6 in f1_v1:
+        f1_p1.insert(f1_v6 + f1_v5, '(')
+        f1_v5 += 1
+    for f1_v6 in f1_v2:
+        f1_p1.insert(f1_v6 + f1_v5, ')')
+        f1_v5 += 1
+        
+        
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+1078,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    f1_v3 = len(f1_p1)
+    for f1_v4 in range(f1_v3 - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v4 < f1_v3 / 2 - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > f1_v3 / 2 - 1:
+                f1_v2.append(f1_v4)
+        else:
+            if f1_v4 <= int(f1_v3 / 2) - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > int(f1_v3 / 2) - 1:
+                f1_v2.append(f1_v4)
+    f1_v5 = 1
+    for f1_v6 in f1_v1:
+        f1_p1.insert(f1_v6 + f1_v5, '(')
+        f1_v5 += 1
+    for f1_v6 in f1_v2:
+        f1_p1.insert(f1_v6 + f1_v5, ')')
+        f1_v5 += 1
+        
+    return """".join(f1_p1)
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+1079,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    f1_v3 = len(f1_p1)
+    for f1_v4 in range(f1_v3 - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v4 < f1_v3 / 2 - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > f1_v3 / 2 - 1:
+                f1_v2.append(f1_v4)
+        else:
+            if f1_v4 <= int(f1_v3 / 2) - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > int(f1_v3 / 2) - 1:
+                f1_v2.append(f1_v4)
+    f1_v5 = 1
+    for f1_v6 in f1_v1:
+        f1_p1.insert(f1_v6 + f1_v5, '(')
+        f1_v5 += 1
+    for f1_v6 in f1_v2:
+        f1_p1.insert(f1_v6 + f1_v5, ')')
+        f1_v5 += 1
+        
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)",16,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+1082,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    f1_v3 = len(f1_p1)
+    for f1_v4 in range(f1_v3 - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v4 < f1_v3 / 2 - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > f1_v3 / 2 - 1:
+                f1_v2.append(f1_v4)
+        else:
+            if f1_v4 <= int(f1_v3 / 2) - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > int(f1_v3 / 2) - 1:
+                f1_v2.append(f1_v4)
+    f1_v5 = 1
+    for f1_v6 in f1_v1:
+        f1_p1.insert(f1_v6 + f1_v5, '(')
+        f1_v5 += 1
+    for f1_v6 in f1_v2:
+        f1_p1.insert(f1_v6 + f1_v5, ')')
+        f1_v5 += 1
+        
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)",16,FROM_ONE_TO_TWO_YEARS,1.0,brackets
+1083,"def f1(f1_p1):
+    f1_v1 = []
+    f1_v2 = []
+    f1_v3 = len(f1_p1)
+    for f1_v4 in range(f1_v3 - 1):
+        if len(f1_p1) % 2 == 0:
+            if f1_v4 < f1_v3 / 2 - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > f1_v3 / 2 - 1:
+                f1_v2.append(f1_v4)
+        else:
+            if f1_v4 <= int(f1_v3 / 2) - 1:
+                f1_v1.append(f1_v4)
+            elif f1_v4 > int(f1_v3 / 2) - 1:
+                f1_v2.append(f1_v4)
+    f1_v5 = 1
+    for f1_v6 in f1_v1:
+        f1_p1.insert(f1_v6 + f1_v5, '(')
+        f1_v5 += 1
+    for f1_v6 in f1_v2:
+        f1_p1.insert(f1_v6 + f1_v5, ')')
+        f1_v5 += 1
+
+    return """".join(f1_p1)
+
+
+v1 = list(input())
+v2 = f1(v1)
+print(v2)",16,FROM_ONE_TO_TWO_YEARS,1.0,brackets

@@ -1,0 +1,16 @@
+id,fragment,age,programExperience,testsResults,task
+761,v1=int(input()),13.0,FROM_TWO_TO_FOUR_YEARS,0.0,max_3
+762,"v1=int(input())
+v2=int",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,max_3
+763,"v1=int(input())
+v2=int(input())",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,max_3
+764,"v1=int(input())
+v2=int(input())
+v3=int",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,max_3
+765,"v1=int(input())
+v2=int(input())
+v3=int(input())",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,max_3
+772,"v1=int(input())
+v2=int(input())
+v3=int(input())
+print(max(v1, v2, v3))",13.0,FROM_TWO_TO_FOUR_YEARS,1.0,max_3

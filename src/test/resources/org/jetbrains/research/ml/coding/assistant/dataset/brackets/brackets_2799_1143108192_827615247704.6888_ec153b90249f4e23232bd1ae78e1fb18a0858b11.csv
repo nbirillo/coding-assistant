@@ -1,0 +1,459 @@
+id,fragment,age,programExperience,testsResults,task
+3858,v1 = input(),26,MORE_THAN_SIX,0.0,brackets
+3860,"v1 = input()
+v2 = """"
+for v3 in range(0, len(v1)):
+    v2 += v1",26,MORE_THAN_SIX,0.0,brackets
+3861,"v1 = input()
+v2 = """"
+for v3 in range(0, len(v1)):
+    v2 += v1[v3]
+    ",26,MORE_THAN_SIX,0.0,brackets
+3865,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4 in range(0, v2):
+    v3 += v1[v4]
+    if v4 < (v2 // 2):
+        v3 += ""(""",26,MORE_THAN_SIX,0.0,brackets
+3866,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4 in range(0, v2):
+    v3 += v1[v4]
+    if v4 < (v2 // 2):
+        v3 += ""(""
+    elif v4 > (v2 // 2):
+        v3 += """"",26,MORE_THAN_SIX,0.0,brackets
+3867,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4 in range(0, v2):
+    v3 += v1[v4]
+    if v4 < (v2 // 2):
+        v3 += ""(""
+    elif v4 > (v2 // 2):
+        v3 += "")""
+        ",26,MORE_THAN_SIX,0.0,brackets
+3868,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4 in range(0, v2):
+    v3 += v1[v4]
+    if v4 < (v2 // 2):
+        v3 += ""(""
+    elif v4 > (v2 // 2):
+        v3 += "")""
+print(v3)",26,MORE_THAN_SIX,0.125,brackets
+3869,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4 in range(0, v2):
+    v3 += v1[v4]
+    if v4 < (v2 // 2):
+        v3 += ""(""
+    elif v4 >= (v2 // 2):
+        v3 += "")""
+print(v3)",26,MORE_THAN_SIX,0.0,brackets
+3870,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4 in range(0, v2):
+
+    v3 += v1[v4]
+    if v4 < (v2 // 2):
+        v3 += ""(""
+    elif v4 >= (v2 // 2):
+        v3 += "")""
+print(v3)",26,MORE_THAN_SIX,0.0,brackets
+3871,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4 in range(0, v2):
+
+    v3 += v1[v4]
+    if v4 < (v2 // 2):
+        v3 += ""(""
+
+print(v3)",26,MORE_THAN_SIX,0.125,brackets
+3872,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4 in range(0, v2):
+    if v4 >= (v2 // 2):
+        v3 += "")""
+    v3 += v1[v4]
+    if v4 < (v2 // 2):
+        v3 += ""(""
+print(v3)",26,MORE_THAN_SIX,0.0,brackets
+3873,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4 in range(0, v2):
+    if v4 > (v2 // 2):
+        v3 += "")""
+    v3 += v1[v4]
+    if v4 < (v2 // 2):
+        v3 += ""(""
+print(v3)",26,MORE_THAN_SIX,0.125,brackets
+3874,"v1 = input()
+v2 = len(v1)
+v3 = """"
+
+for v4 in range(0, v2):
+    if v4 > (v2 // 2):
+        v3 += "")""
+    v3 += v1[v4]
+    if v4 < (v2 // 2):
+        v3 += ""(""
+print(v3)",26,MORE_THAN_SIX,0.125,brackets
+3875,"v1 = input()
+v2 = len(v1)
+v3 = """"
+
+
+for v4 in range(0, v2):
+    if v4 > (v2 // 2):
+        v3 += "")""
+    v3 += v1[v4]
+    if v4 < (v2 // 2):
+        v3 += ""(""
+print(v3)",26,MORE_THAN_SIX,0.125,brackets
+3876,"v1 = input()
+v2 = len(v1)
+v3 = """"
+if v2 % 2 == 0:
+    v4 = v2
+
+for v5 in range(0, v2):
+    if v5 > (v2 // 2):
+        v3 += "")""
+    v3 += v1[v5]
+    if v5 < (v2 // 2):
+        v3 += ""(""
+print(v3)",26,MORE_THAN_SIX,0.125,brackets
+3881,"v1 = input()
+v2 = len(v1)
+v3 = """"
+if v2 % 2 == 0:
+    v4 = v2 // 2 - 1
+
+for v5 in range(0, v2):
+    if v5 > (v2 // 2):
+        v3 += "")""
+    v3 += v1[v5]
+    if v5 < (v2 // 2):
+        v3 += ""(""
+print(v3)",26,MORE_THAN_SIX,0.125,brackets
+3882,"v1 = input()
+v2 = len(v1)
+v3 = """"
+if v2 % 2 == 0:
+    v4 = v2 // 2 - 1
+    
+
+for v5 in range(0, v2):
+    if v5 > (v2 // 2):
+        v3 += "")""
+    v3 += v1[v5]
+    if v5 < (v2 // 2):
+        v3 += ""(""
+print(v3)",26,MORE_THAN_SIX,0.125,brackets
+3887,"v1 = input()
+v2 = len(v1)
+v3 = """"
+if v2 % 2 == 0:
+    v4 = v2 // 2 - 1
+    v5 = v2 // 2 + 1
+
+for v6 in range(0, v2):
+    if v6 > (v2 // 2):
+        v3 += "")""
+    v3 += v1[v6]
+    if v6 < (v2 // 2):
+        v3 += ""(""
+print(v3)",26,MORE_THAN_SIX,0.125,brackets
+3888,"v1 = input()
+v2 = len(v1)
+v3 = """"
+if v2 % 2 == 0:
+    v4 = v2 // 2 - 1
+    v5 = v2 // 2 + 1
+else:
+    v4 = v2 // 2 - 1
+    v5 = v2 // 2 + 1
+for v6 in range(0, v2):
+    if v6 > (v2 // 2):
+        v3 += "")""
+    v3 += v1[v6]
+    if v6 < (v2 // 2):
+        v3 += ""(""
+print(v3)",26,MORE_THAN_SIX,0.125,brackets
+3890,"v1 = input()
+v2 = len(v1)
+v3 = """"
+if v2 % 2 == 0:
+    v4 = v2 // 2 - 1
+    v5 = v2 // 2 + 1
+else:
+    v4 = v2 // 2 - 1
+    v5 = v2 // 2
+for v6 in range(0, v2):
+    if v6 > (v2 // 2):
+        v3 += "")""
+    v3 += v1[v6]
+    if v6 < (v2 // 2):
+        v3 += ""(""
+print(v3)",26,MORE_THAN_SIX,0.125,brackets
+3891,"v1 = input()
+v2 = len(v1)
+v3 = """"
+if v2 % 2 == 0:
+    v4 = v2 // 2 - 1
+    v5 = v2 // 2 + 1
+else:
+    v4 = v2 // 2
+    v5 = v2 // 2
+for v6 in range(0, v2):
+    if v6 > (v2 // 2):
+        v3 += "")""
+    v3 += v1[v6]
+    if v6 < (v2 // 2):
+        v3 += ""(""
+print(v3)",26,MORE_THAN_SIX,0.125,brackets
+3893,"v1 = input()
+v2 = len(v1)
+v3 = """"
+if v2 % 2 == 0:
+    v4 = v2 // 2 - 1
+    v5 = v2 // 2 + 1
+else:
+    v4 = v2 // 2
+    v5 = v2 // 2
+for v6 in range(0, v2):
+    if v6 >= v5:
+        v3 += "")""
+    v3 += v1[v6]
+    if v6 < (v2 // 2):
+        v3 += ""(""
+print(v3)",26,MORE_THAN_SIX,0.0,brackets
+3895,"v1 = input()
+v2 = len(v1)
+v3 = """"
+if v2 % 2 == 0:
+    v4 = v2 // 2 - 1
+    v5 = v2 // 2 + 1
+else:
+    v4 = v2 // 2
+    v5 = v2 // 2
+for v6 in range(0, v2):
+    if v6 >= v5:
+        v3 += "")""
+    v3 += v1[v6]
+    if v6 <= v4:
+        v3 += ""(""
+print(v3)",26,MORE_THAN_SIX,0.0,brackets
+3896,"v1 = input()
+v2 = len(v1)
+v3 = """"
+if v2 % 2 == 0:
+    v4 = v2 // 2 - 1
+    v5 = v2 // 2 + 1
+else:
+    v4 = v2 // 2
+    v5 = v2 // 2
+for v6 in range(0, v2):
+    if v6 >= v5:
+        v3 += "")""
+    v3 += v1[v6]
+    if v6 <= v4:
+        v3 += ""(""
+        
+print(v3)",26,MORE_THAN_SIX,0.0,brackets
+3897,"v1 = input()
+v2 = len(v1)
+v3 = """"
+if v2 % 2 == 0:
+    v4 = v2 // 2 - 1
+    v5 = v2 // 2 + 1
+else:
+    v4 = v2 // 2
+    v5 = v2 // 2
+for v6 in range(0, v2):
+    if v6 >= v5:
+        v3 += "")""
+    v3 += v1[v6]
+    if v6 <= v4:
+        v3 += ""(""
+
+print(v3)",26,MORE_THAN_SIX,0.0,brackets
+3898,"v1 = input()
+v2 = len(v1)
+v3 = """"
+if v2 % 2 == 0:
+    v4 = v2 // 2 - 1
+    v5 = v2 // 2 + 1
+else:
+    v4 = v2 // 2
+    v5 = v2 // 2
+for v6 in range(0, v2):
+    if v6 >= v5:
+        v3 += "")""
+    v3 += v1[v6]
+    if v6 < v4:
+        v3 += ""(""
+
+print(v3)",26,MORE_THAN_SIX,0.0,brackets
+3899,"v1 = input()
+v2 = len(v1)
+v3 = """"
+if v2 % 2 == 0:
+    v4 = v2 // 2 - 1
+    v5 = v2 // 2 + 1
+else:
+    v4 = v2 // 2
+    v5 = v2 // 2
+for v6 in range(0, v2):
+    if v6 > v5:
+        v3 += "")""
+    v3 += v1[v6]
+    if v6 < v4:
+        v3 += ""(""
+
+print(v3)",26,MORE_THAN_SIX,0.125,brackets
+3903,"v1 = input()
+v2 = len(v1)
+v3 = """"
+if v2 % 2 == 0:
+    v4 = v2 // 2 - 1
+    v5 = v2 // 2 + 1
+else:
+    v4 = v2 // 2 - 1
+    v5 = v2 // 2
+for v6 in range(0, v2):
+    if v6 > v5:
+        v3 += "")""
+    v3 += v1[v6]
+    if v6 < v4:
+        v3 += ""(""
+
+print(v3)",26,MORE_THAN_SIX,0.125,brackets
+3904,"v1 = input()
+v2 = len(v1)
+v3 = """"
+if v2 % 2 == 0:
+    v4 = v2 // 2 - 1
+    v5 = v2 // 2 + 1
+else:
+    v4 = v2 // 2 - 1
+    v5 = v2 // 2
+for v6 in range(0, v2):
+    if v6 >= v5:
+        v3 += "")""
+    v3 += v1[v6]
+    if v6 < v4:
+        v3 += ""(""
+
+print(v3)",26,MORE_THAN_SIX,0.0,brackets
+3905,"v1 = input()
+v2 = len(v1)
+v3 = """"
+if v2 % 2 == 0:
+    v4 = v2 // 2 - 1
+    v5 = v2 // 2 + 1
+else:
+    v4 = v2 // 2 - 1
+    v5 = v2 // 2
+for v6 in range(0, v2):
+    if v6 >= v5:
+        v3 += "")""
+    v3 += v1[v6]
+    if v6 <= v4:
+        v3 += ""(""
+
+print(v3)",26,MORE_THAN_SIX,0.0,brackets
+3906,"v1 = input()
+v2 = len(v1)
+v3 = """"
+if v2 % 2 == 0:
+    v4 = v2 // 2 - 1
+    v5 = v2 // 2 + 1
+else:
+    v4 = v2 // 2 - 1
+    v5 = v2 // 2
+for v6 in range(0, v2):
+    if v6 > v5:
+        v3 += "")""
+    v3 += v1[v6]
+    if v6 <= v4:
+        v3 += ""(""
+
+print(v3)",26,MORE_THAN_SIX,0.125,brackets
+3907,"v1 = input()
+v2 = len(v1)
+v3 = """"
+if v2 % 2 == 0:
+    v4 = v2 // 2 - 1
+    v5 = v2 // 2 + 1
+else:
+    v4 = v2 // 2 - 1
+    v5 = v2 // 2
+for v6 in range(0, v2):
+    if v6 > v5:
+        v3 += "")""
+    v3 += v1[v6]
+    if v6 < v4:
+        v3 += ""(""
+
+print(v3)",26,MORE_THAN_SIX,0.125,brackets
+3908,"v1 = input()
+v2 = len(v1)
+v3 = """"
+if v2 % 2 == 0:
+    v4 = v2 // 2 - 1
+    v5 = v2 // 2 + 1
+else:
+    v4 = v2 // 2 - 1
+    v5 = v2 // 2
+for v6 in range(0, v2):
+    if v6 >= v5:
+        v3 += "")""
+    v3 += v1[v6]
+    if v6 < v4:
+        v3 += ""(""
+
+print(v3)",26,MORE_THAN_SIX,0.0,brackets
+3910,"v1 = input()
+v2 = len(v1)
+v3 = """"
+if v2 % 2 == 0:
+    v4 = v2 // 2 - 1
+    v5 = v2 // 2 + 1
+else:
+    v4 = v2 // 2
+    v5 = v2 // 2
+for v6 in range(0, v2):
+    if v6 >= v5:
+        v3 += "")""
+    v3 += v1[v6]
+    if v6 < v4:
+        v3 += ""(""
+
+print(v3)",26,MORE_THAN_SIX,0.0,brackets
+3912,"v1 = input()
+v2 = len(v1)
+v3 = """"
+if v2 % 2 == 0:
+    v4 = v2 // 2 - 1
+    v5 = v2 // 2 + 1
+else:
+    v4 = v2 // 2
+    v5 = v2 // 2 + 1
+for v6 in range(0, v2):
+    if v6 >= v5:
+        v3 += "")""
+    v3 += v1[v6]
+    if v6 < v4:
+        v3 += ""(""
+
+print(v3)",26,MORE_THAN_SIX,1.0,brackets

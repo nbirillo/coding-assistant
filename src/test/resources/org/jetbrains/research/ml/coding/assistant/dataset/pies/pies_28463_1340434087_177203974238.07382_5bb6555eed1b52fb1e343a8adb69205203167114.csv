@@ -1,0 +1,62 @@
+id,fragment,age,programExperience,testsResults,task
+1698,v1 = int(input()),-1,MORE_THAN_SIX,0.0,pies
+1699,"v1 = int(input())
+v1 = int(input())
+v1 = int(input())
+",-1,MORE_THAN_SIX,0.0,pies
+1704,"v1 = int(input())
+v2 = int(input())
+v1 = int(input())
+",-1,MORE_THAN_SIX,0.0,pies
+1706,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+",-1,MORE_THAN_SIX,0.0,pies
+1707,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = 10
+",-1,MORE_THAN_SIX,0.0,pies
+1716,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = 100 * v1 + v2
+
+",-1,MORE_THAN_SIX,0.0,pies
+1717,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = 100 * v1 + v2
+v5 = v3 
+
+",-1,MORE_THAN_SIX,0.0,pies
+1718,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = 100 * v1 + v2
+v5 = v3 * v4
+
+
+",-1,MORE_THAN_SIX,0.0,pies
+1719,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = 100 * v1 + v2
+v5 = v3 * v4
+print()
+
+",-1,MORE_THAN_SIX,0.0,pies
+1721,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = 100 * v1 + v2
+v5 = v3 * v4
+print(f'{v5 // 100} {v5 % 100}')
+
+",-1,MORE_THAN_SIX,1.0,pies

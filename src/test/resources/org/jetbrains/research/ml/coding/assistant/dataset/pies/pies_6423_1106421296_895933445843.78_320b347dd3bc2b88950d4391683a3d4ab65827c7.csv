@@ -1,0 +1,113 @@
+id,fragment,age,programExperience,testsResults,task
+3786,"def f1():
+    f1_v1 = input()",-1,FROM_HALF_TO_ONE_YEAR,0.0,pies
+3789,"def f1():
+    f1_v1 = input()
+    f1_v2 = input()",-1,FROM_HALF_TO_ONE_YEAR,0.0,pies
+3792,"def f1():
+    f1_v1 = input()
+    f1_v2 = input()
+    f1_v3 = input()",-1,FROM_HALF_TO_ONE_YEAR,0.0,pies
+3803,"def f1():
+    f1_v1 = input()
+    f1_v2 = input()
+    f1_v3 = input()
+    f1_v4 = f1_v3 * f1_v1 * 100 + f1_v3 ",-1,FROM_HALF_TO_ONE_YEAR,0.0,pies
+3804,"def f1():
+    f1_v1 = input()
+    f1_v2 = input()
+    f1_v3 = input()
+    f1_v4 = f1_v3 * f1_v1 * 100 + f1_v3 * f1_v2
+    ",-1,FROM_HALF_TO_ONE_YEAR,0.0,pies
+3812,"def f1():
+    f1_v1 = input()
+    f1_v2 = input()
+    f1_v3 = input()
+    f1_v4 = f1_v3 * f1_v1 * 100 + f1_v3 * f1_v2
+    f1_v5 = f1_v4 % 100",-1,FROM_HALF_TO_ONE_YEAR,0.0,pies
+3819,"def f1():
+    f1_v1 = input()
+    f1_v2 = input()
+    f1_v3 = input()
+    f1_v4 = f1_v3 * f1_v1 * 100 + f1_v3 * f1_v2
+    f1_v5 = f1_v4 % 100
+    f1_v6 = f1_v4 / 100",-1,FROM_HALF_TO_ONE_YEAR,0.0,pies
+3832,"def f1():
+    f1_v1 = input()
+    f1_v2 = input()
+    f1_v3 = input()
+    f1_v4 = f1_v3 * f1_v1 * 100 + f1_v3 * f1_v2
+    f1_v5 = f1_v4 % 100
+    f1_v6 = f1_v4 / 100
+    print(f1_v6, "" "", f1_v5)",-1,FROM_HALF_TO_ONE_YEAR,0.0,pies
+3833,"def f1():
+    f1_v1 = input()
+    f1_v2 = input()
+    f1_v3 = input()
+    f1_v4 = f1_v3 * f1_v1 * 100 + f1_v3 * f1_v2
+    f1_v5 = f1_v4 % 100
+    f1_v6 = f1_v4 / 100
+    print(f1_v6, "" "", f1_v5)
+
+if __name__ == ""__main__"":
+    f1()",-1,FROM_HALF_TO_ONE_YEAR,0.0,pies
+3834,"def f1():
+    f1_v1 = input()
+    f1_v2 = input()
+    f1_v3 = input()
+    f1_v4 = f1_v3 * f1_v1 * 100 + f1_v3 * f1_v2
+    f1_v5 = f1_v4 % 100
+    f1_v6 = f1_v4 / 100
+    print(f1_v6, "" "", f1_v5)
+
+
+if __name__ == ""__main__"":
+    f1()",-1,FROM_HALF_TO_ONE_YEAR,0.0,pies
+3838,"def f1():
+    f1_v1 = int(input())
+    f1_v2 = input()
+    f1_v3 = input()
+    f1_v4 = f1_v3 * f1_v1 * 100 + f1_v3 * f1_v2
+    f1_v5 = f1_v4 % 100
+    f1_v6 = f1_v4 / 100
+    print(f1_v6, "" "", f1_v5)
+
+
+if __name__ == ""__main__"":
+    f1()",-1,FROM_HALF_TO_ONE_YEAR,0.0,pies
+3842,"def f1():
+    f1_v1 = int(input())
+    f1_v2 = int(input())
+    f1_v3 = input()
+    f1_v4 = f1_v3 * f1_v1 * 100 + f1_v3 * f1_v2
+    f1_v5 = f1_v4 % 100
+    f1_v6 = f1_v4 / 100
+    print(f1_v6, "" "", f1_v5)
+
+
+if __name__ == ""__main__"":
+    f1()",-1,FROM_HALF_TO_ONE_YEAR,0.0,pies
+3846,"def f1():
+    f1_v1 = int(input())
+    f1_v2 = int(input())
+    f1_v3 = int(input())
+    f1_v4 = f1_v3 * f1_v1 * 100 + f1_v3 * f1_v2
+    f1_v5 = f1_v4 % 100
+    f1_v6 = f1_v4 / 100
+    print(f1_v6, "" "", f1_v5)
+
+
+if __name__ == ""__main__"":
+    f1()",-1,FROM_HALF_TO_ONE_YEAR,0.0,pies
+3847,"def f1():
+    f1_v1 = int(input())
+    f1_v2 = int(input())
+    f1_v3 = int(input())
+    f1_v4 = f1_v3 * f1_v1 * 100 + f1_v3 * f1_v2
+    f1_v5 = f1_v4 % 100
+    f1_v6 = f1_v4 // 100
+    print(f1_v6, "" "", f1_v5)
+
+
+if __name__ == ""__main__"":
+    f1()",-1,FROM_HALF_TO_ONE_YEAR,0.0,pies

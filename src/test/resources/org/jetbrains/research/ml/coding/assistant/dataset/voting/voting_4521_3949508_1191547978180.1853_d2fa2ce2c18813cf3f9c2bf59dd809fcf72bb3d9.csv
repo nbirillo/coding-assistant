@@ -1,0 +1,137 @@
+id,fragment,age,programExperience,testsResults,task
+892,v1=int(input()),13.0,FROM_ONE_TO_TWO_YEARS,0.0,voting
+893,"v1=int(input())
+v1=int(input())
+",13.0,FROM_ONE_TO_TWO_YEARS,0.0,voting
+894,"v1=int(input())
+v1=int(input())
+v1=int(input())",13.0,FROM_ONE_TO_TWO_YEARS,0.0,voting
+895,"v1=int(input())
+v2=int(input())
+v1=int(input())",13.0,FROM_ONE_TO_TWO_YEARS,0.0,voting
+896,"v1=int(input())
+v2=int(input())
+v3=int(input())",13.0,FROM_ONE_TO_TWO_YEARS,0.0,voting
+897,"v1=int(input())
+v2=int(input())
+v3=int(input())
+v4=v1",13.0,FROM_ONE_TO_TWO_YEARS,0.0,voting
+899,"v1=int(input())
+v2=int(input())
+v3=int(input())
+v4= v1 + v2 + v3",13.0,FROM_ONE_TO_TWO_YEARS,0.0,voting
+900,"v1=int(input())
+v2=int(input())
+v3=int(input())
+v4= v1 + v2 + v3
+if(v4>1):
+    v5=1",13.0,FROM_ONE_TO_TWO_YEARS,0.0,voting
+901,"v1=int(input())
+v2=int(input())
+v3=int(input())
+v4= v1 + v2 + v3
+if(v4>1):
+    v5=1
+else:
+    v5=0",13.0,FROM_ONE_TO_TWO_YEARS,0.0,voting
+904,"v1=int(input())
+v2=int(input())
+v3=int(input())
+v4= v1 + v2 + v3
+if(v4>1):
+    v5=1
+else:
+    v5=0
+print(v5)",13.0,FROM_ONE_TO_TWO_YEARS,0.0,voting
+905,"v1=int(input())
+v2=int(input())
+v3=int(input())
+v4= v1 + v2 + v3
+if(v4>=2):
+    v5=1
+else:
+    v5=0
+print(v5)",13.0,FROM_ONE_TO_TWO_YEARS,0.0,voting
+906,"v1=int(input())
+v2=int(input())
+v3=int(input())
+
+v4= v1 + v2 + v3
+if(v4>=2):
+    v5=1
+else:
+    v5=0
+print(v5)",13.0,FROM_ONE_TO_TWO_YEARS,0.0,voting
+907,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if(v1>=0 and v1<=1 and v2>=0 and v2<=1 and v3>=0 and v3<=1):
+    v4= v1 + v2 + v3
+    if(v4>=2):
+        v5=1
+    else:
+        v5=0
+    print(v5)",13.0,FROM_ONE_TO_TWO_YEARS,0.0,voting
+913,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if(v1>=0 and v1<=1 and v2>=0 and v2<=1 and v3>=0 and v3<=1):
+    v4 = v1 + v2 + v3
+    if(v4>=2):
+        v5=1
+    else:
+        v5=0
+    print(v5)",13.0,FROM_ONE_TO_TWO_YEARS,0.0,voting
+916,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if(v1>=0 and v1<=1 and v2>=0 and v2<=1 and v3>=0 and v3<=1):
+    v4 = v1 + v2 + v3
+    if (v4 >= 2):
+        v5=1
+    else:
+        v5=0
+    print(v5)",13.0,FROM_ONE_TO_TWO_YEARS,0.0,voting
+918,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if(v1>=0 and v1<=1 and v2>=0 and v2<=1 and v3>=0 and v3<=1):
+    v4 = v1 + v2 + v3
+    if (v4 >= 2):
+        v5 = 1
+    else:
+        v5=0
+    print(v5)",13.0,FROM_ONE_TO_TWO_YEARS,0.0,voting
+920,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if(v1>=0 and v1<=1 and v2>=0 and v2<=1 and v3>=0 and v3<=1):
+    v4 = v1 + v2 + v3
+    if (v4 >= 2):
+        v5 = 1
+    else:
+        v5 = 0
+    print(v5)",13.0,FROM_ONE_TO_TWO_YEARS,0.0,voting
+921,"v1=int(input())
+v2=int(input())
+v3=int(input())
+v4 = v1 + v2 + v3
+if (v4 >= 2):
+        v5 = 1
+else:
+        v5 = 0
+print(v5)",13.0,FROM_ONE_TO_TWO_YEARS,0.0,voting
+922,"v1, v2, v3=map(int, input())
+v4 = v1 + v2 + v3
+if (v4 >= 2):
+        v5 = 1
+else:
+        v5 = 0
+print(v5)",13.0,FROM_ONE_TO_TWO_YEARS,0.0,voting
+925,"v1, v2, v3=map(int, input().split())
+v4 = v1 + v2 + v3
+if (v4 >= 2):
+        v5 = 1
+else:
+        v5 = 0
+print(v5)",13.0,FROM_ONE_TO_TWO_YEARS,1.0,voting

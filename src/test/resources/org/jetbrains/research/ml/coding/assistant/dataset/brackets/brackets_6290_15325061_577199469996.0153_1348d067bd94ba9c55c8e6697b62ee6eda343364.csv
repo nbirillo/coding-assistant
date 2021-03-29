@@ -1,0 +1,265 @@
+id,fragment,age,programExperience,testsResults,task
+5143,"v1=input()
+for v2 in range(len(v1)):
+    v3=v2
+    if v3==0:
+        print(""YES"")
+        break
+else:
+    print(""NO"")
+",0.0,,0.0,brackets
+5152,"v1=input()
+v2= """"
+for v3 in range(len(v1)):
+    v2+= v1[v3] + ""(""
+
+else:
+    print(""NO"")
+",0.0,,0.0,brackets
+5153,"v1=input()
+v2= """"
+for v3 in range(len(v1)):
+    v2+= v1[v3] + ""(""
+
+
+",0.0,,0.0,brackets
+5159,"v1=input()
+v2= """"
+for v3 in range(len(v1)):
+    v2+= v1[v3] + ""(""
+
+v2= v2[0:len(v2) - 1]
+",0.0,,0.0,brackets
+5162,"v1=input()
+v2= """"
+for v3 in range(len(v1)):
+    v2+= v1[v3] + ""(""
+
+v2= v2[0:len(v2) - 1]
+print(v2)",0.0,,0.0,brackets
+5163,"v1=input()
+v2= """"
+for v3 in range(len(v1) // 2):
+    v2+= v1[v3] + ""(""
+for v3 in range(len(v1) // 2, len(v1)):
+    v2+= v1[v3] + "")""
+v2= v2[0:len(v2) - 1]
+print(v2)",15.0,FROM_HALF_TO_ONE_YEAR,0.625,brackets
+5164,"v1=input()
+v2= """"
+for v3 in range(len(v1)):
+    v2+= v1[v3] + ""(""
+for v3 in range(len(v1) // 2, len(v1)):
+    v2+= v1[v3] + "")""
+v2= v2[0:len(v2) - 1]
+print(v2)",15.0,FROM_HALF_TO_ONE_YEAR,0.0,brackets
+5166,"v1=input()
+v2= """"
+for v3 in range(len(v1) // 2):
+    if int(v1[v3]) > int():
+        v4 = v1[v3]
+print(v4)",15.0,FROM_HALF_TO_ONE_YEAR,0.0,brackets
+5171,"v1=input()
+v2= """"
+for v3 in range(len(v1) // 2):
+    if v3:
+        v4 = v1[v3]
+print(v4)",15.0,FROM_HALF_TO_ONE_YEAR,0.0,brackets
+5172,"v1=input()
+v2= """"
+for v3 in range(len(v1)):
+    v2+= v1[v3] + ""(""
+
+v2= v2[0:len(v2) - 1]
+print(v2)",15.0,FROM_HALF_TO_ONE_YEAR,0.0,brackets
+5173,"v1=input()
+v2= """"
+for v3 in range(len(v1)):
+    v2+= v1[v3] + ""(""
+v2= v2[0:len(v2) - 1]
+print(v2)",15.0,FROM_HALF_TO_ONE_YEAR,0.0,brackets
+5174,"v1=input()
+v2= """"
+for v3 in range(len(v1) // 2):
+    v2+= v1[v3] + ""(""
+v2= v2[0:len(v2) - 1]
+print(v2)",15.0,FROM_HALF_TO_ONE_YEAR,0.0,brackets
+5175,"v1=input()
+v2= """"
+for v3 in range(len(v1) // 2):
+    v2+= v1[v3] + ""(""
+    
+v2= v2[0:len(v2) - 1]
+print(v2)",15.0,FROM_HALF_TO_ONE_YEAR,0.0,brackets
+5177,"v1=input()
+v2= """"
+for v3 in range(len(v1) // 2):
+    v2+= v1[v3] + ""(""
+
+v2= v2[0:len(v2) - 1]
+print(v2)",15.0,FROM_HALF_TO_ONE_YEAR,0.0,brackets
+5178,"v1=input()
+v2= """"
+for v3 in range(len(v1) // 2):
+    v2+= v1[v3] + ""(""
+for v3 in range(len(v1) // 2):
+    v2+= v1[v3] + ""(""
+v2= v2[0:len(v2) - 1]
+print(v2)",15.0,FROM_HALF_TO_ONE_YEAR,0.0,brackets
+5180,"v1=input()
+v2= """"
+for v3 in range(len(v1) // 2):
+    v2+= v1[v3] + ""(""
+for v3 in range(len(v1) // 2):
+    v2+= v1[v3] + "")""
+v2= v2[0:len(v2) - 1]
+print(v2)",15.0,FROM_HALF_TO_ONE_YEAR,0.0,brackets
+5182,"v1=input()
+v2= """"
+for v3 in range(len(v1) // 2):
+    v2+= v1[v3] + ""(""
+for v3 in range(len(v1) // 2, len(v1)):
+    v2+= v1[v3] + "")""
+v2= v2[0:len(v2) - 1]
+print(v2)",15.0,FROM_HALF_TO_ONE_YEAR,0.625,brackets
+5183,"v1=input()
+v2= """"
+for v3 in range(len(v1) // 2):
+    v2+= v1[v3] + ""(""
+for v3 in range(len(v1) // 2, len(v1)):
+    v2+= v1[v3] + "")""
+v2= v2[0:len(v2) - 1]
+
+print(v2)",15.0,FROM_HALF_TO_ONE_YEAR,0.625,brackets
+5203,"v1=input()
+v2= """"
+for v3 in range(len(v1) // 2):
+    v2+= v1[v3] + ""(""
+for v3 in range(len(v1) // 2, len(v1)):
+    v2+= v1[v3] + "")""
+v2= v2[0:len(v2) - 1]
+if len(v2)%2==0:
+    v4= v2[0:len(v2) // 2 + 1] + v2[len(v2) // 2 + 2: len(v2) - 1]
+print(v2)",15.0,FROM_HALF_TO_ONE_YEAR,0.625,brackets
+5204,"v1=input()
+v2= """"
+for v3 in range(len(v1) // 2):
+    v2+= v1[v3] + ""(""
+for v3 in range(len(v1) // 2, len(v1)):
+    v2+= v1[v3] + "")""
+v2= v2[0:len(v2) - 1]
+if len(v2)%2==1:
+    v4= v2[0:len(v2) // 2 + 1] + v2[len(v2) // 2 + 2: len(v2) - 1]
+print(v2)",15.0,FROM_HALF_TO_ONE_YEAR,0.625,brackets
+5205,"v1=input()
+v2= """"
+for v3 in range(len(v1) // 2):
+    v2+= v1[v3] + ""(""
+for v3 in range(len(v1) // 2, len(v1)):
+    v2+= v1[v3] + "")""
+v2= v2[0:len(v2) - 1]
+if len(v2)%2==1:
+    v4= v2[0:len(v2) // 2 + 1] + v2[len(v2) // 2 + 2: len(v2) - 1]
+    
+print(v2)",15.0,FROM_HALF_TO_ONE_YEAR,0.625,brackets
+5207,"v1=input()
+v2= """"
+for v3 in range(len(v1) // 2):
+    v2+= v1[v3] + ""(""
+for v3 in range(len(v1) // 2, len(v1)):
+    v2+= v1[v3] + "")""
+v2= v2[0:len(v2) - 1]
+if len(v2)%2==1:
+    v4= v2[0:len(v2) // 2 + 1] + v2[len(v2) // 2 + 2: len(v2) - 1]
+
+print(v2)",15.0,FROM_HALF_TO_ONE_YEAR,0.625,brackets
+5209,"v1=input()
+v2= """"
+for v3 in range(len(v1) // 2):
+    v2+= v1[v3] + ""(""
+for v3 in range(len(v1) // 2, len(v1)):
+    v2+= v1[v3] + "")""
+v2= v2[0:len(v2) - 1]
+if len(v2)%2==1:
+    v4= v2[0:len(v2) // 2 + 1] + v2[len(v2) // 2 + 2: len(v2) - 1]
+else:
+    v4=v2
+print(v2)",15.0,FROM_HALF_TO_ONE_YEAR,0.625,brackets
+5210,"v1=input()
+v2= """"
+
+for v3 in range(len(v1) // 2):
+    v2+= v1[v3] + ""(""
+for v3 in range(len(v1) // 2, len(v1)):
+    v2+= v1[v3] + "")""
+v2= v2[0:len(v2) - 1]
+if len(v2)%2==1:
+    v4= v2[0:len(v2) // 2 + 1] + v2[len(v2) // 2 + 2: len(v2) - 1]
+else:
+    v4=v2
+print(v2)",15.0,FROM_HALF_TO_ONE_YEAR,0.625,brackets
+5211,"v1=input()
+v2= """"
+v3= """"
+for v4 in range(len(v1) // 2):
+    v2+= v1[v4] + ""(""
+for v4 in range(len(v1) // 2, len(v1)):
+    v2+= v1[v4] + "")""
+v2= v2[0:len(v2) - 1]
+if len(v2)%2==1:
+    v3= v2[0:len(v2) // 2 + 1] + v2[len(v2) // 2 + 2: len(v2) - 1]
+else:
+    v3=v2
+print(v2)",15.0,FROM_HALF_TO_ONE_YEAR,0.625,brackets
+5215,"v1=input()
+v2= """"
+v3= """"
+for v4 in range(len(v1) // 2):
+    v2+= v1[v4] + ""(""
+for v4 in range(len(v1) // 2, len(v1)):
+    v2+= v1[v4] + "")""
+v2= v2[0:len(v2) - 1]
+if len(v2)%2==1:
+    v3= v2[0:len(v2) // 2 + 1] + v2[len(v2) // 2 + 2: len(v2) - 1]
+else:
+    v3=v2
+print(v2)",15.0,FROM_HALF_TO_ONE_YEAR,0.625,brackets
+5221,"v1=input()
+v2= """"
+v3= """"
+for v4 in range(len(v1) // 2):
+    v2+= v1[v4] + ""(""
+for v4 in range(len(v1) // 2, len(v1)):
+    v2+= v1[v4] + "")""
+v2= v2[0:len(v2) - 1]
+if len(v2)%2==1:
+    v3= v2[0:len(v2) // 2] + v2[len(v2) // 2 + 1: len(v2) - 1]
+else:
+    v3=v2
+print(v2)",15.0,FROM_HALF_TO_ONE_YEAR,0.625,brackets
+5223,"v1=input()
+v2= """"
+v3= """"
+for v4 in range(len(v1) // 2):
+    v2+= v1[v4] + ""(""
+for v4 in range(len(v1) // 2, len(v1)):
+    v2+= v1[v4] + "")""
+v2= v2[0:len(v2) - 1]
+if len(v2)%2==1:
+    v3= v2[0:len(v2) // 2] + v2[len(v2) // 2 + 1: len(v2) - 1]
+else:
+    v3=v2
+print(v3)",15.0,FROM_HALF_TO_ONE_YEAR,0.0,brackets
+5224,"v1=input()
+v2= """"
+v3= """"
+for v4 in range(len(v1) // 2):
+    v2+= v1[v4] + ""(""
+for v4 in range(len(v1) // 2, len(v1)):
+    v2+= v1[v4] + "")""
+v2= v2[0:len(v2) - 1]
+if len(v2)%2==1:
+    v3= v2[0:len(v2) // 2] + v2[len(v2) // 2 + 1: len(v2)]
+else:
+    v3=v2
+print(v3)",15.0,FROM_HALF_TO_ONE_YEAR,0.0,brackets

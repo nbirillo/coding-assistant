@@ -1,0 +1,513 @@
+id,fragment,age,programExperience,testsResults,task
+2800,v1 = int(input()),15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2801,"v1 = int(input())
+v2 =int(input())",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2802,"v1 = int(input())
+v2 = int(input())
+",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2803,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2806,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 = v1 * v3
+",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2809,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 = v1 * v3
+v2 = v2 * v3
+",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2812,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 = v1 * v3
+v2 = v2 * v3
+if v2 >= 100:
+    v2 = v1",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2823,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 = v1 * v3
+v2 = v2 * v3
+if v2 >= 100:
+    v2 = v1
+else:
+    print(v2)
+    print(v1, v2, v3)",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2828,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 = v1 * v3
+v2 = v2 * v3
+if v2 >= 100:
+    v2 = v1
+else:
+    print(v2)
+print(v1, v2, v3)",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2829,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 = v1 * v3
+v2 = v2 * v3
+if v2 >= 100:
+    v2 = v1
+else:
+    print(v2)
+
+print(v1, v2, v3)",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2831,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 = v1 * v3
+v2 = v2 * v3
+if v2 >= 100:
+    v2 = v1 + 1
+else:
+    print(v2)
+
+print(v1, v2, v3)",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2832,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 = v1 * v3
+v2 = v2 * v3
+if v2 >= 100:
+    v2 = v1 + 1
+
+
+print(v1, v2, v3)",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2833,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 = v1 * v3
+v2 = v2 * v3
+if v2 >= 100:
+    v2 = v1 + 1
+
+print(v1, v2, v3)",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2853,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 = v1 * v3
+v2 = v2 * v3
+if v2 >= 100:
+    v1 += 1
+else:
+    print(v2)
+
+print(v1, v2, v3)",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2855,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 = v1 * v3
+v2 = v2 * v3
+if v2 >= 100:
+    v1 += 1
+else:
+    print(v2)
+
+print(v1, v2)",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2856,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 = v1 * v3
+v2 = v2 * v3
+if v2 >= 100:
+    v1 += 1
+    
+else:
+    print(v2)
+
+print(v1, v2)",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2859,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 = v1 * v3
+v2 = v2 * v3
+if v2 == 100:
+    v2 = 0
+    
+else:
+    print(v2)
+
+print(v1, v2)",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2861,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 = v1 * v3
+v2 = v2 * v3
+if v2 == 100:
+    v2 = 0
+
+else:
+    print(v2)
+
+print(v1, v2)",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2864,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 = v1 * v3
+v2 = v2 * v3
+if v2 == 100:
+    v2 = 0
+elif v2 > 100:
+    v1 += 1
+else:
+    print(v2)
+
+print(v1, v2)",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2865,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 = v1 * v3
+v2 = v2 * v3
+if v2 == 100:
+    v2 = 0
+elif v2 > 100:
+    v1 += 1
+    
+else:
+    print(v2)
+
+print(v1, v2)",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2871,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 = v1 * v3
+v2 = v2 * v3
+if v2 == 100:
+    v2 = 0
+elif v2 > 100:
+    v1 += 1
+    v2 -= 100
+else:
+    print(v2)
+
+print(v1, v2)",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2878,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 = v1 * v3
+v2 = v2 * v3
+if v2 % 100:
+    v2 = 0
+elif v2 > 100:
+    v1 += 1
+    v2 -= 100
+else:
+    print(v2)
+
+print(v1, v2)",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2879,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 = v1 * v3
+v2 = v2 * v3
+if v2 % 100:
+    v2 = 0
+    
+elif v2 > 100:
+    v1 += 1
+    v2 -= 100
+else:
+    print(v2)
+
+print(v1, v2)",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2882,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 = v1 * v3
+v2 = v2 * v3
+if v2 % 100 == 0:
+    v2 = 0
+    v1 += v2
+elif v2 > 100:
+    v1 += 1
+    v2 -= 100
+else:
+    print(v2)
+
+print(v1, v2)",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2884,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 = v1 * v3
+v2 = v2 * v3
+if v2 % 100 == 0:
+    v2 = 0
+    v1 += v2 % 100
+elif v2 > 100:
+    v1 += 1
+    v2 -= 100
+else:
+    print(v2)
+
+print(v1, v2)",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2885,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 = v1 * v3
+v2 = v2 * v3
+if v2 % 100 == 0:
+    v2 = 0
+    v1 += v2 % 100
+
+else:
+    print(v2)
+
+print(v1, v2)",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2886,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 = v1 * v3
+v2 = v2 * v3
+if v2 % 100 == 0:
+    v2 = 0
+    v1 += v2 % 100
+else:
+    print(v2)
+
+print(v1, v2)",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2887,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 = v1 * v3
+v2 = v2 * v3
+if v2 % 100 == 0:
+    v2 = 0
+
+else:
+    print(v2)
+
+print(v1, v2)",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2888,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 = v1 * v3
+v2 = v2 * v3
+if v2 % 100 == 0:
+    v2 = 0
+
+
+else:
+    print(v2)
+
+print(v1, v2)",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2889,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 = v1 * v3
+v2 = v2 * v3
+if v2 % 100 == 0:
+    v2 = 0
+
+else:
+    print(v2)
+
+print(v1, v2)",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2899,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 = v1 * v3
+v2 = v2 * v3
+if v2 % 100 == 0:
+    v2 = 0
+    v1 += v2 % 100
+else:
+    print(v2)
+
+print(v1, v2)",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2901,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 = v1 * v3
+v2 = v2 * v3
+if v2 // 100 == 0:
+    v2 = 0
+    v1 += v2 % 100
+else:
+    print(v2)
+
+print(v1, v2)",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2902,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 = v1 * v3
+v2 = v2 * v3
+if v2 // 100 == 0:
+    v2 = 0
+    v1 += v2 // 100
+else:
+    print(v2)
+
+print(v1, v2)",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2905,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 = v1 * v3
+v2 = v2 * v3
+if v2 // 100:
+    v2 = 0
+    v1 += v2 // 100
+else:
+    print(v2)
+
+print(v1, v2)",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2920,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 = v1 * v3
+v2 = v2 * v3
+if v2 // 100:
+
+    v1 += v2 // 100
+else:
+    print(v2)
+
+print(v1, v2)",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2921,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 = v1 * v3
+v2 = v2 * v3
+if v2 // 100:
+    v1 += v2 // 100
+else:
+    print(v2)
+
+print(v1, v2)",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2922,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 = v1 * v3
+v2 = v2 * v3
+if v2 // 100:
+    v1 += v2 // 100
+    
+else:
+    print(v2)
+
+print(v1, v2)",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2924,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 = v1 * v3
+v2 = v2 * v3
+if v2 // 100:
+    v1 += v2 // 100
+
+else:
+    print(v2)
+
+print(v1, v2)",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2925,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 = v1 * v3
+v2 = v2 * v3
+if v2 // 100:
+    v1 += v2 // 100
+else:
+    print(v2)
+
+print(v1, v2)",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2926,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 = v1 * v3
+v2 = v2 * v3
+if v2 // 100:
+    v1 += v2 // 100
+    
+else:
+    print(v2)
+
+print(v1, v2)",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2942,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 = v1 * v3
+v2 = v2 * v3
+if v2 // 100:
+    v1 += v2 // 100
+    v2 = (v2 * v3) - v2 // 100
+else:
+    print(v2)
+
+print(v1, v2)",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2943,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 *= v3
+v2 *= v3
+if v2 // 100:
+    v1 += v2 // 100
+    v2 -= v2
+else:
+    print(v2)
+
+print(v1, v2)",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2955,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 *= v3
+v2 *= v3
+if v2 // 100:
+    v1 += v2 // 100
+    
+else:
+    print(v2)
+
+print(v1, v2)",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2956,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 *= v3
+v2 *= v3
+
+v1 += v2 // 100
+    
+print(v2)
+
+print(v1, v2)",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+2959,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 *= v3
+v2 *= v3
+
+v1 += v2 // 100
+    
+
+
+print(v1, v2)",15.0,LESS_THAN_HALF_YEAR,0.25,pies
+2960,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 *= v3
+v2 *= v3
+
+v1 += v2 // 100
+    
+
+print(v1, v2)",15.0,LESS_THAN_HALF_YEAR,0.25,pies
+2961,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 *= v3
+v2 *= v3
+
+v1 += v2 // 100
+    
+print(v1, v2)",15.0,LESS_THAN_HALF_YEAR,0.25,pies
+2996,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 *= v3
+v2 *= v3
+
+v1 += v2 // 100
+v2 %= 100
+print(v1, v2)",15.0,LESS_THAN_HALF_YEAR,1.0,pies

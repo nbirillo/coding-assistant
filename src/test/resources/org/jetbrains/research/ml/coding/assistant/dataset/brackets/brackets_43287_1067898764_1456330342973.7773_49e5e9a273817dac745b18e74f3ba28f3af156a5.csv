@@ -1,0 +1,137 @@
+id,fragment,age,programExperience,testsResults,task
+4231,"
+",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4232,v1 = list,21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4233,v1 = list(input()),21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4234,"v1 = list(input())
+v2 = 0",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4236,"v1 = list(input())
+v2 = 0",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4237,"v1 = list(input())
+v2 = 0
+v3 = len",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4241,"v1 = list(input())
+v2 = 0
+v3 = len",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4242,"v1 = list(input())
+v2 = 0
+",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4243,"v1 = list(input())
+",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4244,"v1 = list(input())
+v2 = v1",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4247,"v1 = list(input())
+v2 = v1[:len(v1) // 2]",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4248,"v1 = list(input())
+v2 = v1[:len(v1) // 2]
+v3 = v1[:]",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4253,"v1 = list(input())
+v2 = v1[:len(v1) // 2]
+v3 = v1[len(v1) // 2]",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4256,"v1 = list(input())
+v2 = v1[:len(v1) // 2]
+v3 = v1[len(v1) // 2]",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4259,"v1 = list(input())
+v2 = v1[:len(v1) // 2]
+v3 = v1[len(v1) // 2:]",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4260,"v1 = list(input())
+v2 = v1[:len(v1) // 2]
+v3 = v1[len(v1) // 2:
+     ]",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4265,"v1 = list(input())
+v2 = v1[:len(v1) // 2]
+v3 = v1[len(v1) // 2:
+     ]",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4266,"v1 = list(input())
+v2 = v1[:len(v1) // 2]
+v3 = v1[len(v1) // 2:]",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4272,"v1 = list(input())
+v2 = v1[:len(v1) // 2]
+v3 = v1[len(v1) // 2:]
+print(v2, v3)",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4274,"v1 = list(input())
+v2 = v1[:len(v1) // 2 + 1]
+v3 = v1[len(v1) // 2:]
+print(v2, v3)",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4276,"v1 = list(input())
+v2 = v1[:len(v1) // 2 + 1]
+v3 = v1[len(v1) // 2 + 1:]
+print(v2, v3)",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4277,"v1 = list(input())
+v2 = v1[:len(v1) // 2 + 1]
+v3 = v1[len(v1) // 2 + 1:]
+
+print(v2, v3)",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4279,"v1 = list(input())
+v2 = v1[:len(v1) // 2 + 1]
+v3 = v1[len(v1) // 2 + 1:]
+
+print(v2, v3)",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4280,"v1 = list(input())
+v2 = v1[:len(v1) // 2 + 1]
+v3 = v1[len(v1) // 2 + 1:]
+print(v2, v3)",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4281,"v1 = list(input())
+v2 = v1[:len(v1) // 2 + 1]
+v3 = v1
+print(v2, v3)",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4282,"v1 = list(input())
+",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4288,"v1 = list(input())
+v2 = v1[:len(v1) // 2]
+v3 = v1[len(v1) // 2:]
+if len(v1) % 2 == 0:
+    print(v2, v3)
+    ",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4301,"v1 = list(input())
+v2 = v1[:len(v1) // 2]
+v3 = v1[len(v1) // 2:]
+if len(v1) % 2 == 0:
+    print('('.join(v2) + ')'.join(')'))
+",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4316,"v1 = list(input())
+v2 = v1[:len(v1) // 2]
+v3 = v1[len(v1) // 2:]
+if len(v1) % 2 == 0:
+    print('('.join(v2) + ')'.join(')'))
+else:
+    print('('.join(v2) + '(' + ')'.join(v3))",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4322,"v1 = list(input())
+v2 = v1[:len(v1) // 2]
+v3 = v1[len(v1) // 2:]
+if len(v1) % 2 == 0:
+    print('('.join(v2) + ')'.join(')'))
+else:
+    print('('.join(v2) + '(' + ')'.join(v3))",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4323,"v1 = list(input())
+v2 = v1[:len(v1) // 2]
+v3 = v1[len(v1) // 2:]
+if len(v1) % 2 == 0:
+    print('('.join(v2) + ')'.join(')'))
+    
+else:
+    print('('.join(v2) + '(' + ')'.join(v3))",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4329,"v1 = list(input())
+v2 = v1[:len(v1) // 2]
+v3 = v1[len(v1) // 2:]
+if len(v1) % 2 == 0:
+    print('('.join(v2) + ')'.join(')'))
+    print(v2, v3)
+else:
+    print('('.join(v2) + '(' + ')'.join(v3))",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4333,"v1 = list(input())
+v2 = v1[:len(v1) // 2]
+v3 = v1[len(v1) // 2:]
+if len(v1) % 2 == 0:
+    print('('.join(v2) + ')'.join(v3))
+    print(v2, v3)
+else:
+    print('('.join(v2) + '(' + ')'.join(v3))",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4335,"v1 = list(input())
+v2 = v1[:len(v1) // 2]
+v3 = v1[len(v1) // 2:]
+if len(v1) % 2 == 0:
+    print('('.join(v2) + ')'.join(v3))
+
+else:
+    print('('.join(v2) + '(' + ')'.join(v3))",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets

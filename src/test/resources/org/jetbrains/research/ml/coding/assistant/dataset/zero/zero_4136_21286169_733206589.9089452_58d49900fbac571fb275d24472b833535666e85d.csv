@@ -1,0 +1,5 @@
+id,fragment,age,programExperience,testsResults,task
+486,"v1=int(input())
+
+
+",16.0,LESS_THAN_HALF_YEAR,0,is_zero

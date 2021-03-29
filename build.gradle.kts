@@ -8,6 +8,7 @@ plugins {
     id("com.github.johnrengelman.shadow") version "5.1.0"
     id("org.jetbrains.dokka") version "0.10.1"
     id("org.jlleitschuh.gradle.ktlint") version "9.4.1"
+    id("io.gitlab.arturbosch.detekt") version "1.15.0"
 }
 
 group = "io.github.nbirillo.coding.assistant"
@@ -51,10 +52,26 @@ ktlint {
     enableExperimentalRules.set(true)
 }
 
+detekt {
+    config = files("./detekt-config.yml")
+    buildUponDefaultConfig = true
+
+    reports {
+        html.enabled = false
+        xml.enabled = false
+        txt.enabled = false
+    }
+}
+
+/**
+ * Gradle task to build and serialize solution space into `output` directory.
+ * input is a directory with a name of the task containing dataset .csv files.
+ */
 open class SolutionSpaceCliTask : org.jetbrains.intellij.tasks.RunIdeTask() {
     // Input directory with csv files
     @get:Input
     val input: String? by project
+
     // Output directory
     @get:Input
     val output: String? by project
@@ -66,17 +83,24 @@ open class SolutionSpaceCliTask : org.jetbrains.intellij.tasks.RunIdeTask() {
     }
 }
 
+/**
+ * Generates hint report using implemented algorithm.
+ */
 open class HintGenerationCliTask : org.jetbrains.intellij.tasks.RunIdeTask() {
-    // Path to the serialized solution space
+    // Path to the serialized solution space file.
     @get:Input
     val solutionSpacePath: String? by project
-    // Path to data with original code to generate report
+
+    // Path to support information about dataset original code fragments.
+    // Needed for only report.
     @get:Input
     val codeRepositoryPath: String? by project
-    // Output directory
+
+    // Name of the task.
     @get:Input
     val taskName: String? by project
 
+    // Directory to store the report.
     @get:Input
     val outputDir: String? by project
 
@@ -99,6 +123,7 @@ tasks {
         .forEach { it.enabled = false }
 
     register<SolutionSpaceCliTask>("solutionSpaceCli") {
+        dependsOn("buildPlugin")
         args = listOfNotNull(
             "solution-space",
             input?.let { "--input_path=$it" },
@@ -107,6 +132,7 @@ tasks {
     }
 
     register<HintGenerationCliTask>("hintGenerationCli") {
+        dependsOn("buildPlugin")
         args = listOfNotNull(
             "hint-generation",
             solutionSpacePath?.let { "--space_path=$it" },

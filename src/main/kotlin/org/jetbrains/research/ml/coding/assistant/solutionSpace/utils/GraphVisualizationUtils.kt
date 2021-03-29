@@ -59,4 +59,6 @@ private object GraphVisualizationUtils {
     }
 }
 
-private val mxStylesheet.finalSolutionStyle get() = styles[GraphVisualizationUtils.FINAL_SOLUTION_NAME]!!
+private val mxStylesheet.finalSolutionStyle
+    get() = styles[GraphVisualizationUtils.FINAL_SOLUTION_NAME]
+        ?: error("Final solution style is not represented in the stylesheet")
