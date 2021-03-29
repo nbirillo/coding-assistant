@@ -1,0 +1,154 @@
+id,fragment,age,programExperience,testsResults,task
+4603,"v1 = input()
+",23,MORE_THAN_SIX,0.0,brackets
+4606,"v1 = input()
+v2 = """"
+
+for v3 in range(len(v1)):
+    if v3 < len(v1) / 2:
+        v2 += v1[v3] + """"",23,MORE_THAN_SIX,0.0,brackets
+4607,"v1 = input()
+v2 = """"
+
+for v3 in range(len(v1)):
+    if v3 < len(v1) / 2:
+        v2 += v1[v3] + ""(""
+        ",23,MORE_THAN_SIX,0.0,brackets
+4608,"v1 = input()
+v2 = """"
+
+for v3 in range(len(v1)):
+    if v3 < len(v1) / 2:
+        v2 += v1[v3] + ""(""
+    else:
+        v2 += v1",23,MORE_THAN_SIX,0.0,brackets
+4610,"v1 = input()
+v2 = """"
+
+for v3 in range(len(v1)):
+    if v3 < len(v1) / 2:
+        v2 += v1[v3] + ""(""
+    else:
+        v2 += "")"" + v1[v3]",23,MORE_THAN_SIX,0.0,brackets
+4611,"v1 = input()
+v2 = """"
+
+for v3 in range(len(v1)):
+    if v3 < len(v1) / 2:
+        v2 += v1[v3] + ""(""
+    else:
+        v2 += "")"" + v1[v3]
+
+print(v2)",23,MORE_THAN_SIX,0.0,brackets
+4612,"v1 = input()
+v2 = """"
+
+for v3 in range(len(v1)):
+    if v3 == 0:
+        v2 += v1[v3]
+    
+print(v2)",23,MORE_THAN_SIX,0.125,brackets
+4620,"v1 = input()
+v2 = """"
+
+for v3 in range(len(v1)):
+    if v3 == 0:
+        v2 += v1[v3]
+    elif v3 < len(v1) / 2:
+        v2 += ""("" + v1[v3]
+print(v2)",23,MORE_THAN_SIX,0.125,brackets
+4621,"v1 = input()
+v2 = """"
+
+for v3 in range(len(v1)):
+    if v3 == 0:
+        v2 += v1[v3]
+    elif v3 < len(v1) / 2:
+        v2 += ""("" + v1[v3]
+        
+print(v2)",23,MORE_THAN_SIX,0.125,brackets
+4623,"v1 = input()
+v2 = """"
+
+for v3 in range(len(v1)):
+    if v3 == 0:
+        v2 += v1[v3]
+    elif v3 < len(v1) / 2:
+        v2 += ""("" + v1[v3]
+    
+print(v2)",23,MORE_THAN_SIX,0.125,brackets
+4630,"v1 = input()
+v2 = """"
+
+for v3 in range(len(v1)):
+    if v3 == 0:
+        v2 += v1[v3]
+    elif v3 < len(v1) / 2:
+        v2 += ""("" + v1[v3]
+    else:
+        v2 += "")"" + v1[v3]
+print(v2)",23,MORE_THAN_SIX,0.125,brackets
+4631,"v1 = input()
+v2 = """"
+
+for v3 in range(len(v1)):
+    if v3 == 0:
+        v2 += v1[v3]
+    elif v3 < len(v1) / 2:
+        v2 += ""("" + v1[v3]
+    else:
+        v2 += "")"" + v1[v3]
+        
+print(v2)",23,MORE_THAN_SIX,0.125,brackets
+4632,"v1 = input()
+v2 = """"
+
+for v3 in range(len(v1)):
+    if v3 == 0:
+        v2 += v1[v3]
+    elif v3 < len(v1) / 2:
+        v2 += ""("" + v1[v3]
+    else:
+        v2 += "")"" + v1[v3]
+
+print(v2)",23,MORE_THAN_SIX,0.125,brackets
+4633,"v1 = input()
+v2 = """"
+
+for v3 in range(len(v1)):
+    if v3 == 0:
+        v2 += v1[v3]
+        
+    elif v3 < len(v1) / 2:
+        v2 += ""("" + v1[v3]
+    else:
+        v2 += "")"" + v1[v3]
+
+print(v2)",23,MORE_THAN_SIX,0.125,brackets
+4635,"v1 = input()
+v2 = """"
+
+for v3 in range(len(v1)):
+    if v3 == 0:
+        v2 += v1[v3]
+    
+    elif v3 < len(v1) / 2:
+        v2 += ""("" + v1[v3]
+    else:
+        v2 += "")"" + v1[v3]
+
+print(v2)",23,MORE_THAN_SIX,0.125,brackets
+4639,"v1 = input()
+v2 = """"
+
+for v3 in range(len(v1)):
+    if v3 == 0:
+        v2 += v1[v3]
+    elif (len(v1) % 2) == 0 and (v3 == len(v1) / 2):
+        v2 += v1[v3]
+    elif v3 < len(v1) / 2:
+        v2 += ""("" + v1[v3]
+    else:
+        v2 += "")"" + v1[v3]
+
+print(v2)",23,MORE_THAN_SIX,1.0,brackets

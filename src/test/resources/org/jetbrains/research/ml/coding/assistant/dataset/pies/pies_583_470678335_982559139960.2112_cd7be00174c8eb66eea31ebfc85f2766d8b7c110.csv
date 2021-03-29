@@ -1,0 +1,49 @@
+id,fragment,age,programExperience,testsResults,task
+3577,v1 = int(input()),17.0,FROM_FOUR_TO_SIX_YEARS,0.0,pies
+3578,"v1 = int(input())
+v2 = int(input())
+",17.0,FROM_FOUR_TO_SIX_YEARS,0.0,pies
+3579,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+",17.0,FROM_FOUR_TO_SIX_YEARS,0.0,pies
+3582,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v2 = v2 * v3
+",17.0,FROM_FOUR_TO_SIX_YEARS,0.0,pies
+3586,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v2 = v2 * v3
+v4 = v2 // 100",17.0,FROM_FOUR_TO_SIX_YEARS,0.0,pies
+3589,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v2 = v2 * v3
+v4 = v2 // 100
+v2 %= 100",17.0,FROM_FOUR_TO_SIX_YEARS,0.0,pies
+3592,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v2 = v2 * v3
+v4 = v2 // 100
+v2 %= 100
+v4 += v1 * v3
+",17.0,FROM_FOUR_TO_SIX_YEARS,0.0,pies
+3593,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v2 = v2 * v3
+v4 = v2 // 100
+v2 %= 100
+v4 += v1 * v3
+print()",17.0,FROM_FOUR_TO_SIX_YEARS,0.0,pies
+3598,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v2 = v2 * v3
+v4 = v2 // 100
+v2 %= 100
+v4 += v1 * v3
+print(v4, v2)",17.0,FROM_FOUR_TO_SIX_YEARS,1.0,pies

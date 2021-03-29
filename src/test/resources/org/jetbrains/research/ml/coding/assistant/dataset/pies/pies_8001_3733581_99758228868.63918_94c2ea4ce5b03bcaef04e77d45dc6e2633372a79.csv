@@ -1,0 +1,41 @@
+id,fragment,age,programExperience,testsResults,task
+4381,v1=int(input()),15.0,FROM_HALF_TO_ONE_YEAR,0.0,pies
+4382,"v1=int(input())
+v2=int",15.0,FROM_HALF_TO_ONE_YEAR,0.0,pies
+4384,"v1=int(input())
+v2=int(input())",15.0,FROM_HALF_TO_ONE_YEAR,0.0,pies
+4385,"v1=int(input())
+v2=int(input())
+v3=int()",15.0,FROM_HALF_TO_ONE_YEAR,0.0,pies
+4386,"v1=int(input())
+v2=int(input())
+v3=int(input())",15.0,FROM_HALF_TO_ONE_YEAR,0.0,pies
+4387,"v1=int(input())
+v2=int(input())
+v3=int(input())
+    ",15.0,FROM_HALF_TO_ONE_YEAR,0.0,pies
+4389,"v1=int(input())
+v2=int(input())
+v3=int(input())
+
+",15.0,FROM_HALF_TO_ONE_YEAR,0.0,pies
+4414,"v1=int(input())
+v2=int(input())
+v3=int(input())
+v4= v1 * v3
+v5= v2 * v3
+while v5>=100:
+    v4+=1
+    v5-=100
+print(v1, v2)
+",15.0,FROM_HALF_TO_ONE_YEAR,0.125,pies
+4417,"v1=int(input())
+v2=int(input())
+v3=int(input())
+v4= v1 * v3
+v5= v2 * v3
+while v5>=100:
+    v4+=1
+    v5-=100
+print(v4, v5)
+",15.0,FROM_HALF_TO_ONE_YEAR,1.0,pies

@@ -1,0 +1,223 @@
+id,fragment,age,programExperience,testsResults,task
+543,v1 = int(input()),14.0,LESS_THAN_HALF_YEAR,0.0,is_zero
+544,"v1 = int(input())
+v2 =[]
+for v3 in range(v1):
+    v2.append(v3)",14.0,LESS_THAN_HALF_YEAR,0.0,is_zero
+546,"v1 = int(input())
+v2 =[]
+for v3 in range(v1):
+    v2.append(int(input()))",14.0,LESS_THAN_HALF_YEAR,0.0,is_zero
+553,"v1 = int(input())
+v2 =[]
+for v3 in range(v1):
+    v2.append(int(input()))
+for v4 in range(v1):
+    if v2[v4]==0:
+        print(""YES"")",14.0,LESS_THAN_HALF_YEAR,0.0,is_zero
+555,"v1 = int(input())
+v2 =[]
+for v3 in range(v1):
+    v2.append(int(input()))
+for v4 in range(v1):
+    if v2[v4]==0:
+        print(""YES"")
+",14.0,LESS_THAN_HALF_YEAR,0.0,is_zero
+556,"v1 = int(input())
+v2 =[]
+for v3 in range(v1):
+    v2.append(int(input()))
+for v4 in range(v1):
+    if v2[v4]==0:
+    
+        print(""YES"")
+",14.0,LESS_THAN_HALF_YEAR,0.0,is_zero
+561,"v1 = int(input())
+v2 =[]
+for v3 in range(v1):
+    v2.append(int(input()))
+for v4 in range(v1):
+    if v2[v4]==0:
+        v5 = ""YES""
+        print(""YES"")
+",14.0,LESS_THAN_HALF_YEAR,0.0,is_zero
+563,"v1 = int(input())
+v2 =[]
+for v3 in range(v1):
+    v2.append(int(input()))
+for v4 in range(v1):
+    if v2[v4]==0:
+        v5 = ""YES""
+        print(v5)
+",14.0,LESS_THAN_HALF_YEAR,0.0,is_zero
+569,"v1 = int(input())
+v2 =[]
+for v3 in range(v1):
+    v2.append(int(input()))
+for v4 in range(v1):
+    if v2[v4]==0:
+        v5 = ""YES""
+        print(v5)
+if not v5 == ""YES"":
+    print(""NO"")",14.0,LESS_THAN_HALF_YEAR,0.0,is_zero
+570,"v1 = int(input())
+v2 =[]
+for v3 in range(v1):
+    v2.append(int(input()))
+for v4 in range(v1):
+    if v2[v4]==0:
+        v5 = ""YES""
+        print(v5)
+
+    print(""NO"")",14.0,LESS_THAN_HALF_YEAR,0.125,is_zero
+571,"v1 = int(input())
+v2 =[]
+for v3 in range(v1):
+    v2.append(int(input()))
+for v4 in range(v1):
+    if v2[v4]==0:
+        v5 = ""YES""
+        print(v5)
+
+print(""NO"")",14.0,LESS_THAN_HALF_YEAR,0.125,is_zero
+572,"v1 = int(input())
+v2 =[]
+for v3 in range(v1):
+    v2.append(int(input()))
+for v4 in range(v1):
+    if v2[v4]==0:
+        v5 = ""YES""
+        print(v5)
+print(""NO"")",14.0,LESS_THAN_HALF_YEAR,0.125,is_zero
+573,"v1 = int(input())
+v2 =[]
+for v3 in range(v1):
+    v2.append(int(input()))
+for v4 in range(v1):
+    if v2[v4]==0:
+        print()
+print(""NO"")",14.0,LESS_THAN_HALF_YEAR,0.125,is_zero
+577,"v1 = int(input())
+v2 =[]
+for v3 in range(v1):
+    v2.append(int(input()))
+for v4 in range(v1):
+    if v2[v4]==0:
+        print(""YES"")
+print(""NO"")",14.0,LESS_THAN_HALF_YEAR,0.125,is_zero
+578,"v1 = int(input())
+v2 =[]
+for v3 in range(v1):
+    v2.append(int(input()))
+for v4 in range(v1):
+    if v2[v4]==0:
+        print(""YES"")
+",14.0,LESS_THAN_HALF_YEAR,0.0,is_zero
+580,"v1 = int(input())
+v2 =[]
+for v3 in range(v1):
+    v2.append(int(input()))
+for v4 in range(v1):
+    if v2[v4]==0:
+        v5 = 0",14.0,LESS_THAN_HALF_YEAR,0.0,is_zero
+583,"v1 = int(input())
+v2 =[]
+for v3 in range(v1):
+    v2.append(int(input()))
+for v4 in range(v1):
+    if v2[v4]==0:
+        v5 = 0
+    if v5 == 0:
+        print(""YEAS"")",14.0,LESS_THAN_HALF_YEAR,0.0,is_zero
+585,"v1 = int(input())
+v2 =[]
+for v3 in range(v1):
+    v2.append(int(input()))
+for v4 in range(v1):
+    if v2[v4]==0:
+        v5 = 0
+    if v5 == 0:
+        print(""YEAS"")
+        ",14.0,LESS_THAN_HALF_YEAR,0.0,is_zero
+592,"v1 = int(input())
+v2 =[]
+for v3 in range(v1):
+    v2.append(int(input()))
+for v4 in range(v1):
+    if v2[v4]==0:
+        v5 = 0
+    if v5 == 0:
+        print(""YEAS"")
+    else:
+        print(""NO"")",14.0,LESS_THAN_HALF_YEAR,0.0,is_zero
+593,"v1 = int(input())
+v2 =[]
+for v3 in range(v1):
+    v2.append(int(input()))
+for v4 in range(v1):
+    if v2[v4]==0:
+        v5 = 0
+    if v5 == 0:
+        print(""YES"")
+    else:
+        print(""NO"")",14.0,LESS_THAN_HALF_YEAR,0.0,is_zero
+594,"v1 = int(input())
+v2 =[]
+
+for v3 in range(v1):
+    v2.append(int(input()))
+for v4 in range(v1):
+    if v2[v4]==0:
+        v5 = 0
+    if v5 == 0:
+        print(""YES"")
+    else:
+        print(""NO"")",14.0,LESS_THAN_HALF_YEAR,0.0,is_zero
+597,"v1 = int(input())
+v2 =[]
+v3 = 1
+for v4 in range(v1):
+    v2.append(int(input()))
+for v5 in range(v1):
+    if v2[v5]==0:
+        v3 = 0
+    if v3 == 0:
+        print(""YES"")
+    else:
+        print(""NO"")",14.0,LESS_THAN_HALF_YEAR,0.125,is_zero
+598,"v1 = int(input())
+v2 =[]
+v3 = 1
+for v4 in range(v1):
+    v2.append(int(input()))
+for v5 in range(v1):
+    if v2[v5]==0:
+        v3 = 0
+if v3 == 0:
+        print(""YES"")
+else:
+        print(""NO"")",14.0,LESS_THAN_HALF_YEAR,1.0,is_zero
+600,"v1 = int(input())
+v2 =[]
+v3 = 1
+for v4 in range(v1):
+    v2.append(int(input()))
+for v5 in range(v1):
+    if v2[v5]==0:
+        v3 = 0
+if v3 == 0:
+    print(""YES"")
+else:
+        print(""NO"")",14.0,LESS_THAN_HALF_YEAR,1.0,is_zero
+602,"v1 = int(input())
+v2 =[]
+v3 = 1
+for v4 in range(v1):
+    v2.append(int(input()))
+for v5 in range(v1):
+    if v2[v5]==0:
+        v3 = 0
+if v3 == 0:
+    print(""YES"")
+else:
+    print(""NO"")",14.0,LESS_THAN_HALF_YEAR,1.0,is_zero

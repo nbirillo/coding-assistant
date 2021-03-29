@@ -1,0 +1,17 @@
+id,fragment,age,programExperience,testsResults,task
+1139,v1=int(input()),13.0,FROM_HALF_TO_ONE_YEAR,0.0,is_zero
+1144,"v1=int(input())
+v2 = 0
+
+for v3 in range(v1):
+    v4=int(input())
+    if (v4==0):
+        v2 = v2 + 1
+        
+if v2==0:
+    print('NO')
+else:
+    print(""YES"")
+
+
+",13.0,FROM_HALF_TO_ONE_YEAR,1.0,is_zero

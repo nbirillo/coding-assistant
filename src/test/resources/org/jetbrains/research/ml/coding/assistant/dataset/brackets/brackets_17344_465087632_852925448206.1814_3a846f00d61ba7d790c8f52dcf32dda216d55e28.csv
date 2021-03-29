@@ -1,0 +1,83 @@
+id,fragment,age,programExperience,testsResults,task
+2268,"v1 = int(input())
+",-1,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+2269,"
+",-1,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+2299,"def f1(f1_p1):
+    if len(f1_p1) > 2:
+        return f1_p1[1] + '(' + f1(f1_p1[1:len(1) - 1]) + ')' + f1_p1[-1]",-1,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+2303,"def f1(f1_p1):
+    if len(f1_p1) > 2:
+        return f1_p1[1] + '(' + f1(f1_p1[1:len(1) - 1]) + ')' + f1_p1[-1]
+    return f1_p1",-1,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+2312,"def f1(f1_p1):
+    if len(f1_p1) > 2:
+        return f1_p1[1] + '(' + f1(f1_p1[1:len(1) - 1]) + ')' + f1_p1[-1]
+    return f1_p1
+print('(' + f1(input) + ')')",-1,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+2313,"def f1(f1_p1):
+
+    if len(f1_p1) > 2:
+        return f1_p1[1] + '(' + f1(f1_p1[1:len(1) - 1]) + ')' + f1_p1[-1]
+    return f1_p1
+print('(' + f1(input) + ')')",-1,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+2316,"def f1(f1_p1):
+
+    if len(f1_p1) > 2:
+        return f1_p1[1] + '(' + f1(f1_p1[1:len(1) - 1]) + ')' + f1_p1[-1]
+    return f1_p1
+print('(' + f1(input) + ')')",-1,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+2317,"def f1(f1_p1):
+    if len(f1_p1) > 2:
+        return f1_p1[1] + '(' + f1(f1_p1[1:len(1) - 1]) + ')' + f1_p1[-1]
+    return f1_p1
+print('(' + f1(input) + ')')",-1,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+2318,"def f1(f1_p1):
+    if len(f1_p1) > 2:
+        return f1_p1[1] + '(' + f1(f1_p1[1:len(1) - 1]) + ')' + f1_p1[-1]
+    return f1_p1
+print('(' + f1(input) + ')')",-1,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+2322,"v1 = str
+def f1(f1_p1):
+    if len(f1_p1) > 2:
+        return f1_p1[1] + '(' + f1(f1_p1[1:len(1) - 1]) + ')' + f1_p1[-1]
+    return f1_p1
+print('(' + f1(v1) + ')')",-1,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+2326,"v1 = str(input())
+def f1(f1_p1):
+    if len(f1_p1) > 2:
+        return f1_p1[1] + '(' + f1(f1_p1[1:len(1) - 1]) + ')' + f1_p1[-1]
+    return f1_p1
+print('(' + f1(v1) + ')')",-1,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+2328,"v1 = str(input())
+def f1(f1_p1):
+    if len(f1_p1) > 2:
+        return f1_p1[1] + '(' + f1(f1_p1[1:len(1) - 1]) + ')' + f1_p1[-1]
+    return f1_p1
+print('(' + f1(input()) + ')')",-1,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+2331,"v1 = input()
+def f1(f1_p1):
+    if len(f1_p1) > 2:
+        return f1_p1[1] + '(' + f1(f1_p1[1:len(1) - 1]) + ')' + f1_p1[-1]
+    return f1_p1
+print('(' + f1(input()) + ')')",-1,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+2333,"v1 = input()
+def f1(f1_p1):
+    if len(f1_p1) > 2:
+        return f1_p1[1] + '(' + f1(f1_p1[1:len(1) - 1]) + ')' + f1_p1[-1]
+    return f1_p1
+print('(' + f1(v1) + ')')",-1,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+2335,"v1 = input()
+def f1(f1_p1):
+    if len(f1_p1) > 2:
+        return f1_p1[1] + '(' + f1(f1_p1[1:len(f1_p1) - 1]) + ')' + f1_p1[-1]
+    return f1_p1
+print('(' + f1(v1) + ')')",-1,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+2336,"
+",-1,FROM_ONE_TO_TWO_YEARS,0.0,brackets
+2337,"v1 = input()
+def f1(f1_p1):
+    if len(f1_p1) > 2:
+        return f1_p1[1] + '(' + f1(f1_p1[1:len(f1_p1) - 1]) + ')' + f1_p1[-1]
+    return f1_p1
+print('(' + f1(v1) + ')')",-1,FROM_ONE_TO_TWO_YEARS,0.0,brackets

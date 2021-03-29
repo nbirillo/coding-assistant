@@ -1,0 +1,8 @@
+id,fragment,age,programExperience,testsResults,task
+374,v1 = str(input()),15.0,LESS_THAN_HALF_YEAR,0,max_digit
+375,"v1 = str(input())
+v2 = 0
+",15.0,LESS_THAN_HALF_YEAR,0,max_digit
+376,"v1 = str(input())
+v2 = 0
+v3 = len(v1)",15.0,LESS_THAN_HALF_YEAR,0,max_digit

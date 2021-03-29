@@ -1,0 +1,20 @@
+id,fragment,age,programExperience,testsResults,task
+3385,v1 = int(input()),-1,FROM_ONE_TO_TWO_YEARS,0.0,pies
+3386,"v1 = int(input())
+v2 = int()",-1,FROM_ONE_TO_TWO_YEARS,0.0,pies
+3387,"v1 = int(input())
+v2 = int(input())",-1,FROM_ONE_TO_TWO_YEARS,0.0,pies
+3388,"v1 = int(input())
+v2 = int(input())
+v3 = int()",-1,FROM_ONE_TO_TWO_YEARS,0.0,pies
+3389,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())",-1,FROM_ONE_TO_TWO_YEARS,0.0,pies
+3390,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+print()",-1,FROM_ONE_TO_TWO_YEARS,0.0,pies
+3422,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+print(v1 * v3 + v2 * v3 // 100, v2 * v3 % 100)",-1,FROM_ONE_TO_TWO_YEARS,1.0,pies

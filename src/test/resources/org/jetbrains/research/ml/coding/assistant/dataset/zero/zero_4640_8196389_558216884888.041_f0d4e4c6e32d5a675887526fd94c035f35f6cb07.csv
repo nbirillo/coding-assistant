@@ -1,0 +1,120 @@
+id,fragment,age,programExperience,testsResults,task
+726,v1 = int(input()),11.0,MORE_THAN_SIX,0.0,is_zero
+730,"v1 = int(input())
+for v2 in range (v1):
+    v2 = int(input())",11.0,MORE_THAN_SIX,0.0,is_zero
+733,"v1 = int(input())
+for v2 in range (v1):
+    v2 = int(input())
+    if(v2 == 0):
+        print(v1)",11.0,MORE_THAN_SIX,0.0,is_zero
+734,"v1 = int(input())
+for v2 in range (v1):
+    v2 = int(input())
+    if(v2 == 0):
+        print("""")
+        ",11.0,MORE_THAN_SIX,0.0,is_zero
+737,"v1 = int(input())
+for v2 in range (v1):
+    v2 = int(input())
+    if(v2 == 0):
+        print(""YES"")
+        ",11.0,MORE_THAN_SIX,0.0,is_zero
+738,"v1 = int(input())
+
+for v2 in range (v1):
+    v3 = int(input())
+    if(v2 == 0):
+        print(""YES"")
+
+    
+",11.0,MORE_THAN_SIX,0.0,is_zero
+739,"v1 = int(input())
+v2 = 0
+for v3 in range (v1):
+    v2 = int(input())
+    if(v3 == 0):
+        print(""YES"")
+
+    
+",11.0,MORE_THAN_SIX,0.0,is_zero
+740,"v1 = int(input())
+v2 = 0
+for v3 in range (v1):
+    v2 = int(input())
+    if(v2 == 0):
+        print(""YES"")
+
+    
+",11.0,MORE_THAN_SIX,0.0,is_zero
+741,"v1 = int(input())
+v2 = 0
+
+for v3 in range (v1):
+    v2 = int(input())
+    if(v2 == 0):
+        print(""YES"")
+
+    
+",11.0,MORE_THAN_SIX,0.0,is_zero
+742,"v1 = int(input())
+v2 = 0
+v3 = 0
+for v4 in range (v1):
+    v2 = int(input())
+    if(v2 == 0):
+        print(""YES"")
+
+    
+",11.0,MORE_THAN_SIX,0.0,is_zero
+744,"v1 = int(input())
+v2 = 0
+v3 = 0
+for v4 in range (v1):
+    v2 = int(input())
+    if(v2 == 0):
+        v3 = 1
+        
+
+    
+",11.0,MORE_THAN_SIX,0.0,is_zero
+750,"v1 = int(input())
+v2 = 0
+v3 = 0
+for v4 in range (v1):
+    v2 = int(input())
+    if(v2 == 0):
+        v3 = 1
+if(v3 == 1):
+    print(""YES"")
+
+    
+",11.0,MORE_THAN_SIX,0.0,is_zero
+751,"v1 = int(input())
+v2 = 0
+v3 = 0
+for v4 in range (v1):
+    v2 = int(input())
+    if(v2 == 0):
+        v3 = 1
+if(v3 == 1):
+    print(""YES"")
+else:
+    print()
+
+    
+",11.0,MORE_THAN_SIX,0.0,is_zero
+754,"v1 = int(input())
+v2 = 0
+v3 = 0
+for v4 in range (v1):
+    v2 = int(input())
+    if(v2 == 0):
+        v3 = 1
+if(v3 == 1):
+    print(""YES"")
+else:
+    print(""NO"")
+
+    
+",11.0,MORE_THAN_SIX,1.0,is_zero

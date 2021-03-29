@@ -1,0 +1,87 @@
+id,fragment,age,programExperience,testsResults,task
+4533,v1=int(input()),15.0,LESS_THAN_HALF_YEAR,0.0,pies
+4534,"v1=int(input())
+v2=int",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+4538,"v1=int(input())
+v2=int(input())",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+4539,"v1=int(input())
+v2=int(input())
+v3=int",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+4541,"v1=int(input())
+v2=int(input())
+v3=int(input())",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+4545,"v1=int(input())
+v2=int(input())
+v3=int(input())
+",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+4546,"v1=int(input())
+v2=int(input())
+v3=int(input())
+v4=v1",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+4547,"v1=int(input())
+v2=int(input())
+v3=int(input())
+v4= v1 * v3",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+4549,"v1=int(input())
+v2=int(input())
+v3=int(input())
+v4= v1 * v3
+",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+4550,"v1=int(input())
+v2=int(input())
+v3=int(input())
+v4= v1 * v3
+v5=v2",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+4551,"v1=int(input())
+v2=int(input())
+v3=int(input())
+v4= v1 * v3
+v5= v2 * v3",15.0,LESS_THAN_HALF_YEAR,0.0,pies
+4563,"v1=int(input())
+v2=int(input())
+v3=int(input())
+v4= v1 * v3
+v5= v2 * v3
+print(v4, v5)",15.0,LESS_THAN_HALF_YEAR,0.25,pies
+4564,"v1=int(input())
+v2=int(input())
+v3=int(input())
+v4= v1 * v3
+v5= v2 * v3
+
+print(v4, v5)",15.0,LESS_THAN_HALF_YEAR,0.25,pies
+4566,"v1=int(input())
+v2=int(input())
+v3=int(input())
+v4= v1 * v3
+v5= v2 * v3
+while v5>100:
+    v4+=1
+print(v4, v5)",15.0,LESS_THAN_HALF_YEAR,0.25,pies
+4567,"v1=int(input())
+v2=int(input())
+v3=int(input())
+v4= v1 * v3
+v5= v2 * v3
+while v5>100:
+    v4+=1
+    
+print(v4, v5)",15.0,LESS_THAN_HALF_YEAR,0.25,pies
+4571,"v1=int(input())
+v2=int(input())
+v3=int(input())
+v4= v1 * v3
+v5= v2 * v3
+while v5>100:
+    v4+=1
+    v5-=100
+print(v4, v5)",15.0,LESS_THAN_HALF_YEAR,0.375,pies
+4572,"v1=int(input())
+v2=int(input())
+v3=int(input())
+v4= v1 * v3
+v5= v2 * v3
+while v5>=100:
+    v4+=1
+    v5-=100
+print(v4, v5)",15.0,LESS_THAN_HALF_YEAR,1.0,pies

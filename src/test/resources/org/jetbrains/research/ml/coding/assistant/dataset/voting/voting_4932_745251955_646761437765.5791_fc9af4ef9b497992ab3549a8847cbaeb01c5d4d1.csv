@@ -1,0 +1,38 @@
+id,fragment,age,programExperience,testsResults,task
+1129,"
+",21,FROM_FOUR_TO_SIX_YEARS,0.0,voting
+1158,"def f1():
+    f1_v1 = list(map(int, input().split()))
+
+if __name__ == '__main__':
+    f1()",21,FROM_FOUR_TO_SIX_YEARS,0.0,voting
+1159,"def f1():
+    f1_v1 = list(map(int, input().split()))
+    
+
+if __name__ == '__main__':
+    f1()",21,FROM_FOUR_TO_SIX_YEARS,0.0,voting
+1167,"def f1():
+    f1_v1 = list(map(int, input().split()))
+    if f1_v1.count(1) > f1_v1.count(0):
+        print(1)
+
+if __name__ == '__main__':
+    f1()",21,FROM_FOUR_TO_SIX_YEARS,0.125,voting
+1168,"def f1():
+    f1_v1 = list(map(int, input().split()))
+    if f1_v1.count(1) > f1_v1.count(0):
+        print(1)
+        
+
+if __name__ == '__main__':
+    f1()",21,FROM_FOUR_TO_SIX_YEARS,0.125,voting
+1178,"def f1():
+    f1_v1 = list(map(int, input().split()))
+    if f1_v1.count(1) > f1_v1.count(0):
+        print(1)
+    else:
+        print(0)
+
+if __name__ == '__main__':
+    f1()",21,FROM_FOUR_TO_SIX_YEARS,1.0,voting

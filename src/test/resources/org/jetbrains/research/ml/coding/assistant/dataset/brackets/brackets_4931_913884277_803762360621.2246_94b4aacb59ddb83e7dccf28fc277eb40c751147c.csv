@@ -1,0 +1,189 @@
+id,fragment,age,programExperience,testsResults,task
+4803,"
+",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4810,"def f1():
+    f1_v1 = input()
+
+if __name__ == '__main__':
+    f1()
+",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4811,"def f1():
+    f1_v1 = input()
+    
+
+if __name__ == '__main__':
+    f1()
+",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4820,"def f1():
+    f1_v1 = input()
+    f1_v2 = len(f1_v1)
+
+if __name__ == '__main__':
+    f1()
+",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4821,"def f1():
+    f1_v1 = input()
+    f1_v2 = len(f1_v1)
+    
+
+if __name__ == '__main__':
+    f1()
+",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4849,"def f1():
+    f1_v1 = input()
+    f1_v2 = len(f1_v1)
+    for f1_v3 in range(f1_v2):
+        if f1_v3 < f1_v2/2:
+            print(f1_v1[f1_v3], '(', sep="""", end="""")
+
+if __name__ == '__main__':
+    f1()
+",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4850,"def f1():
+    f1_v1 = input()
+    f1_v2 = len(f1_v1)
+    for f1_v3 in range(f1_v2):
+        if f1_v3 < f1_v2/2:
+            print(f1_v1[f1_v3], '(', sep="""", end="""")
+            
+
+if __name__ == '__main__':
+    f1()
+",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4856,"def f1():
+    f1_v1 = input()
+    f1_v2 = len(f1_v1)
+    for f1_v3 in range(f1_v2):
+        if f1_v3 < f1_v2/2:
+            print(f1_v1[f1_v3], '(', sep="""", end="""")
+        else:
+            print(f1_v1[f1_v3], '(', sep="""", end="""")
+
+if __name__ == '__main__':
+    f1()
+",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4859,"def f1():
+    f1_v1 = input()
+    f1_v2 = len(f1_v1)
+    for f1_v3 in range(f1_v2):
+        if f1_v3 < f1_v2/2:
+            print(f1_v1[f1_v3], '(', sep="""", end="""")
+        else:
+            print(')', f1_v1[f1_v3], sep="""", end="""")
+
+if __name__ == '__main__':
+    f1()
+",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4860,"def f1():
+    f1_v1 = input()
+    f1_v2 = len(str)
+    for f1_v3 in range(f1_v2):
+        if f1_v3 < f1_v2/2:
+            print(str[f1_v3], '(', sep="""", end="""")
+        else:
+            print(')', str[f1_v3], sep="""", end="""")
+
+if __name__ == '__main__':
+    f1()
+",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4861,"def f1():
+    f1_v1 = input()
+    f1_v2 = len(f1_v1)
+    for f1_v3 in range(f1_v2):
+        if f1_v3 < f1_v2/2:
+            print(str[f1_v3], '(', sep="""", end="""")
+        else:
+            print(')', str[f1_v3], sep="""", end="""")
+
+if __name__ == '__main__':
+    f1()
+",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4862,"def f1():
+    f1_v1 = input()
+    f1_v2 = len(f1_v1)
+    for f1_v3 in range(f1_v2):
+        if f1_v3 < f1_v2/2:
+            print(f1_v1[f1_v3], '(', sep="""", end="""")
+        else:
+            print(')', str[f1_v3], sep="""", end="""")
+
+if __name__ == '__main__':
+    f1()
+",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4863,"def f1():
+    f1_v1 = input()
+    f1_v2 = len(f1_v1)
+    for f1_v3 in range(f1_v2):
+        if f1_v3 < f1_v2/2:
+            print(f1_v1[f1_v3], '(', sep="""", end="""")
+        else:
+            print(')', f1_v1[f1_v3], sep="""", end="""")
+
+if __name__ == '__main__':
+    f1()
+",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4865,"def f1():
+    f1_v1 = input()
+    f1_v2 = len(f1_v1)
+    for f1_v3 in range(f1_v2):
+        if f1_v3 + 1 < f1_v2/2:
+            print(f1_v1[f1_v3], '(', sep="""", end="""")
+        else:
+            print(')', f1_v1[f1_v3], sep="""", end="""")
+
+if __name__ == '__main__':
+    f1()
+",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4879,"def f1():
+    f1_v1 = input()
+    f1_v2 = len(f1_v1)
+    for f1_v3 in range(f1_v2):
+        if f1_v3 + 1 < f1_v2/2:
+            print(f1_v1[f1_v3], '(', sep="""", end="""")
+        elif f1_v3 > f1_v2/2:
+            print(')', f1_v1[f1_v3], sep="""", end="""")
+
+if __name__ == '__main__':
+    f1()
+",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4880,"def f1():
+    f1_v1 = input()
+    f1_v2 = len(f1_v1)
+    for f1_v3 in range(f1_v2):
+        if f1_v3 + 1 < f1_v2/2:
+            print(f1_v1[f1_v3], '(', sep="""", end="""")
+        elif f1_v3 > f1_v2/2:
+            print(')', f1_v1[f1_v3], sep="""", end="""")
+            
+
+if __name__ == '__main__':
+    f1()
+",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4886,"def f1():
+    f1_v1 = input()
+    f1_v2 = len(f1_v1)
+    for f1_v3 in range(f1_v2):
+        if f1_v3 + 1 < f1_v2/2:
+            print(f1_v1[f1_v3], '(', sep="""", end="""")
+        elif f1_v3 > f1_v2/2:
+            print(')', f1_v1[f1_v3], sep="""", end="""")
+        else:
+            print(')', f1_v1[f1_v3], sep="""", end="""")
+
+if __name__ == '__main__':
+    f1()
+",21,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+4887,"def f1():
+    f1_v1 = input()
+    f1_v2 = len(f1_v1)
+    for f1_v3 in range(f1_v2):
+        if f1_v3 + 1 < f1_v2/2:
+            print(f1_v1[f1_v3], '(', sep="""", end="""")
+        elif f1_v3 > f1_v2/2:
+            print(')', f1_v1[f1_v3], sep="""", end="""")
+        else:
+            print(f1_v1[f1_v3], sep="""", end="""")
+
+if __name__ == '__main__':
+    f1()
+",21,FROM_FOUR_TO_SIX_YEARS,1.0,brackets

@@ -1,0 +1,141 @@
+id,fragment,age,programExperience,testsResults,task
+687,v1 = int(input()),14.0,LESS_THAN_HALF_YEAR,0.0,max_3
+688,"v1 = int(input(
+))",14.0,LESS_THAN_HALF_YEAR,0.0,max_3
+689,"v1 = int(input(
+
+))",14.0,LESS_THAN_HALF_YEAR,0.0,max_3
+692,"v1 = int(input(
+
+))",14.0,LESS_THAN_HALF_YEAR,0.0,max_3
+693,"v1 = int(input(
+))",14.0,LESS_THAN_HALF_YEAR,0.0,max_3
+694,v1 = int,14.0,LESS_THAN_HALF_YEAR,0.0,max_3
+696,v1 = int(input()),14.0,LESS_THAN_HALF_YEAR,0.0,max_3
+697,"v1 = int(input())
+v2 = int",14.0,LESS_THAN_HALF_YEAR,0.0,max_3
+699,"v1 = int(input())
+v2 = int(input())",14.0,LESS_THAN_HALF_YEAR,0.0,max_3
+700,"v1 = int(input())
+v2 = int(input())
+v3 = int",14.0,LESS_THAN_HALF_YEAR,0.0,max_3
+702,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())",14.0,LESS_THAN_HALF_YEAR,0.0,max_3
+704,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+if (v1 > v2) and (v1 > v3):
+    print(v1)",14.0,LESS_THAN_HALF_YEAR,0.0,max_3
+707,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+if (v1 > v2) and (v1 > v3):
+    print(v1)
+if (v2 > v1) and (v2 > v3):
+    print(v2)",14.0,LESS_THAN_HALF_YEAR,0.0,max_3
+709,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+if (v1 > v2) and (v1 > v3):
+    print(v1)
+if (v2 > v1) and (v2 > v3):
+    print(v2)
+if (v3 > v1) and (v3 > v2):
+    print(v3
+          )",14.0,LESS_THAN_HALF_YEAR,0.0,max_3
+712,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+if (v1 > v2) and (v1 > v3):
+    print(v1)
+if (v2 > v1) and (v2 > v3):
+    print(v2)
+if (v3 > v1) and (v3 > v2):
+    print(v3
+          )",14.0,LESS_THAN_HALF_YEAR,0.0,max_3
+713,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+if (v1 > v2) and (v1 > v3):
+    print(v1)
+if (v2 > v1) and (v2 > v3):
+    print(v2)
+if (v3 > v1) and (v3 > v2):
+    print(v3)",14.0,LESS_THAN_HALF_YEAR,0.0,max_3
+714,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+if (v1 > v2) and (v1 > v3):
+    print(v1)
+if (v2 > v1) and (v2 > v3):
+    print(v2)
+if (v3 > v1) and (v3 > v2):
+    print(v3)
+if (v1 > v2) and (v1 == v3):
+    print(v1)",14.0,LESS_THAN_HALF_YEAR,0.0,max_3
+718,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+if (v1 > v2) and (v1 > v3):
+    print(v1)
+if (v2 > v1) and (v2 > v3):
+    print(v2)
+if (v3 > v1) and (v3 > v2):
+    print(v3)
+if ((v1 > v2) and (v1 == v3)) or ((v1 > v3) and (v1 == v2)):
+    print(v1)",14.0,LESS_THAN_HALF_YEAR,0.0,max_3
+720,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+if (v1 > v2) and (v1 > v3):
+    print(v1)
+if (v2 > v1) and (v2 > v3):
+    print(v2)
+if (v3 > v1) and (v3 > v2):
+    print(v3)
+if ((v1 > v2) and (v1 == v3)) or ((v1 > v3) and (v1 == v2)):
+    print(v1)
+",14.0,LESS_THAN_HALF_YEAR,0.0,max_3
+723,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+if (v1 > v2) and (v1 > v3):
+    print(v1)
+if (v2 > v1) and (v2 > v3):
+    print(v2)
+if (v3 > v1) and (v3 > v2):
+    print(v3)
+if ((v1 > v2) and (v1 == v3)) or ((v1 > v3) and (v1 == v2)):
+    print(v1)
+if ((v2 > v1) and (v2 == v3)) or ((v2 > v3) and (v2 == v1)):
+    print(v2)",14.0,LESS_THAN_HALF_YEAR,0.0,max_3
+724,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+if (v1 > v2) and (v1 > v3):
+    print(v1)
+if (v2 > v1) and (v2 > v3):
+    print(v2)
+if (v3 > v1) and (v3 > v2):
+    print(v3)
+if ((v1 > v2) and (v1 == v3)) or ((v1 > v3) and (v1 == v2)):
+    print(v1)
+if ((v2 > v1) and (v2 == v3)) or ((v2 > v3) and (v2 == v1)):
+    print(v2)
+if ((v3 > v2) and (v1 == v1)) or ((v3 > v1) and (v3 == v2)):
+    print(v3)",14.0,LESS_THAN_HALF_YEAR,0.0,max_3
+726,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+if (v1 > v2) and (v1 > v3):
+    print(v1)
+if (v2 > v1) and (v2 > v3):
+    print(v2)
+if (v3 > v1) and (v3 > v2):
+    print(v3)
+if ((v1 > v2) and (v1 == v3)) or ((v1 > v3) and (v1 == v2)):
+    print(v1)
+if ((v2 > v1) and (v2 == v3)) or ((v2 > v3) and (v2 == v1)):
+    print(v2)
+",14.0,LESS_THAN_HALF_YEAR,0.0,max_3

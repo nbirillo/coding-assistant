@@ -1,6 +1,6 @@
 <idea-plugin>
     <id>io.github.nbirillo.coding.assistant</id>
-    <name>Coding Assistant</name>
+    <name>Hint Generation Algorithm</name>
     <vendor url="https://research.jetbrains.org/">JetBrains Research</vendor>
 
     <depends>com.intellij.modules.platform</depends>

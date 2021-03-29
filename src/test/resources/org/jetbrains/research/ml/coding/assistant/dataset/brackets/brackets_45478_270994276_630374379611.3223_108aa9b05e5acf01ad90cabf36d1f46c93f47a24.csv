@@ -1,0 +1,81 @@
+id,fragment,age,programExperience,testsResults,task
+4355,"
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,brackets
+4356,"v1 = input
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,brackets
+4357,"v1 = input()
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,brackets
+4358,"v1 = input()
+v2 = map(lambda l1_p1: f""{l1_p1}("", v1[:len(v1) // 2])
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,brackets
+4359,"v1 = input()
+v2 = map(lambda l1_p1: f""{l1_p1}("", v1[:len(v1) // 2])
+print()
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,brackets
+4360,"v1 = input()
+v2 = map(lambda l1_p1: f""{l1_p1}("", v1[:len(v1) // 2])
+print(v2)
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,brackets
+4368,"v1 = input()
+v2 = """".join([f""{v3}("" for v3 in v1[:len(v1) // 2 - 1]])
+print(v2)
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,brackets
+4369,"v1 = input()
+v2 = """".join([f""{v3}("" for v3 in v1[:len(v1) // 2 - 1]])
+v4 = """".join([f""{v5}("" for v5 in v1[len(v1) // 2:]])
+print()
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,brackets
+4372,"v1 = input()
+v2 = """".join([f""{v3}("" for v3 in v1[:len(v1) // 2 - 1]])
+v4 = """".join([f""{v5}("" for v5 in v1[len(v1) // 2:]])
+print(v2 + v4)
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,brackets
+4376,"v1 = input()
+v2 = """".join([f""{v3}("" for v3 in v1[:len(v1) // 2 - 1]])
+v4 = """".join([f""){v5}"" for v5 in v1[len(v1) // 2 + 1:]])
+print(v2 + v4)
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,brackets
+4377,"v1 = input()
+v2 = """".join([f""{v3}("" for v3 in v1[:len(v1) // 2]])
+v4 = """".join([f""){v5}"" for v5 in v1[len(v1) // 2 + 1:]])
+print(v2 + v4)
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,brackets
+4378,"v1 = input()
+v2 = """".join([f""{v3}("" for v3 in v1[:len(v1) // 2]])
+v4 = """".join([f""){v5}"" for v5 in v1[len(v1) // 2:]])
+print(v2 + v4)
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,brackets
+4380,"v1 = input()
+v2 = """".join([f""({v3}"" for v3 in v1[:len(v1) // 2]])
+v4 = """".join([f""){v5}"" for v5 in v1[len(v1) // 2:]])
+print(v2 + v4)
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,brackets
+4382,"v1 = input()
+v2 = """".join([f""({v3}"" for v3 in v1[:len(v1) // 2]])
+v4 = """".join([f""{v5})"" for v5 in v1[len(v1) // 2:]])
+print(v2 + v4)
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,brackets
+4390,"v1 = input()
+v2 = """".join([f""({v3}"" for v3 in v1[:len(v1) // 2]])
+v4 = """".join([f""{v5})"" for v5 in v1[len(v1) // 2:]])
+v6 = (v2 + (""("" if len(v1) % 2 == 1 else """") + v4)[1:-1]
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,brackets
+4393,"v1 = input()
+v2 = """".join([f""({v3}"" for v3 in v1[:len(v1) // 2]])
+v4 = """".join([f""{v5})"" for v5 in v1[len(v1) // 2:]])
+v6 = (v2 + (""("" if len(v1) % 2 == 1 else """") + v4)[1:-1]
+print(v6)",-1,FROM_TWO_TO_FOUR_YEARS,1.0,brackets
+4394,"v1 = input()
+v2 = """".join([f""({v3}"" for v3 in v1[:len(v1) // 2]])
+v4 = """".join([f""{v5})"" for v5 in v1[len(v1) // 2:]])
+v6 = (v2 + (""("" if len(v1) % 2 == 1 else """") + v4)[1:-1]
+print(v6)
+
+",-1,FROM_TWO_TO_FOUR_YEARS,1.0,brackets
+4415,"v1 = input()
+v2 = """".join([f""({v3}"" for v3 in v1[:len(v1) // 2]])
+v4 = """".join([f""{v5})"" for v5 in v1[len(v1) // 2:]])
+v6 = (v2 + (""("" if len(v1) % 2 == 1 else """") + v4)[1:-1]
+print(v6)
+
+",-1,FROM_TWO_TO_FOUR_YEARS,1.0,brackets
