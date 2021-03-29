@@ -4,7 +4,7 @@ import com.github.gumtreediff.tree.TreeContext
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.psi.PsiFile
 import org.jetbrains.research.ml.ast.gumtree.tree.Numbering
-import org.jetbrains.research.ml.ast.gumtree.tree.PostOrderNumbering
+import org.jetbrains.research.ml.ast.gumtree.tree.PreOrderNumbering
 import org.jetbrains.research.ml.ast.gumtree.tree.PsiTreeConverter
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.builder.SolutionSpaceGraphBuilder
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.builder.SolutionSpaceGraphEdge
@@ -38,55 +38,61 @@ class SolutionSpace(val graph: Graph<SolutionSpaceVertex, SolutionSpaceEdge>) {
     ) : this(buildGraph(vertices, edgePairs))
 }
 
+/**
+ * Creates immutable solution space inner graph for `builder` with weights based on `weightFactory`
+ */
 private fun transferGraph(
     weightFactory: EdgeWeightCalculatorFactory<SolutionSpaceVertex, SolutionSpaceEdge>,
     builder: SolutionSpaceGraphBuilder
-): Graph<SolutionSpaceVertex, SolutionSpaceEdge> {
+): AsUnmodifiableGraph<SolutionSpaceVertex, SolutionSpaceEdge> {
     val graph = SimpleDirectedWeightedGraph<SolutionSpaceVertex, SolutionSpaceEdge>(SolutionSpaceEdge::class.java)
     val weightCalculator = weightFactory(graph)
     val oldVertices = builder.graph.vertexSet().toList()
-    val newVertices = oldVertices.map { it.toSolutionSpaceVertex() }
+    val idFactory = SolutionSpaceIdentifierFactoryImpl()
+    val newVertices = oldVertices.map { it.toSolutionSpaceVertex(idFactory) }
     graph.addVertices(newVertices)
 
     val zippedVertices = oldVertices zip newVertices
     val mapping = zippedVertices.toMap()
 
-    for ((oldVertex, newVertex) in zippedVertices) {
-        fun transferEdges(edges: Iterable<SolutionSpaceGraphEdge>, isOutgoing: Boolean) {
-            for (outgoingEdge in edges) {
-                val neighbour = if (isOutgoing) {
-                    builder.graph.getEdgeTarget(outgoingEdge)
-                } else {
-                    builder.graph.getEdgeSource(outgoingEdge)
-                }
-                val newTarget = mapping[neighbour]!!
-                val newEdge: SolutionSpaceEdge? = if (isOutgoing) {
-                    graph.addEdge(newVertex, newTarget)
-                } else {
-                    graph.addEdge(newTarget, newVertex)
-                }
-                if (newEdge == null) {
-                    continue
-                }
-                val calculatedWeight = weightCalculator.getWeight(newEdge)
-                graph.setEdgeWeight(newEdge, calculatedWeight)
+    fun transferEdges(newVertex: SolutionSpaceVertex, edges: Iterable<SolutionSpaceGraphEdge>, isOutgoing: Boolean) {
+        for (outgoingEdge in edges) {
+            val neighbour = if (isOutgoing) {
+                builder.graph.getEdgeTarget(outgoingEdge)
+            } else {
+                builder.graph.getEdgeSource(outgoingEdge)
             }
+            val newTarget = mapping[neighbour]!!
+            val newEdge: SolutionSpaceEdge? = if (isOutgoing) {
+                graph.addEdge(newVertex, newTarget)
+            } else {
+                graph.addEdge(newTarget, newVertex)
+            }
+            if (newEdge == null) {
+                continue
+            }
+            val calculatedWeight = weightCalculator.getWeight(newEdge)
+            graph.setEdgeWeight(newEdge, calculatedWeight)
         }
-
+    }
+    for ((oldVertex, newVertex) in zippedVertices) {
         val outgoingEdges = builder.graph.outgoingEdgesOf(oldVertex).toSet()
-        transferEdges(outgoingEdges, isOutgoing = true)
+        transferEdges(newVertex, outgoingEdges, isOutgoing = true)
 
         val incomingEdges = builder.graph.incomingEdgesOf(oldVertex).toSet()
-        transferEdges(incomingEdges, isOutgoing = false)
+        transferEdges(newVertex, incomingEdges, isOutgoing = false)
     }
 
     return AsUnmodifiableGraph(graph)
 }
 
+/**
+ * Creates immutable solution space inner graph using vertex and edge information
+ */
 private fun buildGraph(
     vertices: Collection<SolutionSpaceVertex>,
     edges: Collection<SolutionSpaceEdgeModel>
-): Graph<SolutionSpaceVertex, SolutionSpaceEdge> {
+): AsUnmodifiableGraph<SolutionSpaceVertex, SolutionSpaceEdge> {
     val graph = SimpleDirectedWeightedGraph<SolutionSpaceVertex, SolutionSpaceEdge>(SolutionSpaceEdge::class.java)
     graph.addVertices(vertices)
     val idToVertex = vertices.map { it.id to it }.toMap()
@@ -98,19 +104,20 @@ private fun buildGraph(
     return AsUnmodifiableGraph(graph)
 }
 
-private var idCounter = 0
-
-private fun SolutionSpaceGraphVertex.toSolutionSpaceVertex(): SolutionSpaceVertex {
+private fun SolutionSpaceGraphVertex.toSolutionSpaceVertex(
+    idFactory: SolutionSpaceIdentifierFactoryImpl
+): SolutionSpaceVertex {
     val treeContext = Util.getTreeContext(representativeSolution.psiFragment)
     return SolutionSpaceVertex(
-        idCounter++,
+        idFactory.uniqueIdentifier(),
         treeContext,
+        codeFragment,
         partialSolutions.map { StudentInfo(it.id, it.metaInfo) }
     )
 }
 
 object Util {
-    fun getTreeContext(psiFile: PsiFile, numbering: Numbering = PostOrderNumbering): TreeContext {
+    fun getTreeContext(psiFile: PsiFile, numbering: Numbering = PreOrderNumbering): TreeContext {
         return ApplicationManager.getApplication().runReadAction<TreeContext> {
             PsiTreeConverter.convertTree(psiFile, numbering)
         }

@@ -1,0 +1,159 @@
+id,fragment,age,programExperience,testsResults,task
+5561,v1 = input(),-1,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+5562,"v1 = input()
+v2 = """"",-1,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+5568,"v1 = input()
+v2 = v1[:len(v1) // 2].replace
+",-1,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+5569,"import re
+
+v1 = input()
+v2 = re.sub(""."", ""("", v1[:len(v1) // 2])
+",-1,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+5570,"import re
+
+v1 = input()
+v2 = re.sub(""."", "".("", v1[:len(v1) // 2])
+",-1,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+5572,"import re
+
+v1 = input()
+v2 = re.sub(""."", "".("", v1[:len(v1) // 2])
+print()",-1,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+5573,"import re
+
+v1 = input()
+v2 = re.sub(""\w"", "".("", v1[:len(v1) // 2])
+print(v2)",-1,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+5576,"import re
+
+v1 = input()
+v2 = re.sub(""\w"", ""\w("", v1[:len(v1) // 2])
+print(v2)",-1,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+5577,"import re
+
+v1 = input()
+
+v2 = re.sub(""\w"", ""\w("", v1[:len(v1) // 2])
+print(v2)",-1,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+5578,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4 in range(v2 // 2):
+    v3 += v1[v4] + ""(""
+print()",-1,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+5579,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4 in range(v2 // 2):
+    v3 += v1[v4] + ""(""
+print(v3)",-1,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+5580,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4 in range(v2 // 2):
+    v3 += v1[v4] + ""(""
+for v4 in range(v2 // 2):
+    v3 += v1[v4] + ""(""
+print(v3)",-1,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+5584,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4 in range(v2 // 2):
+    v3 += v1[v4] + ""(""
+for v4 in range((v2 + 1) // 2, v2):
+    v3 += v1[v4] + ""(""
+print(v3)",-1,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+5586,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4 in range(v2 // 2):
+    v3 += v1[v4] + ""(""
+for v4 in range((v2 + 1) // 2, v2):
+    v3 += v1[v4] + "")""
+print(v3)",-1,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+5588,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4 in range(v2 // 2):
+    v3 += v1[v4] + ""(""
+for v4 in range((v2 + 1) // 2, v2 - 1):
+    v3 += v1[v4] + "")""
+print(v3)",-1,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+5589,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4 in range(v2 // 2):
+    v3 += v1[v4] + ""(""
+for v4 in range((v2 + 1) // 2, v2 - 1):
+    v3 += v1[v4] + "")""
+    
+print(v3)",-1,FROM_FOUR_TO_SIX_YEARS,0.0,brackets
+5597,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4 in range(v2 // 2):
+    v3 += v1[v4] + ""(""
+for v4 in range((v2 + 1) // 2, v2 - 1):
+    v3 += v1[v4] + "")""
+v3 += v1[v2 - 1]
+print(v3)",-1,FROM_FOUR_TO_SIX_YEARS,0.125,brackets
+5600,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4 in range(v2 // 2):
+    v3 += v1[v4] + ""(""
+for v4 in range((v2 + 1) // 2, v2 - 1):
+    v3 += v1[v4] + "")""
+v3 += v1[v2 - 1]
+print(v3)",-1,FROM_FOUR_TO_SIX_YEARS,0.125,brackets
+5601,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4 in range((v2 - 1) // 2):
+    v3 += v1[v4] + ""(""
+for v4 in range((v2 + 1) // 2, v2 - 1):
+    v3 += v1[v4] + "")""
+v3 += v1[v2 - 1]
+print(v3)",-1,FROM_FOUR_TO_SIX_YEARS,0.125,brackets
+5602,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4 in range((v2 - 1) // 2):
+    v3 += v1[v4] + ""(""
+for v4 in range(v2 // 2, v2 - 1):
+    v3 += v1[v4] + "")""
+v3 += v1[v2 - 1]
+print(v3)",-1,FROM_FOUR_TO_SIX_YEARS,0.125,brackets
+5603,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4 in range((v2 - 1) // 2):
+    v3 += v1[v4] + ""(""
+    
+for v4 in range(v2 // 2, v2 - 1):
+    v3 += v1[v4] + "")""
+v3 += v1[v2 - 1]
+print(v3)",-1,FROM_FOUR_TO_SIX_YEARS,0.125,brackets
+5607,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4 in range((v2 - 1) // 2):
+    v3 += v1[v4] + ""(""
+if (v2 - 1) % 2 == 1:
+    v3 += v1[v4] + ""(""
+for v4 in range(v2 // 2, v2 - 1):
+    v3 += v1[v4] + "")""
+v3 += v1[v2 - 1]
+print(v3)",-1,FROM_FOUR_TO_SIX_YEARS,0.125,brackets
+5612,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4 in range((v2 - 1) // 2):
+    v3 += v1[v4] + ""(""
+if (v2 - 1) % 2 == 1:
+    v3 += v1[(v2 - 1) // 2]
+for v4 in range(v2 // 2, v2 - 1):
+    v3 += v1[v4] + "")""
+v3 += v1[v2 - 1]
+print(v3)",-1,FROM_FOUR_TO_SIX_YEARS,1.0,brackets

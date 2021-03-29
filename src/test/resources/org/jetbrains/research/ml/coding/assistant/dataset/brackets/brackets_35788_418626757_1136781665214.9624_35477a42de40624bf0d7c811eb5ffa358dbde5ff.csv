@@ -1,0 +1,338 @@
+id,fragment,age,programExperience,testsResults,task
+4064,v1 = input(),-1,-1,0.0,brackets
+4070,"v1 = input()
+v2 = len(v1)",-1,-1,0.0,brackets
+4071,"v1 = input()
+v2 = len(v1)
+v3 = ''
+v3 += ""f""",-1,-1,0.0,brackets
+4072,"v1 = input()
+v2 = len(v1)
+v3 = """"
+v3 += ""f""",-1,-1,0.0,brackets
+4075,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4, v5 in enumerate(v1):
+    v3 += v5
+    ",-1,-1,0.0,brackets
+4076,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4, v5 in enumerate(v1):
+    v3 += v5
+    if v4 < v2 / 2:
+        v3 += ''",-1,-1,0.0,brackets
+4077,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4, v5 in enumerate(v1):
+    v3 += v5
+    if v4 < v2 / 2:
+        v3 += '('",-1,-1,0.0,brackets
+4079,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4, v5 in enumerate(v1):
+    v3 += v5
+    if v4 < v2 / 2:
+        v3 += '('
+    else:
+        v3 += ')'",-1,-1,0.0,brackets
+4080,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4, v5 in enumerate(v1[:]):
+    v3 += v5
+    if v4 < v2 / 2:
+        v3 += '('
+    else:
+        v3 += ')'
+
+print(v3)",-1,-1,0.0,brackets
+4081,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4, v5 in enumerate(v1[:-1]):
+    v3 += v5
+    if v4 < v2 / 2:
+        v3 += '('
+    else:
+        v3 += ')'
+
+print(v3)",-1,-1,0.0,brackets
+4085,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4, v5 in enumerate(v1[:-1]):
+    v3 += v5
+    if v4 < v2 / 2:
+        v3 += '('
+    else:
+        v3 += ')'
+v3 += v1[-1]
+print(v3)",-1,-1,0.125,brackets
+4086,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4, v5 in enumerate(v1[:-1]):
+    v3 += v5
+    if v4 < v2 / 2:
+        v3 += '('
+    else:
+        v3 += ')'
+        
+v3 += v1[-1]
+print(v3)",-1,-1,0.125,brackets
+4087,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4, v5 in enumerate(v1[:-1]):
+    v3 += v5
+    if v4 < v2 / 2:
+        v3 += '('
+    else:
+        v3 += ')'
+v3 += v1[-1]
+print(v3)",-1,-1,0.125,brackets
+4091,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4, v5 in enumerate(v1[:-1]):
+    v3 += v5
+    if v4 < v2 / 2:
+        v3 += '('
+    else:
+        v3 += ')'
+
+print(v3)",-1,-1,0.0,brackets
+4093,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4, v5 in enumerate(v1):
+    v3 += v5
+    if v4 < v2 / 2:
+        v3 += '('
+    else:
+        v3 += ')'
+
+print(v3)",-1,-1,0.0,brackets
+4094,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4, v5 in enumerate(v1):
+    v3 += v5
+    if v4 < v2 / 2:
+        v3 += '('
+        
+    else:
+        v3 += ')'
+
+print(v3)",-1,-1,0.0,brackets
+4096,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4, v5 in enumerate(v1):
+    v3 += v5
+    if v4 < v2 / 2:
+        v3 += '('
+    
+    else:
+        v3 += ')'
+
+print(v3)",-1,-1,0.0,brackets
+4097,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4, v5 in enumerate(v1):
+    v3 += v5
+    if v4 < v2 / 2:
+        v3 += '('
+    
+        
+    else:
+        v3 += ')'
+
+print(v3)",-1,-1,0.0,brackets
+4099,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4, v5 in enumerate(v1):
+    v3 += v5
+    if v4 < v2 / 2:
+        v3 += '('
+
+        
+    else:
+        v3 += ')'
+
+print(v3)",-1,-1,0.0,brackets
+4100,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4, v5 in enumerate(v1):
+    v3 += v5
+    if v4 < v2 / 2:
+        v3 += '('
+        
+    else:
+        v3 += ')'
+
+print(v3)",-1,-1,0.0,brackets
+4101,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4, v5 in enumerate(v1):
+    v3 += v5
+    
+    if v4 < v2 / 2:
+        v3 += '('
+        
+    else:
+        v3 += ')'
+
+print(v3)",-1,-1,0.0,brackets
+4103,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4, v5 in enumerate(v1):
+    v3 += v5
+    if v4 != v2 - 1:
+        if v4 < v2 / 2:
+            v3 += '('
+        
+    else:
+        v3 += ')'
+
+print(v3)",-1,-1,0.0,brackets
+4104,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4, v5 in enumerate(v1):
+    v3 += v5
+    if v4 != v2 - 1:
+        if v4 < v2 / 2:
+            v3 += '('
+            
+    else:
+        v3 += ')'
+
+print(v3)",-1,-1,0.0,brackets
+4105,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4, v5 in enumerate(v1):
+    v3 += v5
+    if v4 != v2 - 1:
+        if v4 < v2 / 2:
+            v3 += '('
+            
+        else:
+            v3 += ')'
+
+print(v3)",-1,-1,0.125,brackets
+4111,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4, v5 in enumerate(v1):
+    v3 += v5
+    if v4 != v2 - 1:
+        if v4 < v2 / 2:
+            v3 += '('
+
+        else:
+            v3 += ')'
+
+print(v3)",-1,-1,0.125,brackets
+4112,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4, v5 in enumerate(v1):
+    v3 += v5
+    if v4 != v2 - 1:
+        if v4 < v2 / 2:
+            v3 += '('
+        else:
+            v3 += ')'
+
+print(v3)",-1,-1,0.125,brackets
+4118,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4, v5 in enumerate(v1):
+    v3 += v5
+    if v4 != v2 - 1:
+        if v4 < v2 / 2 - 1:
+            v3 += '('
+        else:
+            v3 += ')'
+
+print(v3)",-1,-1,0.125,brackets
+4134,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4, v5 in enumerate(v1):
+    v3 += v5
+    if v4 != v2 - 1 or v4 == v2 // 2 - 1:
+        if v4 < v2 / 2 - 1:
+            v3 += '('
+        else:
+            v3 += ')'
+
+print(v3)",-1,-1,0.125,brackets
+4136,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4, v5 in enumerate(v1):
+    v3 += v5
+    if v4 != v2 - 1 or v4 == v2 // 2 - 1:
+        if v4 < v2 / 2 - 1:
+            v3 += '('
+        else:
+            v3 += ')'
+
+print(v3)
+
+print(v1)",-1,-1,0.0,brackets
+4137,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4, v5 in enumerate(v1):
+    v3 += v5
+    if v4 != v2 - 1 or v4 == v2 // 2 - 1:
+        if v4 < v2 / 2 - 1:
+            v3 += '('
+        else:
+            v3 += ')'
+
+print(v3)
+
+print(v2 // 2)
+print(v2 / 2)",-1,-1,0.0,brackets
+4138,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4, v5 in enumerate(v1):
+    v3 += v5
+    if v4 != v2 - 1 or v4 == v2 // 2 - 1:
+        if v4 < v2 / 2 - 1:
+            v3 += '('
+        else:
+            v3 += ')'
+
+print(v3)
+
+",-1,-1,0.125,brackets
+4143,"v1 = input()
+v2 = len(v1)
+v3 = """"
+for v4, v5 in enumerate(v1):
+    v3 += v5
+    if v4 != v2 - 1 or v4 == v2 / 2:
+        if v4 < v2 / 2 - 1:
+            v3 += '('
+        else:
+            v3 += ')'
+
+print(v3)
+",-1,-1,0.125,brackets

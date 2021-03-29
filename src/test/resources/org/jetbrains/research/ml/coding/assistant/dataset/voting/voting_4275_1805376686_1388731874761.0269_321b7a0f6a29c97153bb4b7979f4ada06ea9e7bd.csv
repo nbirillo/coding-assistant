@@ -1,0 +1,11 @@
+id,fragment,age,programExperience,testsResults,task
+823,"v1, v2, v3 = map(int, input().split())",-1,-1,0.0,voting
+825,"v1, v2, v3 = map(int, input().split())
+v4 = v1 + v2 + v3
+",-1,-1,0.0,voting
+826,"v1, v2, v3 = map(int, input().split())
+v4 = v1 + v2 + v3
+print()",-1,-1,0.0,voting
+827,"v1, v2, v3 = map(int, input().split())
+v4 = v1 + v2 + v3
+print(0 )",-1,-1,0.0,voting

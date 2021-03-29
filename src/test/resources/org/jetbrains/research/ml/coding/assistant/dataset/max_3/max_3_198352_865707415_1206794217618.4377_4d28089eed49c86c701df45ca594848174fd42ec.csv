@@ -1,0 +1,13 @@
+id,fragment,age,programExperience,testsResults,task
+64,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+",21.0,MORE_THAN_SIX,0.0,max_3
+75,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+print(max([v1, v2, v3]))
+
+",21.0,MORE_THAN_SIX,1.0,max_3

@@ -1,0 +1,164 @@
+id,fragment,age,programExperience,testsResults,task
+1085,v1 = input(),-1,FROM_TWO_TO_FOUR_YEARS,0.0,brackets
+1099,"v1 = input()
+
+for v2, v3 in enumerate(v1):
+    if v2 < len(v1):
+        print(v3 + '(', end='')",-1,FROM_TWO_TO_FOUR_YEARS,0.0,brackets
+1100,"v1 = input()
+
+for v2, v3 in enumerate(v1):
+    if v2 < len(v1):
+        print(v3 + '(', end='')
+    elif v2 > len(v1):
+        print()",-1,FROM_TWO_TO_FOUR_YEARS,0.0,brackets
+1108,"v1 = input()
+
+for v2, v3 in enumerate(v1):
+    if v2 < len(v1):
+        print(v3 + '(', end='')
+    elif v2 > len(v1):
+        print(v3 + ')', end='')",-1,FROM_TWO_TO_FOUR_YEARS,0.0,brackets
+1109,"v1 = input()
+
+for v2, v3 in enumerate(v1):
+    if v2 < len(v1):
+        print(v3 + '(', end='')
+    elif v2 > len(v1):
+        print(v3 + ')', end='')
+    else:
+        print()",-1,FROM_TWO_TO_FOUR_YEARS,0.0,brackets
+1111,"v1 = input()
+
+for v2, v3 in enumerate(v1):
+    if v2 < len(v1):
+        print(v3 + '(', end='')
+    elif v2 > len(v1):
+        print(v3 + ')', end='')
+    else:
+        print(v3)",-1,FROM_TWO_TO_FOUR_YEARS,0.0,brackets
+1112,"v1 = input()
+
+for v2, v3 in enumerate(v1):
+    if v2 < len(v1):
+        print(v3 + '(', end='')
+    elif v2 > len(v1):
+        print(v3 + ')', end='')
+    else:
+        print(v3, )
+        ",-1,FROM_TWO_TO_FOUR_YEARS,0.0,brackets
+1113,"v1 = input()
+
+for v2, v3 in enumerate(v1):
+    if v2 < len(v1):
+        print(v3 + '(', end='')
+    elif v2 > len(v1):
+        print(v3 + ')', end='')
+    else:
+        print(v3, end='')
+        ",-1,FROM_TWO_TO_FOUR_YEARS,0.0,brackets
+1114,"v1 = input()
+
+for v2, v3 in enumerate(v1):
+    if v2 < len(v1)//2:
+        print(v3 + '(', end='')
+    elif v2 > len(v1)//2:
+        print(v3 + ')', end='')
+    else:
+        print(v3, end='')
+",-1,FROM_TWO_TO_FOUR_YEARS,0.125,brackets
+1115,"v1 = input()
+
+for v2, v3 in enumerate(v1):
+    if v2+1 < len(v1)//2:
+        print(v3 + '(', end='')
+    elif v2 > len(v1)//2:
+        print(v3 + ')', end='')
+    else:
+        print(v3, end='')
+",-1,FROM_TWO_TO_FOUR_YEARS,0.125,brackets
+1116,"v1 = input()
+
+for v2, v3 in enumerate(v1):
+    if v2+1 < len(v1)//2:
+        print(v3 + '(', end='')
+    elif v2+1 > len(v1)//2:
+        print(v3 + ')', end='')
+    else:
+        print(v3, end='')
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,brackets
+1117,"v1 = input()
+
+
+for v2, v3 in enumerate(v1):
+    if v2+1 < len(v1)//2:
+        print(v3 + '(', end='')
+    elif v2+1 > len(v1)//2:
+        print(v3 + ')', end='')
+    else:
+        print(v3, end='')
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,brackets
+1118,"v1 = input()
+
+
+
+for v2, v3 in enumerate(v1):
+    if v2+1 < len(v1)//2:
+        print(v3 + '(', end='')
+    elif v2+1 > len(v1)//2:
+        print(v3 + ')', end='')
+    else:
+        print(v3, end='')
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,brackets
+1121,"v1 = input()
+
+if len(v1) <= 2:
+    print(v1)
+
+for v2, v3 in enumerate(v1):
+    if v2+1 < len(v1)//2:
+        print(v3 + '(', end='')
+    elif v2+1 > len(v1)//2:
+        print(v3 + ')', end='')
+    else:
+        print(v3, end='')
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,brackets
+1122,"v1 = input()
+
+if len(v1) <= 2:
+    print(v1)
+else:
+    for v2, v3 in enumerate(v1):
+        if v2+1 < len(v1)//2:
+            print(v3 + '(', end='')
+        elif v2+1 > len(v1)//2:
+            print(v3 + ')', end='')
+    else:
+        print(v3, end='')
+",-1,FROM_TWO_TO_FOUR_YEARS,0.125,brackets
+1123,"v1 = input()
+
+if len(v1) <= 2:
+    print(v1)
+else:
+    for v2, v3 in enumerate(v1):
+        if v2+1 < len(v1)//2:
+            print(v3 + '(', end='')
+        elif v2+1 > len(v1)//2:
+            print(v3 + ')', end='')
+        else:
+            print(v3, end='')
+",-1,FROM_TWO_TO_FOUR_YEARS,0.125,brackets
+1124,"v1 = input()
+
+if len(v1) <= 2:
+    print(v1)
+else:
+    for v2, v3 in enumerate(v1):
+        if v2+1 < len(v1)//2:
+            print(v3 + '(', end='')
+        elif v2+1 > len(v1)//2:
+            print(v3 + ')', end='')
+        else:
+            print(v3, end='')
+    print()",-1,FROM_TWO_TO_FOUR_YEARS,0.125,brackets

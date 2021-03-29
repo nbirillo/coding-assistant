@@ -1,0 +1,83 @@
+id,fragment,age,programExperience,testsResults,task
+3115,v1 = int(input()),23,MORE_THAN_SIX,0.0,pies
+3116,"v1 = int(input())
+v2 = int",23,MORE_THAN_SIX,0.0,pies
+3117,"v1 = int(input())
+v2 = int(input())",23,MORE_THAN_SIX,0.0,pies
+3118,"v1 = int(input())
+v2 = int(input())
+v3 = int",23,MORE_THAN_SIX,0.0,pies
+3119,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())",23,MORE_THAN_SIX,0.0,pies
+3120,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = v1 * v3",23,MORE_THAN_SIX,0.0,pies
+3122,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = v1 * v3",23,MORE_THAN_SIX,0.0,pies
+3125,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = v1 * v3
+v5 = v2 * v3",23,MORE_THAN_SIX,0.0,pies
+3130,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = v1 * v3
+v5 = v2 * v3
+
+while v5 >= 100:
+    v5 = v5 - 100",23,MORE_THAN_SIX,0.0,pies
+3135,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = v1 * v3
+v5 = v2 * v3
+
+while v5 >= 100:
+    v5 = v5 - 100
+    v4 = v4 + 1",23,MORE_THAN_SIX,0.0,pies
+3136,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = v1 * v3
+v5 = v2 * v3
+
+while v5 >= 100:
+    v5 = v5 - 100
+    v4 = v4 + 1
+    
+print(v1)",23,MORE_THAN_SIX,0.0,pies
+3141,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = v1 * v3
+v5 = v2 * v3
+
+while v5 >= 100:
+    v5 = v5 - 100
+    v4 = v4 + 1
+    
+print(v4, v5)",23,MORE_THAN_SIX,1.0,pies
+3142,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = v1 * v3
+v5 = v2 * v3
+
+while v5 >= 100:
+    v5 = v5 - 100
+    v4 = v4 + 1
+
+print(v4, v5)",23,MORE_THAN_SIX,1.0,pies

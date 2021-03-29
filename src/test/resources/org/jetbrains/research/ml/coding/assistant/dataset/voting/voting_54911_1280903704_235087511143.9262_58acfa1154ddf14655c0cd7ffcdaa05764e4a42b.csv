@@ -1,0 +1,21 @@
+id,fragment,age,programExperience,testsResults,task
+1181,"
+",21,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1182,v1 = int,21,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1184,v1 = int(input()),21,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1185,"v1 = int(input())
+v2 = int(input())",21,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1186,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())",21,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1189,"v1 = [int(input()) for v2 in range(3)]
+
+if sum(v1) < 2:
+    print(0)",21,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1190,"v1 = [int(input()) for v2 in range(3)]
+
+
+",21,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1196,"v1 = [int(input()) for v2 in range(3)]
+
+print(0) if sum(v1) < 2 else print(1)",21,FROM_TWO_TO_FOUR_YEARS,0.0,voting
