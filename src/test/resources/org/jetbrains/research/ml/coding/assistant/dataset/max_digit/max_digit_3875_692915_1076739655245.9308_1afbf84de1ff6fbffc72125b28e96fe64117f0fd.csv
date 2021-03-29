@@ -1,0 +1,76 @@
+id,fragment,age,programExperience,testsResults,task
+131,"v1 = str(input())
+v2 = []
+for v3 in v1:
+    v2.append(v3)
+    print(v1[0])",15.0,FROM_HALF_TO_ONE_YEAR,0.0,max_digit
+132,"v1 = str(input())
+v2 = []
+for v3 in v1:
+    v2.append(v3)
+",15.0,FROM_HALF_TO_ONE_YEAR,0.0,max_digit
+134,"v1 = str(input())
+v2 = []
+for v3 in v1:
+    v2.append(v3)
+v4 = 0    
+for v3 in v1:
+    if int(v3) != v4:
+        v5 = v3",15.0,FROM_HALF_TO_ONE_YEAR,0.0,max_digit
+137,"v1 = str(input())
+v2 = []
+for v3 in v1:
+    v2.append(v3)
+v4 = 0    
+for v3 in v1:
+    if int(v3) != v4:
+        v5 = int(v3)",15.0,FROM_HALF_TO_ONE_YEAR,0.0,max_digit
+138,"v1 = str(input())
+v2 = []
+for v3 in v1:
+    v2.append(v3)
+v4 = 0    
+for v3 in v1:
+    if int(v3) != v4 :
+        v5 = int(v3)
+        ",15.0,FROM_HALF_TO_ONE_YEAR,0.0,max_digit
+144,"v1 = str(input())
+v2 = []
+for v3 in v1:
+    v2.append(v3)
+v4 = 0    
+for v3 in v1:
+    if int(v3) != v4 and int(v3) > v4:
+        v5 = int(v3)
+        ",15.0,FROM_HALF_TO_ONE_YEAR,0.0,max_digit
+145,"v1 = str(input())
+v2 = []
+for v3 in v1:
+    v2.append(v3)
+v4 = 0    
+for v3 in v1:
+    if int(v3) != v4 and int(v3) > v4:
+        v4 = int(v3)
+        ",15.0,FROM_HALF_TO_ONE_YEAR,0.0,max_digit
+148,"v1 = str(input())
+v2 = []
+for v3 in v1:
+    v2.append(v3)
+v4 = 0    
+for v3 in v1:
+    if int(v3) != v4 and int(v3) > v4:
+        v4 = int(v3)
+print(v4)        
+        
+        ",15.0,FROM_HALF_TO_ONE_YEAR,1.0,max_digit
+149,"v1 = str(input())
+v2 = []
+for v3 in v1:
+    v2.append(v3)
+v4 = 0
+for v3 in v1:
+    if int(v3) != v4 and int(v3) > v4:
+        v4 = int(v3)
+print(v4)        
+        
+        ",15.0,FROM_HALF_TO_ONE_YEAR,1.0,max_digit

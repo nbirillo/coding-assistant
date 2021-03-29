@@ -1,0 +1,424 @@
+id,fragment,age,programExperience,testsResults,task
+4418,"
+",16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4419,v1=input,16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4421,v1=int(input()),16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4422,"v1=int(input())
+v2=int",16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4424,"v1=int(input())
+v2=int(input())",16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4425,"v1=int(input())
+v2=int(input())
+v2=int(input())",16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4426,"v1=int(input())
+v2=int(input())
+v3=int(input())",16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4427,"v1=int(input())
+v2=int(input())
+v3=int(input())
+
+v4=v1",16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4433,"v1=int(input())
+v2=int(input())
+v3=int(input())
+
+v4 = v1 + (v2 / 100)",16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4434,"v1=int(input())
+v2=int(input())
+v3= int(input())
+
+v4 = v1 + (v2 / 100)",16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4435,"v1=int(input())
+v2= int(input())
+v3= int(input())
+
+v4 = v1 + (v2 / 100)",16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4437,"v1 = int(input())
+v2= int(input())
+v3= int(input())
+
+v4 = v1 + (v2 / 100)",16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4438,"v1 = int(input())
+v2 = int(input())
+v3= int(input())
+
+v4 = v1 + (v2 / 100)",16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4439,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = v1 + (v2 / 100)",16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4440,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = v1 + (v2 / 100)
+
+v5 = v4",16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4443,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = v1 + (v2 / 100)
+
+v5 = v4 * v3",16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4453,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = v1 + (v2 / 100)
+
+v5 = v4 * v3
+print(100 * (v5 % 1))
+",16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4454,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = v1 + (v2 / 100)
+
+v5 = v4 * v3
+print(100 * (v5 % 1))
+",16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4455,"import math
+v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = v1 + (v2 / 100)
+
+v5 = v4 * v3
+print(100 * (v5 % 1))
+",16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4460,"import math
+v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = v1 + (v2 / 100)
+
+v5 = v4 * v3
+v6 = math.trunc(100 * (v5 % 1))
+",16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4461,"import math
+v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = v1 + (v2 / 100)
+
+v5 = v4 * v3
+v6 = math.trunc(100 * (v5 % 1))
+v7=v5
+",16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4462,"import math
+v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = v1 + (v2 / 100)
+
+v5 = v4 * v3
+v6 = math.trunc(100 * (v5 % 1))
+v7= v5 - v6
+",16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4468,"import math
+v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = v1 + (v2 / 100)
+
+v5 = v4 * v3
+v6 = math.trunc(100 * (v5 % 1))
+v7= v5 - v6
+print(v7, v6)
+",16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4469,"import math
+v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = v1 + (v2 / 100)
+
+v5 = v4 * v3
+
+v6 = math.trunc(100 * (v5 % 1))
+v7= v5 - v6
+print(v7, v6)
+",16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4472,"import math
+v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = v1 + (v2 / 100)
+
+v5 = v4 * v3
+v6=math.trunc(v5 % 1)
+v7 = math.trunc(100 * (v5 % 1))
+v8= v5 - v7
+print(v8, v7)
+",16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4473,"import math
+v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = v1 + (v2 / 100)
+
+v5 = v4 * v3
+v6=math.trunc(v5 % 1)
+v7 = math.trunc(100 * (v5 % 1))
+v8= v5 - v6
+print(v8, v7)
+",16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4475,"import math
+v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = v1 + (v2 / 100)
+
+v5 = v4 * v3
+v6 = math.trunc(v5 % 1)
+v7 = math.trunc(100 * (v5 % 1))
+v8= v5 - v6
+print(v8, v7)
+",16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4477,"import math
+v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = v1 + (v2 / 100)
+
+v5 = v4 * v3
+v6 = math.trunc(v5 % 1)
+v7 = math.trunc(100 * (v5 % 1))
+v8 = v5 - v6
+print(v8, v7)
+",16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4478,"import math
+v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = v1 + (v2 / 100)
+v5 = v4 * v3
+v6 = math.trunc(v5 % 1)
+v7 = math.trunc(100 * (v5 % 1))
+v8 = v5 - v6
+print(v8, v7)
+",16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4479,"import math
+v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = v1 + (v2 / 100)
+v5 = v4 * v3
+
+v6 = math.trunc(v5 % 1)
+v7 = math.trunc(100 * (v5 % 1))
+v8 = v5 - v6
+print(v8, v7)
+",16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4480,"import math
+v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = v1 + (v2 / 100)
+v5 = v4 * v3
+
+v6 = math.trunc(v5 % 1)
+
+v7 = math.trunc(100 * (v5 % 1))
+v8 = v5 - v6
+print(v8, v7)
+",16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4481,"import math
+v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = v1 + (v2 / 100)
+v5 = v4 * v3
+v6 = math.trunc(v5 % 1)
+
+v7 = math.trunc(100 * (v5 % 1))
+v8 = v5 - v6
+print(v8, v7)
+",16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4485,"import math
+v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = v1 + (v2 / 100)
+v5 = v4 * v3
+v6 = math.trunc(v5 % 1)
+
+v7 = math.trunc(100 * (v5 % 1))
+v8 = v5 - v6
+print(v8, v7)
+",16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4486,"import math
+v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = v1 + (v2 / 100)
+v5 = v4 * v3
+
+v6 = math.trunc(v5 % 1)
+
+v7 = math.trunc(100 * (v5 % 1))
+v8 = v5 - v6
+print(v8, v7)
+",16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4487,"import math
+v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = v1 + (v2 / 100)
+v5 = v4 * v3
+
+v6 = math.trunc(v5 % 1)
+v7 = math.trunc(100 * (v5 % 1))
+v8 = v5 - v6
+print(v8, v7)
+",16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4488,"import math
+v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = v1 + (v2 / 100)
+v5 = v4 * v3
+v6 = math.trunc(v5 % 1)
+v7 = math.trunc(100 * (v5 % 1))
+v8 = v5 - v6
+print(v8, v7)
+",16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4489,"import math
+v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = v1 + (v2 / 100)
+v5 = v4 * v3
+v6 = math.trunc(v5 % 1)
+
+v7 = math.trunc(100 * (v5 % 1))
+v8 = v5 - v6
+print(v8, v7)
+",16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4490,"import math
+v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = v1 + (v2 / 100)
+v5 = v4 * v3
+v6 = math.trunc(v5 % 1)
+
+
+v7 = math.trunc(100 * (v5 % 1))
+v8 = v5 - v6
+print(v8, v7)
+",16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4491,"import math
+v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = v1 + (v2 / 100)
+v5 = v4 * v3
+v6 = math.trunc(v5 % 1)
+
+v7 = math.trunc(100 * (v5 % 1))
+v8 = v5 - v6
+print(v8, v7)
+",16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4492,"import math
+v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = v1 + (v2 / 100)
+v5 = v4 * v3
+
+v6 = math.trunc(v5 % 1)
+
+v7 = math.trunc(100 * (v5 % 1))
+v8 = v5 - v6
+print(v8, v7)
+",16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4493,"import math
+v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = v1 + (v2 / 100)
+
+v5 = v4 * v3
+
+v6 = math.trunc(v5 % 1)
+
+v7 = math.trunc(100 * (v5 % 1))
+v8 = v5 - v6
+print(v8, v7)
+",16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4494,"import math
+v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = v1 + (v2 / 100)
+
+v5 = v4 * v3
+
+v6 = math.trunc(v5 % 1)
+
+v7 = math.trunc(100 * (v5 % 1))
+
+v8 = v5 - v6
+print(v8, v7)
+",16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4495,"import math
+v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = v1 + (v2 / 100)
+
+v5 = v4 * v3
+
+v6 = math.trunc(v5 % 1)
+
+v7 = math.trunc(100 * (v5 % 1))
+
+v8 = v5 - v6
+
+print(v8, v7)
+",16,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4496,"import math
+v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = v1 + (v2 / 100)
+
+v5 = v4 * v3
+
+v6 = math.trunc(v5 % 1)
+
+v7 = math.trunc(100 * (v5 % 1))
+
+v8 = math.trunc(v5 - v6)
+
+print(v8, v7)
+",16,FROM_TWO_TO_FOUR_YEARS,0.25,pies

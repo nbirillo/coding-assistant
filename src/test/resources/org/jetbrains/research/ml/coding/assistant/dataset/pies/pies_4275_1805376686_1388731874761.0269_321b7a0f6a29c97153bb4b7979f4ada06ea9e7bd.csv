@@ -1,0 +1,18 @@
+id,fragment,age,programExperience,testsResults,task
+2450,v1 = int(input()),-1,-1,0.0,pies
+2451,"v1 = int(input())
+v2 = int",-1,-1,0.0,pies
+2453,"v1 = int(input())
+v2 = int(input())
+",-1,-1,0.0,pies
+2454,"v1 = int(input())
+v2 = int(input())
+v3 = int",-1,-1,0.0,pies
+2456,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+",-1,-1,0.0,pies
+2486,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+print(v1 * v3 + (v2 * v3) // 100, (v2 * v3) % 100)",-1,-1,1.0,pies

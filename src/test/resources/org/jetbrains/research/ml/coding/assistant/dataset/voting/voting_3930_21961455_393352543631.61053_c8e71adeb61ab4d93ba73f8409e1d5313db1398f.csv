@@ -1,0 +1,551 @@
+id,fragment,age,programExperience,testsResults,task
+703,"def f1(f1_p1, f1_p2, f1_p3):
+    if (f1_p1 == 0 and f1_p2 == 0):
+        return 0;",13.0,FROM_HALF_TO_ONE_YEAR,0.0,voting
+704,"def f1(f1_p1, f1_p2, f1_p3):
+    if (f1_p1 == 0 and f1_p2 == 0):
+        return 0;
+    elif (f1_p3 == 0 and f1_p2 == 0):
+        return 0;
+        ",13.0,FROM_HALF_TO_ONE_YEAR,0.0,voting
+705,"def f1(f1_p1, f1_p2, f1_p3):
+    if (f1_p1 == 0 and f1_p2 == 0):
+        return 0;
+    elif (f1_p3 == 0 and f1_p2 == 0):
+        return 0;
+    elif (f1_p1 == 0 and f1_p3 == 0):
+        return 0;
+        ",13.0,FROM_HALF_TO_ONE_YEAR,0.0,voting
+706,"def f1(f1_p1, f1_p2, f1_p3):
+    if (f1_p1 == 0 and f1_p2 == 0):
+        return 0;
+    elif (f1_p3 == 0 and f1_p2 == 0):
+        return 0;
+    elif (f1_p1 == 0 and f1_p3 == 0):
+        return 0;
+    if (f1_p1 == 1 and f1_p2 == 1):
+        return 0;
+    elif (f1_p3 == 1 and f1_p2 == 0):
+        return 0;
+    elif (f1_p1 == 0 and f1_p3 == 0):
+        return 0;",13.0,FROM_HALF_TO_ONE_YEAR,0.0,voting
+707,"def f1(f1_p1, f1_p2, f1_p3):
+    if (f1_p1 == 0 and f1_p2 == 0):
+        return 0;
+    elif (f1_p3 == 0 and f1_p2 == 0):
+        return 0;
+    elif (f1_p1 == 0 and f1_p3 == 0):
+        return 0;
+    if (f1_p1 == 1 and f1_p2 == 1):
+        return 0;
+    elif (f1_p3 == 1 and f1_p2 == 1):
+        return 0;
+    elif (f1_p1 == 0 and f1_p3 == 0):
+        return 0;",13.0,FROM_HALF_TO_ONE_YEAR,0.0,voting
+709,"def f1(f1_p1, f1_p2, f1_p3):
+    if (f1_p1 == 0 and f1_p2 == 0):
+        return 0;
+    elif (f1_p3 == 0 and f1_p2 == 0):
+        return 0;
+    elif (f1_p1 == 0 and f1_p3 == 0):
+        return 0;
+    if (f1_p1 == 1 and f1_p2 == 1):
+        return 0;
+    elif (f1_p3 == 1 and f1_p2 == 1):
+        return 0;
+    elif (f1_p1 == 1 and f1_p3 == 1):
+        return 0;",13.0,FROM_HALF_TO_ONE_YEAR,0.0,voting
+713,"def f1(f1_p1, f1_p2, f1_p3):
+    if (f1_p1 == 0 and f1_p2 == 0):
+        return 0;
+    elif (f1_p3 == 0 and f1_p2 == 0):
+        return 0;
+    elif (f1_p1 == 0 and f1_p3 == 0):
+        return 0;
+    if (f1_p1 == 1 and f1_p2 == 1):
+        return 1;
+    elif (f1_p3 == 1 and f1_p2 == 1):
+        return 0;
+    elif (f1_p1 == 1 and f1_p3 == 1):
+        return 0;",13.0,FROM_HALF_TO_ONE_YEAR,0.0,voting
+715,"def f1(f1_p1, f1_p2, f1_p3):
+    if (f1_p1 == 0 and f1_p2 == 0):
+        return 0;
+    elif (f1_p3 == 0 and f1_p2 == 0):
+        return 0;
+    elif (f1_p1 == 0 and f1_p3 == 0):
+        return 0;
+    if (f1_p1 == 1 and f1_p2 == 1):
+        return 1;
+    elif (f1_p3 == 1 and f1_p2 == 1):
+        return 1;
+    elif (f1_p1 == 1 and f1_p3 == 1):
+        return 0;",13.0,FROM_HALF_TO_ONE_YEAR,0.0,voting
+717,"def f1(f1_p1, f1_p2, f1_p3):
+    if (f1_p1 == 0 and f1_p2 == 0):
+        return 0;
+    elif (f1_p3 == 0 and f1_p2 == 0):
+        return 0;
+    elif (f1_p1 == 0 and f1_p3 == 0):
+        return 0;
+    if (f1_p1 == 1 and f1_p2 == 1):
+        return 1;
+    elif (f1_p3 == 1 and f1_p2 == 1):
+        return 1;
+    elif (f1_p1 == 1 and f1_p3 == 1):
+        return 1;",13.0,FROM_HALF_TO_ONE_YEAR,0.0,voting
+718,"def f1(f1_p1, f1_p2, f1_p3):
+    if (f1_p1 == 0 and f1_p2 == 0):
+        return 0;
+    elif (f1_p3 == 0 and f1_p2 == 0):
+        return 0;
+    elif (f1_p1 == 0 and f1_p3 == 0):
+        return 0;
+    elif (f1_p1 == 1 and f1_p2 == 1):
+        return 1;
+    elif (f1_p3 == 1 and f1_p2 == 1):
+        return 1;
+    elif (f1_p1 == 1 and f1_p3 == 1):
+        return 1;",13.0,FROM_HALF_TO_ONE_YEAR,0.0,voting
+719,"def f1(f1_p1, f1_p2, f1_p3):
+    if (f1_p1 == 0 and f1_p2 == 0):
+        return 0;
+    elif (f1_p3 == 0 and f1_p2 == 0):
+        return 0;
+    elif (f1_p1 == 0 and f1_p3 == 0):
+        return 0;
+    elif (f1_p1 == 1 and f1_p2 == 1):
+        return 1;
+    elif (f1_p3 == 1 and f1_p2 == 1):
+        return 1;
+    elif (f1_p1 == 1 and f1_p3 == 1):
+        return 1;
+v1 = int(input())
+",13.0,FROM_HALF_TO_ONE_YEAR,0.0,voting
+720,"def f1(f1_p1, f1_p2, f1_p3):
+    if (f1_p1 == 0 and f1_p2 == 0):
+        return 0;
+    elif (f1_p3 == 0 and f1_p2 == 0):
+        return 0;
+    elif (f1_p1 == 0 and f1_p3 == 0):
+        return 0;
+    elif (f1_p1 == 1 and f1_p2 == 1):
+        return 1;
+    elif (f1_p3 == 1 and f1_p2 == 1):
+        return 1;
+    elif (f1_p1 == 1 and f1_p3 == 1):
+        return 1;
+v1 = int(input())
+v1 = int(input())",13.0,FROM_HALF_TO_ONE_YEAR,0.0,voting
+721,"def f1(f1_p1, f1_p2, f1_p3):
+    if (f1_p1 == 0 and f1_p2 == 0):
+        return 0;
+    elif (f1_p3 == 0 and f1_p2 == 0):
+        return 0;
+    elif (f1_p1 == 0 and f1_p3 == 0):
+        return 0;
+    elif (f1_p1 == 1 and f1_p2 == 1):
+        return 1;
+    elif (f1_p3 == 1 and f1_p2 == 1):
+        return 1;
+    elif (f1_p1 == 1 and f1_p3 == 1):
+        return 1;
+v1 = int(input())
+v1 = int(input())
+v1 = int(input())
+",13.0,FROM_HALF_TO_ONE_YEAR,0.0,voting
+722,"def f1(f1_p1, f1_p2, f1_p3):
+    if (f1_p1 == 0 and f1_p2 == 0):
+        return 0;
+    elif (f1_p3 == 0 and f1_p2 == 0):
+        return 0;
+    elif (f1_p1 == 0 and f1_p3 == 0):
+        return 0;
+    elif (f1_p1 == 1 and f1_p2 == 1):
+        return 1;
+    elif (f1_p3 == 1 and f1_p2 == 1):
+        return 1;
+    elif (f1_p1 == 1 and f1_p3 == 1):
+        return 1;
+v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+",13.0,FROM_HALF_TO_ONE_YEAR,0.0,voting
+723,"def f1(f1_p1, f1_p2, f1_p3):
+    if (f1_p1 == 0 and f1_p2 == 0):
+        return 0;
+    elif (f1_p3 == 0 and f1_p2 == 0):
+        return 0;
+    elif (f1_p1 == 0 and f1_p3 == 0):
+        return 0;
+    elif (f1_p1 == 1 and f1_p2 == 1):
+        return 1;
+    elif (f1_p3 == 1 and f1_p2 == 1):
+        return 1;
+    elif (f1_p1 == 1 and f1_p3 == 1):
+        return 1;
+v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+",13.0,FROM_HALF_TO_ONE_YEAR,0.0,voting
+726,"def f1(f1_p1, f1_p2, f1_p3):
+    if (f1_p1 == 0 and f1_p2 == 0):
+        return 0;
+    elif (f1_p3 == 0 and f1_p2 == 0):
+        return 0;
+    elif (f1_p1 == 0 and f1_p3 == 0):
+        return 0;
+    elif (f1_p1 == 1 and f1_p2 == 1):
+        return 1;
+    elif (f1_p3 == 1 and f1_p2 == 1):
+        return 1;
+    elif (f1_p1 == 1 and f1_p3 == 1):
+        return 1;
+v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = f1(v1, v2, v3)
+",13.0,FROM_HALF_TO_ONE_YEAR,0.0,voting
+727,"def f1(f1_p1, f1_p2, f1_p3):
+    if (f1_p1 == 0 and f1_p2 == 0):
+        return 0
+    elif (f1_p3 == 0 and f1_p2 == 0):
+        return 0;
+    elif (f1_p1 == 0 and f1_p3 == 0):
+        return 0;
+    elif (f1_p1 == 1 and f1_p2 == 1):
+        return 1;
+    elif (f1_p3 == 1 and f1_p2 == 1):
+        return 1;
+    elif (f1_p1 == 1 and f1_p3 == 1):
+        return 1;
+v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = f1(v1, v2, v3)
+",13.0,FROM_HALF_TO_ONE_YEAR,0.0,voting
+728,"def f1(f1_p1, f1_p2, f1_p3):
+    if (f1_p1 == 0 and f1_p2 == 0):
+        return 0
+    elif (f1_p3 == 0 and f1_p2 == 0):
+        return 0
+    elif (f1_p1 == 0 and f1_p3 == 0):
+        return 0;
+    elif (f1_p1 == 1 and f1_p2 == 1):
+        return 1;
+    elif (f1_p3 == 1 and f1_p2 == 1):
+        return 1;
+    elif (f1_p1 == 1 and f1_p3 == 1):
+        return 1;
+v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = f1(v1, v2, v3)
+",13.0,FROM_HALF_TO_ONE_YEAR,0.0,voting
+729,"def f1(f1_p1, f1_p2, f1_p3):
+    if (f1_p1 == 0 and f1_p2 == 0):
+        return 0
+    elif (f1_p3 == 0 and f1_p2 == 0):
+        return 0
+    elif (f1_p1 == 0 and f1_p3 == 0):
+        return 0;
+    elif (f1_p1 == 1 and f1_p2 == 1):
+        return 1
+    elif (f1_p3 == 1 and f1_p2 == 1):
+        return 1;
+    elif (f1_p1 == 1 and f1_p3 == 1):
+        return 1;
+v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = f1(v1, v2, v3)
+",13.0,FROM_HALF_TO_ONE_YEAR,0.0,voting
+730,"def f1(f1_p1, f1_p2, f1_p3):
+    if (f1_p1 == 0 and f1_p2 == 0):
+        return 0
+    elif (f1_p3 == 0 and f1_p2 == 0):
+        return 0
+    elif (f1_p1 == 0 and f1_p3 == 0):
+        return 0
+    elif (f1_p1 == 1 and f1_p2 == 1):
+        return 1
+    elif (f1_p3 == 1 and f1_p2 == 1):
+        return 1;
+    elif (f1_p1 == 1 and f1_p3 == 1):
+        return 1;
+v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = f1(v1, v2, v3)
+",13.0,FROM_HALF_TO_ONE_YEAR,0.0,voting
+731,"def f1(f1_p1, f1_p2, f1_p3):
+    if (f1_p1 == 0 and f1_p2 == 0):
+        return 0
+    elif (f1_p3 == 0 and f1_p2 == 0):
+        return 0
+    elif (f1_p1 == 0 and f1_p3 == 0):
+        return 0
+    elif (f1_p1 == 1 and f1_p2 == 1):
+        return 1
+    elif (f1_p3 == 1 and f1_p2 == 1):
+        return 1
+    elif (f1_p1 == 1 and f1_p3 == 1):
+        return 1;
+v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = f1(v1, v2, v3)
+",13.0,FROM_HALF_TO_ONE_YEAR,0.0,voting
+732,"def f1(f1_p1, f1_p2, f1_p3):
+    if (f1_p1 == 0 and f1_p2 == 0):
+        return 0
+    elif (f1_p3 == 0 and f1_p2 == 0):
+        return 0
+    elif (f1_p1 == 0 and f1_p3 == 0):
+        return 0
+    elif (f1_p1 == 1 and f1_p2 == 1):
+        return 1
+    elif (f1_p3 == 1 and f1_p2 == 1):
+        return 1
+    elif (f1_p1 == 1 and f1_p3 == 1):
+        return 1
+v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = f1(v1, v2, v3)
+",13.0,FROM_HALF_TO_ONE_YEAR,0.0,voting
+734,"def f1(f1_p1, f1_p2, f1_p3):
+    if (f1_p1 == 0 and f1_p2 == 0):
+        return 0
+    elif (f1_p3 == 0 and f1_p2 == 0):
+        return 0
+    elif (f1_p1 == 0 and f1_p3 == 0):
+        return 0
+    elif (f1_p1 == 1 and f1_p2 == 1):
+        return 1
+    elif (f1_p3 == 1 and f1_p2 == 1):
+        return 1
+    elif (f1_p1 == 1 and f1_p3 == 1):
+        return 1
+v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = f1(v1, v2, v3)
+print()
+",13.0,FROM_HALF_TO_ONE_YEAR,0.0,voting
+735,"def f1(f1_p1, f1_p2, f1_p3):
+    if (f1_p1 == 0 and f1_p2 == 0):
+        return 0
+    elif (f1_p3 == 0 and f1_p2 == 0):
+        return 0
+    elif (f1_p1 == 0 and f1_p3 == 0):
+        return 0
+    elif (f1_p1 == 1 and f1_p2 == 1):
+        return 1
+    elif (f1_p3 == 1 and f1_p2 == 1):
+        return 1
+    elif (f1_p1 == 1 and f1_p3 == 1):
+        return 1
+v1, v2, v3 = map(int, input())
+v4 = f1(v1, v2, v3)
+print(v4)
+",13.0,FROM_HALF_TO_ONE_YEAR,0.0,voting
+737,"def f1(f1_p1, f1_p2, f1_p3):
+    if (f1_p1 == 0 and f1_p2 == 0):
+        return 0
+    elif (f1_p3 == 0 and f1_p2 == 0):
+        return 0
+    elif (f1_p1 == 0 and f1_p3 == 0):
+        return 0
+    elif (f1_p1 == 1 and f1_p2 == 1):
+        return 1
+    elif (f1_p3 == 1 and f1_p2 == 1):
+        return 1
+    elif (f1_p1 == 1 and f1_p3 == 1):
+        return 1
+v1, v2, v3 = map(int, input().split())
+v4 = f1(v1, v2, v3)
+print(v4)
+",13.0,FROM_HALF_TO_ONE_YEAR,1.0,voting
+738,"def f1(f1_p1, f1_p2, f1_p3):
+    if (f1_p1 == 0 and f1_p2 == 0):
+        return 0
+    elif (f1_p3 == 0 and f1_p2 == 0):
+        return 0
+    elif (f1_p1 == 0 and f1_p3 == 0):
+        return 0
+    elif (f1_p1 == 1 and f1_p2 == 1):
+        return 1
+    elif (f1_p3 == 1 and f1_p2 == 1):
+        return 1
+    elif (f1_p1 == 1 and f1_p3 == 1):
+    
+        return 1
+v1, v2, v3 = map(int, input().split())
+v4 = f1(v1, v2, v3)
+print(v4)
+",13.0,FROM_HALF_TO_ONE_YEAR,1.0,voting
+740,"def f1(f1_p1, f1_p2, f1_p3):
+    if (f1_p1 == 0 and f1_p2 == 0):
+        return 0
+    elif (f1_p3 == 0 and f1_p2 == 0):
+        return 0
+    elif (f1_p1 == 0 and f1_p3 == 0):
+        return 0
+    elif (f1_p1 == 1 and f1_p2 == 1):
+        return 1
+    elif (f1_p3 == 1 and f1_p2 == 1):
+        return 1
+    elif (f1_p1 == 1 and f1_p3 == 1):
+    
+        return 1
+v1, v2, v3 = map(int, input().split())
+v4 = f1(v1, v2, v3)
+print(v4)
+",13.0,FROM_HALF_TO_ONE_YEAR,1.0,voting
+741,"def f1(f1_p1, f1_p2, f1_p3):
+    if (f1_p1 == 0 and f1_p2 == 0):
+        return 0
+    elif (f1_p3 == 0 and f1_p2 == 0):
+        return 0
+    elif (f1_p1 == 0 and f1_p3 == 0):
+        return 0
+    elif (f1_p1 == 1 and f1_p2 == 1):
+        return 1
+    elif (f1_p3 == 1 and f1_p2 == 1):
+        return 1
+    elif (f1_p1 == 1 and f1_p3 == 1):
+        return 1
+v1, v2, v3 = map(int, input().split())
+v4 = f1(v1, v2, v3)
+print(v4)
+",13.0,FROM_HALF_TO_ONE_YEAR,1.0,voting
+742,"def f1(f1_p1, f1_p2, f1_p3):
+    if (f1_p1 == 0 and f1_p2 == 0):
+        return 0
+    elif (f1_p3 == 0 and f1_p2 == 0):
+        return 0
+    elif (f1_p1 == 0 and f1_p3 == 0):
+        return 0
+    elif (f1_p1 == 1 and f1_p2 == 1):
+        return 1
+    elif (f1_p3 == 1 and f1_p2 == 1):
+        return 1
+    elif (f1_p1 == 1 and f1_p3 == 1):
+        return 1
+v1, v2, v3 = map(int, input().split())
+v4 = f1(v1, v2, v3)
+print(v4)
+",13.0,FROM_HALF_TO_ONE_YEAR,1.0,voting
+743,"def f1(f1_p1, f1_p2, f1_p3):
+    if (f1_p1 == 0 and f1_p2 == 0):
+        return 0
+    elif (f1_p3 == 0 and f1_p2 == 0):
+        return 0
+    elif (f1_p1 == 0 and f1_p3 == 0):
+        return 0
+    elif (f1_p1 == 1 and f1_p2 == 1):
+        return 1
+    elif (f1_p3 == 1 and f1_p2 == 1):
+        return 1
+    elif (f1_p1 == 1 and f1_p3 == 1):
+        return 1
+
+v1, v2, v3 = map(int, input().split())
+v4 = f1(v1, v2, v3)
+print(v4)
+",13.0,FROM_HALF_TO_ONE_YEAR,1.0,voting
+744,"def f1(f1_p1, f1_p2, f1_p3):
+    if (f1_p1 == 0 and f1_p2 == 0):
+        return 0
+    elif (f1_p3 == 0 and f1_p2 == 0):
+        return 0
+    elif (f1_p1 == 0 and f1_p3 == 0):
+        return 0
+    elif (f1_p1 == 1 and f1_p2 == 1):
+        return 1
+    elif (f1_p3 == 1 and f1_p2 == 1):
+        return 1
+    elif (f1_p1 == 1 and f1_p3 == 1):
+        return 1
+
+v1, v2, v3 = map(int, input().split())
+v4 = f1(v1, v2, v3)
+print(v4)
+",13.0,FROM_HALF_TO_ONE_YEAR,1.0,voting
+745,"def f1(f1_p1, f1_p2, f1_p3):
+    if (f1_p1 == 0 and f1_p2 == 0):
+        return 0
+    elif (f1_p3 == 0 and f1_p2 == 0):
+        return 0
+    elif (f1_p1 == 0 and f1_p3 == 0):
+        return 0
+    elif (f1_p1 == 1 and f1_p2 == 1):
+        return 1
+    elif (f1_p3 == 1 and f1_p2 == 1):
+        return 1
+    elif (f1_p1 == 1 and f1_p3 == 1):
+        return 1
+
+
+v1, v2, v3 = map(int, input().split())
+v4 = f1(v1, v2, v3)
+print(v4)
+",13.0,FROM_HALF_TO_ONE_YEAR,1.0,voting
+746,"def f1(f1_p1, f1_p2, f1_p3):
+    if (f1_p1 == 0 and f1_p2 == 0):
+        return 0
+    elif (f1_p3 == 0 and f1_p2 == 0):
+        return 0
+    elif (f1_p1 == 0 and f1_p3 == 0):
+        return 0
+    elif (f1_p1 == 1 and f1_p2 == 1):
+        return 1
+    elif (f1_p3 == 1 and f1_p2 == 1):
+        return 1
+    elif (f1_p1 == 1 and f1_p3 == 1):
+        return 1
+
+
+v1, v2, v3 = map(int, input().split())
+v4 = f1(v1, v2, v3)
+print(v4)
+",13.0,FROM_HALF_TO_ONE_YEAR,1.0,voting
+747,"def f1(f1_p1, f1_p2, f1_p3):
+    if (f1_p1 == 0 and f1_p2 == 0):
+        return 0
+    elif (f1_p3 == 0 and f1_p2 == 0):
+        return 0
+    elif (f1_p1 == 0 and f1_p3 == 0):
+        return 0
+    elif (f1_p1 == 1 and f1_p2 == 1):
+        return 1
+    elif (f1_p3 == 1 and f1_p2 == 1):
+        return 1
+    elif (f1_p1 == 1 and f1_p3 == 1):
+        return 1
+
+
+v1, v2, v3 = map(int, input().split())
+v4 = f1(v1, v2, v3)
+print(v4)
+",13.0,FROM_HALF_TO_ONE_YEAR,1.0,voting
+748,"def f1(f1_p1, f1_p2, f1_p3):
+    if (f1_p1 == 0 and f1_p2 == 0):
+        return 0
+    elif (f1_p3 == 0 and f1_p2 == 0):
+        return 0
+    elif (f1_p1 == 0 and f1_p3 == 0):
+        return 0
+    elif (f1_p1 == 1 and f1_p2 == 1):
+        return 1
+    elif (f1_p3 == 1 and f1_p2 == 1):
+        return 1
+    elif (f1_p1 == 1 and f1_p3 == 1):
+        return 1
+
+
+v1, v2, v3 = map(int, input().split())
+v4 = f1(v1, v2, v3)
+print(v4)
+",13.0,FROM_HALF_TO_ONE_YEAR,1.0,voting

@@ -1,0 +1,137 @@
+id,fragment,age,programExperience,testsResults,task
+749,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+",14.0,LESS_THAN_HALF_YEAR,0.0,voting
+753,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+if v1 // 1 == 0 and v2 // 1 == 0:
+    print(""0"")",14.0,LESS_THAN_HALF_YEAR,0.0,voting
+757,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+if v1 // 1 == 0 and v2 // 1 == 0:
+    print(""0"")
+if v1 // 1 == 1 and v2 // 1 == 1:
+    print(""1"")",14.0,LESS_THAN_HALF_YEAR,0.0,voting
+761,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+if v1 // 1 == 0 and v2 // 1 == 0:
+    print(""0"")
+if v1 // 1 == 1 and v2 // 1 == 1:
+    print(""1"")
+if v1 // 1 == 1 and v3 // 1 == 1:
+    print(""1"")",14.0,LESS_THAN_HALF_YEAR,0.0,voting
+765,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+if v1 // 1 == 0 and v2 // 1 == 0:
+    print(""0"")
+if v1 // 1 == 1 and v2 // 1 == 1:
+    print(""1"")
+if v1 // 1 == 1 and v3 // 1 == 1:
+    print(""1"")
+if v2 // 1 == 0 and v3 // 1 == 0:
+    print(""0"")",14.0,LESS_THAN_HALF_YEAR,0.0,voting
+769,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+if v1 // 1 == 0 and v2 // 1 == 0:
+    print(""0"")
+if v1 // 1 == 1 and v2 // 1 == 1:
+    print(""1"")
+if v1 // 1 == 1 and v3 // 1 == 1:
+    print(""1"")
+if v2 // 1 == 0 and v3 // 1 == 0:
+    print(""0"")
+else:
+    print(""1"")",14.0,LESS_THAN_HALF_YEAR,0.0,voting
+770,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+if v1 // 1 == 0 and v2 // 1 == 0:
+    print(""0"")
+if v1 // 1 == 1 and v2 // 1 == 1:
+    print(""1"")
+if v1 // 1 == 1 and v3 // 1 == 1:
+    print(""1"")
+if v2 // 1 == 0 and v3 // 1 == 0:
+    print(""0"")
+",14.0,LESS_THAN_HALF_YEAR,0.0,voting
+774,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+if v1 // 1 == 0 and v2 // 1 == 0:
+    print(""0"")
+if v1 // 1 == 1 and v2 // 1 == 1:
+    print(""1"")
+if v1 // 1 == 1 and v3 // 1 == 1:
+    print(""1"")
+if v2 // 1 == 0 and v3 // 1 == 0:
+    print(""0"")
+if v1 // 1 == 0 and v3 // 1 == 0 and v2 // 1 == 0:
+    print(""0"")",14.0,LESS_THAN_HALF_YEAR,0.0,voting
+776,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+if v1 // 1 == 0 and v2 // 1 == 0:
+    print(""0"")
+if v1 // 1 == 1 and v2 // 1 == 1:
+    print(""1"")
+if v1 // 1 == 1 and v3 // 1 == 1:
+    print(""1"")
+
+if v1 // 1 == 0 and v3 // 1 == 0 and v2 // 1 == 0:
+    print(""0"")",14.0,LESS_THAN_HALF_YEAR,0.0,voting
+777,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+if v1 // 1 == 0 and v2 // 1 == 0:
+    print(""0"")
+if v1 // 1 == 1 and v2 // 1 == 1:
+    print(""1"")
+if v1 // 1 == 1 and v3 // 1 == 1:
+    print(""1"")
+if v1 // 1 == 0 and v3 // 1 == 0 and v2 // 1 == 0:
+    print(""0"")",14.0,LESS_THAN_HALF_YEAR,0.0,voting
+778,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+if v1 // 1 == 0 and v2 // 1 == 0:
+    print(""0"")
+if v1 // 1 == 1 and v2 // 1 == 1:
+    print(""1"")
+if v1 // 1 == 1 and v3 // 1 == 1:
+    print(""1"")
+if v1 // 1 == 0 and v3 // 1 == 0 and v2 // 1 == 0:
+    print(""0"")
+if v1 // 1 == 1 and v3 // 1 == 1 and v2 // 1 == 1:
+    print(""1"")",14.0,LESS_THAN_HALF_YEAR,0.0,voting
+779,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+",14.0,LESS_THAN_HALF_YEAR,0.0,voting
+783,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+if v1 + v2 + v3 == 3:
+    print(""1"")
+",14.0,LESS_THAN_HALF_YEAR,0.0,voting
+787,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+if v1 + v2 + v3 == 3:
+    print(""1"")
+elif v1 + v2 + v3 == 2:
+    print(""1"")",14.0,LESS_THAN_HALF_YEAR,0.0,voting
+791,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+if v1 + v2 + v3 == 3:
+    print(""1"")
+elif v1 + v2 + v3 == 2:
+    print(""1"")
+else:
+    print(""0"")",14.0,LESS_THAN_HALF_YEAR,0.0,voting

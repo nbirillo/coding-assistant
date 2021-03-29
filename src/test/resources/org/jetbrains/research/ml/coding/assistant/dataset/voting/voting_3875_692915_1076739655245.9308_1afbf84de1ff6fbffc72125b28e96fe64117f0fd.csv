@@ -1,0 +1,166 @@
+id,fragment,age,programExperience,testsResults,task
+602,"v1 = int(input())
+v2 = 'NO'
+for v3 in range(v1):
+    if int(input()) == 0 and v2 != 'YES':
+        v2 = 'YES'
+print(v2)",15.0,FROM_HALF_TO_ONE_YEAR,0.0,voting
+603,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = 0
+v5 = 0
+for v6 in range (3):
+    if v1 == 0 or v2 == 0 or v3 == 0:
+        v4 += 1
+    elif v1 == 1 or v2 == 1 or v3 == 1:
+        v5 += 1
+if v4 > v5:
+    print(0)
+else:
+    print(1)",15.0,FROM_HALF_TO_ONE_YEAR,0.0,voting
+607,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = 0
+v5 = 0
+for v6 in range (3):
+    if v1 == 0 or v2 == 0 or v3 == 0:
+        v4 += 1
+    elif v1 == 1 or v2 == 1 or v3 == 1:
+        v5 += 1
+if v4 > v5:
+    print(0)
+elif v5 > v4:
+    print(1)",15.0,FROM_HALF_TO_ONE_YEAR,0.0,voting
+609,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = 0
+v5 = 0
+for v6 in range (3):
+    if v1 == 0 or v2 == 0 or v3 == 0:
+        v4 =  1
+    elif v1 == 1 or v2 == 1 or v3 == 1:
+        v5 += 1
+if v4 > v5:
+    print(0)
+elif v5 > v4:
+    print(1)",15.0,FROM_HALF_TO_ONE_YEAR,0.0,voting
+610,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = 0
+v5 = 0
+for v6 in range (3):
+    if v1 == 0 or v2 == 0 or v3 == 0:
+        v4 = v4 + 1
+    elif v1 == 1 or v2 == 1 or v3 == 1:
+        v5 = v5 + 1
+if v4 > v5:
+    print(0)
+elif v5 > v4:
+    print(1)",15.0,FROM_HALF_TO_ONE_YEAR,0.0,voting
+611,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = 0
+v5 = 0
+
+if v1 == 0 or v2 == 0 or v3 == 0:
+    v4 = v4 + 1
+elif v1 == 1 or v2 == 1 or v3 == 1:
+        v5 = v5 + 1
+if v4 > v5:
+    print(0)
+elif v5 > v4:
+    print(1)",15.0,FROM_HALF_TO_ONE_YEAR,0.0,voting
+613,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = 0
+v5 = 0
+
+if v1 == 0 or v2 == 0 or v3 == 0:
+    v4 = v4 + 1
+elif v1 == 1 or v2 == 1 or v3 == 1:
+    v5 = v5 + 1
+if v4 > v5:
+    print(0)
+elif v5 > v4:
+    print(1)",15.0,FROM_HALF_TO_ONE_YEAR,0.0,voting
+614,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = 0
+v5 = 0
+if v1 == 0 or v2 == 0 or v3 == 0:
+    v4 = v4 + 1
+elif v1 == 1 or v2 == 1 or v3 == 1:
+    v5 = v5 + 1
+if v4 > v5:
+    print(0)
+elif v5 > v4:
+    print(1)",15.0,FROM_HALF_TO_ONE_YEAR,0.0,voting
+632,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = 0
+v5 = 0
+if v1 + v2 + v3 == 1:
+    v4 = v4 + 1
+elif v1 == 1 or v2 == 1 or v3 == 1:
+    v5 = v5 + 1
+if v4 > v5:
+    print(0)
+elif v5 > v4:
+    print(1)",15.0,FROM_HALF_TO_ONE_YEAR,0.0,voting
+635,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = 0
+v5 = 0
+if v1 + v2 + v3 == 1:
+    print(0)
+elif v1 == 1 or v2 == 1 or v3 == 1:
+    v5 = v5 + 1
+if v4 > v5:
+    print(0)
+elif v5 > v4:
+    print(1)",15.0,FROM_HALF_TO_ONE_YEAR,0.0,voting
+643,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = 0
+v5 = 0
+if v1 + v2 + v3 == 1 or v1 + v2 + v3 == 0:
+    print(0)
+elif v1 == 1 or v2 == 1 or v3 == 1:
+    v5 = v5 + 1
+if v4 > v5:
+    print(0)
+elif v5 > v4:
+    print(1)",15.0,FROM_HALF_TO_ONE_YEAR,0.0,voting
+644,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+if v1 + v2 + v3 == 1 or v1 + v2 + v3 == 0:
+    print(0)
+    if v1 + v2 + v3 == 1 or v1 + v2 + v3 == 0:
+        print(0)",15.0,FROM_HALF_TO_ONE_YEAR,0.0,voting
+647,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+if v1 + v2 + v3 == 1 or v1 + v2 + v3 == 0:
+    print(0)
+if v1 + v2 + v3 == 2 or v1 + v2 + v3 == 3:
+        print(0)",15.0,FROM_HALF_TO_ONE_YEAR,0.0,voting
+651,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+if v1 + v2 + v3 == 1 or v1 + v2 + v3 == 0:
+    print(0)
+if v1 + v2 + v3 == 2 or v1 + v2 + v3 == 3:
+    print(1)",15.0,FROM_HALF_TO_ONE_YEAR,0.0,voting
+652,"v1 = int(input())
+",15.0,FROM_HALF_TO_ONE_YEAR,0.0,voting

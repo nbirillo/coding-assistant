@@ -1,9 +1,27 @@
 <idea-plugin>
     <id>io.github.nbirillo.coding.assistant</id>
-    <name>Coding Assistant</name>
+    <name>Hint Generation Algorithm</name>
     <vendor url="https://research.jetbrains.org/">JetBrains Research</vendor>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.python</depends>
 
     <description><![CDATA[
     A PyCharm plugin for generating the personalized hints
     ]]></description>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <appStarter implementation="org.jetbrains.research.ml.coding.assistant.runner.SolutionSpaceRunner"/>
+        <appStarter implementation="org.jetbrains.research.ml.coding.assistant.runner.HintGenerateRunner"/>
+        <projectService
+                serviceInterface="org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreator"
+                serviceImplementation="org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreatorImpl"
+                testServiceImplementation="org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.impl.TestPsiCreator"
+        />
+        <projectService
+                serviceInterface="org.jetbrains.research.ml.coding.assistant.unification.DatasetUnification"
+                serviceImplementation="org.jetbrains.research.ml.coding.assistant.unification.DatasetUnificationImpl"
+        />
+    </extensions>
 </idea-plugin>

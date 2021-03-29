@@ -1,0 +1,151 @@
+id,fragment,age,programExperience,testsResults,task
+215,"v1 = int (input())
+v2 = int (input())
+v3 = int (input())
+v4 = v1 * 100 + v2
+v5 = v4 * v3
+v6 = v5 // 100
+v7 = v5 % 100
+print (v6, v7)",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,max_3
+216,"v1 = int (input())
+v2 = int (input())
+v3 = int (input())
+",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,max_3
+223,"v1 = int (input())
+v2 = int (input())
+v3 = int (input())
+
+",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,max_3
+226,"v1 = int (input())
+v2 = int (input())
+v3 = int (input())
+
+if (v1>v2 and v1>v3):
+    print (v1)",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,max_3
+227,"v1 = int (input())
+v2 = int (input())
+v3 = int (input())
+
+if (v1>v2 and v1>v3):
+    print (v1)
+if (v2>v2 and v1>v3):
+    print (v1)",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,max_3
+228,"v1 = int (input())
+v2 = int (input())
+v3 = int (input())
+
+if (v1>v2 and v1>v3):
+    print (v1)
+if (v2>v1 and v2>v3):
+    print (v1)",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,max_3
+230,"v1 = int (input())
+v2 = int (input())
+v3 = int (input())
+
+if (v1>v2 and v1>v3):
+    print (v1)
+if (v2>v1 and v2>v3):
+    print (v2)
+",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,max_3
+231,"v1 = int (input())
+v2 = int (input())
+v3 = int (input())
+
+if (v1>v2 and v1>v3):
+    print (v1)
+if (v2>v1 and v2>v3):
+    print (v2)
+if (v2>v1 and v2>v3):
+    print (v2)",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,max_3
+232,"v1 = int (input())
+v2 = int (input())
+v3 = int (input())
+
+if (v1>v2 and v1>v3):
+    print (v1)
+    
+if (v2>v1 and v2>v3):
+    print (v2)
+if (v2>v1 and v2>v3):
+    print (v2)",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,max_3
+233,"v1 = int (input())
+v2 = int (input())
+v3 = int (input())
+
+if (v1>v2 and v1>v3):
+    print (v1)
+    
+if (v2>v1 and v2>v3):
+    print (v2)
+    
+if (v2>v1 and v2>v3):
+    print (v2)",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,max_3
+235,"v1 = int (input())
+v2 = int (input())
+v3 = int (input())
+
+if (v1>v2 and v1>v3):
+    print (v1)
+    
+if (v2>v1 and v2>v3):
+    print (v2)
+    
+if (v3>v1 and v3>v3):
+    print (v2)",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,max_3
+236,"v1 = int (input())
+v2 = int (input())
+v3 = int (input())
+
+if (v1>v2 and v1>v3):
+    print (v1)
+    
+if (v2>v1 and v2>v3):
+    print (v2)
+
+if (v3>v1 and v3>v2):
+    print (v3)",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,max_3
+237,"v1 = int (input())
+v2 = int (input())
+v3 = int (input())
+
+if (v1>v2 and v1>v3):
+    print (v1)
+
+if (v2>v1 and v2>v3):
+    print (v2)
+
+if (v3>v1 and v3>v2):
+    print (v3)",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,max_3
+238,"v1 = int (input())
+v2 = int (input())
+v3 = int (input())
+
+if (v1>=v2 and v1>=v3):
+    print (v1)
+
+if (v2>=v1 and v2>=v3):
+    print (v2)
+
+if (v3>=v1 and v3>=v2):
+    print (v3)",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,max_3
+239,"v1 = int (input())
+v2 = int (input())
+v3 = int (input())
+
+if (v1>=v2 and v1>=v3):
+    print (v1)
+elif (v2 >= v1 and v2 >= v3):
+    print (v2)
+
+if (v3>=v1 and v3>=v2):
+    print (v3)",13.0,FROM_TWO_TO_FOUR_YEARS,0.0,max_3
+240,"v1 = int (input())
+v2 = int (input())
+v3 = int (input())
+
+if (v1>=v2 and v1>=v3):
+    print (v1)
+elif (v2 >= v1 and v2 >= v3):
+    print (v2)
+elif (v3 >= v1 and v3 >= v2):
+    print (v3)",13.0,FROM_TWO_TO_FOUR_YEARS,1.0,max_3

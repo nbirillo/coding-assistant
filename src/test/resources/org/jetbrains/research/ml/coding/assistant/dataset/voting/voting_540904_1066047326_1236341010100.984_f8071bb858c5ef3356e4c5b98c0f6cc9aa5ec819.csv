@@ -1,0 +1,14 @@
+id,fragment,age,programExperience,testsResults,task
+1179,"v1 = int(input())
+
+v2 = False
+for v3 in range(v1):
+    v4 = int(input())
+    if v4 == 0:
+        v2 = True
+
+print([""NO"", ""YES""][v2])",24.0,MORE_THAN_SIX,0.0,voting
+1180,"v1 = list(map(int, input().split()))
+v1.sort()
+print(v1[1])
+",24.0,MORE_THAN_SIX,1.0,voting

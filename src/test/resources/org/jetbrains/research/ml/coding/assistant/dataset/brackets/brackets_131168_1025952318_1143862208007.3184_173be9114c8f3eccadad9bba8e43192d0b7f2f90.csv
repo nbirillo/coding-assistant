@@ -1,0 +1,639 @@
+id,fragment,age,programExperience,testsResults,task
+1125,"
+",26,MORE_THAN_SIX,0.0,brackets
+1131,"def f1():
+    
+    return output",26,MORE_THAN_SIX,0.0,brackets
+1143,"def f1(f1_p1):
+    
+    return output",26,MORE_THAN_SIX,0.0,brackets
+1144,"def f1(f1_p1):
+    
+    
+    return output",26,MORE_THAN_SIX,0.0,brackets
+1145,"def f1(f1_p1):
+    
+    
+    
+    return output",26,MORE_THAN_SIX,0.0,brackets
+1146,"def f1(f1_p1):
+    
+    
+
+    return output",26,MORE_THAN_SIX,0.0,brackets
+1147,"def f1(f1_p1):
+
+    
+
+    return output",26,MORE_THAN_SIX,0.0,brackets
+1148,"def f1(f1_p1):
+
+
+
+    return output",26,MORE_THAN_SIX,0.0,brackets
+1149,"def f1(f1_p1):
+    f1_v1 = ''
+
+
+    return output",26,MORE_THAN_SIX,0.0,brackets
+1151,"def f1(f1_p1):
+    f1_v1 = ''
+
+
+    return output",26,MORE_THAN_SIX,0.0,brackets
+1155,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+        f1_v1 += f1_v3
+
+    return f1_v1
+",26,MORE_THAN_SIX,0.0,brackets
+1156,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+        f1_v1 += f1_v3
+        
+
+    return f1_v1
+",26,MORE_THAN_SIX,0.0,brackets
+1165,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+        f1_v1 += f1_v3
+        f1_v1 += braket
+
+    return f1_v1
+",26,MORE_THAN_SIX,0.0,brackets
+1166,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+        
+        f1_v1 += f1_v3
+        f1_v1 += braket
+
+    return f1_v1
+",26,MORE_THAN_SIX,0.0,brackets
+1182,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+        f1_v4 = '(' if f1_v2 <= (len(f1_p1) / 2) else ')'
+        f1_v1 += f1_v3
+        f1_v1 += f1_v4
+
+    return f1_v1
+",26,MORE_THAN_SIX,0.0,brackets
+1183,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+    
+        f1_v4 = '(' if f1_v2 <= (len(f1_p1) / 2) else ')'
+        f1_v1 += f1_v3
+        f1_v1 += f1_v4
+
+    return f1_v1
+",26,MORE_THAN_SIX,0.0,brackets
+1191,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+        print(f1_v2)
+        f1_v4 = '(' if f1_v2 <= (len(f1_p1) / 2) else ')'
+        f1_v1 += f1_v3
+        f1_v1 += f1_v4
+
+    return f1_v1
+",26,MORE_THAN_SIX,0.0,brackets
+1193,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+        print(f1_v2)
+        f1_v4 = '(' if f1_v2 < (len(f1_p1) // 2) else ')'
+        f1_v1 += f1_v3
+        f1_v1 += f1_v4
+
+    return f1_v1
+",26,MORE_THAN_SIX,0.0,brackets
+1194,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+        print(f1_v2)
+        f1_v4 = '(' if f1_v2 < (len(f1_p1) // 2) else ')'
+        f1_v1 += f1_v3
+        f1_v1 += f1_v4
+
+
+    return f1_v1
+",26,MORE_THAN_SIX,0.0,brackets
+1195,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+        print(f1_v2)
+        f1_v4 = '(' if f1_v2 < (len(f1_p1) // 2) else ')'
+        f1_v1 += f1_v3
+        f1_v1 += f1_v4
+
+    return f1_v1
+",26,MORE_THAN_SIX,0.0,brackets
+1197,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+
+        f1_v4 = '(' if f1_v2 < (len(f1_p1) // 2) else ')'
+        f1_v1 += f1_v3
+        f1_v1 += f1_v4
+
+    return f1_v1
+",26,MORE_THAN_SIX,0.0,brackets
+1198,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+        f1_v4 = '(' if f1_v2 < (len(f1_p1) // 2) else ')'
+        f1_v1 += f1_v3
+        f1_v1 += f1_v4
+
+    return f1_v1
+",26,MORE_THAN_SIX,0.0,brackets
+1202,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+        f1_v4 = '(' if f1_v2 < (len(f1_p1) // 2) else ')'
+        f1_v1 += f1_v3
+        f1_v1 += f1_v4
+
+    return f1_v1
+",26,MORE_THAN_SIX,0.0,brackets
+1203,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+        f1_v4 = '(' if f1_v2 < (len(f1_p1) // 2) else ')'
+        
+        f1_v1 += f1_v3
+        f1_v1 += f1_v4
+
+    return f1_v1
+",26,MORE_THAN_SIX,0.0,brackets
+1204,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+        f1_v4 = '(' if f1_v2 < (len(f1_p1) // 2) else ')'
+        
+        
+        f1_v1 += f1_v3
+        f1_v1 += f1_v4
+
+    return f1_v1
+",26,MORE_THAN_SIX,0.0,brackets
+1206,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+        f1_v4 = '(' if f1_v2 < (len(f1_p1) // 2) else ')'
+        if f1_v2 < (len(f1_p1) / 2): f1_v4 = '('
+        
+        f1_v1 += f1_v3
+        f1_v1 += f1_v4
+
+    return f1_v1
+",26,MORE_THAN_SIX,0.0,brackets
+1207,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+        f1_v4 = '(' if f1_v2 < (len(f1_p1) // 2) else ')'
+        if f1_v2 < (len(f1_p1) / 2):
+         f1_v4 = '('
+        
+        f1_v1 += f1_v3
+        f1_v1 += f1_v4
+
+    return f1_v1
+",26,MORE_THAN_SIX,0.0,brackets
+1209,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+        f1_v4 = '(' if f1_v2 < (len(f1_p1) // 2) else ')'
+        if f1_v2 < (len(f1_p1) / 2):
+            f1_v4 = ''
+        
+        f1_v1 += f1_v3
+        f1_v1 += f1_v4
+
+    return f1_v1
+",26,MORE_THAN_SIX,0.0,brackets
+1211,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+        f1_v4 = '(' if f1_v2 < (len(f1_p1) // 2) else ')'
+        if f1_v2 == (len(f1_p1) / 2):
+            f1_v4 = ''
+        
+        f1_v1 += f1_v3
+        f1_v1 += f1_v4
+
+    return f1_v1
+",26,MORE_THAN_SIX,0.0,brackets
+1212,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+        f1_v4 = '(' if f1_v2 < (len(f1_p1) // 2) else ')'
+        if f1_v2 == (len(f1_p1) / 2):
+            f1_v4 = ''
+
+        f1_v1 += f1_v3
+        f1_v1 += f1_v4
+
+    return f1_v1
+",26,MORE_THAN_SIX,0.0,brackets
+1213,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+    
+        f1_v4 = '(' if f1_v2 < (len(f1_p1) // 2) else ')'
+        if f1_v2 == (len(f1_p1) / 2):
+            f1_v4 = ''
+
+        f1_v1 += f1_v3
+        f1_v1 += f1_v4
+
+    return f1_v1
+",26,MORE_THAN_SIX,0.0,brackets
+1214,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+        
+        f1_v4 = '(' if f1_v2 < (len(f1_p1) // 2) else ')'
+        if f1_v2 == (len(f1_p1) / 2):
+            f1_v4 = ''
+
+        f1_v1 += f1_v3
+        f1_v1 += f1_v4
+
+    return f1_v1
+",26,MORE_THAN_SIX,0.0,brackets
+1215,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+        
+        
+        f1_v4 = '(' if f1_v2 < (len(f1_p1) // 2) else ')'
+        if f1_v2 == (len(f1_p1) / 2):
+            f1_v4 = ''
+
+        f1_v1 += f1_v3
+        f1_v1 += f1_v4
+
+    return f1_v1
+",26,MORE_THAN_SIX,0.0,brackets
+1232,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+        print(len(f1_p1) / 2, f1_v2, f1_v3)
+        
+        f1_v4 = '(' if f1_v2 < (len(f1_p1) // 2) else ')'
+        if f1_v2 == (len(f1_p1) / 2):
+            f1_v4 = ''
+
+        f1_v1 += f1_v3
+        f1_v1 += f1_v4
+
+    return f1_v1
+",26,MORE_THAN_SIX,0.0,brackets
+1233,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+        print(len(f1_p1) / 2, f1_v2, f1_v3)
+
+        f1_v4 = '(' if f1_v2 < (len(f1_p1) // 2) else ')'
+        if f1_v2 == (len(f1_p1) / 2):
+            f1_v4 = ''
+
+        f1_v1 += f1_v3
+        f1_v1 += f1_v4
+
+    return f1_v1
+",26,MORE_THAN_SIX,0.0,brackets
+1237,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+        print(len(f1_p1) / 2, f1_v2, f1_v3)
+
+        f1_v4 = '(' if f1_v2 < (len(f1_p1) // 2) else ')'
+        if f1_v2 == (len(f1_p1) / 2) - 1:
+            f1_v4 = ''
+
+        f1_v1 += f1_v3
+        f1_v1 += f1_v4
+
+    return f1_v1
+",26,MORE_THAN_SIX,0.0,brackets
+1239,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+        print(len(f1_p1) / 2, f1_v2, f1_v3)
+
+        f1_v4 = '(' if f1_v2 < (len(f1_p1) // 2) else ')'
+        if f1_v2 == (len(f1_p1) / 2) - 1:
+            f1_v4 = ''
+
+        f1_v1 += f1_v3
+        f1_v1 += f1_v4
+
+    return f1_v1[:-1]
+",26,MORE_THAN_SIX,0.0,brackets
+1240,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+
+
+        f1_v4 = '(' if f1_v2 < (len(f1_p1) // 2) else ')'
+        if f1_v2 == (len(f1_p1) / 2) - 1:
+            f1_v4 = ''
+
+        f1_v1 += f1_v3
+        f1_v1 += f1_v4
+
+    return f1_v1[:-1]
+",26,MORE_THAN_SIX,0.0,brackets
+1241,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+
+        f1_v4 = '(' if f1_v2 < (len(f1_p1) // 2) else ')'
+        if f1_v2 == (len(f1_p1) / 2) - 1:
+            f1_v4 = ''
+
+        f1_v1 += f1_v3
+        f1_v1 += f1_v4
+
+    return f1_v1[:-1]
+",26,MORE_THAN_SIX,0.0,brackets
+1242,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+
+        if f1_v2 < (len(f1_p1) // 2):
+            f1_v4 = '(' 
+        if f1_v2 > (len(f1_p1) // 2):
+            f1_v4 = ')'
+        elif f1_v2 == (len(f1_p1) / 2) - 1:
+            f1_v4 = ''
+
+        f1_v1 += f1_v3
+        f1_v1 += f1_v4
+
+    return f1_v1[:-1]
+",26,MORE_THAN_SIX,0.0,brackets
+1243,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+
+        if f1_v2 < (len(f1_p1) // 2):
+            f1_v4 = '(' 
+        elif f1_v2 > (len(f1_p1) // 2):
+            f1_v4 = ')'
+        elif f1_v2 == (len(f1_p1) / 2) - 1:
+            f1_v4 = ''
+
+        f1_v1 += f1_v3
+        f1_v1 += f1_v4
+
+    return f1_v1[:-1]
+",26,MORE_THAN_SIX,0.0,brackets
+1244,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+
+        if f1_v2 < (len(f1_p1) // 2):
+            f1_v4 = '('
+        elif f1_v2 > (len(f1_p1) // 2):
+            f1_v4 = ')'
+        elif f1_v2 == (len(f1_p1) / 2) - 1:
+            f1_v4 = ''
+
+        f1_v1 += f1_v3
+        f1_v1 += f1_v4
+
+    return f1_v1[:-1]
+",26,MORE_THAN_SIX,0.0,brackets
+1245,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+
+
+        if f1_v2 < (len(f1_p1) // 2):
+            f1_v4 = '('
+        elif f1_v2 > (len(f1_p1) // 2):
+            f1_v4 = ')'
+        elif f1_v2 == (len(f1_p1) / 2) - 1:
+            f1_v4 = ''
+
+        f1_v1 += f1_v3
+        f1_v1 += f1_v4
+
+    return f1_v1[:-1]
+",26,MORE_THAN_SIX,0.0,brackets
+1246,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+
+
+
+        if f1_v2 < (len(f1_p1) // 2):
+            f1_v4 = '('
+        elif f1_v2 > (len(f1_p1) // 2):
+            f1_v4 = ')'
+        elif f1_v2 == (len(f1_p1) / 2) - 1:
+            f1_v4 = ''
+
+        f1_v1 += f1_v3
+        f1_v1 += f1_v4
+
+    return f1_v1[:-1]
+",26,MORE_THAN_SIX,0.0,brackets
+1249,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+
+
+
+        if f1_v2 < (len(f1_p1) // 2):
+            f1_v4 = '('
+        elif f1_v2 > (len(f1_p1) // 2):
+            f1_v4 = ')'
+        elif f1_v2 == (len(f1_p1) / 2) - 1:
+            f1_v4 = ''
+
+        f1_v1 += f1_v3
+        f1_v1 += f1_v4
+
+    return f1_v1[:-1]
+",26,MORE_THAN_SIX,0.0,brackets
+1250,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+
+
+        if f1_v2 == (len(f1_p1) / 2) - 1:
+                    f1_v4 = ''
+        if f1_v2 < (len(f1_p1) // 2):
+            f1_v4 = '('
+        elif f1_v2 > (len(f1_p1) // 2):
+            f1_v4 = ')'
+        elif f1_v2 == (len(f1_p1) / 2) - 1:
+            f1_v4 = ''
+
+        f1_v1 += f1_v3
+        f1_v1 += f1_v4
+
+    return f1_v1[:-1]
+",26,MORE_THAN_SIX,0.0,brackets
+1251,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+
+
+        if f1_v2 == (len(f1_p1) / 2) - 1:
+            f1_v4 = ''
+        if f1_v2 < (len(f1_p1) // 2):
+            f1_v4 = '('
+        elif f1_v2 > (len(f1_p1) // 2):
+            f1_v4 = ')'
+        elif f1_v2 == (len(f1_p1) / 2) - 1:
+            f1_v4 = ''
+
+        f1_v1 += f1_v3
+        f1_v1 += f1_v4
+
+    return f1_v1[:-1]
+",26,MORE_THAN_SIX,0.0,brackets
+1252,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+
+        if f1_v2 == (len(f1_p1) / 2) - 1:
+            f1_v4 = ''
+        if f1_v2 < (len(f1_p1) // 2):
+            f1_v4 = '('
+        elif f1_v2 > (len(f1_p1) // 2):
+            f1_v4 = ')'
+        elif f1_v2 == (len(f1_p1) / 2) - 1:
+            f1_v4 = ''
+
+        f1_v1 += f1_v3
+        f1_v1 += f1_v4
+
+    return f1_v1[:-1]
+",26,MORE_THAN_SIX,0.0,brackets
+1253,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+
+        if f1_v2 == (len(f1_p1) / 2) - 1:
+            f1_v4 = ''
+        if f1_v2 < (len(f1_p1) // 2):
+            f1_v4 = '('
+        elif f1_v2 > (len(f1_p1) // 2):
+            f1_v4 = ')'
+
+        f1_v1 += f1_v3
+        f1_v1 += f1_v4
+
+    return f1_v1[:-1]
+",26,MORE_THAN_SIX,0.0,brackets
+1254,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+
+        if f1_v2 == (len(f1_p1) / 2) - 1:
+            f1_v4 = ''
+        elif f1_v2 < (len(f1_p1) // 2):
+            f1_v4 = '('
+        elif f1_v2 > (len(f1_p1) // 2):
+            f1_v4 = ')'
+
+        f1_v1 += f1_v3
+        f1_v1 += f1_v4
+
+    return f1_v1[:-1]
+",26,MORE_THAN_SIX,0.0,brackets
+1255,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+
+
+        if f1_v2 == (len(f1_p1) / 2) - 1:
+            f1_v4 = ''
+        elif f1_v2 < (len(f1_p1) // 2):
+            f1_v4 = '('
+        elif f1_v2 > (len(f1_p1) // 2):
+            f1_v4 = ')'
+
+        f1_v1 += f1_v3
+        f1_v1 += f1_v4
+
+    return f1_v1[:-1]
+",26,MORE_THAN_SIX,0.0,brackets
+1273,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+        print(f1_v2, len(f1_p1) // 2, f1_v3)
+
+        if f1_v2 == (len(f1_p1) / 2) - 1:
+            f1_v4 = ''
+        elif f1_v2 < (len(f1_p1) // 2):
+            f1_v4 = '('
+        elif f1_v2 > (len(f1_p1) // 2):
+            f1_v4 = ')'
+
+        f1_v1 += f1_v3
+        f1_v1 += f1_v4
+
+    return f1_v1[:-1]
+",26,MORE_THAN_SIX,0.0,brackets
+1274,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+        print(f1_v2, len(f1_p1) // 2, f1_v3)
+
+        if f1_v2 == (len(f1_p1) / 2) - 1:
+            f1_v4 = ''
+        elif f1_v2 < (len(f1_p1) // 2):
+            f1_v4 = '('
+        elif f1_v2 >= (len(f1_p1) // 2):
+            f1_v4 = ')'
+
+        f1_v1 += f1_v3
+        f1_v1 += f1_v4
+
+    return f1_v1[:-1]
+",26,MORE_THAN_SIX,0.0,brackets
+1275,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+
+
+        if f1_v2 == (len(f1_p1) / 2) - 1:
+            f1_v4 = ''
+        elif f1_v2 < (len(f1_p1) // 2):
+            f1_v4 = '('
+        elif f1_v2 >= (len(f1_p1) // 2):
+            f1_v4 = ')'
+
+        f1_v1 += f1_v3
+        f1_v1 += f1_v4
+
+    return f1_v1[:-1]
+",26,MORE_THAN_SIX,0.0,brackets
+1276,"def f1(f1_p1):
+    f1_v1 = ''
+    for f1_v2, f1_v3 in enumerate(f1_p1):
+
+        if f1_v2 == (len(f1_p1) / 2) - 1:
+            f1_v4 = ''
+        elif f1_v2 < (len(f1_p1) // 2):
+            f1_v4 = '('
+        elif f1_v2 >= (len(f1_p1) // 2):
+            f1_v4 = ')'
+
+        f1_v1 += f1_v3
+        f1_v1 += f1_v4
+
+    return f1_v1[:-1]
+",26,MORE_THAN_SIX,0.0,brackets

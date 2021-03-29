@@ -1,0 +1,58 @@
+id,fragment,age,programExperience,testsResults,task
+788,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if v3>=v1 and v1>=v2:
+    print(v3)",14.0,LESS_THAN_HALF_YEAR,0.125,max_3
+791,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if v3>=v1 and v1>=v2:
+    print(v3)
+elif v1>=v3 and v3>=v2:
+    print(v1)",14.0,LESS_THAN_HALF_YEAR,0.125,max_3
+794,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if v3>=v1 and v1>=v2:
+    print(v3)
+elif v1>=v3 and v3>=v2:
+    print(v1)
+else:
+    print(v2)",14.0,LESS_THAN_HALF_YEAR,0.125,max_3
+799,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if v3>=v1 and v1>=v2:
+    print(v3)
+elif v1>=v3 and v3>=v2:
+    print(v1)
+elif v2>=v1 and v1>=v3:
+    print(v2)",14.0,LESS_THAN_HALF_YEAR,0.125,max_3
+800,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if v3>=v1 and v3>=v2:
+    print(v3)
+elif v1>=v3 and v3>=v2:
+    print(v1)
+elif v2>=v1 and v1>=v3:
+    print(v2)",14.0,LESS_THAN_HALF_YEAR,0.75,max_3
+801,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if v3>=v1 and v3>=v2:
+    print(v3)
+elif v1>=v3 and v1>=v2:
+    print(v1)
+elif v2>=v1 and v1>=v3:
+    print(v2)",14.0,LESS_THAN_HALF_YEAR,0.875,max_3
+802,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if v3>=v1 and v3>=v2:
+    print(v3)
+elif v1>=v3 and v1>=v2:
+    print(v1)
+elif v2>=v1 and v2>=v3:
+    print(v2)",14.0,LESS_THAN_HALF_YEAR,1.0,max_3

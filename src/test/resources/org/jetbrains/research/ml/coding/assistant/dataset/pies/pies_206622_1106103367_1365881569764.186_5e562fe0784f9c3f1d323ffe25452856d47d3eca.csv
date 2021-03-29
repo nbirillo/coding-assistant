@@ -1,0 +1,50 @@
+id,fragment,age,programExperience,testsResults,task
+1159,"def f1(f1_p1, f1_p2, f1_p3):
+    f1_v1, f1_p2 = divmod(f1_p2 * f1_p3, 100)",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+1197,"def f1(f1_p1, f1_p2, f1_p3):
+    f1_v1, f1_p2 = divmod(f1_p2 * f1_p3, 100)
+    return f1_p1 * f1_p3 + f1_v1, f1_p2",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+1198,"def f1(f1_p1, f1_p2, f1_p3):
+    f1_v1, f1_p2 = divmod(f1_p2 * f1_p3, 100)
+    return f1_p1 * f1_p3 + f1_v1, f1_p2
+
+
+v1, v2, v3 = (int(input()) for v4 in range(3))
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+1199,"def f1(f1_p1, f1_p2, f1_p3):
+    f1_v1, f1_p2 = divmod(f1_p2 * f1_p3, 100)
+    return f1_p1 * f1_p3 + f1_v1, f1_p2
+
+
+v1, v2, v3 = (int(input()) for v4 in range(3))
+print()",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+1200,"def f1(f1_p1, f1_p2, f1_p3):
+    f1_v1, f1_p2 = divmod(f1_p2 * f1_p3, 100)
+    return f1_p1 * f1_p3 + f1_v1, f1_p2
+
+
+v1, v2, v3 = (int(input()) for v4 in range(3))
+print(*f1(v1, v2, v3))",-1,FROM_TWO_TO_FOUR_YEARS,1.0,pies
+1201,"def f1(f1_p1, f1_p2, f1_p3):
+    f1_v1, f1_p2 = divmod(f1_p2 * f1_p3, 100)
+    return f1_p1 * f1_p3 + f1_v1, f1_p2
+
+
+v1, v2, v3 = (int(input()) for v4 in range(3))
+print(*f1(v1, v2, v3)
+)",-1,FROM_TWO_TO_FOUR_YEARS,1.0,pies
+1206,"def f1(f1_p1, f1_p2, f1_p3):
+    f1_v1, f1_p2 = divmod(f1_p2 * f1_p3, 100)
+    return f1_p1 * f1_p3 + f1_v1, f1_p2
+
+
+v1, v2, v3 = (int(input()) for v4 in range(3))
+print(*f1(v1, v2, v3)
+)",-1,FROM_TWO_TO_FOUR_YEARS,1.0,pies
+1207,"def f1(f1_p1, f1_p2, f1_p3):
+    f1_v1, f1_p2 = divmod(f1_p2 * f1_p3, 100)
+    return f1_p1 * f1_p3 + f1_v1, f1_p2
+
+
+v1, v2, v3 = (int(input()) for v4 in range(3))
+print(*f1(v1, v2, v3))",-1,FROM_TWO_TO_FOUR_YEARS,1.0,pies

@@ -1,0 +1,29 @@
+id,fragment,age,programExperience,testsResults,task
+2569,"v1 = int(input())
+",14.0,FROM_TWO_TO_FOUR_YEARS,0,pies
+2570,"v1 = int(input())
+v2 = int",14.0,FROM_TWO_TO_FOUR_YEARS,0,pies
+2571,"v1 = int(input())
+v2 = int(input())
+",14.0,FROM_TWO_TO_FOUR_YEARS,0,pies
+2572,"v1 = int(input())
+v2 = int(input())
+v3 = int",14.0,FROM_TWO_TO_FOUR_YEARS,0,pies
+2574,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())",14.0,FROM_TWO_TO_FOUR_YEARS,0,pies
+2575,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = str()",14.0,FROM_TWO_TO_FOUR_YEARS,0,pies
+2576,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = str()
+v5 = str",14.0,FROM_TWO_TO_FOUR_YEARS,0,pies
+2577,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = str()
+v5 = str()
+",14.0,FROM_TWO_TO_FOUR_YEARS,0,pies
