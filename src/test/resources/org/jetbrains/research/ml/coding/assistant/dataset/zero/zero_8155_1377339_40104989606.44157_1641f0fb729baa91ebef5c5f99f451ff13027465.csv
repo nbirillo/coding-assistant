@@ -1,0 +1,157 @@
+id,fragment,age,programExperience,testsResults,task
+1073,v1=int(input()),16.0,FROM_ONE_TO_TWO_YEARS,0.0,is_zero
+1074,"v1=int(input())
+for v2 in range(v1):
+    v3=[v2]
+ 
+",16.0,FROM_ONE_TO_TWO_YEARS,0.0,is_zero
+1075,"v1=int(input())
+v2=[]
+for v3 in range(v1):
+    v2.append(int(input()))
+for v3 in range(v1 + 1):
+    if(v2[v3]>v2[v3 + 1]):
+        v4=v2[v3]
+print(v4)
+
+
+",16.0,FROM_ONE_TO_TWO_YEARS,0.0,is_zero
+1076,"v1=int(input())
+v2=[]
+for v3 in range(v1):
+    v2.append(int(input()))
+    
+for v3 in range(v1):
+    if(v2[v3]>v2[v3 + 1]):
+        v4=v2[v3]
+print(v4)
+
+
+",16.0,FROM_ONE_TO_TWO_YEARS,0.0,is_zero
+1082,"v1=int(input())
+v2=[]
+for v3 in range(v1):
+    v2.append(int(input()))
+
+for v3 in range(v1):
+    if(v2[v3]>v2[v3 + 1]):
+        v4=v2[v3]
+print(v4)
+
+
+",16.0,FROM_ONE_TO_TWO_YEARS,0.0,is_zero
+1083,"v1=int(input())
+v2=[]
+for v3 in range(v1):
+    v2.append(int(input()))
+for v3 in range(v1):
+    if(v2[v3]>v2[v3 + 1]):
+        v4=v2[v3]
+print(v4)
+
+
+",16.0,FROM_ONE_TO_TWO_YEARS,0.0,is_zero
+1084,"v1=int(input())
+v2=[]
+for v3 in range(v1):
+    v2.append(int(input()))
+    
+for v3 in range(v1):
+    if(v2[v3]>v2[v3 + 1]):
+        v4=v2[v3]
+print(v4)
+
+
+",16.0,FROM_ONE_TO_TWO_YEARS,0.0,is_zero
+1089,"v1=int(input())
+v2=[]
+for v3 in range(v1):
+    v2.append(int(input()))
+v2.append(0)
+for v3 in range(v1):
+    if(v2[v3]>v2[v3 + 1]):
+        v4=v2[v3]
+print(v4)
+
+
+",16.0,FROM_ONE_TO_TWO_YEARS,0.0,is_zero
+1091,"v1=int(input())
+v2=[]
+for v3 in range(v1):
+    v2.append(int(input()))
+v2.append(0)
+for v3 in range(v1):
+    if(v2[v3]>v2[v3 + 1]):
+        v4=v2[v3]
+
+
+
+",16.0,FROM_ONE_TO_TWO_YEARS,0.0,is_zero
+1094,"v1=int(input())
+v2=[]
+for v3 in range(v1):
+    v2.append(int(input()))
+for v3 in range(v1):
+    if (v2[v3]==0):
+        v4=1
+if(v4==1):
+    print()
+
+
+",16.0,FROM_ONE_TO_TWO_YEARS,0.0,is_zero
+1095,"v1=int(input())
+v2=[]
+for v3 in range(v1):
+    v2.append(int(input()))
+for v3 in range(v1):
+    if (v2[v3]==0):
+        v4=1
+if(v4==1):
+    print(""YES"")
+    
+
+
+",16.0,FROM_ONE_TO_TWO_YEARS,0.0,is_zero
+1096,"v1=int(input())
+v2=[]
+for v3 in range(v1):
+    v2.append(int(input()))
+for v3 in range(v1):
+    if (v2[v3]==0):
+        v4=1
+if(v4==1):
+    print(""YES"")
+else: print(""N"")
+    
+
+
+",16.0,FROM_ONE_TO_TWO_YEARS,0.0,is_zero
+1097,"v1=int(input())
+v2=[]
+for v3 in range(v1):
+    v2.append(int(input()))
+for v3 in range(v1):
+    if (v2[v3]==0):
+        v4=1
+if(v4==1):
+    print(""YES"")
+else: print(""NO"")
+    
+
+
+",16.0,FROM_ONE_TO_TWO_YEARS,0.0,is_zero
+1098,"v1=int(input())
+v2=[]
+
+for v3 in range(v1):
+    v2.append(int(input()))
+for v3 in range(v1):
+    if (v2[v3]==0):
+        v4=1
+if(v4==1):
+    print(""YES"")
+else: print(""NO"")
+
+
+
+",16.0,FROM_ONE_TO_TWO_YEARS,0.0,is_zero

@@ -1,0 +1,6 @@
+id,fragment,age,programExperience,testsResults,task
+1220,"v1 = list(map(int, input().split()))",17.0,FROM_FOUR_TO_SIX_YEARS,0.0,voting
+1221,"v1 = list(map(int, input().split()))
+print()",17.0,FROM_FOUR_TO_SIX_YEARS,0.0,voting
+1225,"v1 = list(map(int, input().split()))
+print(0 if v1.count(0) > v1.count(1) else 1)",17.0,FROM_FOUR_TO_SIX_YEARS,1.0,voting

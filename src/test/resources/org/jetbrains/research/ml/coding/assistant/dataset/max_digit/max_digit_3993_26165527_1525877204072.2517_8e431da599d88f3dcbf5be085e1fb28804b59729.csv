@@ -1,0 +1,39 @@
+id,fragment,age,programExperience,testsResults,task
+152,v1 = [int(input())],14.0,LESS_THAN_HALF_YEAR,0.0,max_digit
+154,"v1 = [int(input())]
+v1.sort()",14.0,LESS_THAN_HALF_YEAR,0.0,max_digit
+156,"v1 = [int(input())]
+v1.sort()
+print (v1)",14.0,LESS_THAN_HALF_YEAR,0.0,max_digit
+168,"v1 = [int(input()) for v2 in range(1000)]
+v1.sort()
+print (v1)",14.0,LESS_THAN_HALF_YEAR,0.0,max_digit
+169,"v1 = str 
+v2 = [int(input()) for v3 in range(1000)]
+v2.sort()
+print (v2)",14.0,LESS_THAN_HALF_YEAR,0.0,max_digit
+171,"v1 = str()
+v2 = [int(input()) for v3 in range(1000)]
+v2.sort()
+print (v2)",14.0,LESS_THAN_HALF_YEAR,0.0,max_digit
+173,"v1 = str()
+v2 = [int(input()) for v3 in range(1000)]
+v2.sort()
+
+",14.0,LESS_THAN_HALF_YEAR,0.0,max_digit
+175,"v1 = [int(input()) for v2 in range(5)]
+v1.sort()
+for v3 in range(len(v1)):
+        print()
+v4 = int(input())
+print(v1[v4])",14.0,LESS_THAN_HALF_YEAR,0.0,max_digit
+177,"v1 = [int(input()) for v2 in range(5)]
+v1.sort()
+for v3 in range(len(v1)):
+ v4 = int(input())
+print(v1[v4])",14.0,LESS_THAN_HALF_YEAR,0.0,max_digit
+178,"v1 = [int(input()) for v2 in range(5)]
+v1.sort()
+for v3 in range(len(v1)):
+  v4 = int(input())
+print(v1[v4])",14.0,LESS_THAN_HALF_YEAR,0.0,max_digit

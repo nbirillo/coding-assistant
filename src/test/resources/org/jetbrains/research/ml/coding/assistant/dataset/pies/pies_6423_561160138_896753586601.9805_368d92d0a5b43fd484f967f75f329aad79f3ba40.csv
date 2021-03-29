@@ -1,0 +1,130 @@
+id,fragment,age,programExperience,testsResults,task
+3850,v1 = int(input()),-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+3851,"v1 = int(input())
+v2 = int()",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+3852,"v1 = int(input())
+v2 = int(input())",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+3853,"v1 = int(input())
+v2 = int(input())
+v3 = int()",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+3854,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+3855,"def f1():
+    f1_v1 = int(input())
+    f1_v2 = int(input())
+v1 = int(input())
+
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+3856,"def f1():
+    f1_v1 = int(input())
+    f1_v2 = int(input())
+    f1_v3 = int(input())
+
+",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+3858,"def f1():
+    f1_v1 = int(input())
+    f1_v2 = int(input())
+    f1_v3 = int(input())
+
+if __name__ == '__main__':
+    f1()",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+3860,"def f1():
+    f1_v1 = int(input())
+    f1_v2 = int(input())
+    f1_v3 = int(input())
+
+if __name__ == '__main__':
+    f1()",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+3861,"def f1():
+    f1_v1 = int(input())
+    f1_v2 = int(input())
+    f1_v3 = int(input())
+    
+
+if __name__ == '__main__':
+    f1()",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+3862,"def f1():
+    f1_v1 = int(input())
+    f1_v2 = int(input())
+    f1_v3 = int(input())
+    
+    
+
+if __name__ == '__main__':
+    f1()",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+3896,"def f1():
+    f1_v1 = int(input())
+    f1_v2 = int(input())
+    f1_v3 = int(input())
+    
+    f1_v4 = (f1_v1 * 100 + f1_v2) * f1_v3
+
+if __name__ == '__main__':
+    f1()",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+3897,"def f1():
+    f1_v1 = int(input())
+    f1_v2 = int(input())
+    f1_v3 = int(input())
+    
+    f1_v4 = (f1_v1 * 100 + f1_v2) * f1_v3
+    
+
+if __name__ == '__main__':
+    f1()",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+3898,"def f1():
+    f1_v1 = int(input())
+    f1_v2 = int(input())
+    f1_v3 = int(input())
+    
+    f1_v4 = (f1_v1 * 100 + f1_v2) * f1_v3
+    
+    
+
+if __name__ == '__main__':
+    f1()",-1,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+3917,"def f1():
+    f1_v1 = int(input())
+    f1_v2 = int(input())
+    f1_v3 = int(input())
+    
+    f1_v4 = (f1_v1 * 100 + f1_v2) * f1_v3
+    
+    print(f'{f1_v4 // 100} {f1_v4 % 100}')
+
+if __name__ == '__main__':
+    f1()",-1,FROM_TWO_TO_FOUR_YEARS,1.0,pies
+3918,"def f1():
+    f1_v1 = int(input())
+    f1_v2 = int(input())
+    f1_v3 = int(input())
+    
+    f1_v4 = (f1_v1 * 100 + f1_v2) * f1_v3
+
+    print(f'{f1_v4 // 100} {f1_v4 % 100}')
+
+if __name__ == '__main__':
+    f1()",-1,FROM_TWO_TO_FOUR_YEARS,1.0,pies
+3919,"def f1():
+    f1_v1 = int(input())
+    f1_v2 = int(input())
+    f1_v3 = int(input())
+
+    f1_v4 = (f1_v1 * 100 + f1_v2) * f1_v3
+
+    print(f'{f1_v4 // 100} {f1_v4 % 100}')
+
+if __name__ == '__main__':
+    f1()",-1,FROM_TWO_TO_FOUR_YEARS,1.0,pies
+3920,"def f1():
+    f1_v1 = int(input())
+    f1_v2 = int(input())
+    f1_v3 = int(input())
+
+    f1_v4 = (f1_v1 * 100 + f1_v2) * f1_v3
+
+    print(f'{f1_v4 // 100} {f1_v4 % 100}')
+
+
+if __name__ == '__main__':
+    f1()",-1,FROM_TWO_TO_FOUR_YEARS,1.0,pies

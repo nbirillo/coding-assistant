@@ -1,0 +1,58 @@
+id,fragment,age,programExperience,testsResults,task
+1224,"def f1(f1_p1, f1_p2, f1_p3):
+    if (n == 0):
+        print(f1_p1 + "" "" + f1_p2)
+
+",-1,FROM_FOUR_TO_SIX_YEARS,0.0,pies
+1225,"def f1(f1_p1, f1_p2, f1_p3):
+    if n == 0:
+        print(f1_p1 + "" "" + f1_p2)
+
+",-1,FROM_FOUR_TO_SIX_YEARS,0.0,pies
+1251,"def f1(f1_p1, f1_p2, f1_p3):
+    if f1_p3 == 0:
+        print(""0 0"")
+    else:
+        f1_v1 = f1_p1 * 100 + f1_p2
+
+
+
+",-1,FROM_FOUR_TO_SIX_YEARS,0.0,pies
+1252,"def f1(f1_p1, f1_p2, f1_p3):
+    if f1_p3 == 0:
+        print(""0 0"")
+    else:
+        f1_v1 = (f1_p1 * 100 + f1_p2) * p
+        
+",-1,FROM_FOUR_TO_SIX_YEARS,0.0,pies
+1256,"def f1(f1_p1, f1_p2, f1_p3):
+    if f1_p3 == 0:
+        print(""0 0"")
+    else:
+        f1_v1 = (f1_p1 * 100 + f1_p2) * f1_p3
+        
+",-1,FROM_FOUR_TO_SIX_YEARS,0.0,pies
+1268,"def f1(f1_p1, f1_p2, f1_p3):
+    if f1_p3 == 0:
+        print(""0 0"")
+    else:
+        f1_v1 = (f1_p1 * 100 + f1_p2) * f1_p3
+        f1_v2 = f1_p2 / 100
+",-1,FROM_FOUR_TO_SIX_YEARS,0.0,pies
+1281,"def f1(f1_p1, f1_p2, f1_p3):
+    if f1_p3 == 0:
+        print(""0 0"")
+    else:
+        f1_v1 = (f1_p1 * 100 + f1_p2) * f1_p3
+        f1_v2 = f1_p2 / 100
+        f1_v3 = f1_v1 % 100
+",-1,FROM_FOUR_TO_SIX_YEARS,0.0,pies
+1307,"def f1(f1_p1, f1_p2, f1_p3):
+    if f1_p3 == 0:
+        print(""0 0"")
+    else:
+        f1_v1 = (f1_p1 * 100 + f1_p2) * f1_p3
+        f1_v2 = f1_p2 / 100
+        f1_v3 = f1_v1 % 100
+        print(str(f1_v2) + "" "" + str(f1_v3))
+",-1,FROM_FOUR_TO_SIX_YEARS,0.0,pies

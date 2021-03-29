@@ -2,11 +2,28 @@ package org.jetbrains.research.ml.coding.assistant.dataset
 
 import com.github.doyaaaaaken.kotlincsv.dsl.csvReader
 import org.jetbrains.research.ml.coding.assistant.dataset.model.*
+import org.jetbrains.research.ml.coding.assistant.utils.FileExtension
 import org.jetbrains.research.ml.coding.assistant.utils.getListFiles
+import org.jetbrains.research.ml.coding.assistant.utils.isTypeOf
 import java.io.File
 import kotlin.streams.toList
 
+/**
+ * Loads the data produced by the TaskTracker plugin.
+ */
 object TaskTrackerDatasetFetcher : DatasetFetcher {
+    /**
+     * Fetch the whole dataset.
+     * Directory Format:
+     * `file`:
+     *  ├── task1
+     *  |    ├── dynamic_solution_1.csv
+     *  |    ├── dynamic_solution_2.csv
+     *  |    └── dynamic_solution_3.csv
+     *  └── task2
+     *       ├── dynamic_solution_1.csv
+     *       └── dynamic_solution_2.csv
+     */
     override fun fetchDataset(file: File): Dataset {
         require(file.isDirectory) { "Argument has to be directory with tasks" }
         val taskSolutions = file.getListFiles().parallelStream()
@@ -15,6 +32,15 @@ object TaskTrackerDatasetFetcher : DatasetFetcher {
         return Dataset(taskSolutions)
     }
 
+    /**
+     * Fetch data for the one task.
+     *
+     * Directory Format:
+     *  task1
+     *   ├── dynamic_solution_1.csv
+     *   ├── dynamic_solution_2.csv
+     *   └── dynamic_solution_3.csv
+     */
     override fun fetchTaskSolutions(file: File): TaskSolutions {
         require(file.isDirectory) { "Argument has to be directory with solution files" }
         val solutions = file.getListFiles().parallelStream()
@@ -22,12 +48,15 @@ object TaskTrackerDatasetFetcher : DatasetFetcher {
             .filter { it.hasFinalSolution() }
         return TaskSolutions(
             datasetTask = DatasetTask.createFromString(file.name),
-            solutions?.toList() ?: listOf()
+            dynamicSolutions = solutions?.toList() ?: emptyList()
         )
     }
 
+    /**
+     * Fetch a single dynamic solution from the .csv file.
+     */
     private fun fetchDynamicSolution(file: File): DynamicSolution {
-        require(file.isFile && file.extension == "csv") { "The file has to be csv" }
+        require(file.isFile && file.isTypeOf(FileExtension.CSV)) { "The file has to be csv" }
         val records = csvReader().readAllWithHeader(file).map { DatasetRecord(it) }
         return DynamicSolution(records).run {
             copy(records = records.dropLastWhile { !it.metaInfo.isFinalSolution })

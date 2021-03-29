@@ -1,0 +1,21 @@
+formatting:
+  Indentation:
+    continuationIndentSize: 8
+  ParameterListWrapping:
+    indentSize: 8
+
+exceptions:
+    TooGenericExceptionCaught:
+      active: false
+
+potential-bugs:
+  MapGetWithNotNullAssertionOperator:
+    active: true
+
+style:
+  WildcardImport:
+    active: false
+  MagicNumber:
+    active: false
+  ForbiddenComment:
+    active: false

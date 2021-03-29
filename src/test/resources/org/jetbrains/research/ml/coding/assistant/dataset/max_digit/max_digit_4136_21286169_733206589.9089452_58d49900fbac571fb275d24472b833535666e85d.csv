@@ -1,0 +1,107 @@
+id,fragment,age,programExperience,testsResults,task
+181,"v1=int(input())
+
+
+
+
+
+
+
+
+",16.0,LESS_THAN_HALF_YEAR,0.0,max_digit
+188,"v1=int(input())
+v2=0
+v3=0
+while (v2 != 0) and (v3 != 0):
+    v2= v1 // 10;
+    
+
+
+
+
+
+
+
+
+",16.0,LESS_THAN_HALF_YEAR,0.0,max_digit
+193,"v1=int(input())
+v2=0
+v3=0
+while (v2 != 0) and (v3 != 0):
+    v2= v1 // 10;
+    v3= v1 % 10;
+    
+
+
+
+
+
+
+
+
+",16.0,LESS_THAN_HALF_YEAR,0.0,max_digit
+195,"v1=int(input())
+v2=0
+v3=0
+v4=0
+while (v3 != 0) and (v4 != 0):
+    v3= v1 // 10;
+    v4= v1 % 10;
+    if v3>v4:
+        v2=v3
+        
+    
+
+
+
+
+
+
+
+
+",16.0,LESS_THAN_HALF_YEAR,0.0,max_digit
+198,"v1=int(input())
+v2=0
+v3=0
+v4=0
+while (v3 != 0) and (v4 != 0):
+    v3= v1 // 10;
+    v4= v1 % 10;
+    if v3>v4:
+        v2=v3
+    else:
+        v2=v4
+        
+    
+
+
+
+
+
+
+
+
+",16.0,LESS_THAN_HALF_YEAR,0.0,max_digit
+200,"v1=int(input())
+v2=0
+v3=0
+v4=0
+while (v3 != 0) and (v4 != 0):
+    v3= v1 // 10;
+    v4= v1 % 10;
+    if v3>v4:
+        v2=v3
+    else:
+        v2=v4
+       
+        
+    
+
+
+
+
+
+
+
+
+",16.0,LESS_THAN_HALF_YEAR,0.0,max_digit

@@ -1,0 +1,100 @@
+id,fragment,age,programExperience,testsResults,task
+293,"
+",23,FROM_FOUR_TO_SIX_YEARS,0.0,voting
+294,"if __name__ == '__main__':
+    v1 = input",23,FROM_FOUR_TO_SIX_YEARS,0.0,voting
+299,"if __name__ == '__main__':
+    v1 = input().split(' ')",23,FROM_FOUR_TO_SIX_YEARS,0.0,voting
+300,"if __name__ == '__main__':
+    v1 = map(int, input().split(' '))
+    ",23,FROM_FOUR_TO_SIX_YEARS,0.0,voting
+301,"from functools import reduce
+
+if __name__ == '__main__':
+    v1 = reduce(lambda l1_p1, l1_p2: l1_p1 ^ l1_p2, map(int, input().split(' ')))
+    
+    ",23,FROM_FOUR_TO_SIX_YEARS,0.0,voting
+304,"from functools import reduce
+
+if __name__ == '__main__':
+    v1 = reduce(lambda l1_p1, l1_p2: l1_p1 ^ l1_p2, map(int, input().split(' '))) ^ 1
+    
+    ",23,FROM_FOUR_TO_SIX_YEARS,0.0,voting
+306,"from functools import reduce
+
+if __name__ == '__main__':
+    v1 = reduce(lambda l1_p1, l1_p2: l1_p1 ^ l1_p2, map(int, input().split(' '))) ^ 1
+    print()
+    
+    ",23,FROM_FOUR_TO_SIX_YEARS,0.0,voting
+309,"from functools import reduce
+
+if __name__ == '__main__':
+
+    print()
+    
+    ",23,FROM_FOUR_TO_SIX_YEARS,0.0,voting
+310,"from functools import reduce
+
+if __name__ == '__main__':
+    print()
+    
+    ",23,FROM_FOUR_TO_SIX_YEARS,0.0,voting
+311,"from functools import reduce
+
+if __name__ == '__main__':
+    print(reduce(lambda l1_p1, l1_p2: l1_p1 ^ l1_p2, map(int, input().split(' '))) ^ 1)
+    
+    ",23,FROM_FOUR_TO_SIX_YEARS,0.75,voting
+312,"from functools import reduce
+
+if __name__ == '__main__':
+    print(reduce(lambda l1_p1, l1_p2: l1_p1 ^ l1_p2, map(int, input().split(' '))))
+",23,FROM_FOUR_TO_SIX_YEARS,0.0,voting
+320,"from functools import reduce
+
+if __name__ == '__main__':
+    v1 = input().split("" "")
+",23,FROM_FOUR_TO_SIX_YEARS,0.0,voting
+321,"from functools import reduce
+
+if __name__ == '__main__':
+    v1 = input().split("" "")
+    assert v1
+",23,FROM_FOUR_TO_SIX_YEARS,0.0,voting
+323,"from functools import reduce
+
+if __name__ == '__main__':
+    v1 = input().split("" "")
+    assert len(v1) == 3
+",23,FROM_FOUR_TO_SIX_YEARS,0.0,voting
+327,"from functools import reduce
+
+if __name__ == '__main__':
+    v1 = input().split("" "")
+    assert len(v1) == 3
+    
+    
+",23,FROM_FOUR_TO_SIX_YEARS,0.0,voting
+328,"from functools import reduce
+
+if __name__ == '__main__':
+    v1 = sum(map(int, input().split("" "")))
+    
+",23,FROM_FOUR_TO_SIX_YEARS,0.0,voting
+331,"from functools import reduce
+
+if __name__ == '__main__':
+    v1 = sum(map(int, input().split("" "")))
+    if v1 >= 2:
+        print(1)
+",23,FROM_FOUR_TO_SIX_YEARS,0.125,voting
+334,"from functools import reduce
+
+if __name__ == '__main__':
+    v1 = sum(map(int, input().split("" "")))
+    if v1 >= 2:
+        print(1)
+    else:
+        print(0)
+",23,FROM_FOUR_TO_SIX_YEARS,1.0,voting

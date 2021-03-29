@@ -1,0 +1,103 @@
+id,fragment,age,programExperience,testsResults,task
+315,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+
+",13.0,FROM_HALF_TO_ONE_YEAR,0.0,is_zero
+316,"
+v1 = int(input())
+
+
+",13.0,FROM_HALF_TO_ONE_YEAR,0.0,is_zero
+318,"v1 = int(input())
+for v2 in range (v1):
+    if (v2 == 0):
+        print (""Yes"")
+    
+",13.0,FROM_HALF_TO_ONE_YEAR,0.0,is_zero
+319,"v1 = int(input())
+for v2 in range (v1):
+    if (v2 == 0):
+       v3 = 1
+       
+        
+    
+",13.0,FROM_HALF_TO_ONE_YEAR,0.0,is_zero
+321,"v1 = int(input())
+v2=0
+for v3 in range (v1):
+    if (v3 == 0):
+       v2 = 1
+if (v2==1):
+    print (""Yes"")
+else:
+    print (""No"")
+
+
+",13.0,FROM_HALF_TO_ONE_YEAR,0.0,is_zero
+322,"v1 = int(input())
+v2=0
+for v3 in range (v1):
+    
+    if (v3 == 0):
+       v2 = 1
+if (v2==1):
+    print (""Yes"")
+else:
+    print (""No"")
+
+
+",13.0,FROM_HALF_TO_ONE_YEAR,0.0,is_zero
+323,"v1 = int(input())
+v2=0
+for v3 in range (v1):
+    v4 = int(input())
+    if (v3 == 0):
+       v2 = 1
+if (v2==1):
+    print (""Yes"")
+else:
+    print (""No"")
+
+
+",13.0,FROM_HALF_TO_ONE_YEAR,0.0,is_zero
+324,"v1 = int(input())
+v2=0
+for v3 in range (v1):
+    v4 = int(input())
+    if (v4 == 0):
+       v2 = 1
+if (v2==1):
+    print (""Yes"")
+else:
+    print (""No"")
+
+
+",13.0,FROM_HALF_TO_ONE_YEAR,0.0,is_zero
+328,"v1 = int(input())
+v2=0
+for v3 in range (v1):
+    v4 = int(input())
+    if (v4 == 0):
+       v2 = 1
+if (v2==1):
+    print (""YES"")
+else:
+    print (""No"")
+
+
+",13.0,FROM_HALF_TO_ONE_YEAR,0.0,is_zero
+330,"v1 = int(input())
+v2=0
+for v3 in range (v1):
+    v4 = int(input())
+    if (v4 == 0):
+       v2 = 1
+if (v2==1):
+    print (""YES"")
+else:
+    print (""NO"")
+
+
+",13.0,FROM_HALF_TO_ONE_YEAR,1.0,is_zero

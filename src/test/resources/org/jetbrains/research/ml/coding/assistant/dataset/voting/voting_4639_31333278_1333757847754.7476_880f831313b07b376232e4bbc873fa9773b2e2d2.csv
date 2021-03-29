@@ -1,0 +1,62 @@
+id,fragment,age,programExperience,testsResults,task
+980,"v1 = bool(input())
+v2 = int(input())
+v3 = int(input())",11.0,MORE_THAN_SIX,0.0,voting
+982,"v1 = bool(input())
+v2 = bool(input())
+v3 = int(input())",11.0,MORE_THAN_SIX,0.0,voting
+984,"v1 = bool(input())
+v2 = bool(input())
+v3 = bool(input())",11.0,MORE_THAN_SIX,0.0,voting
+991,"v1 = bool(input())
+v2 = bool(input())
+v3 = bool(input())
+if(v1 == True and v2 == 1 or v2 == 1 and v3 == 1 or v1 == 1 and v3 == 1):
+    print(1)",11.0,MORE_THAN_SIX,0.0,voting
+992,"v1 = bool(input())
+v2 = bool(input())
+v3 = bool(input())
+if(v1 == True and v2 == 1 or v2 == 1 and v3 == 1 or v1 == 1 and v3 == 1):
+    print(1)
+else:
+    print()",11.0,MORE_THAN_SIX,0.0,voting
+993,"v1 = bool(input())
+v2 = bool(input())
+v3 = bool(input())
+if(v1 == True and v2 == 1 or v2 == 1 and v3 == 1 or v1 == 1 and v3 == 1):
+    print(1)
+else:
+    print(0)",11.0,MORE_THAN_SIX,0.0,voting
+994,"v1 = bool(input())
+v2 = bool(input())
+v3 = bool(input())
+if(v1 == 1 and v2 == 1 or v2 == 1 and v3 == 1 or v1 == 1 and v3 == 1):
+    print(1)
+else:
+    print(0)",11.0,MORE_THAN_SIX,0.0,voting
+996,"v1 = int(input())
+v2 = bool(input())
+v3 = bool(input())
+if(v1 == 1 and v2 == 1 or v2 == 1 and v3 == 1 or v1 == 1 and v3 == 1):
+    print(1)
+else:
+    print(0)",11.0,MORE_THAN_SIX,0.0,voting
+998,"v1 = int(input())
+v2 = int(input())
+v3 = bool(input())
+if(v1 == 1 and v2 == 1 or v2 == 1 and v3 == 1 or v1 == 1 and v3 == 1):
+    print(1)
+else:
+    print(0)",11.0,MORE_THAN_SIX,0.0,voting
+1000,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+if(v1 == 1 and v2 == 1 or v2 == 1 and v3 == 1 or v1 == 1 and v3 == 1):
+    print(1)
+else:
+    print(0)",11.0,MORE_THAN_SIX,0.0,voting
+1001,"v1, v2, v3 = map(int, input().split())
+if(v1 == 1 and v2 == 1 or v2 == 1 and v3 == 1 or v1 == 1 and v3 == 1):
+    print(1)
+else:
+    print(0)",11.0,MORE_THAN_SIX,1.0,voting

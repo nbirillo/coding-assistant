@@ -1,0 +1,19 @@
+id,fragment,age,programExperience,testsResults,task
+380,v1 = input(),13.0,FROM_HALF_TO_ONE_YEAR,0.0,max_digit
+390,"v1 = input()
+v2 = 0
+for v3 in range(0, 999):
+    if (int(v1[v3]) >= v2):
+        v2 = int(v1[v3])",13.0,FROM_HALF_TO_ONE_YEAR,0.0,max_digit
+391,"v1 = input()
+v2 = 0
+for v3 in range(0, 999):
+    if (int(v1[v3]) >= v2):
+        v2 = int(v1[v3])
+print(v2)",13.0,FROM_HALF_TO_ONE_YEAR,0.0,max_digit
+393,"v1 = input()
+v2 = 0
+for v3 in range(0, len(v1)):
+    if (int(v1[v3]) >= v2):
+        v2 = int(v1[v3])
+print(v2)",13.0,FROM_HALF_TO_ONE_YEAR,1.0,max_digit
