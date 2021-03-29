@@ -1,0 +1,271 @@
+id,fragment,age,programExperience,testsResults,task
+878,v1=int(input()),15.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+879,"v1=int(input())
+v2=int",15.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+881,"v1=int(input())
+v2=int(input())",15.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+882,"v1=int(input())
+v2=int(input())
+v3=int",15.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+884,"v1=int(input())
+v2=int(input())
+v3=int(input())",15.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+887,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if v1>v2>=v3:
+    print(v1)",15.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+890,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if v1>v2>=v3:
+    print(v1)
+else:
+    if v2>v1>=v3:
+        print(v2)",15.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+892,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if v1>v2 and v1>v3:
+    print(v1)
+else:
+    if v2>v1 and v2>v3:
+        print(v2)
+    else:
+        if v3>v1 and v3>v2:
+            print(v3)",15.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+893,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if v1>v2 and v1>v3:
+    print(v1)
+else:
+    if v2>v1 and v2>v3:
+        print(v2)
+    else:
+        if v3>v1 and v3>v2:
+            print(v3)
+        else:
+            if v1==v2:
+                print(v1, )",15.0,FROM_HALF_TO_ONE_YEAR,0.5,max_3
+894,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if v1>v2 and v1>v3:
+    print(v1)
+else:
+    if v2>v1 and v2>v3:
+        print(v2)
+    else:
+        if v3>v1 and v3>v2:
+            print(v3)
+        else:
+            if v1==v2:
+                print(v1, v2)",15.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+895,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if v1>v2 and v1>v3:
+    print(v1)
+else:
+    if v2>v1 and v2>v3:
+        print(v2)
+    else:
+        if v3>v1 and v3>v2:
+            print(v3)
+        else:
+            if v1==v2:
+                print(v1, v2)
+            else:
+                if v1==v3:
+                    print()",15.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+897,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if v1>v2 and v1>v3:
+    print(v1)
+else:
+    if v2>v1 and v2>v3:
+        print(v2)
+    else:
+        if v3>v1 and v3>v2:
+            print(v3)
+        else:
+            if v1==v2:
+                print(v1, v2)
+            else:
+                if v1==v3:
+                    print(v1, )",15.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+898,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if v1>v2 and v1>v3:
+    print(v1)
+else:
+    if v2>v1 and v2>v3:
+        print(v2)
+    else:
+        if v3>v1 and v3>v2:
+            print(v3)
+        else:
+            if v1==v2:
+                print(v1, v2)
+            else:
+                if v1==v3:
+                    print(v1, v3)
+                ",15.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+900,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if v1>v2 and v1>v3:
+    print(v1)
+else:
+    if v2>v1 and v2>v3:
+        print(v2)
+    else:
+        if v3>v1 and v3>v2:
+            print(v3)
+        else:
+            if v1==v2:
+                print(v1, v2)
+            else:
+                if v1==v3:
+                    print(v1, v3)
+                else:
+                    if v2==v3:
+                        print()",15.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+901,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if v1>v2 and v1>v3:
+    print(v1)
+else:
+    if v2>v1 and v2>v3:
+        print(v2)
+    else:
+        if v3>v1 and v3>v2:
+            print(v3)
+        else:
+            if v1==v2:
+                print(v1, v2)
+            else:
+                if v1==v3:
+                    print(v1, v3)
+                else:
+                    if v2==v3:
+                        print(v2, v3)
+                        ",15.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+905,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if v1>v2 and v1>v3:
+    print(v1)
+else:
+    if v2>v1 and v2>v3:
+        print(v2)
+    else:
+        if v3>v1 and v3>v2:
+            print(v3)
+        else:
+            if v1==v2:
+                print(v1, v2)
+            else:
+                if v1==v3:
+                    print(v1, v3)
+                else:
+                    if v2==v3:
+                        print(v2, v3)
+                    else:
+                        print(v1, v2, v3)",15.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+912,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if v1>v2 and v1>v3:
+    print(v1)
+else:
+    if v2>v1 and v2>v3:
+        print(v2)
+    else:
+        if v3>v1 and v3>v2:
+            print(v3)
+        else:
+            if v1==v2:
+                print(v1, v2)
+            else:
+                if v1==v3:
+                    print(v1, v3)
+                else:
+                    if v2==v3:
+                        print(v2, v3)
+                    else:
+                        if v1==v2==v3:
+                            print(v1)",15.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+913,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if v1>v2 and v1>v3:
+    print(v1)
+else:
+    if v2>v1 and v2>v3:
+        print(v2)
+    else:
+        if v3>v1 and v3>v2:
+            print(v3)
+        else:
+            if v1==v2:
+                print(v1, v2)
+            else:
+                if v1==v3:
+                    print(v1, v3)
+                else:
+                    if v2==v3:
+                        print(v2, )
+                    else:
+                        if v1==v2==v3:
+                            print(v1)",15.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+914,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if v1>v2 and v1>v3:
+    print(v1)
+else:
+    if v2>v1 and v2>v3:
+        print(v2)
+    else:
+        if v3>v1 and v3>v2:
+            print(v3)
+        else:
+            if v1==v2:
+                print(v1, )
+            else:
+                if v1==v3:
+                    print(v1)
+                else:
+                    if v2==v3:
+                        print(v2)
+                    else:
+                        if v1==v2==v3:
+                            print(v1)",15.0,FROM_HALF_TO_ONE_YEAR,1.0,max_3
+915,"v1=int(input())
+v2=int(input())
+v3=int(input())
+if v1>v2 and v1>v3:
+    print(v1)
+else:
+    if v2>v1 and v2>v3:
+        print(v2)
+    else:
+        if v3>v1 and v3>v2:
+            print(v3)
+        else:
+            if v1==v2:
+                print(v1)
+            else:
+                if v1==v3:
+                    print(v1)
+                else:
+                    if v2==v3:
+                        print(v2)
+                    else:
+                        if v1==v2==v3:
+                            print(v1)",15.0,FROM_HALF_TO_ONE_YEAR,1.0,max_3

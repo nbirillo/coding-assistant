@@ -1,0 +1,91 @@
+id,fragment,age,programExperience,testsResults,task
+1024,"import sys
+
+if __name__ == ""__main__"":
+    v1 = int(sys.stdin.readline())",-1,MORE_THAN_SIX,0.0,pies
+1025,"import sys
+
+if __name__ == ""__main__"":
+    v1 = int(sys.stdin.readline())
+    v2 = int(sys.stdin.readline())
+    ",-1,MORE_THAN_SIX,0.0,pies
+1026,"import sys
+
+if __name__ == ""__main__"":
+    v1 = int(sys.stdin.readline())
+    v2 = int(sys.stdin.readline())
+    v3 = int(sys.stdin.readline())
+    ",-1,MORE_THAN_SIX,0.0,pies
+1030,"import sys
+
+if __name__ == ""__main__"":
+    v1 = int(sys.stdin.readline())
+    v2 = int(sys.stdin.readline())
+    v3 = int(sys.stdin.readline())
+    v4 = v1 * 100",-1,MORE_THAN_SIX,0.0,pies
+1031,"import sys
+
+if __name__ == ""__main__"":
+    v1 = int(sys.stdin.readline())
+    v2 = int(sys.stdin.readline())
+    v3 = int(sys.stdin.readline())
+    v4 = v1 * 100 + v2
+    ",-1,MORE_THAN_SIX,0.0,pies
+1032,"import sys
+
+if __name__ == ""__main__"":
+    v1 = int(sys.stdin.readline())
+    v2 = int(sys.stdin.readline())
+    v3 = int(sys.stdin.readline())
+    v4 = v1 * 100 + v2
+    v5 = v3",-1,MORE_THAN_SIX,0.0,pies
+1033,"import sys
+
+if __name__ == ""__main__"":
+    v1 = int(sys.stdin.readline())
+    v2 = int(sys.stdin.readline())
+    v3 = int(sys.stdin.readline())
+    v4 = v1 * 100 + v2
+    v5 = v3 * v4
+    ",-1,MORE_THAN_SIX,0.0,pies
+1039,"import sys
+
+if __name__ == ""__main__"":
+    v1 = int(sys.stdin.readline())
+    v2 = int(sys.stdin.readline())
+    v3 = int(sys.stdin.readline())
+    v4 = v1 * 100 + v2
+    v5 = v3 * v4
+    v6 = int(v5 / 100)",-1,MORE_THAN_SIX,0.0,pies
+1047,"import sys
+
+if __name__ == ""__main__"":
+    v1 = int(sys.stdin.readline())
+    v2 = int(sys.stdin.readline())
+    v3 = int(sys.stdin.readline())
+    v4 = v1 * 100 + v2
+    v5 = v3 * v4
+    v6 = int(v5 / 100)
+    v7 = v5 % 100",-1,MORE_THAN_SIX,0.0,pies
+1048,"import sys
+
+if __name__ == ""__main__"":
+    v1 = int(sys.stdin.readline())
+    v2 = int(sys.stdin.readline())
+    v3 = int(sys.stdin.readline())
+    v4 = v1 * 100 + v2
+    v5 = v3 * v4
+    v6 = int(v5 / 100)
+    v7 = v5 % 100
+    print()",-1,MORE_THAN_SIX,0.0,pies
+1051,"import sys
+
+if __name__ == ""__main__"":
+    v1 = int(sys.stdin.readline())
+    v2 = int(sys.stdin.readline())
+    v3 = int(sys.stdin.readline())
+    v4 = v1 * 100 + v2
+    v5 = v3 * v4
+    v6 = int(v5 / 100)
+    v7 = v5 % 100
+    print(f'{v6} {v7}')",-1,MORE_THAN_SIX,1.0,pies

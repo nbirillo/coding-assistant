@@ -1,0 +1,214 @@
+id,fragment,age,programExperience,testsResults,task
+1453,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = []
+v5 = []
+if(v1 == 1):
+    v5.append(v1)
+else:(v4.append(v1))
+",15.0,LESS_THAN_HALF_YEAR,0.0,voting
+1454,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = []
+v5 = []
+if(v1 == 1):
+    v5.append(v1)
+else:
+    (v4.append(v1))
+",15.0,LESS_THAN_HALF_YEAR,0.0,voting
+1455,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = []
+v5 = []
+if(v1 == 1):
+    v5.append(v1)
+else:
+    v4.append(v1)
+",15.0,LESS_THAN_HALF_YEAR,0.0,voting
+1460,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = []
+v5 = []
+if(v1 == 1):
+    v5.append(v1)
+else:
+    v4.append(v1)
+if(v2 == 1):
+    v5.append(v2)
+",15.0,LESS_THAN_HALF_YEAR,0.0,voting
+1463,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = []
+v5 = []
+if(v1 == 1):
+    v5.append(v1)
+else:
+    v4.append(v1)
+if(v2 == 1):
+    v5.append(v2)
+else:
+    v4.append(v2)
+",15.0,LESS_THAN_HALF_YEAR,0.0,voting
+1466,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = []
+v5 = []
+if(v1 == 1):
+    v5.append(v1)
+else:
+    v4.append(v1)
+if(v2 == 1):
+    v5.append(v2)
+else:
+    v4.append(v2)
+if(v3 == 1):
+    v5.append(v3)
+",15.0,LESS_THAN_HALF_YEAR,0.0,voting
+1469,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = []
+v5 = []
+if(v1 == 1):
+    v5.append(v1)
+else:
+    v4.append(v1)
+if(v2 == 1):
+    v5.append(v2)
+else:
+    v4.append(v2)
+if(v3 == 1):
+    v5.append(v3)
+else:
+    v4.append(v3)
+",15.0,LESS_THAN_HALF_YEAR,0.0,voting
+1470,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = []
+v5 = []
+if(v1 == 1):
+    v5.append(v1)
+else:
+    v4.append(v1)
+if(v2 == 1):
+    v5.append(v2)
+else:
+    v4.append(v2)
+if(v3 == 1):
+    v5.append(v3)
+else:
+    v4.append(v3)
+v6 = len
+",15.0,LESS_THAN_HALF_YEAR,0.0,voting
+1471,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = []
+v5 = []
+if(v1 == 1):
+    v5.append(v1)
+else:
+    v4.append(v1)
+if(v2 == 1):
+    v5.append(v2)
+else:
+    v4.append(v2)
+if(v3 == 1):
+    v5.append(v3)
+else:
+    v4.append(v3)
+v6 = len(v4)
+",15.0,LESS_THAN_HALF_YEAR,0.0,voting
+1472,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = []
+v5 = []
+if(v1 == 1):
+    v5.append(v1)
+else:
+    v4.append(v1)
+if(v2 == 1):
+    v5.append(v2)
+else:
+    v4.append(v2)
+if(v3 == 1):
+    v5.append(v3)
+else:
+    v4.append(v3)
+v6 = len(v4)
+v7 = v6
+",15.0,LESS_THAN_HALF_YEAR,0.0,voting
+1474,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = []
+v5 = []
+if(v1 == 1):
+    v5.append(v1)
+else:
+    v4.append(v1)
+if(v2 == 1):
+    v5.append(v2)
+else:
+    v4.append(v2)
+if(v3 == 1):
+    v5.append(v3)
+else:
+    v4.append(v3)
+v6 = len(v4)
+v7 = len(v5)
+",15.0,LESS_THAN_HALF_YEAR,0.0,voting
+1477,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = []
+v5 = []
+if(v1 == 1):
+    v5.append(v1)
+else:
+    v4.append(v1)
+if(v2 == 1):
+    v5.append(v2)
+else:
+    v4.append(v2)
+if(v3 == 1):
+    v5.append(v3)
+else:
+    v4.append(v3)
+v6 = len(v4)
+v7 = len(v5)
+if(v6 < v7):
+    print(1)
+",15.0,LESS_THAN_HALF_YEAR,0.0,voting
+1480,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = []
+v5 = []
+if(v1 == 1):
+    v5.append(v1)
+else:
+    v4.append(v1)
+if(v2 == 1):
+    v5.append(v2)
+else:
+    v4.append(v2)
+if(v3 == 1):
+    v5.append(v3)
+else:
+    v4.append(v3)
+v6 = len(v4)
+v7 = len(v5)
+if(v6 < v7):
+    print(1)
+elif(v6 > v7):
+    print(0)
+",15.0,LESS_THAN_HALF_YEAR,0.0,voting

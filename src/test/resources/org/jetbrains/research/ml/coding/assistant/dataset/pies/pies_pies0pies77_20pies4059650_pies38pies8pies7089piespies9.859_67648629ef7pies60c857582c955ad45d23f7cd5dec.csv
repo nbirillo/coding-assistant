@@ -1,0 +1,140 @@
+id,fragment,age,programExperience,testsResults,task
+4678,v1 = int(input()),17.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4679,"v1 = int(input())
+v2 = int()",17.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4681,"v1 = int(input())
+v2 = int(input())",17.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4682,"v1 = int(input())
+v2 = int(input())
+v3 = int()",17.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4683,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())",17.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4684,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = v3",17.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4690,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = v3 * v1 + (v3 * v2) // 100",17.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4691,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = v3 * v1 + (v3 * v2) // 100
+v5 = v3",17.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4698,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = v3 * v1 + (v3 * v2) // 100
+v5 = (v1 * 100 + v2) * v3",17.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4699,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = v3 * v1 + (v3 * v2) // 100
+v5 = (v1 * 100 + v2) * v3
+print()",17.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4701,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = v3 * v1 + (v3 * v2) // 100
+v5 = (v1 * 100 + v2) * v3
+print(v4)",17.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4702,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = v3 * v1 + (v3 * v2) // 100
+v5 = (v1 * 100 + v2) * v3
+print(v4)
+print()",17.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4705,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = v3 * v1 + (v3 * v2) // 100
+v5 = (v1 * 100 + v2) * v3
+print(v4)
+print(v5 - v4)",17.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4706,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = v3 * v1 + (v3 * v2) // 100
+v5 = (v1 * 100 + v2) * v3
+print(v4)
+
+print(v5 - v4)",17.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4710,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = v3 * v1 + (v3 * v2) // 100
+v5 = (v1 * 100 + v2) * v3
+print(v4)
+v6= v5 - v4
+print(v5 - v4)",17.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4712,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = v3 * v1 + (v3 * v2) // 100
+v5 = (v1 * 100 + v2) * v3
+print(v4)
+v6= v5 - v4
+print(v6)",17.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4713,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = v3 * v1 + (v3 * v2) // 100
+v5 = (v1 * 100 + v2) * v3
+print(v4)
+v6 = v5 - v4
+print(v6)",17.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4714,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = (v3 * v1 + (v3 * v2) // 100)
+v5 = (v1 * 100 + v2) * v3
+print(v4)
+v6 = v5 - v4
+print(v6)",17.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4715,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = (v3 * v1 + (v3 * v2) // 100)
+v5 = (v1 * 100 + v2) * v3
+
+v6 = v5 - v4
+print(v6)",17.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4716,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = (v3 * v1 + (v3 * v2) // 100)
+v5 = (v1 * 100 + v2) * v3
+
+v6 = v5 - v4 * 1
+print(v6)
+print(v4)",17.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4718,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = (v3 * v1 + (v3 * v2) // 100)
+v5 = (v1 * 100 + v2) * v3
+
+v6 = v5 - v4 * 100
+print(v6)
+print(v4)",17.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4721,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = (v3 * v1 + (v3 * v2) // 100)
+v5 = (v1 * 100 + v2) * v3
+
+v6 = v5 - v4 * 100
+print(v4, v6)
+print(v4)",17.0,FROM_TWO_TO_FOUR_YEARS,0.0,pies
+4722,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = (v3 * v1 + (v3 * v2) // 100)
+v5 = (v1 * 100 + v2) * v3
+
+v6 = v5 - v4 * 100
+print(v4, v6)
+",17.0,FROM_TWO_TO_FOUR_YEARS,1.0,pies

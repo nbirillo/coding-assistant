@@ -1,0 +1,17 @@
+id,fragment,age,programExperience,testsResults,task
+750,v1 = int(input()),17.0,FROM_FOUR_TO_SIX_YEARS,0.0,max_3
+751,"v1 = int(input())
+v2 = int(input())
+",17.0,FROM_FOUR_TO_SIX_YEARS,0.0,max_3
+752,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+",17.0,FROM_FOUR_TO_SIX_YEARS,0.0,max_3
+753,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+print()",17.0,FROM_FOUR_TO_SIX_YEARS,0.0,max_3
+756,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+print(max(v3, max(v1, v2)))",17.0,FROM_FOUR_TO_SIX_YEARS,1.0,max_3

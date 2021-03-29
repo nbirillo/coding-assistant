@@ -1,0 +1,47 @@
+id,fragment,age,programExperience,testsResults,task
+2729,v1 = input(),14.0,LESS_THAN_HALF_YEAR,0.0,pies
+2730,"v1 = input()
+v2 = input",14.0,LESS_THAN_HALF_YEAR,0.0,pies
+2732,"v1 = input()
+v2 = int(input())",14.0,LESS_THAN_HALF_YEAR,0.0,pies
+2733,"v1 = int(input())
+v2 = int(input())",14.0,LESS_THAN_HALF_YEAR,0.0,pies
+2734,"v1 = int(input())
+v2 = int(input())
+v3 = int",14.0,LESS_THAN_HALF_YEAR,0.0,pies
+2736,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())",14.0,LESS_THAN_HALF_YEAR,0.0,pies
+2738,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+",14.0,LESS_THAN_HALF_YEAR,0.0,pies
+2742,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+while v2 > 99:
+    v2 -= 100",14.0,LESS_THAN_HALF_YEAR,0.0,pies
+2744,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+while v2 > 99:
+    v2 -= 100
+    v1 += 1",14.0,LESS_THAN_HALF_YEAR,0.0,pies
+2752,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 = v1 * v3
+v2 = v2 * v3
+while v2 > 99:
+    v2 -= 100
+    v1 += 1
+print(v1)",14.0,LESS_THAN_HALF_YEAR,0.0,pies
+2753,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v1 = v1 * v3
+v2 = v2 * v3
+while v2 > 99:
+    v2 -= 100
+    v1 += 1
+print(str(v1) + "" "" + str(v2))",14.0,LESS_THAN_HALF_YEAR,1.0,pies

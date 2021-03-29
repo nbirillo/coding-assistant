@@ -1,0 +1,415 @@
+id,fragment,age,programExperience,testsResults,task
+1523,"
+",16,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1524,"v1=0
+while v1!=3:
+    v2=v1",16,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1544,"v1=0
+while v1!=3:
+    v2=input('ÑÐ¸ÑÐ»Ð¾? ')",16,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1547,"v1=0
+while v1!=3:
+    v2=input('ÑÐ¸ÑÐ»Ð¾? ')
+    v1= v1 + 1",16,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1554,"v1=0
+v2=0
+v3=0
+while v1!=3:
+    v4=input('ÑÐ¸ÑÐ»Ð¾? ')
+    v1= v1 + 1
+    if v4==1:
+        v2= v2 + 1",16,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1558,"v1=0
+v2=0
+v3=0
+while v1!=3:
+    v4=input('ÑÐ¸ÑÐ»Ð¾? ')
+    v1= v1 + 1
+    if v4==1:
+        v2= v2 + 1
+    elif v4==0:
+        v3= v3 + 1",16,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1562,"v1 = 0
+
+v2 = 0
+v3 = 0
+while v1 != 3:
+    v4 = input('ÑÐ¸ÑÐ»Ð¾? ')
+    v1 = v1 + 1
+    if v4 == 1:
+        v2 = v2 + 1
+    else:
+        v3 = v3 + 1
+
+
+if v3 > v2:
+    print(0)
+elif v3 < v2:
+    print(1)
+    
+",16,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1563,"v1 = 0
+
+v2 = 0
+v3 = 0
+while v1 != 3:
+    v4 = input('ÑÐ¸ÑÐ»Ð¾? ')
+    v1 = v1 + 1
+    if v4 == 1:
+        v2 = v2 + 1
+    elif v4 == 0:
+        v3 = v3 + 1
+
+
+if v3 > v2:
+    print(0)
+elif v3 < v2:
+    print(1)
+    
+",16,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1564,"v1 = 0
+
+v2 = 0
+v3 = 0
+while v1 != 3:
+    v4 = input('ÑÐ¸ÑÐ»Ð¾? ')
+    v1 = v1 + 1
+    if v4 == 1:
+        v2 = v2 + 1
+    elif v4 == 0:
+        v3 = v3 + 1
+
+if v3 > v2:
+    print(0)
+elif v3 < v2:
+    print(1)
+    
+",16,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1565,"v1 = 0
+
+v2 = 0
+v3 = 0
+while v1 != 3:
+    v4 = input('ÑÐ¸ÑÐ»Ð¾? ')
+    v1 = v1 + 1
+    if v4 == 1:
+        v2 = v2 + 1
+    else:
+        v3 = v3 + 1
+
+if v3 > v2:
+    print(0)
+elif v3 < v2:
+    print(1)
+
+",16,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1566,"v1 = 0
+v2 = 0
+v3 = 0
+while v1 != 3:
+    v4 = input('ÑÐ¸ÑÐ»Ð¾? ')
+    v1 = v1 + 1
+    if v4 == 1:
+        v2 = v2 + 1
+    else:
+        v3 = v3 + 1
+
+if v3 > v2:
+    print(0)
+elif v3 < v2:
+    print(1)
+
+",16,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1567,"v1 = 0
+v2 = 0
+v3 = 0
+while v1 != 3:
+    v4 = input('ÑÐ¸ÑÐ»Ð¾? ')
+    v1 = v1 + 1
+    if v4 == 1:
+        v2 = v2 + 1
+        
+    else:
+        v3 = v3 + 1
+
+if v3 > v2:
+    print(0)
+elif v3 < v2:
+    print(1)
+
+",16,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1571,"v1 = 0
+v2 = 0
+v3 = 0
+while v1 != 3:
+    v4 = input('ÑÐ¸ÑÐ»Ð¾? ')
+    v1 = v1 + 1
+    if v4 == 1:
+        v2 = v2 + 1
+        print(v2)
+    else:
+        v3 = v3 + 1
+
+if v3 > v2:
+    print(0)
+elif v3 < v2:
+    print(1)
+
+",16,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1572,"v1 = 0
+v2 = 0
+v3 = 0
+while v1 != 3:
+    v4 = input('ÑÐ¸ÑÐ»Ð¾? ')
+    v1 = v1 + 1
+    if v4 == 1:
+        v2 = v2 + 1
+        print(v2)
+    else:
+        v3 = v3 + 1
+        
+
+if v3 > v2:
+    print(0)
+elif v3 < v2:
+    print(1)
+
+",16,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1576,"v1 = 0
+v2 = 0
+v3 = 0
+while v1 != 3:
+    v4 = input('ÑÐ¸ÑÐ»Ð¾? ')
+    v1 = v1 + 1
+    if v4 == 1:
+        v2 = v2 + 1
+        print(v2)
+    else:
+        v3 = v3 + 1
+        print(v3)
+
+if v3 > v2:
+    print(0)
+elif v3 < v2:
+    print(1)
+
+",16,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1577,"v1 = 0
+v2 = 0
+v3 = 0
+while v1 != 3:
+    v4 = input('ÑÐ¸ÑÐ»Ð¾? ')
+    v1 = v1 + 1
+    if v4 == 1:
+        v2 = v2 + 1
+        print(v2)
+    else:
+        v3 = v3 + 1
+        print(v3)
+
+print('a0', v3)
+print('a1', v2)
+if v3 > v2:
+    print(0)
+elif v3 < v2:
+    print(1)
+
+",16,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1578,"v1 = 0
+v2 = 0
+v3 = 0
+",16,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1580,"v1 = 0
+v2 = 0
+v3 = 0
+",16,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1581,"v1 = 0
+v2 = 0
+v3 = 0
+v4 =v1",16,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1583,"v1 = 0
+v2 = 0
+v3 = 0
+v4 =input()",16,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1584,"v1 = 0
+v2 = 0
+v3 = 0
+
+v4 =input()",16,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1585,"v1 = 0
+v2 = 0
+v3 = 0
+v4 =input()",16,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1589,"v1 = 0
+v2 = 0
+v3 = 0
+v4 =input()
+if v4==1:
+    v2= v2 + 1",16,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1592,"v1 = 0
+v2 = 0
+v3 = 0
+v4 =input()
+if v4==1:
+    v2= v2 + 1
+elif v4==0:
+    v3= v3 + 1",16,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1595,"v1 = 0
+v2 = 0
+v3 = 0
+v4 =input()
+if v4==1:
+    v2= v2 + 1
+elif v4==0:
+    v3= v3 + 1
+
+if v2>v3:
+    print(1)",16,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1596,"v1 = 0
+v2 = 0
+v3 = 0
+v4 =input()
+if v4==1:
+    v2= v2 + 1
+elif v4==0:
+    v3= v3 + 1
+
+if v2>v3:
+    print(1)
+elif v3>v2:
+    print()",16,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1597,"v1 = 0
+v2 = 0
+v3 = 0
+v4 =input()
+if v4==1:
+    v2= v2 + 1
+elif v4==0:
+    v3= v3 + 1
+
+if v2>v3:
+    print(1)
+elif v3>v2:
+    print(0)",16,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1598,"v1 = 0
+v2 = 0
+v3 = 0
+v4 =input()
+if v4==1:
+    v2= v2 + 1
+elif v4==0:
+    v3= v3 + 1
+if v2>v3:
+    print(1)
+elif v3>v2:
+    print(0)",16,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1599,"v1 = 0
+v2 = 0
+v3 = 0
+v4 =int(input())
+if v4==1:
+    v2= v2 + 1
+elif v4==0:
+    v3= v3 + 1
+if v2>v3:
+    print(1)
+elif v3>v2:
+    print(0)",16,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1600,"v1 = 0
+v2 = 0
+v3 = 0
+while v1<3:
+    v4 =int(input())
+    if v4==1:
+        v2= v2 + 1
+    elif v4==0:
+        v3= v3 + 1
+if v2>v3:
+    print(1)
+elif v3>v2:
+    print(0)",16,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1601,"v1 = 0
+v2 = 0
+v3 = 0
+while v1!=3:
+    v4 =int(input())
+    if v4==1:
+        v2= v2 + 1
+    elif v4==0:
+        v3= v3 + 1
+if v2>v3:
+    print(1)
+elif v3>v2:
+    print(0)",16,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1602,"v1 = 0
+v2 = 0
+v3 = 0
+while v1!=3:
+    v4 =int(input())
+    if v4==1:
+        v2= v2 + 1
+    elif v4==0:
+        v3= v3 + 1
+        
+if v2>v3:
+    print(1)
+elif v3>v2:
+    print(0)",16,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1608,"v1 = 0
+v2 = 0
+v3 = 0
+while v1!=3:
+    v4 =int(input())
+    if v4==1:
+        v2= v2 + 1
+    elif v4==0:
+        v3= v3 + 1
+    v1= v1 + 1
+if v2>v3:
+    print(1)
+elif v3>v2:
+    print(0)",16,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1609,"v1 = 0
+v2 = 0
+v3 = 0
+while v1!=3:
+    v4 =int(input())
+    if v4==1:
+        v2= v2 + 1
+    elif v4==0:
+        v3= v3 + 1
+    v1= v1 + 1
+    
+if v2>v3:
+    print(1)
+elif v3>v2:
+    print(0)",16,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1610,"v1 = 0
+v2 = 0
+v3 = 0
+while v1!=3:
+    v4 =int(input())
+    if v4==1:
+        v2= v2 + 1
+    elif v4==0:
+        v3= v3 + 1
+    v1= v1 + 1
+
+if v2>v3:
+    print(1)
+elif v3>v2:
+    print(0)",16,FROM_TWO_TO_FOUR_YEARS,0.0,voting
+1611,"v1 = 0
+v2 = 0
+v3 = 0
+while v1!=3:
+    v4 =int(input())
+    if v4==1:
+        v2= v2 + 1
+    elif v4==0:
+        v3= v3 + 1
+    v1= v1 + 1
+if v2>v3:
+    print(1)
+elif v3>v2:
+    print(0)",16,FROM_TWO_TO_FOUR_YEARS,0.0,voting

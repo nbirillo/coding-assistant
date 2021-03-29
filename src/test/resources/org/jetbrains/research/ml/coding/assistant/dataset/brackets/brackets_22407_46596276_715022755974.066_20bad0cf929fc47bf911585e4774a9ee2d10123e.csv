@@ -1,0 +1,244 @@
+id,fragment,age,programExperience,testsResults,task
+3401,"
+",25,MORE_THAN_SIX,0.0,brackets
+3402,v1 = input,25,MORE_THAN_SIX,0.0,brackets
+3403,v1 = input(),25,MORE_THAN_SIX,0.0,brackets
+3404,"v1 = input()
+v2 = len",25,MORE_THAN_SIX,0.0,brackets
+3405,"v1 = input()
+v2 = len(v1)",25,MORE_THAN_SIX,0.0,brackets
+3406,"v1 = input()
+v2 = len(v1)
+v3 = bool",25,MORE_THAN_SIX,0.0,brackets
+3412,"v1 = input()
+v2 = len(v1)
+v3 = bool(v2 % 2)
+",25,MORE_THAN_SIX,0.0,brackets
+3413,"v1 = input()
+v2 = len(v1)
+v3 = bool(v2 % 2)
+
+v4 = v1
+",25,MORE_THAN_SIX,0.0,brackets
+3415,"v1 = input()
+v2 = len(v1)
+v3 = bool(v2 % 2)
+
+v4 = v1[0]
+",25,MORE_THAN_SIX,0.0,brackets
+3418,"v1 = input()
+v2 = len(v1)
+v3 = bool(v2 % 2)
+
+v4 = v1[0]
+
+
+v4 += v1[-1]
+",25,MORE_THAN_SIX,0.0,brackets
+3419,"v1 = input()
+v2 = len(v1)
+v3 = bool(v2 % 2)
+
+v4 = v1[0]
+
+
+
+v4 += v1[-1]
+",25,MORE_THAN_SIX,0.0,brackets
+3420,"v1 = input()
+v2 = len(v1)
+v3 = bool(v2 % 2)
+
+v4 = v1[0]
+
+
+if v2 !=1:
+    v4 += v1[-1]
+",25,MORE_THAN_SIX,0.0,brackets
+3423,"v1 = input()
+v2 = len(v1)
+v3 = bool(v2 % 2)
+
+v4 = v1[0]
+
+
+if v2 !=1:
+    v4 += v1[-1]
+print(v4)
+",25,MORE_THAN_SIX,0.125,brackets
+3424,"v1 = input()
+v2 = len(v1)
+v3 = bool(v2 % 2)
+
+v4 = v1[0]
+
+
+
+if v2 !=1:
+    v4 += v1[-1]
+print(v4)
+",25,MORE_THAN_SIX,0.125,brackets
+3428,"v1 = input()
+v2 = len(v1)
+v3 = bool(v2 % 2)
+
+v4 = v1[0]
+
+for v5 in range(1, v2 // 2):
+    v4 += ""(""
+
+if v2 !=1:
+    v4 += v1[-1]
+print(v4)
+",25,MORE_THAN_SIX,0.125,brackets
+3429,"v1 = input()
+v2 = len(v1)
+v3 = bool(v2 % 2)
+
+v4 = v1[0]
+
+for v5 in range(1, v2 // 2):
+    v4 += ""(""
+    
+
+if v2 !=1:
+    v4 += v1[-1]
+print(v4)
+",25,MORE_THAN_SIX,0.125,brackets
+3436,"v1 = input()
+v2 = len(v1)
+v3 = bool(v2 % 2)
+
+v4 = v1[0]
+
+for v5 in range(1, v2 // 2):
+    v4 += ""(""
+    v4 += v1[v5]
+
+if v2 !=1:
+    v4 += v1[-1]
+print(v4)
+",25,MORE_THAN_SIX,0.125,brackets
+3437,"v1 = input()
+v2 = len(v1)
+v3 = bool(v2 % 2)
+
+v4 = v1[0]
+
+for v5 in range(1, v2 // 2):
+    v4 += ""(""
+    v4 += v1[v5]
+
+
+if v2 !=1:
+    v4 += v1[-1]
+print(v4)
+",25,MORE_THAN_SIX,0.125,brackets
+3438,"v1 = input()
+v2 = len(v1)
+v3 = bool(v2 % 2)
+
+v4 = v1[0]
+
+for v5 in range(1, v2 // 2):
+    v4 += ""(""
+    v4 += v1[v5]
+
+
+
+if v2 !=1:
+    v4 += v1[-1]
+print(v4)
+",25,MORE_THAN_SIX,0.125,brackets
+3442,"v1 = input()
+v2 = len(v1)
+v3 = bool(v2 % 2)
+
+v4 = v1[0]
+
+for v5 in range(1, v2 // 2):
+    v4 += ""(""
+    v4 += v1[v5]
+
+for v5 in range(v2 // 2, v2 - 1):
+    v4 += v1[v5]
+
+if v2 !=1:
+    v4 += v1[-1]
+print(v4)
+",25,MORE_THAN_SIX,0.125,brackets
+3443,"v1 = input()
+v2 = len(v1)
+v3 = bool(v2 % 2)
+
+v4 = v1[0]
+
+for v5 in range(1, v2 // 2):
+    v4 += ""(""
+    v4 += v1[v5]
+
+for v5 in range(v2 // 2, v2 - 1):
+    v4 += v1[v5]
+    
+
+if v2 !=1:
+    v4 += v1[-1]
+print(v4)
+",25,MORE_THAN_SIX,0.125,brackets
+3447,"v1 = input()
+v2 = len(v1)
+v3 = bool(v2 % 2)
+
+v4 = v1[0]
+
+for v5 in range(1, v2 // 2):
+    v4 += ""(""
+    v4 += v1[v5]
+
+for v5 in range(v2 // 2, v2 - 1):
+    v4 += v1[v5]
+    v4 += "")""
+
+if v2 !=1:
+    v4 += v1[-1]
+print(v4)
+",25,MORE_THAN_SIX,0.25,brackets
+3448,"v1 = input()
+v2 = len(v1)
+v3 = bool(v2 % 2)
+
+v4 = v1[0]
+
+for v5 in range(1, v2 // 2):
+    v4 += ""(""
+    v4 += v1[v5]
+
+
+for v5 in range(v2 // 2, v2 - 1):
+    v4 += v1[v5]
+    v4 += "")""
+
+if v2 !=1:
+    v4 += v1[-1]
+print(v4)
+",25,MORE_THAN_SIX,0.25,brackets
+3454,"v1 = input()
+v2 = len(v1)
+v3 = bool(v2 % 2)
+
+v4 = v1[0]
+
+for v5 in range(1, v2 // 2):
+    v4 += ""(""
+    v4 += v1[v5]
+if v3:
+    v4  += '('
+
+for v5 in range(v2 // 2, v2 - 1):
+    v4 += v1[v5]
+    v4 += "")""
+
+if v2 !=1:
+    v4 += v1[-1]
+print(v4)
+",25,MORE_THAN_SIX,0.0,brackets

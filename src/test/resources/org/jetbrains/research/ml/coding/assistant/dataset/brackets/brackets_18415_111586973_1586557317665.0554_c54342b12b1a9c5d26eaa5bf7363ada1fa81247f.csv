@@ -1,0 +1,77 @@
+id,fragment,age,programExperience,testsResults,task
+2338,"
+",22,MORE_THAN_SIX,0.0,brackets
+2343,"v1 = input()
+",22,MORE_THAN_SIX,0.0,brackets
+2349,"v1 = input()
+v2 = [v3 + '(' for v3 in v1[:len(v1) // 2]]
+",22,MORE_THAN_SIX,0.0,brackets
+2359,"v1 = input()
+v2 = [v3 + '(' for v3 in v1[:len(v1) // 2]]
+v4 = [')' + v5 for v5 in v1[len(v1) // 2:]]
+",22,MORE_THAN_SIX,0.0,brackets
+2366,"v1 = input()
+v2 = [v3 + '(' for v3 in v1[:len(v1) // 2]]
+v4 = [')' + v5 for v5 in v1[len(v1) // 2:]]
+print(''.join(v2 + v4))
+",22,MORE_THAN_SIX,0.0,brackets
+2367,"v1 = input()
+
+v2 = [v3 + '(' for v3 in v1[:len(v1) // 2]]
+v4 = [')' + v5 for v5 in v1[len(v1) // 2:]]
+print(''.join(v2 + v4))
+",22,MORE_THAN_SIX,0.0,brackets
+2378,"v1 = input()
+v2 = len(v1) // 2 - (1 if len(v1) % 2 else 0)
+v3 = [v4 + '(' for v4 in v1[:len(v1) // 2]]
+v5 = [')' + v6 for v6 in v1[len(v1) // 2:]]
+print(''.join(v3 + v5))
+",22,MORE_THAN_SIX,0.0,brackets
+2382,"v1 = input()
+v2 = len(v1) // 2 - (1 if len(v1) % 2 else 0)
+v3 = [v4 + '(' for v4 in v1[:v2]]
+v5 = [')' + v6 for v6 in v1[len(v1) // 2:]]
+print(''.join(v3 + v5))
+",22,MORE_THAN_SIX,0.0,brackets
+2386,"v1 = input()
+v2 = len(v1) // 2 - (1 if len(v1) % 2 else 0)
+v3 = [v4 + '(' for v4 in v1[:v2]]
+v5 = [')' + v6 for v6 in v1[v2:]]
+print(''.join(v3 + v5))
+",22,MORE_THAN_SIX,0.0,brackets
+2388,"v1 = input()
+v2 = len(v1) // 2 - (1 if len(v1) % 2 == 0 else 0)
+v3 = [v4 + '(' for v4 in v1[:v2]]
+v5 = [')' + v6 for v6 in v1[v2:]]
+print(''.join(v3 + v5))
+",22,MORE_THAN_SIX,0.0,brackets
+2390,"v1 = input()
+v2 = len(v1) // 2 - (1 if len(v1) % 2 == 0 else 0)
+v3 = [v4 + '(' for v4 in v1[:v2]]
+v5 = [')' + v6 for v6 in v1[v2 + 1:]]
+print(''.join(v3 + v5))
+",22,MORE_THAN_SIX,0.0,brackets
+2391,"v1 = input()
+v2 = len(v1) // 2 - (1 if len(v1) % 2 == 0 else 0)
+v3 = [v4 + '(' for v4 in v1[:v2]]
+v5 = [')' + v6 for v6 in v1[v2 + 1:]]
+print(''.join(v3 + [v1[v2]] + v5))
+",22,MORE_THAN_SIX,0.125,brackets
+2395,"v1 = input()
+v2 = len(v1) // 2 - (1 if len(v1) % 2 == 0 else 0)
+v3 = [v4 + '(' for v4 in v1[:v2]]
+v5 = [')' + v6 for v6 in v1[len(v1) - v2:]]
+print(''.join(v3 + [v1[v2]] + v5))
+",22,MORE_THAN_SIX,0.125,brackets
+2396,"v1 = input()
+v2 = len(v1) // 2 - (1 if len(v1) % 2 == 0 else 0)
+v3 = ''.join([v4 + '(' for v4 in v1[:v2]])
+v5 = ''.join([')' + v6 for v6 in v1[len(v1) - v2:]])
+print(''.join(v3 + v1[v2: len(v1) - v2] + v5))
+",22,MORE_THAN_SIX,1.0,brackets
+2397,"v1 = input()
+v2 = len(v1) // 2 - (1 if len(v1) % 2 == 0 else 0)
+v3 = ''.join([v4 + '(' for v4 in v1[:v2]])
+v5 = ''.join([')' + v6 for v6 in v1[len(v1) - v2:]])
+print(v3 + v1[v2: len(v1) - v2] + v5)
+",22,MORE_THAN_SIX,1.0,brackets

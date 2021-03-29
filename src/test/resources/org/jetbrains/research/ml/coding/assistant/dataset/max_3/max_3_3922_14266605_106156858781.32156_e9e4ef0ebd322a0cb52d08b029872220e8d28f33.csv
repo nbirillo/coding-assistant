@@ -1,0 +1,126 @@
+id,fragment,age,programExperience,testsResults,task
+171,"v1 = 0 ",13.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+172,"v1 = int
+v2 = 0
+",13.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+175,"v1 = int (input())
+v2 = 0
+",13.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+176,"v1 = int (input())
+
+v2 = 0
+",13.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+177,"v1 = int(input())
+v2 = int
+v3 = 0
+",13.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+179,"v1 = int(input())
+v2 = int(input())
+v3 = 0
+",13.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+180,"v1 = int(input())
+v2 = int(input())
+v3 = int()
+v4 = 0
+",13.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+181,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = 0
+",13.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+182,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = 0
+",13.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+186,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+
+v4 = 0 ",13.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+187,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = 0 ",13.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+190,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = 0
+if v1 > v2:
+    v4 = v1
+   
+    ",13.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+193,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = 0
+if v1 > v2:
+    v4 = v1
+else:
+    v4 = v2
+if v2 > v3:
+    v4 = v2
+if v3 > v4:
+    v4 = v3
+print (v4)
+",13.0,FROM_HALF_TO_ONE_YEAR,0.75,max_3
+194,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = 0
+if v1 > v2:
+    v4 = v1
+else:
+    v4 = v2
+if v2 > v3:
+    v4 = v2
+if v3 > v4:
+    v4 = v3
+print (v4)
+",13.0,FROM_HALF_TO_ONE_YEAR,0.75,max_3
+209,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = 0
+if v1 > v2:
+    v4 = v1
+else:
+    v4 = v2
+if v2 > v3:
+    v4 = v2
+if v3 > v4:
+    v4 = v3
+print (v4)
+",13.0,FROM_HALF_TO_ONE_YEAR,0.75,max_3
+210,v1 = int(input()),13.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+212,"v1 = int(input())
+",13.0,FROM_HALF_TO_ONE_YEAR,0.0,max_3
+213,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = 0
+if v1 > v2:
+    v4 = v1
+else:
+    v4 = v2
+if v2 > v3:
+    v4 = v2
+if v3 > v4:
+    v4 = v3
+print (v4)
+",13.0,FROM_HALF_TO_ONE_YEAR,0.75,max_3
+214,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+v4 = 0
+if v1 > v2:
+    v4 = v1
+else:
+    v4 = v2
+if v2 > v3:
+    v4 = v2
+if v3 > v4:
+    v4 = v3
+print (v4)
+",13.0,FROM_HALF_TO_ONE_YEAR,0.75,max_3

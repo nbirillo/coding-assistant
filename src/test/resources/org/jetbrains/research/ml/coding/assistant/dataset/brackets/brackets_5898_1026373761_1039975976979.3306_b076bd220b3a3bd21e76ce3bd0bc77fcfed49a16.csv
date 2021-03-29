@@ -1,0 +1,28 @@
+id,fragment,age,programExperience,testsResults,task
+5128,v1 = input(),-1,MORE_THAN_SIX,0.0,brackets
+5129,"v1 = input()
+
+if len(v1) % 2 == 1:
+    print(""("".join(v1[:len(v1) // 2]), '(', "")"".join(v1[len(v1) // 2:]), sep="""")
+else:
+    print()",-1,MORE_THAN_SIX,0.0,brackets
+5130,"v1 = input()
+
+if len(v1) % 2 == 1:
+    print(""("".join(v1[:len(v1) // 2]), '(', "")"".join(v1[len(v1) // 2:]), sep="""")
+else:
+    print(""("".join(v1[:len(v1) // 2]), '(', "")"".join(v1[len(v1) // 2:]), sep="""")",-1,MORE_THAN_SIX,0.0,brackets
+5131,"v1 = input()
+
+if len(v1) % 2 == 1:
+    print(""("".join(v1[:len(v1) // 2]), '(', "")"".join(v1[len(v1) // 2:]), sep="""")
+else:
+    print(""("".join(v1[:len(v1) // 2 + 1]), '(', "")"".join(v1[len(v1) // 2:]), sep="""")
+    ",-1,MORE_THAN_SIX,0.0,brackets
+5135,"v1 = input()
+
+if len(v1) % 2 == 1:
+    print(""("".join(v1[:len(v1) // 2]), '(', "")"".join(v1[len(v1) // 2:]), sep="""")
+else:
+    print(""("".join(v1[:len(v1) // 2]), "")"".join(v1[len(v1) // 2:]), sep="""")
+    ",-1,MORE_THAN_SIX,0.0,brackets

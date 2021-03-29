@@ -1,0 +1,15 @@
+id,fragment,age,programExperience,testsResults,task
+1061,"v1=[]
+v2=int(input())
+for v3 in range(v2):
+    v1.append(v3)",16.0,FROM_ONE_TO_TWO_YEARS,0.0,is_zero
+1063,"v1=[]
+v2=int(input())
+for v3 in range(v2):
+    v1.append(input())",16.0,FROM_ONE_TO_TWO_YEARS,0.0,is_zero
+1070,"v1=[]
+v2=int(input())
+for v3 in range(v2):
+    v1.append(input())
+if v1[v3]==0:
+    print('YES')",16.0,FROM_ONE_TO_TWO_YEARS,0.0,is_zero

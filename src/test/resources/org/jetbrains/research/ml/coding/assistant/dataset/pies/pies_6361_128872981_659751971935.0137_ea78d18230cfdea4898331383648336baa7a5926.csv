@@ -1,0 +1,54 @@
+id,fragment,age,programExperience,testsResults,task
+3712,"v1 = int(input())
+",-1,FROM_FOUR_TO_SIX_YEARS,0.0,pies
+3713,"v1 = int(input())
+v2 = int
+",-1,FROM_FOUR_TO_SIX_YEARS,0.0,pies
+3714,"v1 = int(input())
+v2 = int(input())
+",-1,FROM_FOUR_TO_SIX_YEARS,0.0,pies
+3715,"v1 = int(input())
+v2 = int(input())
+v3 = int",-1,FROM_FOUR_TO_SIX_YEARS,0.0,pies
+3717,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())",-1,FROM_FOUR_TO_SIX_YEARS,0.0,pies
+3743,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+print(str(v3 * v1 + v3 * v2 / 100) + "" "" + str((v3 * v2) % 100))",-1,FROM_FOUR_TO_SIX_YEARS,0.0,pies
+3744,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+print(str(v3 * v1 + v3 * v2 / 100) + "" "" + str((v3 * v2) % 100))
+",-1,FROM_FOUR_TO_SIX_YEARS,0.0,pies
+3752,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+print(str(v3 * v1 + v3 * v2 / 100) + "" "" + str((v3 * v2) % 100))
+",-1,FROM_FOUR_TO_SIX_YEARS,0.0,pies
+3753,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+print(str(v3 * v1 + v3 * v2 / 100) + "" "" + str((v3 * v2) % 100))
+",-1,FROM_FOUR_TO_SIX_YEARS,0.0,pies
+3754,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+print(str(v3 * v1 + v3 * v2 / 100) + "" "" + str((v3 * v2) % 100))
+""""",-1,FROM_FOUR_TO_SIX_YEARS,0.0,pies
+3755,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+print(str(v3 * v1 + v3 * v2 / 100) + "" "" + str((v3 * v2) % 100))
+",-1,FROM_FOUR_TO_SIX_YEARS,0.0,pies
+3756,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+print(str(v3 * v1 + v3 * v2 / 100) + "" "" + str((v3 * v2) % 100))
+",-1,FROM_FOUR_TO_SIX_YEARS,0.0,pies
+3781,"v1 = int(input())
+v2 = int(input())
+v3 = int(input())
+print(str(v3 * v1 + v3 * v2 / 100) + "" "" + str((v3 * v2) % 100))
+",-1,FROM_FOUR_TO_SIX_YEARS,0.0,pies

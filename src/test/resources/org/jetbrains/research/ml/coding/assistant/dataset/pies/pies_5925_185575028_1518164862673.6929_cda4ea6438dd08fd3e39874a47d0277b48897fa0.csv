@@ -1,0 +1,53 @@
+id,fragment,age,programExperience,testsResults,task
+3666,,25,LESS_THAN_HALF_YEAR,0.0,pies
+3667,v1 = int,25,LESS_THAN_HALF_YEAR,0.0,pies
+3669,v1 = int (input()),25,LESS_THAN_HALF_YEAR,0.0,pies
+3670,"v1 = int (input())
+v1 = int (input())",25,LESS_THAN_HALF_YEAR,0.0,pies
+3671,"v1 = int (input())
+v2 = int (input())",25,LESS_THAN_HALF_YEAR,0.0,pies
+3672,"v1 = int (input())
+v2 = int (input())
+v1 = int (input())",25,LESS_THAN_HALF_YEAR,0.0,pies
+3673,"v1 = int (input())
+v2 = int (input())
+v3 = int (input())",25,LESS_THAN_HALF_YEAR,0.0,pies
+3675,"v1 = int (input())
+v2 = int (input())
+v3 = int (input())
+
+v4 = 0",25,LESS_THAN_HALF_YEAR,0.0,pies
+3677,"v1 = int (input())
+v2 = int (input())
+v3 = int (input())
+
+v4 = 0
+v5 = 0",25,LESS_THAN_HALF_YEAR,0.0,pies
+3689,"v1 = int (input())
+v2 = int (input())
+v3 = int (input())
+
+v4 = 0
+v5 = 0
+
+v4 = v1 * v3 + (v2 * v3) // 100",25,LESS_THAN_HALF_YEAR,0.0,pies
+3696,"v1 = int (input())
+v2 = int (input())
+v3 = int (input())
+
+v4 = 0
+v5 = 0
+
+v4 = v1 * v3 + (v2 * v3) // 100
+v5 = (v2 * v3) % 100",25,LESS_THAN_HALF_YEAR,0.0,pies
+3709,"v1 = int (input())
+v2 = int (input())
+v3 = int (input())
+
+v4 = 0
+v5 = 0
+
+v4 = v1 * v3 + (v2 * v3) // 100
+v5 = (v2 * v3) % 100
+
+print(str(v4) + "" "" + str(v5))",25,LESS_THAN_HALF_YEAR,1.0,pies
