@@ -1,6 +1,7 @@
 package org.jetbrains.research.ml.coding.assistant.system
 
 import com.github.gumtreediff.tree.TreeContext
+import org.jetbrains.research.ml.coding.assistant.dataset.model.DatasetTask
 import org.jetbrains.research.ml.coding.assistant.dataset.model.MetaInfo
 
 /**
@@ -9,6 +10,7 @@ import org.jetbrains.research.ml.coding.assistant.dataset.model.MetaInfo
  * For further calculations it has to store the gumtree tree (`treeContext`).
  */
 data class PartialSolution(
+    val datasetTask: DatasetTask,
     val treeContext: TreeContext,
     val fragment: String,
     val metaInfo: MetaInfo

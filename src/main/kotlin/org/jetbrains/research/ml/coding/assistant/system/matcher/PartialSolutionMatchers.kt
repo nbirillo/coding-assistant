@@ -29,7 +29,7 @@ interface BooleanPartialSolutionMatcher : PartialSolutionMatcher {
  * Exact partial solution matcher matches the vertex from the solution space and student's partial solution
  * only if their trees are isomorphic(see `ITree.isIsomorphicTo`)
  */
-class ExactPartialSolutionMatcher : BooleanPartialSolutionMatcher {
+object ExactPartialSolutionMatcher : BooleanPartialSolutionMatcher {
     override fun isMatched(vertex: SolutionSpaceVertex, partialSolution: PartialSolution): Boolean {
         return vertex.fragment.root.isIsomorphicTo(partialSolution.treeContext.root)
     }

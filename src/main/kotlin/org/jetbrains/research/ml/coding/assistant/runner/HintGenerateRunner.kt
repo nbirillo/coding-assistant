@@ -9,11 +9,15 @@ import org.jetbrains.research.ml.coding.assistant.dataset.model.DatasetTask
 import org.jetbrains.research.ml.coding.assistant.dataset.model.MetaInfo
 import org.jetbrains.research.ml.coding.assistant.report.*
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.Util
+import org.jetbrains.research.ml.coding.assistant.solutionSpace.repo.SolutionSpaceFileRepository
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.serialization.SerializationUtils
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreator
 import org.jetbrains.research.ml.coding.assistant.system.PartialSolution
+import org.jetbrains.research.ml.coding.assistant.system.finder.NaiveVertexFinder
 import org.jetbrains.research.ml.coding.assistant.system.finder.ParallelVertexFinder
+import org.jetbrains.research.ml.coding.assistant.system.hint.NaiveHintVertexCalculator
 import org.jetbrains.research.ml.coding.assistant.system.matcher.EditPartialSolutionMatcher
+import org.jetbrains.research.ml.coding.assistant.system.matcher.ExactPartialSolutionMatcher
 import org.jetbrains.research.ml.coding.assistant.utils.ProjectUtils
 import java.io.File
 import java.nio.file.Path
@@ -68,12 +72,19 @@ object HintGenerateRunner : ApplicationStarter {
             val project = ProjectUtils.setUpProjectWithSdk(getTmpProjectDir())
 
             val codeRepository = createCodeRepository(codeRepositoryFile)
-            val solutionSpace = SerializationUtils.decodeSolutionSpace(solutionSpaceFile.readText())
+            val solutionSpaceRepository = SolutionSpaceFileRepository(mapOf(datasetTask to solutionSpaceFile))
 
-            val code = """print(max(input()))""".trimIndent()
+            val code = """
+                x = list(input())
+                l = len(x)
+                w = []
+                for i in range(l // 2):
+                    w += x[i] + '('
+            """.trimIndent()
             val psiCreator = project.service<PsiCreator>()
             val file = psiCreator.initFileToPsi(code)
             val partialSolution = PartialSolution(
+                datasetTask,
                 Util.getTreeContext(file),
                 code,
                 MetaInfo(123.0f, null, 0.32, datasetTask)
@@ -81,12 +92,16 @@ object HintGenerateRunner : ApplicationStarter {
 
             val reportGenerator = CompositeMarkdownHintReportGenerator(MarkdownHintReportGenerator(codeRepository))
             val reportFile = outputDir.resolve("${datasetTask.taskName}_report.md").apply { createNewFile() }
-
             val reportFactory = HintReportFactory(
-                datasetTask,
-                listOf(ParallelVertexFinder(EditPartialSolutionMatcher))
+                solutionSpaceRepository,
+                listOf(
+                    ParallelVertexFinder(EditPartialSolutionMatcher),
+                    ParallelVertexFinder(ExactPartialSolutionMatcher),
+                    NaiveVertexFinder(ExactPartialSolutionMatcher)
+                ),
+                listOf(NaiveHintVertexCalculator)
             )
-            val hintReports = reportFactory.createHintReports(solutionSpace, partialSolution)
+            val hintReports = reportFactory.createHintReports(partialSolution)
             reportFile.outputStream().use { stream ->
                 reportGenerator.generate(stream, hintReports)
             }

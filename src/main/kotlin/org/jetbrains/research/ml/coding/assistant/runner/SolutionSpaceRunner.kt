@@ -10,6 +10,7 @@ import org.jetbrains.research.ml.coding.assistant.dataset.model.DatasetTask
 import org.jetbrains.research.ml.coding.assistant.report.CodeRepository
 import org.jetbrains.research.ml.coding.assistant.report.OriginalCodeData
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.builder.SolutionSpaceGraphBuilder
+import org.jetbrains.research.ml.coding.assistant.solutionSpace.repo.SolutionSpaceDirectoryRepository
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.serialization.SerializationUtils
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.generateImage
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.weightCalculator.CustomEdgeWeightCalculator
@@ -66,12 +67,8 @@ object SolutionSpaceRunner : ApplicationStarter {
             dumpCodeMap(outputDir, taskSolutions.datasetTask, unifiedSolutions.flatten())
 
             // dump solution space
-            val solutionSpaceFile = outputDir.resolve(
-                "${taskSolutions.datasetTask.taskName}_solution_space.json"
-            )
-                .apply { createNewFile() }
-            val encodedSolutionSpace = SerializationUtils.encodeSolutionSpace(solutionSpace)
-            solutionSpaceFile.writeText(encodedSolutionSpace)
+            val solutionSpaceRepository = SolutionSpaceDirectoryRepository(outputDir)
+            solutionSpaceRepository.storeSolutionSpace(taskSolutions.datasetTask, solutionSpace)
 
             // dump solution space graph image
             val imageFile = outputDir

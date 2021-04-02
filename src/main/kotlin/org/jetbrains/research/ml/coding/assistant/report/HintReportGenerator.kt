@@ -14,6 +14,7 @@ interface HintReportGenerator {
 class MarkdownHintReportGenerator(private val codeRepository: CodeRepository) : HintReportGenerator {
     override fun generate(outputStream: OutputStream, report: HintReport) {
         val text = """
+
 ## ${report.algorithmName}
 
 ### Student code
@@ -23,6 +24,7 @@ ${report.partialSolution.fragment}
 
 ### Closest node's code
 `vertex` = ${report.closestVertex}
+
 `meta information`:
 ${report.closestVertex.toDebugString()}
 
@@ -34,6 +36,7 @@ ${report.closestVertex?.let(
 
 ### Hint node's code 
 `vertex` = ${report.nextNode}
+
 `meta information`:
 ${report.nextNode.toDebugString()}
 
@@ -73,7 +76,7 @@ appendLine()
 }
 
 private fun SolutionSpaceVertex?.toDebugString(): String {
-    return this?.info?.joinToString("\n\n") { it.metaInfo.toDebugString() } ?: "No meta information"
+    return this?.info?.joinToString("---\n") { it.metaInfo.toDebugString() } ?: "No meta information"
 }
 
 private fun MetaInfo.toDebugString(): String {

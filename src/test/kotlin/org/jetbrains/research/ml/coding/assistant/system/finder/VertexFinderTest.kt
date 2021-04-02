@@ -23,11 +23,11 @@ import org.junit.Test
 class VertexFinderTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(::VertexFinderTest)) {
     @Test
     fun testBasic() {
-        val taskSolutions = DatasetUtils.DATASET.tasks.first()
+        val taskSolution = DatasetUtils.DATASET.tasks.first()
         val datasetUnification = project.service<DatasetUnification>()
 
         val solutionSpaceBuilder = SolutionSpaceGraphBuilder()
-        taskSolutions.dynamicSolutions
+        taskSolution.dynamicSolutions
             .map { datasetUnification.unify(it) }
             .forEach { solutionSpaceBuilder.addDynamicSolution(it) }
 
@@ -40,6 +40,7 @@ class VertexFinderTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(::Vert
         val psiFile = createPsiFile(fragment)
         val context = Util.getTreeContext(psiFile)
         val partialSolution = PartialSolution(
+            taskSolution.datasetTask,
             context,
             fragment,
             MetaInfo(10.0f, null, 0.1, DatasetTask.BRACKETS)

@@ -1,6 +1,9 @@
 package org.jetbrains.research.ml.coding.assistant.unification
 
+import com.intellij.openapi.components.service
+import com.intellij.psi.PsiDocumentManager
 import com.intellij.psi.PsiElement
+import com.intellij.psi.PsiFile
 import org.jetbrains.research.ml.ast.transformations.PerformedCommandStorage
 import org.jetbrains.research.ml.ast.transformations.Transformation
 import org.jetbrains.research.ml.ast.transformations.anonymization.AnonymizationTransformation
@@ -39,13 +42,16 @@ object CompositeTransformation : Transformation() {
 
     override fun forwardApply(psiTree: PsiElement, commandsStorage: PerformedCommandStorage?) {
         LOG.fine { "Tree Started: ${psiTree.text}" }
-
+        val psiDocumentManager = psiTree.project.service<PsiDocumentManager>()
+        val document = (psiTree as? PsiFile)?.let { psiDocumentManager.getDocument(it) }
         var iterationNumber = 0
         do {
             ++iterationNumber
             val previousTree = psiTree.copy()
             try {
                 transformations.forEach {
+                    if (document != null)
+                        psiDocumentManager.commitDocument(document)
                     LOG.finer { "Transformation Started: ${it.key}" }
                     it.forwardApply(psiTree, commandsStorage)
                     LOG.finer { "Transformation Ended: ${it.key}" }
