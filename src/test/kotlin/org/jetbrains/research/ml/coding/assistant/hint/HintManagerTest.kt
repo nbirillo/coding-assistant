@@ -36,7 +36,10 @@ class HintManagerTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(::HintM
         val datasetTask = DatasetTask.MAX_3
         val metaInfo = MetaInfo(12.0f, null, 0.32, datasetTask)
         val hintedFile = hintManager.getHintedFile(datasetTask, psiFileWrapper, metaInfo)
-        print(hintedFile?.text)
+        println("""
+Hinted:
+${hintedFile?.text}
+            """.trimIndent())
         psiFileWrapper.deleteFile()
     }
 }
