@@ -5,5 +5,5 @@ import org.jetbrains.research.ml.coding.assistant.system.PartialSolution
 
 data class CodeHint(
     val partialSolution: PartialSolution,
-    val hintCode: SolutionSpaceVertex
+    val hintVertex: SolutionSpaceVertex
 )

@@ -36,10 +36,9 @@ class HintManagerImpl(private val hintFactory: HintFactory) : HintManager {
         val hint = hintFactory.createHint(partialSolution) ?: return null
         val psiCreator = studentPsiFile.project.service<PsiCreator>()
         val studentTreeContext = Util.getTreeContext(studentPsiFile)
-        val hintPsiFile = psiCreator.initFileToPsi(hint.hintCode.code)
-        // FIXME: use TreeContext from the vertex.
-        val hintTreeContext = Util.getTreeContext(hintPsiFile)
-        val editActions = studentTreeContext.calculateEditActions(hintTreeContext)
+        val hintPsiFile = psiCreator.initFileToPsi(hint.hintVertex.code)
+        Util.number(hintPsiFile, hint.hintVertex.fragment)
+        val editActions = studentTreeContext.calculateEditActions(hint.hintVertex.fragment)
         WriteCommandAction.runWriteCommandAction(studentPsiFile.project) {
             studentPsiFile.applyActions(editActions, hintPsiFile)
         }
