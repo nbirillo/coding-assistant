@@ -1,17 +1,12 @@
 package org.jetbrains.research.ml.coding.assistant.solutionSpace
 
-import com.github.gumtreediff.tree.TreeContext
-import com.intellij.openapi.application.ApplicationManager
-import com.intellij.psi.PsiFile
-import org.jetbrains.research.ml.ast.gumtree.tree.Numbering
-import org.jetbrains.research.ml.ast.gumtree.tree.PreOrderNumbering
-import org.jetbrains.research.ml.ast.gumtree.tree.PsiTreeConverter
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.builder.SolutionSpaceGraphBuilder
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.builder.SolutionSpaceGraphEdge
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.builder.SolutionSpaceGraphVertex
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.serialization.SolutionSpaceEdgeModel
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.addVertices
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.weightCalculator.EdgeWeightCalculatorFactory
+import org.jetbrains.research.ml.coding.assistant.utils.Util
 import org.jgrapht.Graph
 import org.jgrapht.graph.AsUnmodifiableGraph
 import org.jgrapht.graph.SimpleDirectedWeightedGraph
@@ -114,12 +109,4 @@ private fun SolutionSpaceGraphVertex.toSolutionSpaceVertex(
         codeFragment,
         partialSolutions.map { StudentInfo(it.id, it.metaInfo) }
     )
-}
-
-object Util {
-    fun getTreeContext(psiFile: PsiFile, numbering: Numbering = PreOrderNumbering): TreeContext {
-        return ApplicationManager.getApplication().runReadAction<TreeContext> {
-            PsiTreeConverter.convertTree(psiFile, numbering)
-        }
-    }
 }

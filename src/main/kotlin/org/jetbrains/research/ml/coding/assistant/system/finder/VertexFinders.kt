@@ -3,7 +3,6 @@ package org.jetbrains.research.ml.coding.assistant.system.finder
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpace
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpaceVertex
 import org.jetbrains.research.ml.coding.assistant.system.PartialSolution
-import org.jetbrains.research.ml.coding.assistant.system.matcher.BooleanPartialSolutionMatcher
 import org.jetbrains.research.ml.coding.assistant.system.matcher.PartialSolutionMatcher
 
 /**
@@ -25,12 +24,24 @@ abstract class VertexFinder {
 /**
  * Naive vertex finder returns the first vertex that matcher predicate `BooleanPartialSolutionMatcher.isMatched`
  */
-class NaiveVertexFinder(override val matcher: BooleanPartialSolutionMatcher) : VertexFinder() {
+class NaiveVertexFinder(override val matcher: PartialSolutionMatcher) : VertexFinder() {
     override fun findCorrespondingVertex(
         solutionSpace: SolutionSpace,
         partialSolution: PartialSolution
     ): SolutionSpaceVertex? {
-        return solutionSpace.graph.vertexSet().firstOrNull { matcher.isMatched(it, partialSolution) }
+        return solutionSpace.graph.vertexSet().minByOrNull { vertex ->
+            matcher.differScore(vertex, partialSolution)
+                .also { score ->
+                    println(
+                        """    
+Score = $score
+Current vertex(${vertex.id}) code:
+${vertex.code}
+
+""".trimIndent()
+                    )
+                }
+        }
     }
 }
 

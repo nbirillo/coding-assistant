@@ -16,6 +16,7 @@ version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
+    mavenLocal()
     jcenter()
 }
 
@@ -24,7 +25,7 @@ dependencies {
 
     implementation("org.jetbrains.research.ml.ast.transformations:ast-transformations") {
         version {
-            branch = "master"
+            branch = "test"
         }
     }
     implementation("org.jgrapht:jgrapht-core:1.1.0")
@@ -43,7 +44,7 @@ dependencies {
 intellij {
     type = "PC"
     version = "2020.3.3"
-    downloadSources = false
+    downloadSources = true
     setPlugins("PythonCore")
     updateSinceUntilBuild = true
 }
@@ -140,5 +141,11 @@ tasks {
             outputDir?.let { "--output_path=$it" },
             taskName?.let { "--task_name=$it" }
         )
+    }
+}
+
+kotlin.sourceSets.all {
+    languageSettings.apply {
+        useExperimentalAnnotation("kotlin.contracts.ExperimentalContracts")
     }
 }

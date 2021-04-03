@@ -20,7 +20,6 @@ object NaiveHintVertexCalculator : HintVertexCalculator {
         partialSolution: PartialSolution
     ): SolutionSpaceVertex? {
         val successors = Graphs.successorListOf(solutionSpace.graph, closestVertex)
-        println(successors.map { it.toString() })
         return successors.firstOrNull()
     }
 }

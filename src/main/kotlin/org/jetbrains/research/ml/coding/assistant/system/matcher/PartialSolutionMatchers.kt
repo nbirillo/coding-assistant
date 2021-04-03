@@ -60,9 +60,26 @@ class ThresholdSolutionMatcher(
 /**
  * Edit partial solution matcher defines a differ score
  * between the vertex from the solution space and student's partial solution
- * based on the list of edits between them.
+ * based on the sum of every edits tree count between them.
  */
 object EditPartialSolutionMatcher : PartialSolutionMatcher {
+    override fun differScore(vertex: SolutionSpaceVertex, partialSolution: PartialSolution): Double {
+        val matcher = Matcher(partialSolution.treeContext, vertex.fragment)
+        val actions = matcher.getEditActions()
+        return actions.sumBy { it.node.size }.toDouble()
+    }
+
+    override fun toString(): String {
+        return "EditPartialSolutionMatcher"
+    }
+}
+
+/**
+ * Edit partial solution matcher defines a differ score
+ * between the vertex from the solution space and student's partial solution
+ * based on the list of edits between them.
+ */
+object EditCountPartialSolutionMatcher : PartialSolutionMatcher {
     override fun differScore(vertex: SolutionSpaceVertex, partialSolution: PartialSolution): Double {
         val matcher = Matcher(partialSolution.treeContext, vertex.fragment)
         val actions = matcher.getEditActions()
@@ -70,6 +87,6 @@ object EditPartialSolutionMatcher : PartialSolutionMatcher {
     }
 
     override fun toString(): String {
-        return "EditPartialSolutionMatcher"
+        return "EditCountPartialSolutionMatcher"
     }
 }

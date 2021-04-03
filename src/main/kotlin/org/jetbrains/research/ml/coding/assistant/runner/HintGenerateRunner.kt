@@ -8,7 +8,7 @@ import org.jetbrains.research.ml.ast.util.getTmpProjectDir
 import org.jetbrains.research.ml.coding.assistant.dataset.model.DatasetTask
 import org.jetbrains.research.ml.coding.assistant.dataset.model.MetaInfo
 import org.jetbrains.research.ml.coding.assistant.report.*
-import org.jetbrains.research.ml.coding.assistant.solutionSpace.Util
+import org.jetbrains.research.ml.coding.assistant.utils.Util
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.repo.SolutionSpaceFileRepository
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.serialization.SerializationUtils
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreator
@@ -18,7 +18,9 @@ import org.jetbrains.research.ml.coding.assistant.system.finder.ParallelVertexFi
 import org.jetbrains.research.ml.coding.assistant.system.hint.NaiveHintVertexCalculator
 import org.jetbrains.research.ml.coding.assistant.system.matcher.EditPartialSolutionMatcher
 import org.jetbrains.research.ml.coding.assistant.system.matcher.ExactPartialSolutionMatcher
+import org.jetbrains.research.ml.coding.assistant.unification.CompositeTransformation
 import org.jetbrains.research.ml.coding.assistant.utils.ProjectUtils
+import org.jetbrains.research.ml.coding.assistant.utils.reformatInWriteAction
 import java.io.File
 import java.nio.file.Path
 import java.nio.file.Paths
@@ -74,19 +76,22 @@ object HintGenerateRunner : ApplicationStarter {
             val codeRepository = createCodeRepository(codeRepositoryFile)
             val solutionSpaceRepository = SolutionSpaceFileRepository(mapOf(datasetTask to solutionSpaceFile))
 
+            // language=Python
             val code = """
-                x = list(input())
-                l = len(x)
-                w = []
-                for i in range(l // 2):
-                    w += x[i] + '('
+x = list(input())
+l = len(x)
+w = []
+for i in range(l // 2):
+    w += x[i] + '('
             """.trimIndent()
             val psiCreator = project.service<PsiCreator>()
-            val file = psiCreator.initFileToPsi(code)
+            val file = psiCreator.initFileToPsi(code).reformatInWriteAction()
+            CompositeTransformation.forwardApply(file, null)
+
             val partialSolution = PartialSolution(
                 datasetTask,
                 Util.getTreeContext(file),
-                code,
+                file,
                 MetaInfo(123.0f, null, 0.32, datasetTask)
             )
 

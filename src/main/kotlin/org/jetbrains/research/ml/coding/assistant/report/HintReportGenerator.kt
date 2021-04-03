@@ -19,7 +19,7 @@ class MarkdownHintReportGenerator(private val codeRepository: CodeRepository) : 
 
 ### Student code
 ```python
-${report.partialSolution.fragment}
+${report.partialSolution.psiFragment.text}
 ```
 
 ### Closest node's code

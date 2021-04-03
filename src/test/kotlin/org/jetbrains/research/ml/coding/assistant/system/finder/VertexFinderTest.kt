@@ -5,7 +5,7 @@ import com.intellij.openapi.components.service
 import org.jetbrains.research.ml.ast.util.getTmpProjectDir
 import org.jetbrains.research.ml.coding.assistant.dataset.model.DatasetTask
 import org.jetbrains.research.ml.coding.assistant.dataset.model.MetaInfo
-import org.jetbrains.research.ml.coding.assistant.solutionSpace.Util
+import org.jetbrains.research.ml.coding.assistant.utils.Util
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.builder.SolutionSpaceGraphBuilder
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreator
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiFileWrapper
@@ -42,7 +42,7 @@ class VertexFinderTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(::Vert
         val partialSolution = PartialSolution(
             taskSolution.datasetTask,
             context,
-            fragment,
+            psiFile,
             MetaInfo(10.0f, null, 0.1, DatasetTask.BRACKETS)
         )
         assertNoThrowable {
