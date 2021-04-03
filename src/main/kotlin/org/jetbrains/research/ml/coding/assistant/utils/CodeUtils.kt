@@ -9,11 +9,12 @@ import org.jetbrains.research.ml.ast.gumtree.diff.Matcher
 import org.jetbrains.research.ml.ast.gumtree.diff.PsiElementTransformer
 import org.jetbrains.research.ml.ast.gumtree.diff.PsiTransformation
 import org.jetbrains.research.ml.ast.gumtree.tree.Numbering
+import org.jetbrains.research.ml.ast.gumtree.tree.PostOrderNumbering
 import org.jetbrains.research.ml.ast.gumtree.tree.PreOrderNumbering
 import org.jetbrains.research.ml.ast.gumtree.tree.PsiTreeConverter
 
 object Util {
-    fun getTreeContext(psiFile: PsiFile, numbering: Numbering = PreOrderNumbering): TreeContext {
+    fun getTreeContext(psiFile: PsiFile, numbering: Numbering = PostOrderNumbering): TreeContext {
         return ApplicationManager.getApplication().runReadAction<TreeContext> {
             PsiTreeConverter.convertTree(psiFile, numbering)
         }
@@ -23,7 +24,7 @@ object Util {
 fun PsiElement.applyActions(
     actions: List<Action>,
     dstPsi: PsiElement,
-    numbering: Numbering = PreOrderNumbering,
+    numbering: Numbering = PostOrderNumbering,
     toIgnoreWhiteSpaces: Boolean = true
 ) {
     val transformation = PsiTransformation(this, dstPsi, numbering, toIgnoreWhiteSpaces)
