@@ -32,14 +32,14 @@ class NaiveVertexFinder(override val matcher: PartialSolutionMatcher) : VertexFi
         return solutionSpace.graph.vertexSet().minByOrNull { vertex ->
             matcher.differScore(vertex, partialSolution)
                 .also { score ->
-                    println(
-                        """    
-Score = $score
-Current vertex(${vertex.id}) code:
-${vertex.code}
-
-""".trimIndent()
-                    )
+//                    println(
+//                        """
+//Score = $score
+//Current vertex(${vertex.id}) code:
+//${vertex.code}
+//
+//""".trimIndent()
+//                    )
                 }
         }
     }

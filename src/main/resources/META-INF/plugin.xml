@@ -14,6 +14,7 @@
         <!-- Add your extensions here -->
         <appStarter implementation="org.jetbrains.research.ml.coding.assistant.runner.SolutionSpaceRunner"/>
         <appStarter implementation="org.jetbrains.research.ml.coding.assistant.runner.HintGenerateRunner"/>
+        <appStarter implementation="org.jetbrains.research.ml.coding.assistant.runner.TestHintGenerationRunner"/>
         <projectService
                 serviceInterface="org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreator"
                 serviceImplementation="org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreatorImpl"

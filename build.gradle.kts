@@ -7,8 +7,8 @@ plugins {
     id("org.jetbrains.intellij") version "0.7.2"
     id("com.github.johnrengelman.shadow") version "5.1.0"
     id("org.jetbrains.dokka") version "0.10.1"
-    id("org.jlleitschuh.gradle.ktlint") version "9.4.1"
-    id("io.gitlab.arturbosch.detekt") version "1.15.0"
+//    id("org.jlleitschuh.gradle.ktlint") version "9.4.1"
+//    id("io.gitlab.arturbosch.detekt") version "1.15.0"
 }
 
 group = "io.github.nbirillo.coding.assistant"
@@ -49,20 +49,22 @@ intellij {
     updateSinceUntilBuild = true
 }
 
-ktlint {
-    enableExperimentalRules.set(true)
-}
+//ktlint {
+//    enableExperimentalRules.set(true)
+//}
 
-detekt {
-    config = files("./detekt-config.yml")
-    buildUponDefaultConfig = true
+//detekt {
+//    config = files("./detekt-config.yml")
+//    buildUponDefaultConfig = true
+//
+//    reports {
+//        html.enabled = false
+//        xml.enabled = false
+//        txt.enabled = false
+//    }
+//}
 
-    reports {
-        html.enabled = false
-        xml.enabled = false
-        txt.enabled = false
-    }
-}
+
 
 /**
  * Gradle task to build and serialize solution space into `output` directory.
@@ -77,6 +79,14 @@ open class SolutionSpaceCliTask : org.jetbrains.intellij.tasks.RunIdeTask() {
     @get:Input
     val output: String? by project
 
+    init {
+        jvmArgs = listOf("-Djava.awt.headless=true", "--add-exports", "java.base/jdk.internal.vm=ALL-UNNAMED")
+        standardInput = System.`in`
+        standardOutput = System.`out`
+    }
+}
+
+open class TestHintGenerationCliTask : org.jetbrains.intellij.tasks.RunIdeTask() {
     init {
         jvmArgs = listOf("-Djava.awt.headless=true", "--add-exports", "java.base/jdk.internal.vm=ALL-UNNAMED")
         standardInput = System.`in`
@@ -140,6 +150,13 @@ tasks {
             codeRepositoryPath?.let { "--code_repository_path=$it" },
             outputDir?.let { "--output_path=$it" },
             taskName?.let { "--task_name=$it" }
+        )
+    }
+
+    register<TestHintGenerationCliTask>("testHintGenerationCli") {
+        dependsOn("buildPlugin")
+        args = listOfNotNull(
+            "test-hint-generation"
         )
     }
 }

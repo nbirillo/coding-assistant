@@ -28,6 +28,7 @@ class HintFactoryImpl(
         val hintVertex =
             hintVertexCalculator.calculateHintVertex(solutionSpace, closestVertex, partialSolution) ?: return null
         println("Hint Vertex = ${hintVertex.id}")
+        println(hintVertex.code)
         return CodeHint(partialSolution, hintVertex)
     }
 }
