@@ -2,8 +2,9 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     java
-    kotlin("jvm") version "1.4.30"
-    kotlin("plugin.serialization") version "1.4.30"
+    val kotlinVersion = "1.4.30"
+    kotlin("jvm") version kotlinVersion
+    kotlin("plugin.serialization") version kotlinVersion
     id("org.jetbrains.intellij") version "0.7.2"
     id("com.github.johnrengelman.shadow") version "5.1.0"
     id("org.jetbrains.dokka") version "0.10.1"
@@ -11,144 +12,89 @@ plugins {
     id("io.gitlab.arturbosch.detekt") version "1.15.0"
 }
 
-group = "io.github.nbirillo.coding.assistant"
-version = "1.0-SNAPSHOT"
+allprojects {
+    repositories {
+        mavenCentral()
+        mavenLocal()
+        jcenter()
+    }
+    apply {
+        plugin("org.jlleitschuh.gradle.ktlint")
+        plugin("io.gitlab.arturbosch.detekt")
+    }
 
-repositories {
-    mavenCentral()
-    mavenLocal()
-    jcenter()
-}
+    ktlint {
+        enableExperimentalRules.set(true)
+    }
 
-dependencies {
-    implementation(kotlin("stdlib-jdk8"))
+    detekt {
+        config = files("./detekt-config.yml")
+        buildUponDefaultConfig = true
 
-    implementation("org.jetbrains.research.ml.ast.transformations:ast-transformations") {
-        version {
-            branch = "test"
+        reports {
+            html.enabled = false
+            xml.enabled = false
+            txt.enabled = false
         }
     }
-    implementation("org.jgrapht:jgrapht-core:1.1.0")
-    implementation("org.jgrapht:jgrapht-ext:1.1.0")
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.1.0")
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-protobuf:1.1.0")
-
-    implementation( group= "de.siegmar", name= "fastcsv", version= "2.0.0")
-    implementation("com.github.gumtreediff", "core", "2.1.2")
-
-    implementation("com.xenomachina:kotlin-argparser:2.0.7")
 }
 
-intellij {
-    type = "PC"
-    version = "2020.3.3"
-    downloadSources = true
-    setPlugins("PythonCore")
-    updateSinceUntilBuild = true
-}
-
-ktlint {
-    enableExperimentalRules.set(true)
-}
-
-detekt {
-    config = files("./detekt-config.yml")
-    buildUponDefaultConfig = true
-
-    reports {
-        html.enabled = false
-        xml.enabled = false
-        txt.enabled = false
-    }
-}
-
-/**
- * Gradle task to build and serialize solution space into `output` directory.
- * input is a directory with a name of the task containing dataset .csv files.
- */
-open class SolutionSpaceCliTask : org.jetbrains.intellij.tasks.RunIdeTask() {
-    // Input directory with csv files
-    @get:Input
-    val input: String? by project
-
-    // Output directory
-    @get:Input
-    val output: String? by project
-
-    init {
-        jvmArgs = listOf("-Djava.awt.headless=true", "--add-exports", "java.base/jdk.internal.vm=ALL-UNNAMED")
-        standardInput = System.`in`
-        standardOutput = System.`out`
-    }
-}
-
-/**
- * Generates hint report using implemented algorithm.
- */
-open class HintGenerationCliTask : org.jetbrains.intellij.tasks.RunIdeTask() {
-    // Path to the serialized solution space file.
-    @get:Input
-    val solutionSpacePath: String? by project
-
-    // Path to support information about dataset original code fragments.
-    // Needed for only report.
-    @get:Input
-    val codeRepositoryPath: String? by project
-
-    // Name of the task.
-    @get:Input
-    val taskName: String? by project
-
-    // Directory to store the report.
-    @get:Input
-    val outputDir: String? by project
-
-    init {
-        jvmArgs = listOf("-Djava.awt.headless=true", "--add-exports", "java.base/jdk.internal.vm=ALL-UNNAMED")
-        standardInput = System.`in`
-        standardOutput = System.`out`
-    }
-}
-
-tasks {
-    withType<JavaCompile> {
-        sourceCompatibility = "11"
-        targetCompatibility = "11"
-    }
-    withType<KotlinCompile> {
-        kotlinOptions.jvmTarget = "11"
-    }
-    withType<org.jetbrains.intellij.tasks.BuildSearchableOptionsTask>()
-        .forEach { it.enabled = false }
-
-    register<SolutionSpaceCliTask>("solutionSpaceCli") {
-        dependsOn("buildPlugin")
-        args = listOfNotNull(
-            "solution-space",
-            input?.let { "--input_path=$it" },
-            output?.let { "--output_path=$it" }
-        )
+subprojects {
+    group = "io.github.nbirillo.coding.assistant"
+    version = "1.0-SNAPSHOT"
+    apply {
+        plugin("java")
+        plugin("kotlin")
+        plugin("org.jetbrains.kotlin.plugin.serialization")
+        plugin("org.jetbrains.intellij")
+        plugin("com.github.johnrengelman.shadow")
+        plugin("org.jetbrains.dokka")
+        plugin("org.jlleitschuh.gradle.ktlint")
     }
 
-    jar {
-        from(sourceSets["main"].allSource)
-        archiveClassifier.set("sources")
+    intellij {
+        type = "PC"
+        version = "2020.3.3"
+        downloadSources = false
+        setPlugins("PythonCore")
+        updateSinceUntilBuild = true
     }
 
-    register<HintGenerationCliTask>("hintGenerationCli") {
-        dependsOn("buildPlugin")
-        args = listOfNotNull(
-            "hint-generation",
-            solutionSpacePath?.let { "--space_path=$it" },
-            codeRepositoryPath?.let { "--code_repository_path=$it" },
-            outputDir?.let { "--output_path=$it" },
-            taskName?.let { "--task_name=$it" }
-        )
-    }
-}
+    tasks {
+        withType<JavaCompile> {
+            sourceCompatibility = "11"
+            targetCompatibility = "11"
+        }
+        withType<KotlinCompile> {
+            kotlinOptions.jvmTarget = "11"
+        }
+        // According to this topic:
+        // https://intellij-support.jetbrains.com/hc/en-us/community/posts/360010164960-Build-Intellij-plugin-in-IDEA-2019-1-2020-3?page=1#community_comment_360002517940
+        withType<org.jetbrains.intellij.tasks.BuildSearchableOptionsTask>()
+            .forEach { it.enabled = false }
 
-kotlin.sourceSets.all {
-    languageSettings.apply {
-        useExperimentalAnnotation("kotlin.contracts.ExperimentalContracts")
+        jar {
+            from(sourceSets["main"].allSource)
+            archiveClassifier.set("sources")
+        }
+    }
+
+    dependencies {
+        implementation(kotlin("stdlib-jdk8"))
+
+        implementation("org.jetbrains.research.ml.ast.transformations:ast-transformations") {
+            version {
+                branch = "test"
+            }
+        }
+        implementation("org.jgrapht:jgrapht-core:1.1.0")
+        implementation("org.jgrapht:jgrapht-ext:1.1.0")
+        implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.1.0")
+        implementation("org.jetbrains.kotlinx:kotlinx-serialization-protobuf:1.1.0")
+
+        implementation(group = "de.siegmar", name = "fastcsv", version = "2.0.0")
+        implementation("com.github.gumtreediff", "core", "2.1.2")
+
+        implementation("com.xenomachina:kotlin-argparser:2.0.7")
     }
 }
