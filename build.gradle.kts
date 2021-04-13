@@ -132,6 +132,11 @@ tasks {
         )
     }
 
+    jar {
+        from(sourceSets["main"].allSource)
+        archiveClassifier.set("sources")
+    }
+
     register<HintGenerationCliTask>("hintGenerationCli") {
         dependsOn("buildPlugin")
         args = listOfNotNull(
