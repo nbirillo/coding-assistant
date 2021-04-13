@@ -9,6 +9,6 @@ include(
 
 sourceControl {
     gitRepository(URI.create("https://github.com/JetBrains-Research/ast-transformations.git")) {
-        producesModule("org.jetbrains.research.ml.ast.transformations:ast-transformations")
+        producesModule("org.jetbrains.research.ml.ast.transformations:ast-transformations-core")
     }
 }

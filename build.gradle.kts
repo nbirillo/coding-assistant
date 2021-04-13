@@ -82,9 +82,9 @@ subprojects {
     dependencies {
         implementation(kotlin("stdlib-jdk8"))
 
-        implementation("org.jetbrains.research.ml.ast.transformations:ast-transformations") {
+        implementation("org.jetbrains.research.ml.ast.transformations:ast-transformations-core") {
             version {
-                branch = "test"
+                branch = "feature/multi-module"
             }
         }
         implementation("org.jgrapht:jgrapht-core:1.1.0")
