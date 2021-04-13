@@ -11,8 +11,6 @@ import org.jetbrains.research.ml.ast.util.createFile
 import org.jetbrains.research.ml.ast.util.getTmpProjectDir
 import org.jetbrains.research.ml.coding.assistant.utils.FileExtension
 import java.io.File
-import kotlin.contracts.InvocationKind
-import kotlin.contracts.contract
 
 /**
  * Wrapper for PsiFile with ability to delete physical file from the disk.

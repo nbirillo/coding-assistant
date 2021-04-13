@@ -7,7 +7,6 @@ import org.jetbrains.research.ml.coding.assistant.dataset.model.MetaInfo
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.repo.SolutionSpaceDirectoryRepository
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreator
 import org.jetbrains.research.ml.coding.assistant.system.finder.NaiveVertexFinder
-import org.jetbrains.research.ml.coding.assistant.system.finder.ParallelVertexFinder
 import org.jetbrains.research.ml.coding.assistant.system.hint.NaiveHintVertexCalculator
 import org.jetbrains.research.ml.coding.assistant.system.matcher.EditPartialSolutionMatcher
 import org.jetbrains.research.ml.coding.assistant.util.ParametrizedBaseWithSdkTest
@@ -36,10 +35,12 @@ class HintManagerTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(::HintM
         val datasetTask = DatasetTask.MAX_3
         val metaInfo = MetaInfo(12.0f, null, 0.32, datasetTask)
         val hintedFile = hintManager.getHintedFile(datasetTask, psiFileWrapper, metaInfo)
-        println("""
+        println(
+            """
 Hinted:
 ${hintedFile?.text}
-            """.trimIndent())
+            """.trimIndent()
+        )
         psiFileWrapper.deleteFile()
     }
 }
