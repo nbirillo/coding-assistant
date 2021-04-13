@@ -33,7 +33,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.1.0")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-protobuf:1.1.0")
 
-    implementation( group= "de.siegmar", name= "fastcsv", version= "2.0.0")
+    implementation(group = "de.siegmar", name = "fastcsv", version = "2.0.0")
     implementation("com.github.gumtreediff", "core", "2.1.2")
 
     implementation("com.xenomachina:kotlin-argparser:2.0.7")
@@ -121,30 +121,30 @@ tasks {
     withType<org.jetbrains.intellij.tasks.BuildSearchableOptionsTask>()
         .forEach { it.enabled = false }
 
-    register<SolutionSpaceCliTask>("solutionSpaceCli") {
-        dependsOn("buildPlugin")
-        args = listOfNotNull(
-            "solution-space",
-            input?.let { "--input_path=$it" },
-            output?.let { "--output_path=$it" }
-        )
-    }
+//    register<SolutionSpaceCliTask>("solutionSpaceCli") {
+//        dependsOn("buildPlugin")
+//        args = listOfNotNull(
+//            "solution-space",
+//            input?.let { "--input_path=$it" },
+//            output?.let { "--output_path=$it" }
+//        )
+//    }
 
     jar {
         from(sourceSets["main"].allSource)
         archiveClassifier.set("sources")
     }
 
-    register<HintGenerationCliTask>("hintGenerationCli") {
-        dependsOn("buildPlugin")
-        args = listOfNotNull(
-            "hint-generation",
-            solutionSpacePath?.let { "--space_path=$it" },
-            codeRepositoryPath?.let { "--code_repository_path=$it" },
-            outputDir?.let { "--output_path=$it" },
-            taskName?.let { "--task_name=$it" }
-        )
-    }
+//    register<HintGenerationCliTask>("hintGenerationCli") {
+//        dependsOn("buildPlugin")
+//        args = listOfNotNull(
+//            "hint-generation",
+//            solutionSpacePath?.let { "--space_path=$it" },
+//            codeRepositoryPath?.let { "--code_repository_path=$it" },
+//            outputDir?.let { "--output_path=$it" },
+//            taskName?.let { "--task_name=$it" }
+//        )
+//    }
 }
 
 kotlin.sourceSets.all {
