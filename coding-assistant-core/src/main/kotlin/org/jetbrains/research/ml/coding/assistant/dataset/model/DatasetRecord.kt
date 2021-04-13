@@ -29,7 +29,7 @@ data class DatasetRecord(
 data class MetaInfo(
     val age: Float?,
     val programExperience: ProgramExperience?,
-    val testsResults: Double,
+    val testsResults: Double?,
     val task: DatasetTask
 ) {
     internal constructor(record: CSVRecord) : this(
