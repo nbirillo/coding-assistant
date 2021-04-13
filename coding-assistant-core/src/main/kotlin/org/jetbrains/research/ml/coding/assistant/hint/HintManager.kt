@@ -46,29 +46,41 @@ class HintManagerImpl(private val hintFactory: HintFactory) : HintManager {
             studentPsiFile.applyActions(editActions, hintPsiFile)
         }
 
-        println("""
+        println(
+            """
 # Content Before Commit
-${studentPsiFile.containingFile.virtualFile.contentsToByteArray().toString(Charset.defaultCharset())}
+${studentPsiFile.containingFile.virtualFile.contentsToByteArray().toString(
+                Charset.defaultCharset()
+            )}
 
-            """.trimIndent())
+            """.trimIndent()
+        )
         val newStudentFile = commitPsiFile(studentPsiFile)
-        println("""
+        println(
+            """
 # Content After Commit
-${studentPsiFile.containingFile.virtualFile.contentsToByteArray().toString(Charset.defaultCharset())}
+${studentPsiFile.containingFile.virtualFile.contentsToByteArray().toString(
+                Charset.defaultCharset()
+            )}
 
 # New file text After Commit
 ${newStudentFile.text}
 
-            """.trimIndent())
+            """.trimIndent()
+        )
         val hintedPsiFile = commandStorage.undoPerformedCommands()
-        println("""
+        println(
+            """
 # Content After Undo
-${studentPsiFile.containingFile.virtualFile.contentsToByteArray().toString(Charset.defaultCharset())}
+${studentPsiFile.containingFile.virtualFile.contentsToByteArray().toString(
+                Charset.defaultCharset()
+            )}
 
 # New file text  After Undo
 ${newStudentFile.text}
 
-            """.trimIndent())
+            """.trimIndent()
+        )
         hintPsiFile.deleteFile()
         return hintedPsiFile as PsiFile?
     }

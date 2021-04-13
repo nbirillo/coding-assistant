@@ -1,7 +1,6 @@
 package org.jetbrains.research.ml.coding.assistant.system
 
 import com.github.gumtreediff.tree.TreeContext
-import com.intellij.psi.PsiElement
 import com.intellij.psi.PsiFile
 import org.jetbrains.research.ml.coding.assistant.dataset.model.DatasetTask
 import org.jetbrains.research.ml.coding.assistant.dataset.model.MetaInfo

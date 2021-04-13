@@ -50,8 +50,9 @@ object CompositeTransformation : Transformation() {
             val previousTree = psiTree.copy()
             try {
                 transformations.forEach {
-                    if (document != null)
+                    if (document != null) {
                         psiDocumentManager.commitDocument(document)
+                    }
                     LOG.finer { "Transformation Started: ${it.key}" }
                     it.forwardApply(psiTree, commandsStorage)
                     LOG.finer { "Transformation Ended: ${it.key}" }

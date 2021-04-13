@@ -5,7 +5,6 @@ import com.intellij.openapi.components.service
 import org.jetbrains.research.ml.ast.util.getTmpProjectDir
 import org.jetbrains.research.ml.coding.assistant.dataset.model.DatasetTask
 import org.jetbrains.research.ml.coding.assistant.dataset.model.MetaInfo
-import org.jetbrains.research.ml.coding.assistant.utils.Util
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.builder.SolutionSpaceGraphBuilder
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreator
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiFileWrapper
@@ -16,6 +15,7 @@ import org.jetbrains.research.ml.coding.assistant.unification.CompositeTransform
 import org.jetbrains.research.ml.coding.assistant.unification.DatasetUnification
 import org.jetbrains.research.ml.coding.assistant.util.DatasetUtils
 import org.jetbrains.research.ml.coding.assistant.util.ParametrizedBaseWithSdkTest
+import org.jetbrains.research.ml.coding.assistant.utils.Util
 import org.junit.Ignore
 import org.junit.Test
 

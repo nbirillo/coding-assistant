@@ -3,8 +3,8 @@ package org.jetbrains.research.ml.coding.assistant.solutionSpace.serialization
 import com.jetbrains.python.PythonFileType
 import kotlinx.serialization.json.Json
 import org.jetbrains.research.ml.ast.util.getTmpProjectDir
-import org.jetbrains.research.ml.coding.assistant.utils.Util
 import org.jetbrains.research.ml.coding.assistant.util.ParametrizedBaseWithSdkTest
+import org.jetbrains.research.ml.coding.assistant.utils.Util
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
