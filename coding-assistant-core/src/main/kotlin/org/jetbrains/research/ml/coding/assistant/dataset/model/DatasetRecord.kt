@@ -49,7 +49,20 @@ data class MetaInfo(
         FROM_FOUR_TO_SIX_YEARS,
         MORE_THAN_SIX;
 
-        companion object
+        companion object {
+            private val RANGE_TO_PE: List<Pair<IntRange, ProgramExperience>> = listOf(
+                0 until 6 to LESS_THAN_HALF_YEAR,
+                6 until 12 to FROM_HALF_TO_ONE_YEAR,
+                12 until 24 to FROM_ONE_TO_TWO_YEARS,
+                24 until 48 to FROM_HALF_TO_ONE_YEAR,
+                48 until 72 to FROM_HALF_TO_ONE_YEAR,
+                72..Int.MAX_VALUE to FROM_HALF_TO_ONE_YEAR
+            )
+
+            fun createFromMonths(months: Int): ProgramExperience {
+                return RANGE_TO_PE.first { it.first.contains(months) }.second
+            }
+        }
     }
 
     companion object {
