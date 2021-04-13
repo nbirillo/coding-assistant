@@ -33,9 +33,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.1.0")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-protobuf:1.1.0")
 
-    implementation("com.github.doyaaaaaken:kotlin-csv-jvm:0.15.0") {
-        exclude("org.slf4j")
-    }
+    implementation( group= "de.siegmar", name= "fastcsv", version= "2.0.0")
     implementation("com.github.gumtreediff", "core", "2.1.2")
 
     implementation("com.xenomachina:kotlin-argparser:2.0.7")

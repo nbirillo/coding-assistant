@@ -1,11 +1,12 @@
 package org.jetbrains.research.ml.coding.assistant.dataset
 
-import com.github.doyaaaaaken.kotlincsv.dsl.csvReader
+import de.siegmar.fastcsv.reader.NamedCsvReader
 import org.jetbrains.research.ml.coding.assistant.dataset.model.*
 import org.jetbrains.research.ml.coding.assistant.utils.FileExtension
 import org.jetbrains.research.ml.coding.assistant.utils.getListFiles
 import org.jetbrains.research.ml.coding.assistant.utils.isTypeOf
 import java.io.File
+import java.nio.charset.Charset
 import kotlin.streams.toList
 
 /**
@@ -57,7 +58,9 @@ object TaskTrackerDatasetFetcher : DatasetFetcher {
      */
     private fun fetchDynamicSolution(file: File): DynamicSolution {
         require(file.isFile && file.isTypeOf(FileExtension.CSV)) { "The file has to be csv" }
-        val records = csvReader().readAllWithHeader(file).map { DatasetRecord(it) }
+        val csvReader = NamedCsvReader.builder()
+            .build(file.toPath(), Charset.defaultCharset())
+        val records = csvReader.map { DatasetRecord(it.fields) }
         return DynamicSolution(records).run {
             copy(records = records.dropLastWhile { !it.metaInfo.isFinalSolution })
         }
