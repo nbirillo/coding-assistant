@@ -84,7 +84,7 @@ subprojects {
 
         implementation("org.jetbrains.research.ml.ast.transformations:ast-transformations-core") {
             version {
-                branch = "feature/multi-module"
+                branch = "master"
             }
         }
         implementation("org.jgrapht:jgrapht-core:1.1.0")
