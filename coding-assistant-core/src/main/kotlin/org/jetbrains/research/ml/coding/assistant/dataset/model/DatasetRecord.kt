@@ -47,7 +47,9 @@ data class MetaInfo(
         FROM_ONE_TO_TWO_YEARS,
         FROM_TWO_TO_FOUR_YEARS,
         FROM_FOUR_TO_SIX_YEARS,
-        MORE_THAN_SIX
+        MORE_THAN_SIX;
+
+        companion object
     }
 
     companion object {
