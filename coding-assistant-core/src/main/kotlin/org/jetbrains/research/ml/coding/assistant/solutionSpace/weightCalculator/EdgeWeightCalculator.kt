@@ -32,8 +32,8 @@ class CustomEdgeWeightCalculator(
         // TODO: think about more features.
         val targetVertex = graph.getEdgeTarget(edge)
         val sourceVertex = graph.getEdgeSource(edge)
-        val sourceTestScore = sourceVertex.studentInfo.metaInfo.testsResults
-        val targetTestScore = targetVertex.studentInfo.metaInfo.testsResults
+        val sourceTestScore = sourceVertex.studentInfo.metaInfo.testsResults ?: 0.0
+        val targetTestScore = targetVertex.studentInfo.metaInfo.testsResults ?: 0.0
         if (targetTestScore < sourceTestScore) {
             return Double.POSITIVE_INFINITY
         }

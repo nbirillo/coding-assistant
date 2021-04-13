@@ -28,7 +28,7 @@ allprojects {
     }
 
     detekt {
-        config = files("./detekt-config.yml")
+        config = files("../detekt-config.yml")
         buildUponDefaultConfig = true
 
         reports {
