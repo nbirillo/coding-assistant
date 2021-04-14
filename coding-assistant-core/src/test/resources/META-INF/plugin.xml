@@ -1,0 +1,9 @@
+<idea-plugin xmlns:xi="http://www.w3.org/2001/XInclude">
+    <id>io.github.nbirillo.coding.assistant</id>
+    <vendor url="https://research.jetbrains.org/">JetBrains Research</vendor>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.python</depends>
+
+    <xi:include href="/META-INF/coding-assistant-core-settings.xml" xpointer="xpointer(/idea-plugin/*)"/>
+</idea-plugin>
