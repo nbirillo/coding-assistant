@@ -1,0 +1,13 @@
+<idea-plugin>
+    <extensions defaultExtensionNs="com.intellij">
+        <projectService
+                serviceInterface="org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreator"
+                serviceImplementation="org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreatorImpl"
+                testServiceImplementation="org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.impl.TestPsiCreator"
+        />
+        <projectService
+                serviceInterface="org.jetbrains.research.ml.coding.assistant.unification.DatasetUnification"
+                serviceImplementation="org.jetbrains.research.ml.coding.assistant.unification.DatasetUnificationImpl"
+        />
+    </extensions>
+</idea-plugin>

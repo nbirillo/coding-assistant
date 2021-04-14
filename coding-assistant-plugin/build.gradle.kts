@@ -1,5 +1,13 @@
+group = rootProject.group
+version = rootProject.version
+
+plugins {
+    id("com.github.johnrengelman.shadow") version "5.1.0" apply true
+}
+
 dependencies {
     implementation(project(":coding-assistant-core"))
+    implementation("com.xenomachina:kotlin-argparser:2.0.7")
 }
 
 /**

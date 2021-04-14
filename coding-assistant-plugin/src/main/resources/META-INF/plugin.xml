@@ -1,4 +1,4 @@
-<idea-plugin>
+<idea-plugin xmlns:xi="http://www.w3.org/2001/XInclude">
     <id>io.github.nbirillo.coding.assistant</id>
     <name>Hint Generation Algorithm</name>
     <vendor url="https://research.jetbrains.org/">JetBrains Research</vendor>
@@ -10,18 +10,11 @@
     A PyCharm plugin for generating the personalized hints
     ]]></description>
 
+    <xi:include href="/META-INF/coding-assistant-core-settings.xml" xpointer="xpointer(/idea-plugin/*)"/>
+
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
         <appStarter implementation="org.jetbrains.research.ml.coding.assistant.runner.SolutionSpaceRunner"/>
         <appStarter implementation="org.jetbrains.research.ml.coding.assistant.runner.HintGenerateRunner"/>
-        <projectService
-                serviceInterface="org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreator"
-                serviceImplementation="org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreatorImpl"
-                testServiceImplementation="org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.impl.TestPsiCreator"
-        />
-        <projectService
-                serviceInterface="org.jetbrains.research.ml.coding.assistant.unification.DatasetUnification"
-                serviceImplementation="org.jetbrains.research.ml.coding.assistant.unification.DatasetUnificationImpl"
-        />
     </extensions>
 </idea-plugin>
