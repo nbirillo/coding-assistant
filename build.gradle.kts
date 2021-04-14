@@ -7,8 +7,8 @@ plugins {
     id("org.jetbrains.intellij") version "0.7.2"
     id("com.github.johnrengelman.shadow") version "5.1.0"
     id("org.jetbrains.dokka") version "0.10.1"
-    id("org.jlleitschuh.gradle.ktlint") version "9.4.1"
-    id("io.gitlab.arturbosch.detekt") version "1.15.0"
+//    id("org.jlleitschuh.gradle.ktlint") version "9.4.1"
+//    id("io.gitlab.arturbosch.detekt") version "1.15.0"
 }
 
 group = "io.github.nbirillo.coding.assistant"
@@ -25,7 +25,7 @@ dependencies {
 
     implementation("org.jetbrains.research.ml.ast.transformations:ast-transformations") {
         version {
-            branch = "test"
+            branch = "java-8"
         }
     }
     implementation("org.jgrapht:jgrapht-core:1.1.0")
@@ -49,20 +49,20 @@ intellij {
     updateSinceUntilBuild = true
 }
 
-ktlint {
-    enableExperimentalRules.set(true)
-}
-
-detekt {
-    config = files("./detekt-config.yml")
-    buildUponDefaultConfig = true
-
-    reports {
-        html.enabled = false
-        xml.enabled = false
-        txt.enabled = false
-    }
-}
+//ktlint {
+//    enableExperimentalRules.set(true)
+//}
+//
+//detekt {
+//    config = files("./detekt-config.yml")
+//    buildUponDefaultConfig = true
+//
+//    reports {
+//        html.enabled = false
+//        xml.enabled = false
+//        txt.enabled = false
+//    }
+//}
 
 /**
  * Gradle task to build and serialize solution space into `output` directory.
@@ -114,11 +114,11 @@ open class HintGenerationCliTask : org.jetbrains.intellij.tasks.RunIdeTask() {
 
 tasks {
     withType<JavaCompile> {
-        sourceCompatibility = "11"
-        targetCompatibility = "11"
+        sourceCompatibility = "1.8"
+        targetCompatibility = "1.8"
     }
     withType<KotlinCompile> {
-        kotlinOptions.jvmTarget = "11"
+        kotlinOptions.jvmTarget = "1.8"
     }
     withType<org.jetbrains.intellij.tasks.BuildSearchableOptionsTask>()
         .forEach { it.enabled = false }
