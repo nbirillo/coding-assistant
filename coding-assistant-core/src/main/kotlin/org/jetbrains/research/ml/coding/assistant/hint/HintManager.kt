@@ -43,34 +43,9 @@ class HintManagerImpl(private val hintFactory: HintFactory) : HintManager {
             studentPsiFile.applyActions(editActions, hintPsiFile)
         }
 
-        println(
-            """
-# Content Before Commit
-${
-                studentPsiFile.containingFile.virtualFile.contentsToByteArray().toString(
-                    Charset.defaultCharset()
-                )
-            }
+        commandStorage.undoAllPerformedCommands()
 
-            """.trimIndent()
-        )
-        println(
-            """
-# Content After Commit
-${studentPsiFile.containingFile.virtualFile.contentsToByteArray().toString(Charset.defaultCharset())}
-            """.trimIndent()
-        )
-        val hintedPsiFile = commandStorage.undoAllPerformedCommands()
-        println(
-            """
-# Content After Undo
-${studentPsiFile.containingFile.virtualFile.contentsToByteArray().toString(Charset.defaultCharset())}
-
-# New file text  After Undo
-${studentPsiFile.text}
-            """.trimIndent()
-        )
         hintPsiFile.deleteFile()
-        return hintedPsiFile as PsiFile?
+        return studentPsiFile
     }
 }
