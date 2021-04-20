@@ -9,7 +9,10 @@ import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator
 import org.jetbrains.research.ml.coding.assistant.system.PartialSolution
 import org.jetbrains.research.ml.coding.assistant.unification.CompositeTransformation
 import org.jetbrains.research.ml.coding.assistant.utils.Util
+import org.jetbrains.research.ml.coding.assistant.utils.applyActions
+import org.jetbrains.research.ml.coding.assistant.utils.calculateEditActions
 import org.jetbrains.research.ml.coding.assistant.utils.reformatInWriteAction
+import java.nio.charset.Charset
 
 interface HintManager {
     fun getHintedFile(psiFragment: PsiFile, metaInfo: MetaInfo): PsiFile?
@@ -32,6 +35,42 @@ class HintManagerImpl(private val hintFactory: HintFactory) : HintManager {
         println("Student code:\n${studentPsiFile.text}\n")
         val hint = hintFactory.createHint(partialSolution) ?: return null
         val psiCreator = studentPsiFile.project.service<PsiCreator>()
-        return psiCreator.initFileToPsi(hint.hintVertex.code)
+        val studentTreeContext = Util.getTreeContext(studentPsiFile)
+        val hintPsiFile = psiCreator.initFileToPsi(hint.hintVertex.code)
+        Util.number(hintPsiFile, hint.hintVertex.fragment)
+        val editActions = studentTreeContext.calculateEditActions(hint.hintVertex.fragment)
+        WriteCommandAction.runWriteCommandAction(studentPsiFile.project) {
+            studentPsiFile.applyActions(editActions, hintPsiFile)
+        }
+
+        println(
+            """
+# Content Before Commit
+${
+                studentPsiFile.containingFile.virtualFile.contentsToByteArray().toString(
+                    Charset.defaultCharset()
+                )
+            }
+
+            """.trimIndent()
+        )
+        println(
+            """
+# Content After Commit
+${studentPsiFile.containingFile.virtualFile.contentsToByteArray().toString(Charset.defaultCharset())}
+            """.trimIndent()
+        )
+        val hintedPsiFile = commandStorage.undoAllPerformedCommands()
+        println(
+            """
+# Content After Undo
+${studentPsiFile.containingFile.virtualFile.contentsToByteArray().toString(Charset.defaultCharset())}
+
+# New file text  After Undo
+${studentPsiFile.text}
+            """.trimIndent()
+        )
+        hintPsiFile.deleteFile()
+        return hintedPsiFile as PsiFile?
     }
 }
