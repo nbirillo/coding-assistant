@@ -8,7 +8,7 @@ plugins {
 dependencies {
     api("org.jetbrains.research.ml.ast.transformations:ast-transformations-core") {
         version {
-            branch = "tests/pycharm-2020.1"
+            branch = "tests/new-inverse-transformations"
         }
     }
     api("org.jgrapht:jgrapht-core:1.1.0")

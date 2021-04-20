@@ -48,7 +48,7 @@ class DatasetUnificationImpl(project: Project) : DatasetUnification {
 
         ApplicationManager.getApplication().invokeAndWait {
             logger.finer { "Unification Started: ${psiFile.text}" }
-            CompositeTransformation.forwardApply(psiFile, null)
+            CompositeTransformation.forwardApply(psiFile)
             logger.finer { "Unification Ended: ${psiFile.text}" }
         }
 
