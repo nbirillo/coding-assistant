@@ -2,7 +2,6 @@ package org.jetbrains.research.ml.coding.assistant.hint
 
 import com.intellij.openapi.command.WriteCommandAction
 import com.intellij.openapi.components.service
-import com.intellij.psi.PsiDocumentManager
 import com.intellij.psi.PsiFile
 import org.jetbrains.research.ml.ast.transformations.commands.CommandPerformer
 import org.jetbrains.research.ml.coding.assistant.dataset.model.MetaInfo
@@ -13,6 +12,7 @@ import org.jetbrains.research.ml.coding.assistant.utils.Util
 import org.jetbrains.research.ml.coding.assistant.utils.applyActions
 import org.jetbrains.research.ml.coding.assistant.utils.calculateEditActions
 import org.jetbrains.research.ml.coding.assistant.utils.reformatInWriteAction
+import java.nio.charset.Charset
 
 interface HintManager {
     fun getHintedFile(psiFragment: PsiFile, metaInfo: MetaInfo): PsiFile?
@@ -20,7 +20,6 @@ interface HintManager {
 
 class HintManagerImpl(private val hintFactory: HintFactory) : HintManager {
     override fun getHintedFile(psiFragment: PsiFile, metaInfo: MetaInfo): PsiFile? {
-        val documentManager = psiFragment.project.service<PsiDocumentManager>()
         val studentPsiFile = psiFragment.reformatInWriteAction()
         val commandStorage = CommandPerformer(studentPsiFile, true)
 
@@ -43,9 +42,6 @@ class HintManagerImpl(private val hintFactory: HintFactory) : HintManager {
         WriteCommandAction.runWriteCommandAction(studentPsiFile.project) {
             studentPsiFile.applyActions(editActions, hintPsiFile)
         }
-
-        val studentDocument = documentManager.getDocument(studentPsiFile) ?: return hintPsiFile
-        documentManager.commitDocument(studentDocument)
 
         commandStorage.undoAllPerformedCommands()
 
