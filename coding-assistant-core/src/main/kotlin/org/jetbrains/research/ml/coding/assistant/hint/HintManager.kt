@@ -4,9 +4,6 @@ import com.intellij.openapi.command.WriteCommandAction
 import com.intellij.openapi.components.service
 import com.intellij.psi.PsiDocumentManager
 import com.intellij.psi.PsiFile
-import com.intellij.psi.PsiFileFactory
-import com.jetbrains.python.PythonLanguage
-import com.jetbrains.python.psi.impl.PythonLanguageLevelPusher
 import org.jetbrains.research.ml.ast.transformations.commands.CommandPerformer
 import org.jetbrains.research.ml.coding.assistant.dataset.model.MetaInfo
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreator
@@ -24,7 +21,6 @@ interface HintManager {
 class HintManagerImpl(private val hintFactory: HintFactory) : HintManager {
     override fun getHintedFile(psiFragment: PsiFile, metaInfo: MetaInfo): PsiFile? {
         val documentManager = psiFragment.project.service<PsiDocumentManager>()
-        val psiFileFactory = psiFragment.project.service<PsiFileFactory>()
         val studentPsiFile = psiFragment.reformatInWriteAction()
         val commandStorage = CommandPerformer(studentPsiFile, true)
 
@@ -39,8 +35,9 @@ class HintManagerImpl(private val hintFactory: HintFactory) : HintManager {
         )
         println("Student code:\n${studentPsiFile.text}\n")
         val hint = hintFactory.createHint(partialSolution) ?: return null
+        val psiCreator = studentPsiFile.project.service<PsiCreator>()
         val studentTreeContext = Util.getTreeContext(studentPsiFile)
-        val hintPsiFile = psiFileFactory.createFileFromText(PythonLanguage.getInstance(), hint.hintVertex.code)
+        val hintPsiFile = psiCreator.initFileToPsi(hint.hintVertex.code)
         Util.number(hintPsiFile, hint.hintVertex.fragment)
         val editActions = studentTreeContext.calculateEditActions(hint.hintVertex.fragment)
         WriteCommandAction.runWriteCommandAction(studentPsiFile.project) {
@@ -52,6 +49,7 @@ class HintManagerImpl(private val hintFactory: HintFactory) : HintManager {
 
         commandStorage.undoAllPerformedCommands()
 
+        hintPsiFile.deleteFile()
         return studentPsiFile
     }
 }
