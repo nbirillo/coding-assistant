@@ -18,3 +18,10 @@ dependencies {
     implementation(group = "de.siegmar", name = "fastcsv", version = "2.0.0")
     api("com.github.gumtreediff", "core", "2.1.2")
 }
+
+tasks {
+    register<Jar>("sourcesJar") {
+        from(sourceSets["main"].allSource)
+        archiveClassifier.set("sources")
+    }
+}
