@@ -31,7 +31,7 @@ object CompositeTransformation : Transformation() {
     private val LOG = Logger.getLogger(javaClass.name)
 
     override val key: String = "CompositeTransformation"
-    val anonimization = AnonymizationTransformation()
+    lateinit var anonimization: AnonymizationTransformation
     private val transformations = arrayListOf(
         CommentsRemovalTransformation,
         AugmentedAssignmentTransformation,
@@ -46,6 +46,7 @@ object CompositeTransformation : Transformation() {
     )
 
     override fun forwardApply(psiTree: PsiElement, commandPerformer: ICommandPerformer) {
+        anonimization = AnonymizationTransformation()
         anonimization.forwardApply(psiTree, commandPerformer)
         LOG.fine { "Tree Started: ${psiTree.text}" }
         val psiDocumentManager = psiTree.project.service<PsiDocumentManager>()

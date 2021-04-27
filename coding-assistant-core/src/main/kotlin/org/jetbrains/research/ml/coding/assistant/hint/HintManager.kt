@@ -35,7 +35,9 @@ class HintManagerImpl(private val hintFactory: HintFactory) : HintManager {
         val hint = hintFactory.createHint(partialSolution) ?: return null
         val psiCreator = studentPsiFile.project.service<PsiCreator>()
         val hintPsiFile = psiCreator.initFileToPsi(hint.hintVertex.code)
-        CompositeTransformation.undo(hintPsiFile)
+        WriteCommandAction.runWriteCommandAction(studentPsiFile.project) {
+            CompositeTransformation.undo(hintPsiFile)
+        }
         return hintPsiFile
     }
 }
