@@ -7,23 +7,21 @@ import com.intellij.psi.PsiElement
 import com.intellij.psi.PsiFile
 import com.jetbrains.python.psi.PyFile
 import com.jetbrains.python.psi.PyRecursiveElementVisitor
-import org.jetbrains.research.ml.ast.transformations.PerformedCommandStorage
 import org.jetbrains.research.ml.ast.transformations.Transformation
 import org.jetbrains.research.ml.coding.assistant.unification.anon.AnonymizationTransformation
 import org.jetbrains.research.ml.coding.assistant.unification.anon.ElementAnonymizer
 import org.jetbrains.research.ml.coding.assistant.unification.anon.RenameUtil
 import org.jetbrains.research.ml.ast.transformations.augmentedAssignment.AugmentedAssignmentTransformation
+import org.jetbrains.research.ml.ast.transformations.commands.ICommandPerformer
 import org.jetbrains.research.ml.ast.transformations.commentsRemoval.CommentsRemovalTransformation
 import org.jetbrains.research.ml.ast.transformations.comparisonUnification.ComparisonUnificationTransformation
 import org.jetbrains.research.ml.ast.transformations.constantfolding.ConstantFoldingTransformation
 import org.jetbrains.research.ml.ast.transformations.deadcode.DeadCodeRemovalTransformation
 import org.jetbrains.research.ml.ast.transformations.expressionUnification.ExpressionUnificationTransformation
 import org.jetbrains.research.ml.ast.transformations.ifRedundantLinesRemoval.IfRedundantLinesRemovalTransformation
-import org.jetbrains.research.ml.ast.transformations.inputDescriptionElimination.InputDescriptionEliminationTransformation
 import org.jetbrains.research.ml.ast.transformations.multipleOperatorComparison.MultipleOperatorComparisonTransformation
 import org.jetbrains.research.ml.ast.transformations.multipleTargetAssignment.MultipleTargetAssignmentTransformation
 import org.jetbrains.research.ml.ast.transformations.outerNotElimination.OuterNotEliminationTransformation
-import org.jetbrains.research.ml.ast.transformations.safePerformCommand
 import java.util.logging.Logger
 
 /**
@@ -36,7 +34,6 @@ object CompositeTransformation : Transformation() {
     val anonimization = AnonymizationTransformation()
     private val transformations = arrayListOf(
         CommentsRemovalTransformation,
-        InputDescriptionEliminationTransformation,
         AugmentedAssignmentTransformation,
         DeadCodeRemovalTransformation,
         ConstantFoldingTransformation,

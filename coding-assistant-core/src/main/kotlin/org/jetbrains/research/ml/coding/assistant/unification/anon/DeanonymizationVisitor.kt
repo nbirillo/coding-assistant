@@ -5,8 +5,7 @@ import com.intellij.openapi.project.Project
 import com.intellij.psi.PsiElement
 import com.jetbrains.python.psi.PyElement
 import com.jetbrains.python.psi.PyRecursiveElementVisitor
-import org.jetbrains.research.ml.ast.transformations.PerformedCommandStorage
-import org.jetbrains.research.ml.ast.transformations.safePerformCommand
+import org.jetbrains.research.ml.ast.transformations.commands.ICommandPerformer
 
 
 class DeanonymizationVisitor(private val project: Project, private val anonToOrigin: Map<String, String>) : PyRecursiveElementVisitor() {
@@ -23,10 +22,8 @@ class DeanonymizationVisitor(private val project: Project, private val anonToOri
         super.visitPyElement(node)
     }
 
-    fun performAllRenames(commandsStorage: PerformedCommandStorage?) {
+    fun performAllRenames() {
         val renames = toAnonymize.toList().map { RenameUtil.renameElementDelayed(it.first, it.second) }
-        WriteCommandAction.runWriteCommandAction(project) {
-            renames.forEach { commandsStorage.safePerformCommand(it, "Anonymize element") }
-        }
+        renames.forEach { it() }
     }
 }
