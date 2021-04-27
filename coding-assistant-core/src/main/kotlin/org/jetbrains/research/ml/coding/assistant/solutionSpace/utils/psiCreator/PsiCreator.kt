@@ -41,7 +41,7 @@ interface PsiCreator {
  */
 class PsiCreatorImpl(project: Project) : PsiCreator {
     private val extension = FileExtension.Py
-    private val tmpDataPath: String = getTmpProjectDir(toCreateFolder = false)
+    private val tmpDataPath: String = project.basePath ?: getTmpProjectDir(toCreateFolder = false)
     private val psiManager: PsiManager = project.service()
     private var counter: Int = 0
 

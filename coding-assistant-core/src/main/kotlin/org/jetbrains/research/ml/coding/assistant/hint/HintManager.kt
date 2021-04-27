@@ -21,10 +21,9 @@ interface HintManager {
 class HintManagerImpl(private val hintFactory: HintFactory) : HintManager {
     override fun getHintedFile(psiFragment: PsiFile, metaInfo: MetaInfo): PsiFile? {
         val studentPsiFile = psiFragment.reformatInWriteAction()
-        val commandStorage = CommandPerformer(studentPsiFile, true)
 
         WriteCommandAction.runWriteCommandAction(studentPsiFile.project) {
-            CompositeTransformation.forwardApply(studentPsiFile, commandStorage)
+            CompositeTransformation.forwardApply(studentPsiFile)
         }
         val partialSolution = PartialSolution(
             metaInfo.task,
@@ -35,17 +34,8 @@ class HintManagerImpl(private val hintFactory: HintFactory) : HintManager {
         println("Student code:\n${studentPsiFile.text}\n")
         val hint = hintFactory.createHint(partialSolution) ?: return null
         val psiCreator = studentPsiFile.project.service<PsiCreator>()
-        val studentTreeContext = Util.getTreeContext(studentPsiFile)
         val hintPsiFile = psiCreator.initFileToPsi(hint.hintVertex.code)
-        Util.number(hintPsiFile, hint.hintVertex.fragment)
-        val editActions = studentTreeContext.calculateEditActions(hint.hintVertex.fragment)
-        WriteCommandAction.runWriteCommandAction(studentPsiFile.project) {
-            studentPsiFile.applyActions(editActions, hintPsiFile)
-        }
-
-        commandStorage.undoAllPerformedCommands()
-
-        hintPsiFile.deleteFile()
-        return studentPsiFile
+        CompositeTransformation.undo(hintPsiFile)
+        return hintPsiFile
     }
 }

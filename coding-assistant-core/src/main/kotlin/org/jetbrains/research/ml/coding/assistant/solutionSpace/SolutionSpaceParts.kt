@@ -25,7 +25,7 @@ data class SolutionSpaceVertex constructor(
     val info: List<StudentInfo>
 ) {
     override fun toString(): String {
-        return info.joinToString { "Vertex ${it.id}" }
+        return info.first().id
     }
 
     val studentInfo: StudentInfo get() = info.first()
