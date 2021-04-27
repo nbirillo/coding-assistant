@@ -46,6 +46,7 @@ object CompositeTransformation : Transformation() {
     )
 
     override fun forwardApply(psiTree: PsiElement, commandPerformer: ICommandPerformer) {
+        anonimization.forwardApply(psiTree, commandPerformer)
         LOG.fine { "Tree Started: ${psiTree.text}" }
         val psiDocumentManager = psiTree.project.service<PsiDocumentManager>()
         val document = (psiTree as? PsiFile)?.let { psiDocumentManager.getDocument(it) }
