@@ -51,6 +51,32 @@ class SolutionSpaceGraphBuilder {
             .forEach(graph::removeVertex)
     }
 
+    private fun removeNonFinalLeaves() {
+        fun SolutionSpaceGraphVertex.isLeaf(): Boolean {
+            return graph.outDegreeOf(this) == 0
+        }
+        fun collectVertices(vertex: SolutionSpaceGraphVertex): List<SolutionSpaceGraphVertex> {
+            val prevSingleNonFinalVertices = graph
+                .incomingEdgesOf(vertex)
+                .map { graph.getEdgeSource(it) }
+                .filter { it.isFinal && graph.outDegreeOf(it) == 1 }
+            return prevSingleNonFinalVertices + prevSingleNonFinalVertices.flatMap { collectVertices(it) }
+        }
+
+        val toRemoveVertices = mutableSetOf<SolutionSpaceGraphVertex>()
+        for (vertex in graph.vertexSet()) {
+            if (!vertex.isFinal && vertex.isLeaf()) {
+                toRemoveVertices.add(vertex)
+                toRemoveVertices.addAll(collectVertices(vertex))
+            }
+        }
+
+        graph.vertexSet()
+            .filter { toRemoveVertices.contains(it) }
+            .forEach(graph::removeVertex)
+
+    }
+
     private fun deletePsiFiles() {
         val psiFiles = graph.vertexSet()
             .flatMap { vertex -> vertex.partialSolutions.map { it.psiFragment } }
@@ -65,6 +91,7 @@ class SolutionSpaceGraphBuilder {
     ): SolutionSpace {
         removeSimpleCycles()
         removeSingletonVertices()
+        removeNonFinalLeaves()
         val solutionSpace = SolutionSpace(weightFactory, this)
         if (isFileDeletionNeeded) {
             deletePsiFiles()

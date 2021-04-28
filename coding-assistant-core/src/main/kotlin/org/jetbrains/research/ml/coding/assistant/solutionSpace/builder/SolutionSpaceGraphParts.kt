@@ -24,6 +24,8 @@ data class SolutionSpaceGraphVertex(
         require(partialSolutions.isNotEmpty()) { "Associated solutions set cannot be empty." }
     }
 
+    val isFinal: Boolean get() = partialSolutions.any { it.metaInfo.isFinalSolution }
+
     fun containsAll(solutions: List<DatasetPartialSolution>): Boolean {
         return partialSolutions.containsAll(solutions)
     }
