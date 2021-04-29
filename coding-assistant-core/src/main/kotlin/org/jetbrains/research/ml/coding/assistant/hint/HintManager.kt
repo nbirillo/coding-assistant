@@ -45,9 +45,10 @@ class HintManagerImpl(private val hintFactory: HintFactory) : HintManager {
     private fun updateDocument(psiFragment: PsiFile, newContent: String): PsiFile? {
         val documentManager = psiFragment.project.service<PsiDocumentManager>()
         val document = documentManager.getDocument(psiFragment) ?: return null
-        document.setText(newContent)
+        WriteCommandAction.runWriteCommandAction(psiFragment.project) {
+            document.setText(newContent)
+        }
         documentManager.commitDocument(document)
         return documentManager.getPsiFile(document)
     }
-
 }
