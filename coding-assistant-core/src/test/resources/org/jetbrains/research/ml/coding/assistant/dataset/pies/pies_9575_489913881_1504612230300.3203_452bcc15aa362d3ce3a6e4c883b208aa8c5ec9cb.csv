@@ -1,3 +1,0 @@
-id,fragment,age,programExperience,testsResults,task
-4675,"def f1(f1_p1, f1_p2, f1_p3):
-    return f1_p1 * f1_p3 + (f1_p2 * f1_p3) // 100, (f1_p2 * f1_p3) % 100",-1,FROM_FOUR_TO_SIX_YEARS,0,pies

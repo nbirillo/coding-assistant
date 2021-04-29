@@ -1,3 +1,0 @@
-id,fragment,age,programExperience,testsResults,task
-410,"print(max([int(input()) for v1 in range(3)]))
-",36.0,FROM_HALF_TO_ONE_YEAR,1.0,max_3

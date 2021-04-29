@@ -43,7 +43,6 @@ class SolutionSpaceFileRepository(private val solutionSpaceFiles: Map<DatasetTas
     }
 }
 
-
 typealias SolutionSpaceCache = HashMap<DatasetTask, SolutionSpace>
 
 class SolutionSpaceCachedRepository(

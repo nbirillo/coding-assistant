@@ -8,7 +8,7 @@ plugins {
 dependencies {
     api("org.jetbrains.research.ml.ast.transformations:ast-transformations-core") {
         version {
-            branch = "develop"
+            branch = "develop-8"
         }
     }
     api("org.jgrapht:jgrapht-core:1.1.0")

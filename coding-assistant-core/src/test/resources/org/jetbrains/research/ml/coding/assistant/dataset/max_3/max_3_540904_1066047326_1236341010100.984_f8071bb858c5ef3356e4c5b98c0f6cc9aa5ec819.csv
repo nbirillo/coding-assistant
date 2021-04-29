@@ -1,6 +1,0 @@
-id,fragment,age,programExperience,testsResults,task
-734,"v1 = int(input())
-v2 = int(input())
-v3 = int(input())
-
-print(max(v1, max(v2, v3)))",24.0,MORE_THAN_SIX,1.0,max_3

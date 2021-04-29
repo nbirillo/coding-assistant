@@ -110,7 +110,6 @@ object WeightedEditPartialSolutionMatcher : PartialSolutionMatcher {
         }
     }
 
-
     override fun toString(): String {
         return "WeightedEditPartialSolutionMatcher"
     }

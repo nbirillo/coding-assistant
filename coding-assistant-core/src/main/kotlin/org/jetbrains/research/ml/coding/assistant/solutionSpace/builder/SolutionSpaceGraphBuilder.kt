@@ -9,7 +9,6 @@ import org.jetbrains.research.ml.coding.assistant.solutionSpace.weightCalculator
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.weightCalculator.EdgeWeightCalculatorFactory
 import org.jetbrains.research.ml.coding.assistant.unification.model.DynamicIntermediateSolution
 import org.jgrapht.Graph
-import org.jgrapht.Graphs
 import org.jgrapht.alg.cycle.SzwarcfiterLauerSimpleCycles
 import org.jgrapht.graph.SimpleDirectedWeightedGraph
 import kotlin.reflect.KFunction1
@@ -79,7 +78,6 @@ class SolutionSpaceGraphBuilder {
         graph.vertexSet()
             .filter { toRemoveVertices.contains(it) }
             .forEach(graph::removeVertex)
-
     }
 
     private fun deletePsiFiles() {
@@ -91,7 +89,9 @@ class SolutionSpaceGraphBuilder {
     }
 
     fun build(
-        weightFactory: KFunction1<Graph<SolutionSpaceVertex, SolutionSpaceEdge>, EdgeWeightCalculator<SolutionSpaceVertex, SolutionSpaceEdge>>
+        weightFactory: KFunction1<
+            Graph<SolutionSpaceVertex, SolutionSpaceEdge>,
+            EdgeWeightCalculator<SolutionSpaceVertex, SolutionSpaceEdge>>
     ): SolutionSpace = build { weightFactory.invoke(it) }
 
     fun build(

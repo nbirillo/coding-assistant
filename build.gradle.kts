@@ -24,7 +24,7 @@ allprojects {
 
     intellij {
         type = "PC"
-        version = "2020.3.3"
+        version = "2020.1"
         downloadSources = false
         setPlugins("PythonCore")
         updateSinceUntilBuild = true
@@ -45,18 +45,17 @@ allprojects {
 
     tasks {
         withType<JavaCompile> {
-            sourceCompatibility = "11"
-            targetCompatibility = "11"
+            sourceCompatibility = "1.8"
+            targetCompatibility = "1.8"
         }
         withType<KotlinCompile> {
-            kotlinOptions.jvmTarget = "11"
+            kotlinOptions.jvmTarget = "1.8"
             kotlinOptions.freeCompilerArgs += listOf("-Xopt-in=kotlin.RequiresOptIn")
         }
         // According to this topic:
         // https://intellij-support.jetbrains.com/hc/en-us/community/posts/360010164960-Build-Intellij-plugin-in-IDEA-2019-1-2020-3?page=1#community_comment_360002517940
         withType<org.jetbrains.intellij.tasks.BuildSearchableOptionsTask>()
             .forEach { it.enabled = false }
-
     }
 
     kotlin.sourceSets.all {

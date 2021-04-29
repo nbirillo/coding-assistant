@@ -1,4 +1,0 @@
-id,fragment,age,programExperience,testsResults,task
-261,"
-",22,MORE_THAN_SIX,0.0,voting
-272,print(int(sum([int(v1) for v1 in input().split()]) > 1)),22,MORE_THAN_SIX,1.0,voting

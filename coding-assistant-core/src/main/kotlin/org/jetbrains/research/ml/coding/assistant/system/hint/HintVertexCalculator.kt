@@ -30,7 +30,6 @@ object NaiveHintVertexCalculator : HintVertexCalculator {
     }
 }
 
-
 object PoissonPathHintVertexCalculator : HintVertexCalculator {
     override fun calculateHintVertex(
         solutionSpace: SolutionSpace,
@@ -41,8 +40,9 @@ object PoissonPathHintVertexCalculator : HintVertexCalculator {
         val paths = dijkstra.getPaths(closestVertex)
         val closestFinalSolutions = solutionSpace.finalSolutions.minElementsBy { paths.getWeight(it) }
         val shortestPaths = closestFinalSolutions.map { paths.getPath(it) }
-        if (shortestPaths.isEmpty())
+        if (shortestPaths.isEmpty()) {
             return null
+        }
 
         return preferredVertex(partialSolution, shortestPaths)
     }

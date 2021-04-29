@@ -1,2 +1,0 @@
-id,fragment,age,programExperience,testsResults,task
-37,print(max([int(v1) for v1 in input()])),21.0,MORE_THAN_SIX,1.0,max_digit

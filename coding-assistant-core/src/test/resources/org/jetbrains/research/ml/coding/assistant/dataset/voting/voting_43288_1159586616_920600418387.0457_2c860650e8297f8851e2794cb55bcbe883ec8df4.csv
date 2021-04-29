@@ -1,4 +1,0 @@
-id,fragment,age,programExperience,testsResults,task
-828,"
-",21,FROM_FOUR_TO_SIX_YEARS,0.0,voting
-834,"print(1 if sum(map(int, input().split())) > 1 else 0)",21,FROM_FOUR_TO_SIX_YEARS,1.0,voting

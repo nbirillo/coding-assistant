@@ -1,9 +1,0 @@
-id,fragment,age,programExperience,testsResults,task
-28,"v1 = str(input())
-v2 = list(v1)",17.0,FROM_TWO_TO_FOUR_YEARS,0.0,max_digit
-29,"v1 = str(input())
-v2 = list(v1)
-print()",17.0,FROM_TWO_TO_FOUR_YEARS,0.0,max_digit
-31,"v1 = str(input())
-v2 = list(v1)
-print(max(v2))",17.0,FROM_TWO_TO_FOUR_YEARS,1.0,max_digit

@@ -1,8 +1,0 @@
-id,fragment,age,programExperience,testsResults,task
-1199,"v1 = list(map(int, input().split()))",-1,-1,0.0,voting
-1202,"v1 = list(map(int, input().split()))
-v1.sort()
-",-1,-1,0.0,voting
-1205,"v1 = list(map(int, input().split()))
-v1.sort()
-print(v1[1])",-1,-1,1.0,voting

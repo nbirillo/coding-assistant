@@ -1,9 +1,0 @@
-id,fragment,age,programExperience,testsResults,task
-2548,"v1 = (int(input()) + 100 * int(input())) * int(input())
-",0.0,,0.0,pies
-2561,"v1 = (int(input()) + 100 * int(input())) * int(input())
-print(v1 // 100, v1 % 100)
-",0.0,,0.125,pies
-2565,"v1 = (100 * int(input()) + int(input())) * int(input())
-print(v1 // 100, v1 % 100)
-",36.0,FROM_HALF_TO_ONE_YEAR,1.0,pies
