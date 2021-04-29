@@ -1,6 +1,7 @@
 package org.jetbrains.research.ml.coding.assistant.dataset.model
 
 import kotlinx.serialization.Serializable
+import kotlin.math.abs
 
 // Represents one record in .csv file.
 // Keys = columns. Map values = record values.
@@ -27,53 +28,40 @@ data class DatasetRecord(
  */
 @Serializable
 data class MetaInfo(
-    val age: Float?,
-    val programExperience: ProgramExperience?,
-    val testsResults: Double?,
+    val age: Float,
+    val programExperience: ProgramExperience,
+    val testsResults: Double,
     val task: DatasetTask
 ) {
     internal constructor(record: CSVRecord) : this(
-        age = record[Column.AGE]?.toFloatOrNullWithDefault(-1.0f),
-        programExperience = record[Column.PROGRAM_EXPERIENCE].toProgramExperience(),
-        testsResults = record[Column.TESTS_RESULTS]?.toDouble() ?: throwNullFieldError(Column.TESTS_RESULTS),
+        age = record[Column.AGE]?.toFloatOrNull() ?: -1.0f,
+        programExperience = record[Column.PROGRAM_EXPERIENCE].toProgramExperience()
+            ?: ProgramExperience.LESS_THAN_HALF_YEAR,
+        testsResults = record[Column.TESTS_RESULTS]?.toDouble() ?: 0.0,
         task = DatasetTask.createFromString(record[Column.TASK] ?: throwNullFieldError(Column.TASK))
     )
 
+    fun toComparableVector(): List<Double> =
+        listOf(programExperience.peLevel.toDouble(), age.toDouble(), testsResults)
+
     val isFinalSolution: Boolean get() = testsResults == 1.0
 
-    enum class ProgramExperience {
-        LESS_THAN_HALF_YEAR,
-        FROM_HALF_TO_ONE_YEAR,
-        FROM_ONE_TO_TWO_YEARS,
-        FROM_TWO_TO_FOUR_YEARS,
-        FROM_FOUR_TO_SIX_YEARS,
-        MORE_THAN_SIX;
+    enum class ProgramExperience(val peLevel: Int, val maxMonths: Int) : Comparable<ProgramExperience> {
+        LESS_THAN_HALF_YEAR(0, 6),
+        FROM_HALF_TO_ONE_YEAR(1, 12),
+        FROM_ONE_TO_TWO_YEARS(2, 24),
+        FROM_TWO_TO_FOUR_YEARS(3, 48),
+        FROM_FOUR_TO_SIX_YEARS(4, 72),
+        MORE_THAN_SIX(5, Int.MAX_VALUE);
 
         companion object {
-            private val RANGE_TO_PE: List<Pair<IntRange, ProgramExperience>> = listOf(
-                0 until 6 to LESS_THAN_HALF_YEAR,
-                6 until 12 to FROM_HALF_TO_ONE_YEAR,
-                12 until 24 to FROM_ONE_TO_TWO_YEARS,
-                24 until 48 to FROM_HALF_TO_ONE_YEAR,
-                48 until 72 to FROM_HALF_TO_ONE_YEAR,
-                72..Int.MAX_VALUE to FROM_HALF_TO_ONE_YEAR
-            )
-
             fun createFromMonths(months: Int): ProgramExperience {
-                return RANGE_TO_PE.first { it.first.contains(months) }.second
+                return values().first { it.maxMonths < months }
             }
         }
     }
 
     companion object {
-        private fun String?.toFloatOrNullWithDefault(default: Float): Float? {
-            val value = this?.toFloatOrNull()
-            if (value == default) {
-                return null
-            }
-            return value
-        }
-
         private fun String?.toProgramExperience(): ProgramExperience? =
             this?.let {
                 try {
@@ -82,6 +70,31 @@ data class MetaInfo(
                     null
                 }
             }
+    }
+}
+
+fun List<MetaInfo>.indexOfPreferredFor(metaInfo: MetaInfo): Int? {
+    val metaInfoVector = metaInfo.toComparableVector()
+
+    val vectors = map { info ->
+        (metaInfoVector zip info.toComparableVector()).map { abs(it.first - it.second) }
+    }
+
+    return vectors.indices.minByOrNull { LexicographicallyCompare(vectors[it]) }
+}
+
+data class LexicographicallyCompare(val list: List<Comparable<*>>) : Comparable<LexicographicallyCompare> {
+    override fun compareTo(other: LexicographicallyCompare): Int {
+        for ((element, otherElement) in list zip other.list) {
+            if (element.javaClass != otherElement.javaClass) {
+                throw IllegalArgumentException()
+            }
+
+            compareValues(element, otherElement).let {
+                if (it != 0) return it
+            }
+        }
+        return compareValues(list.size, other.list.size)
     }
 }
 

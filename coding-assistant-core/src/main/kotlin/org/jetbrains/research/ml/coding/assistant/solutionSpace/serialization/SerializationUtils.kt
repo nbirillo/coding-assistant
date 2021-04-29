@@ -1,8 +1,11 @@
 package org.jetbrains.research.ml.coding.assistant.solutionSpace.serialization
 
+import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.decodeFromString
+import kotlinx.serialization.encodeToByteArray
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
+import kotlinx.serialization.protobuf.ProtoBuf
 import org.jetbrains.research.ml.coding.assistant.report.OriginalCodeData
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpace
 
@@ -12,12 +15,15 @@ object SerializationUtils {
         allowSpecialFloatingPointValues = true
     }
 
-    fun encodeSolutionSpace(solutionSpace: SolutionSpace): String {
-        return json.encodeToString(SolutionSpaceSerializer, solutionSpace)
+    @OptIn(ExperimentalSerializationApi::class)
+    private val protoBuf = ProtoBuf
+
+    fun encodeSolutionSpace(solutionSpace: SolutionSpace): ByteArray {
+        return protoBuf.encodeToByteArray(SolutionSpaceSerializer, solutionSpace)
     }
 
-    fun decodeSolutionSpace(content: String): SolutionSpace {
-        return json.decodeFromString(SolutionSpaceSerializer, content)
+    fun decodeSolutionSpace(byteArray: ByteArray): SolutionSpace {
+        return protoBuf.decodeFromByteArray(SolutionSpaceSerializer, byteArray)
     }
 
     fun encodeCodeData(solutionSpace: OriginalCodeData): String {

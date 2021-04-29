@@ -31,6 +31,9 @@ class SolutionSpace(val graph: Graph<SolutionSpaceVertex, SolutionSpaceEdge>) {
         vertices: Collection<SolutionSpaceVertex>,
         edgePairs: Collection<SolutionSpaceEdgeModel>
     ) : this(buildGraph(vertices, edgePairs))
+
+    val finalSolutions: List<SolutionSpaceVertex>
+        get() = graph.vertexSet().filter { it.isFinal }
 }
 
 /**

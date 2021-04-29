@@ -11,9 +11,9 @@ typealias EdgeWeightCalculatorFactory<V, E> = (Graph<V, E>) -> EdgeWeightCalcula
  */
 abstract class EdgeWeightCalculator<V, E>(val graph: Graph<V, E>) {
     /**
-        Calculated the weight of the edge.
-        Bigger score means more difference(priority) between source and target node.
-    */
+    Calculated the weight of the edge.
+    Bigger score means more difference(priority) between source and target node.
+     */
     abstract fun getWeight(edge: E): Double
 }
 
@@ -29,11 +29,10 @@ class CustomEdgeWeightCalculator(
 ) : EdgeWeightCalculator<SolutionSpaceVertex, SolutionSpaceEdge>(graph) {
     private val cache = EdgeActionsCache(graph)
     override fun getWeight(edge: SolutionSpaceEdge): Double {
-        // TODO: think about more features.
         val targetVertex = graph.getEdgeTarget(edge)
         val sourceVertex = graph.getEdgeSource(edge)
-        val sourceTestScore = sourceVertex.studentInfo.metaInfo.testsResults ?: 0.0
-        val targetTestScore = targetVertex.studentInfo.metaInfo.testsResults ?: 0.0
+        val sourceTestScore = sourceVertex.studentInfo.metaInfo.testsResults
+        val targetTestScore = targetVertex.studentInfo.metaInfo.testsResults
         if (targetTestScore < sourceTestScore) {
             return Double.POSITIVE_INFINITY
         }
@@ -42,5 +41,14 @@ class CustomEdgeWeightCalculator(
         val actions = cache[edge]
         val editNodesSizeCoefficient: Double = actions.map { it.node.size }.sum().toDouble()
         return editNodesSizeCoefficient / testScoreCoefficient
+    }
+}
+
+class PoissonTimeWeightCalculator(
+    graph: Graph<SolutionSpaceVertex, SolutionSpaceEdge>
+) : EdgeWeightCalculator<SolutionSpaceVertex, SolutionSpaceEdge>(graph) {
+    override fun getWeight(edge: SolutionSpaceEdge): Double {
+        val targetVertex = graph.getEdgeTarget(edge)
+        return 1 / targetVertex.info.size.toDouble()
     }
 }

@@ -3,7 +3,6 @@ package org.jetbrains.research.ml.coding.assistant.hint
 import com.intellij.openapi.command.WriteCommandAction
 import com.intellij.openapi.components.service
 import com.intellij.psi.PsiFile
-import org.jetbrains.research.ml.ast.transformations.PerformedCommandStorage
 import org.jetbrains.research.ml.coding.assistant.dataset.model.MetaInfo
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreator
 import org.jetbrains.research.ml.coding.assistant.system.PartialSolution
@@ -18,10 +17,10 @@ interface HintManager {
 class HintManagerImpl(private val hintFactory: HintFactory) : HintManager {
     override fun getHintedFile(psiFragment: PsiFile, metaInfo: MetaInfo): PsiFile? {
         val studentPsiFile = psiFragment.reformatInWriteAction()
-        val commandStorage = PerformedCommandStorage(studentPsiFile)
+        val transformation = CompositeTransformation()
 
         WriteCommandAction.runWriteCommandAction(studentPsiFile.project) {
-            CompositeTransformation.forwardApply(studentPsiFile, commandStorage)
+            transformation.forwardApply(studentPsiFile)
         }
         val partialSolution = PartialSolution(
             metaInfo.task,
@@ -32,6 +31,10 @@ class HintManagerImpl(private val hintFactory: HintFactory) : HintManager {
         println("Student code:\n${studentPsiFile.text}\n")
         val hint = hintFactory.createHint(partialSolution) ?: return null
         val psiCreator = studentPsiFile.project.service<PsiCreator>()
-        return psiCreator.initFileToPsi(hint.hintVertex.code)
+        val hintPsiFile = psiCreator.initFileToPsi(hint.hintVertex.code)
+        WriteCommandAction.runWriteCommandAction(studentPsiFile.project) {
+            transformation.inverseApply(hintPsiFile)
+        }
+        return hintPsiFile
     }
 }

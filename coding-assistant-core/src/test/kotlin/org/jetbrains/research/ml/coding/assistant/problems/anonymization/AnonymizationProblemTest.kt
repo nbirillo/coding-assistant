@@ -32,8 +32,9 @@ class AnonymizationProblemTest : ParametrizedBaseWithSdkTest(getResourcesRootPat
     fun testAnonymizationError() {
         val inText = inFile!!.readText()
         val psiFile = createPsiFile(inText)
+        val transformation = AnonymizationTransformation()
         ApplicationManager.getApplication().invokeAndWait {
-            AnonymizationTransformation.forwardApply(psiFile, null)
+            transformation.forwardApply(psiFile)
         }
         assertNotEquals(outFile!!.readText(), psiFile.text)
         psiFile.deleteFile()

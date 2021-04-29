@@ -86,13 +86,14 @@ for i in range(l // 2):
             """.trimIndent()
             val psiCreator = project.service<PsiCreator>()
             val file = psiCreator.initFileToPsi(code).reformatInWriteAction()
-            CompositeTransformation.forwardApply(file, null)
+            val transformation = CompositeTransformation()
+            transformation.forwardApply(file)
 
             val partialSolution = PartialSolution(
                 datasetTask,
                 Util.getTreeContext(file),
                 file,
-                MetaInfo(123.0f, null, 0.32, datasetTask)
+                MetaInfo(-1.0f, MetaInfo.ProgramExperience.LESS_THAN_HALF_YEAR, 0.32, datasetTask)
             )
 
             val reportGenerator = CompositeMarkdownHintReportGenerator(MarkdownHintReportGenerator(codeRepository))

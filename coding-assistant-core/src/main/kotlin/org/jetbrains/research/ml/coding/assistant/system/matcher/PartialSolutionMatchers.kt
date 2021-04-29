@@ -1,5 +1,6 @@
 package org.jetbrains.research.ml.coding.assistant.system.matcher
 
+import com.github.gumtreediff.actions.model.*
 import org.jetbrains.research.ml.ast.gumtree.diff.Matcher
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpaceVertex
 import org.jetbrains.research.ml.coding.assistant.system.PartialSolution
@@ -88,5 +89,29 @@ object EditCountPartialSolutionMatcher : PartialSolutionMatcher {
 
     override fun toString(): String {
         return "EditCountPartialSolutionMatcher"
+    }
+}
+
+object WeightedEditPartialSolutionMatcher : PartialSolutionMatcher {
+    override fun differScore(vertex: SolutionSpaceVertex, partialSolution: PartialSolution): Double {
+        val matcher = Matcher(partialSolution.treeContext, vertex.fragment)
+        val actions = matcher.getEditActions()
+        return actions.sumByDouble { it.node.size.toDouble() * weightOf(it) }
+    }
+
+    private fun weightOf(action: Action): Double {
+        return when (action) {
+            is Addition -> 0.7
+            is Delete -> 1.5
+            is Insert -> 1.0
+            is Move -> 0.7
+            is Update -> 0.5
+            else -> 1.0
+        }
+    }
+
+
+    override fun toString(): String {
+        return "WeightedEditPartialSolutionMatcher"
     }
 }

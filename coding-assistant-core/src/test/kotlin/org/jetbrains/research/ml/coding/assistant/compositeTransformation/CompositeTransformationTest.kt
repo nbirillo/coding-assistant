@@ -26,8 +26,9 @@ class CompositeTransformationTest : ParametrizedBaseWithSdkTest(getTmpProjectDir
     fun testCompositeTransformation() {
         val inText = inFile!!.readText()
         val psiFile = createPsiFile(inText)
+        val transformation = CompositeTransformation()
         ApplicationManager.getApplication().invokeAndWait {
-            CompositeTransformation.forwardApply(psiFile, null)
+            transformation.forwardApply(psiFile)
         }
         assertEquals(outFile!!.readText(), psiFile.text)
     }

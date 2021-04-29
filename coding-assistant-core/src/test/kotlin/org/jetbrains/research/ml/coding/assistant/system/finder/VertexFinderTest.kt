@@ -43,7 +43,7 @@ class VertexFinderTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(::Vert
             taskSolution.datasetTask,
             context,
             psiFile,
-            MetaInfo(10.0f, null, 0.1, DatasetTask.BRACKETS)
+            MetaInfo(10.0f, MetaInfo.ProgramExperience.LESS_THAN_HALF_YEAR, 0.1, DatasetTask.BRACKETS)
         )
         assertNoThrowable {
             finder.findCorrespondingVertex(solutionSpace, partialSolution)
@@ -55,8 +55,9 @@ class VertexFinderTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(::Vert
 
     private fun createPsiFile(text: String): PsiFileWrapper {
         return project.service<PsiCreator>().initFileToPsi(text).apply {
+            val transformation = CompositeTransformation()
             ApplicationManager.getApplication().invokeAndWait {
-                CompositeTransformation.forwardApply(this, null)
+                transformation.forwardApply(this)
             }
         }
     }

@@ -5,10 +5,14 @@ import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpaceEdg
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpaceVertex
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.removeVertices
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.replaceVertex
+import org.jetbrains.research.ml.coding.assistant.solutionSpace.weightCalculator.EdgeWeightCalculator
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.weightCalculator.EdgeWeightCalculatorFactory
 import org.jetbrains.research.ml.coding.assistant.unification.model.DynamicIntermediateSolution
+import org.jgrapht.Graph
+import org.jgrapht.Graphs
 import org.jgrapht.alg.cycle.SzwarcfiterLauerSimpleCycles
 import org.jgrapht.graph.SimpleDirectedWeightedGraph
+import kotlin.reflect.KFunction1
 
 typealias DynamicIntermediateSolutionVertexChain = List<SolutionSpaceGraphVertex>
 internal typealias SolutionSpaceGraph = SimpleDirectedWeightedGraph<SolutionSpaceGraphVertex, SolutionSpaceGraphEdge>
@@ -46,7 +50,7 @@ class SolutionSpaceGraphBuilder {
         // remove non-final singleton vertices
         graph.vertexSet()
             .filter {
-                graph.edgesOf(it).isEmpty() && !it.representativeSolution.metaInfo.isFinalSolution
+                graph.edgesOf(it).isEmpty()
             }
             .forEach(graph::removeVertex)
     }
@@ -55,6 +59,7 @@ class SolutionSpaceGraphBuilder {
         fun SolutionSpaceGraphVertex.isLeaf(): Boolean {
             return graph.outDegreeOf(this) == 0
         }
+
         fun collectVertices(vertex: SolutionSpaceGraphVertex): List<SolutionSpaceGraphVertex> {
             val prevSingleNonFinalVertices = graph
                 .incomingEdgesOf(vertex)
@@ -86,16 +91,17 @@ class SolutionSpaceGraphBuilder {
     }
 
     fun build(
-        isFileDeletionNeeded: Boolean = true,
+        weightFactory: KFunction1<Graph<SolutionSpaceVertex, SolutionSpaceEdge>, EdgeWeightCalculator<SolutionSpaceVertex, SolutionSpaceEdge>>
+    ): SolutionSpace = build { weightFactory.invoke(it) }
+
+    fun build(
         weightFactory: EdgeWeightCalculatorFactory<SolutionSpaceVertex, SolutionSpaceEdge>
     ): SolutionSpace {
         removeSimpleCycles()
         removeSingletonVertices()
         removeNonFinalLeaves()
         val solutionSpace = SolutionSpace(weightFactory, this)
-        if (isFileDeletionNeeded) {
-            deletePsiFiles()
-        }
+        deletePsiFiles()
         return solutionSpace
     }
 }

@@ -8,11 +8,12 @@ plugins {
 dependencies {
     api("org.jetbrains.research.ml.ast.transformations:ast-transformations-core") {
         version {
-            branch = "master"
+            branch = "develop"
         }
     }
     api("org.jgrapht:jgrapht-core:1.1.0")
     api("org.jgrapht:jgrapht-ext:1.1.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-protobuf:1.1.0")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.1.0")
 
     implementation(group = "de.siegmar", name = "fastcsv", version = "2.0.0")

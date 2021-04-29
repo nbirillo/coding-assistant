@@ -50,10 +50,18 @@ allprojects {
         }
         withType<KotlinCompile> {
             kotlinOptions.jvmTarget = "11"
+            kotlinOptions.freeCompilerArgs += listOf("-Xopt-in=kotlin.RequiresOptIn")
         }
         // According to this topic:
         // https://intellij-support.jetbrains.com/hc/en-us/community/posts/360010164960-Build-Intellij-plugin-in-IDEA-2019-1-2020-3?page=1#community_comment_360002517940
         withType<org.jetbrains.intellij.tasks.BuildSearchableOptionsTask>()
             .forEach { it.enabled = false }
+
+    }
+
+    kotlin.sourceSets.all {
+        languageSettings.apply {
+            useExperimentalAnnotation("kotlinx.serialization.ExperimentalSerializationApi")
+        }
     }
 }

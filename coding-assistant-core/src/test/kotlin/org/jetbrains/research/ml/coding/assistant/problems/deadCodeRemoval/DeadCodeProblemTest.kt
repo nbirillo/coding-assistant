@@ -29,7 +29,7 @@ class DeadCodeProblemTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(::A
         val inText = inFile!!.readText()
         val psiFile = createPsiFile(inText)
         ApplicationManager.getApplication().invokeAndWait {
-            DeadCodeRemovalTransformation.forwardApply(psiFile, null)
+            DeadCodeRemovalTransformation.forwardApply(psiFile)
         }
         assertNotEquals(outFile!!.readText(), psiFile.text)
         psiFile.deleteFile()

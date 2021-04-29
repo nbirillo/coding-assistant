@@ -46,9 +46,10 @@ class DatasetUnificationImpl(project: Project) : DatasetUnification {
     private fun unifyRecord(datasetRecord: DatasetRecord): DatasetPartialSolution {
         val psiFile = fileFactory.initFileToPsi(datasetRecord.fragment).reformatInWriteAction()
 
+        val transformation = CompositeTransformation()
         ApplicationManager.getApplication().invokeAndWait {
             logger.finer { "Unification Started: ${psiFile.text}" }
-            CompositeTransformation.forwardApply(psiFile, null)
+            transformation.forwardApply(psiFile)
             logger.finer { "Unification Ended: ${psiFile.text}" }
         }
 
