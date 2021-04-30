@@ -1,5 +1,6 @@
 package org.jetbrains.research.ml.coding.assistant.solutionSpace.repo
 
+import com.google.common.io.Resources
 import org.jetbrains.research.ml.coding.assistant.dataset.model.DatasetTask
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpace
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.serialization.SerializationUtils
@@ -59,5 +60,23 @@ class SolutionSpaceCachedRepository(
     override fun storeSolutionSpace(datasetTask: DatasetTask, solutionSpace: SolutionSpace) {
         innerRepository.storeSolutionSpace(datasetTask, solutionSpace)
         cache[datasetTask] = solutionSpace
+    }
+}
+
+@Suppress("UnstableApiUsage")
+class SolutionSpaceResourcesDirectoryRepository(
+    private val klass: Class<*>
+) : SolutionSpaceRepository {
+    override fun fetchSolutionSpace(datasetTask: DatasetTask): SolutionSpace {
+        val dataBytes = Resources.toByteArray(Resources.getResource(klass, filename(datasetTask)))
+        return SerializationUtils.decodeSolutionSpace(dataBytes)
+    }
+
+    override fun storeSolutionSpace(datasetTask: DatasetTask, solutionSpace: SolutionSpace) {
+        error("Resource files supposed to be read only")
+    }
+
+    companion object {
+        private fun filename(datasetTask: DatasetTask) = "${datasetTask.taskName}.solution_space"
     }
 }

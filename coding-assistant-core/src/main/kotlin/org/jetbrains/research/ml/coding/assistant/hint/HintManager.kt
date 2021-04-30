@@ -2,10 +2,8 @@ package org.jetbrains.research.ml.coding.assistant.hint
 
 import com.intellij.openapi.command.WriteCommandAction
 import com.intellij.openapi.components.service
-import com.intellij.openapi.project.Project
 import com.intellij.psi.PsiDocumentManager
 import com.intellij.psi.PsiFile
-import org.apache.xmlgraphics.xmp.schemas.DublinCoreAdapter
 import org.jetbrains.research.ml.coding.assistant.dataset.model.MetaInfo
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.psiCreator.PsiCreator
 import org.jetbrains.research.ml.coding.assistant.system.PartialSolution
@@ -34,13 +32,14 @@ class HintManagerImpl(private val hintFactory: HintFactory) : HintManager {
         println("Student code:\n${studentPsiFile.text}\n")
         val hint = hintFactory.createHint(partialSolution) ?: return null
         val psiCreator = studentPsiFile.project.service<PsiCreator>()
-        val hintPsiFile = updateDocument(psiFragment, hint.hintVertex.code) ?: psiCreator.initFileToPsi(hint.hintVertex.code)
+        val hintPsiFile = updateDocument(psiFragment, hint.hintVertex.code) ?: psiCreator.initFileToPsi(
+            hint.hintVertex.code
+        )
         WriteCommandAction.runWriteCommandAction(studentPsiFile.project) {
             transformation.inverseApply(hintPsiFile)
         }
         return hintPsiFile
     }
-
 
     private fun updateDocument(psiFragment: PsiFile, newContent: String): PsiFile? {
         val documentManager = psiFragment.project.service<PsiDocumentManager>()

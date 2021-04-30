@@ -53,6 +53,6 @@ class DatasetUnificationImpl(project: Project) : DatasetUnification {
             logger.finer { "Unification Ended: ${psiFile.text}" }
         }
 
-        return DatasetPartialSolution(datasetRecord.id, psiFile, datasetRecord.metaInfo)
+        return DatasetPartialSolution(datasetRecord.id, psiFile.reformatInWriteAction(), datasetRecord.metaInfo)
     }
 }
