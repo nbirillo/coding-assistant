@@ -25,8 +25,9 @@ class HintFactoryImpl(
         val solutionSpace = repository.fetchSolutionSpace(partialSolution.datasetTask)
         val closestVertex = vertexFinder.findCorrespondingVertex(solutionSpace, partialSolution) ?: return null
         println("Closest Vertex = ${closestVertex.id}")
-        val hintVertex =
-            hintVertexCalculator.calculateHintVertex(solutionSpace, closestVertex, partialSolution) ?: return null
+        val hintVertex = hintVertexCalculator.calculateHintVertex(solutionSpace, closestVertex, partialSolution)
+            ?: closestVertex.takeIf { it.isFinal }
+            ?: return null
         println("Hint Vertex = ${hintVertex.id}")
         return CodeHint(partialSolution, hintVertex)
     }

@@ -13,7 +13,6 @@ import org.jetbrains.research.ml.coding.assistant.solutionSpace.builder.Solution
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.repo.SolutionSpaceDirectoryRepository
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.serialization.SerializationUtils
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.generateImage
-import org.jetbrains.research.ml.coding.assistant.solutionSpace.weightCalculator.CustomEdgeWeightCalculator
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.weightCalculator.PoissonTimeWeightCalculator
 import org.jetbrains.research.ml.coding.assistant.unification.DatasetUnification
 import org.jetbrains.research.ml.coding.assistant.unification.model.DatasetPartialSolution

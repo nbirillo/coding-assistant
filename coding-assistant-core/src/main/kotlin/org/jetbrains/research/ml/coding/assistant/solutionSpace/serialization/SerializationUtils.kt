@@ -1,8 +1,6 @@
 package org.jetbrains.research.ml.coding.assistant.solutionSpace.serialization
 
-import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.decodeFromString
-import kotlinx.serialization.encodeToByteArray
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.protobuf.ProtoBuf
@@ -15,7 +13,6 @@ object SerializationUtils {
         allowSpecialFloatingPointValues = true
     }
 
-    @OptIn(ExperimentalSerializationApi::class)
     private val protoBuf = ProtoBuf
 
     fun encodeSolutionSpace(solutionSpace: SolutionSpace): ByteArray {

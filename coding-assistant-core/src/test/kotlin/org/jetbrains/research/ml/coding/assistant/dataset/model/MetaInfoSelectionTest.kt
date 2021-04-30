@@ -41,7 +41,6 @@ class MetaInfoSelectionTest {
         assertEquals(2, metaInfos.indexOfPreferredFor(metaInfo))
     }
 
-
     @Test
     fun `test meta info eq pe and age`() {
         // search for closets test result

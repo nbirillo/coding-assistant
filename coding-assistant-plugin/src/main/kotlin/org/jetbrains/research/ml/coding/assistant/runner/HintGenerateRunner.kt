@@ -15,8 +15,11 @@ import org.jetbrains.research.ml.coding.assistant.system.PartialSolution
 import org.jetbrains.research.ml.coding.assistant.system.finder.NaiveVertexFinder
 import org.jetbrains.research.ml.coding.assistant.system.finder.ParallelVertexFinder
 import org.jetbrains.research.ml.coding.assistant.system.hint.NaiveHintVertexCalculator
+import org.jetbrains.research.ml.coding.assistant.system.hint.PoissonPathHintVertexCalculator
+import org.jetbrains.research.ml.coding.assistant.system.matcher.EditCountPartialSolutionMatcher
 import org.jetbrains.research.ml.coding.assistant.system.matcher.EditPartialSolutionMatcher
 import org.jetbrains.research.ml.coding.assistant.system.matcher.ExactPartialSolutionMatcher
+import org.jetbrains.research.ml.coding.assistant.system.matcher.WeightedEditPartialSolutionMatcher
 import org.jetbrains.research.ml.coding.assistant.unification.CompositeTransformation
 import org.jetbrains.research.ml.coding.assistant.utils.ProjectUtils
 import org.jetbrains.research.ml.coding.assistant.utils.Util
@@ -93,7 +96,7 @@ for i in range(l // 2):
                 datasetTask,
                 Util.getTreeContext(file),
                 file,
-                MetaInfo(-1.0f, MetaInfo.ProgramExperience.LESS_THAN_HALF_YEAR, 0.32, datasetTask)
+                MetaInfo(13.0f, MetaInfo.ProgramExperience.LESS_THAN_HALF_YEAR, 0.32, datasetTask)
             )
 
             val reportGenerator = CompositeMarkdownHintReportGenerator(MarkdownHintReportGenerator(codeRepository))
@@ -101,11 +104,13 @@ for i in range(l // 2):
             val reportFactory = HintReportFactory(
                 solutionSpaceRepository,
                 listOf(
+                    ParallelVertexFinder(EditCountPartialSolutionMatcher),
                     ParallelVertexFinder(EditPartialSolutionMatcher),
+                    ParallelVertexFinder(WeightedEditPartialSolutionMatcher),
                     ParallelVertexFinder(ExactPartialSolutionMatcher),
                     NaiveVertexFinder(ExactPartialSolutionMatcher)
                 ),
-                listOf(NaiveHintVertexCalculator)
+                listOf(PoissonPathHintVertexCalculator, NaiveHintVertexCalculator)
             )
             val hintReports = reportFactory.createHintReports(partialSolution)
             reportFile.outputStream().use { stream ->
