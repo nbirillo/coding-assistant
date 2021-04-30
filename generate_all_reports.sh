@@ -1,0 +1,6 @@
+./generate_report.sh "$(realpath test_examples)" brackets "$(realpath output/brackets.solution_space)" "$(realpath output/brackets_code_repo.json)" "$(realpath test_examples_reports)"
+./generate_report.sh "$(realpath test_examples)" max_3 "$(realpath output/max_3.solution_space)" "$(realpath output/max_3_code_repo.json)" "$(realpath test_examples_reports/max_3)"
+./generate_report.sh "$(realpath test_examples)" max_digit "$(realpath output/max_digit.solution_space)" "$(realpath output/max_digit_code_repo.json)" "$(realpath test_examples_reports)"
+./generate_report.sh "$(realpath test_examples)" pies "$(realpath output/pies.solution_space)" "$(realpath output/pies_code_repo.json)" "$(realpath test_examples_reports)"
+./generate_report.sh "$(realpath test_examples)" voting "$(realpath output/voting.solution_space)" "$(realpath output/voting_code_repo.json)" "$(realpath test_examples_reports)"
+./generate_report.sh "$(realpath test_examples)" zero "$(realpath output/zero.solution_space)" "$(realpath output/zero_code_repo.json)" "$(realpath test_examples_reports)"

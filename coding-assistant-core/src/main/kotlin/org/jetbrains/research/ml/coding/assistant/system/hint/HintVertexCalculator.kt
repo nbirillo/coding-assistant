@@ -10,16 +10,18 @@ import org.jgrapht.GraphPath
 import org.jgrapht.Graphs
 import org.jgrapht.alg.shortestpath.DijkstraShortestPath
 
-interface HintVertexCalculator {
-    fun calculateHintVertex(
+abstract class HintVertexCalculator {
+    abstract fun calculateHintVertex(
         solutionSpace: SolutionSpace,
         closestVertex: SolutionSpaceVertex,
         partialSolution: PartialSolution
     ): SolutionSpaceVertex?
+
+    override fun toString(): String = this::class.simpleName ?: "HintVertexCalculator"
 }
 
 @Deprecated("use DijkstraHintVertexCalculator")
-object NaiveHintVertexCalculator : HintVertexCalculator {
+object NaiveHintVertexCalculator : HintVertexCalculator() {
     override fun calculateHintVertex(
         solutionSpace: SolutionSpace,
         closestVertex: SolutionSpaceVertex,
@@ -30,7 +32,7 @@ object NaiveHintVertexCalculator : HintVertexCalculator {
     }
 }
 
-object PoissonPathHintVertexCalculator : HintVertexCalculator {
+object PoissonPathHintVertexCalculator : HintVertexCalculator() {
     override fun calculateHintVertex(
         solutionSpace: SolutionSpace,
         closestVertex: SolutionSpaceVertex,
@@ -39,7 +41,7 @@ object PoissonPathHintVertexCalculator : HintVertexCalculator {
         val dijkstra = DijkstraShortestPath(solutionSpace.graph)
         val paths = dijkstra.getPaths(closestVertex)
         val closestFinalSolutions = solutionSpace.finalSolutions.minElementsBy { paths.getWeight(it) }
-        val shortestPaths = closestFinalSolutions.map { paths.getPath(it) }
+        val shortestPaths = closestFinalSolutions.mapNotNull { paths.getPath(it) }
         if (shortestPaths.isEmpty()) {
             return null
         }
@@ -65,7 +67,7 @@ object PoissonPathHintVertexCalculator : HintVertexCalculator {
     }
 
     private fun getNextVertex(path: GraphPath<SolutionSpaceVertex, SolutionSpaceEdge>): SolutionSpaceVertex? {
-        val firstEdge = path.edgeList.firstOrNull() ?: return null
+        val firstEdge = path.edgeList?.firstOrNull() ?: return null
         return path.graph.getEdgeTarget(firstEdge)
     }
 }

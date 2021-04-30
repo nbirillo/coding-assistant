@@ -22,7 +22,7 @@ class HintReportFactory(
             }
             HintReport(
                 partialSolution.datasetTask,
-                finder.toString(),
+                "$finder + $calculator",
                 partialSolution,
                 solutionSpace,
                 closestVertex,

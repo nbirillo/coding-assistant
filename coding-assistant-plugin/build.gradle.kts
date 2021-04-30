@@ -51,6 +51,9 @@ open class HintGenerationCliTask : org.jetbrains.intellij.tasks.RunIdeTask() {
     @get:Input
     val outputDir: String? by project
 
+    @get:Input
+    val fragmentPath: String? by project
+
     init {
         jvmArgs = listOf("-Djava.awt.headless=true", "--add-exports", "java.base/jdk.internal.vm=ALL-UNNAMED")
         standardInput = System.`in`
@@ -75,6 +78,7 @@ tasks {
             solutionSpacePath?.let { "--space_path=$it" },
             codeRepositoryPath?.let { "--code_repository_path=$it" },
             outputDir?.let { "--output_path=$it" },
+            fragmentPath?.let { "--fragment_path=$it" },
             taskName?.let { "--task_name=$it" }
         )
     }
