@@ -1,0 +1,1 @@
+vts = map(int, input().split())

@@ -1,0 +1,1 @@
+nums = map(int, input())

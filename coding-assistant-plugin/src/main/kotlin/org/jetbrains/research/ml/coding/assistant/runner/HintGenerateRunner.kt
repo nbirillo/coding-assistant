@@ -30,6 +30,7 @@ import java.nio.file.Paths
 import kotlin.system.exitProcess
 
 object HintGenerateRunner : ApplicationStarter {
+    private lateinit var fragmentPath: File
     private lateinit var solutionSpaceFile: File
     private lateinit var codeRepositoryFile: File
     private lateinit var outputDir: File
@@ -63,6 +64,12 @@ object HintGenerateRunner : ApplicationStarter {
             "--output_path",
             help = "Output directory"
         ) { Paths.get(this) }
+
+        val fragmentPath: Path by parser.storing(
+            "-f",
+            "--fragment_path",
+            help = "Code fragment path"
+        ) { Paths.get(this) }
     }
 
     override fun main(args: MutableList<String>) {
@@ -72,6 +79,7 @@ object HintGenerateRunner : ApplicationStarter {
                 this@HintGenerateRunner.codeRepositoryFile = codeRepositoryPath.toFile()
                 this@HintGenerateRunner.outputDir = outputPath.toFile().apply { mkdirs() }
                 this@HintGenerateRunner.datasetTask = DatasetTask.createFromString(taskName)
+                this@HintGenerateRunner.fragmentPath = fragmentPath.toFile()
             }
 
             val project = ProjectUtils.setUpProjectWithSdk(getTmpProjectDir())
@@ -79,14 +87,7 @@ object HintGenerateRunner : ApplicationStarter {
             val codeRepository = createCodeRepository(codeRepositoryFile)
             val solutionSpaceRepository = SolutionSpaceFileRepository(mapOf(datasetTask to solutionSpaceFile))
 
-            // language=Python
-            val code = """
-x = list(input())
-l = len(x)
-w = []
-for i in range(l // 2):
-    w += x[i] + '('
-            """.trimIndent()
+            val code = fragmentPath.readText()
             val psiCreator = project.service<PsiCreator>()
             val file = psiCreator.initFileToPsi(code).reformatInWriteAction()
             val transformation = CompositeTransformation()
@@ -100,15 +101,20 @@ for i in range(l // 2):
             )
 
             val reportGenerator = CompositeMarkdownHintReportGenerator(MarkdownHintReportGenerator(codeRepository))
-            val reportFile = outputDir.resolve("${datasetTask.taskName}_report.md").apply { createNewFile() }
+            val reportFile = outputDir.resolve(
+                "${fragmentPath.nameWithoutExtension}_${datasetTask.taskName}_report.md"
+            ).apply { createNewFile() }
             val reportFactory = HintReportFactory(
                 solutionSpaceRepository,
                 listOf(
                     ParallelVertexFinder(EditCountPartialSolutionMatcher),
+                    NaiveVertexFinder(EditCountPartialSolutionMatcher),
                     ParallelVertexFinder(EditPartialSolutionMatcher),
+                    NaiveVertexFinder(EditPartialSolutionMatcher),
                     ParallelVertexFinder(WeightedEditPartialSolutionMatcher),
+                    NaiveVertexFinder(WeightedEditPartialSolutionMatcher),
                     ParallelVertexFinder(ExactPartialSolutionMatcher),
-                    NaiveVertexFinder(ExactPartialSolutionMatcher)
+                    NaiveVertexFinder(ExactPartialSolutionMatcher),
                 ),
                 listOf(PoissonPathHintVertexCalculator, NaiveHintVertexCalculator)
             )
