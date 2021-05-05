@@ -27,7 +27,7 @@ object TaskTrackerDatasetFetcher : DatasetFetcher {
      */
     override fun fetchDataset(file: File): Dataset {
         require(file.isDirectory) { "Argument has to be directory with tasks" }
-        val taskSolutions = file.getListFiles().parallelStream()
+        val taskSolutions = file.getListFiles()
             .filter { it.isDirectory }
             .map(this::fetchTaskSolutions).toList()
         return Dataset(taskSolutions)
@@ -44,12 +44,12 @@ object TaskTrackerDatasetFetcher : DatasetFetcher {
      */
     override fun fetchTaskSolutions(file: File): TaskSolutions {
         require(file.isDirectory) { "Argument has to be directory with solution files" }
-        val solutions = file.getListFiles().parallelStream()
+        val solutions = file.getListFiles()
             .map(this::fetchDynamicSolution)
             .filter { it.hasFinalSolution() }
         return TaskSolutions(
             datasetTask = DatasetTask.createFromString(file.name),
-            dynamicSolutions = solutions?.toList() ?: emptyList()
+            dynamicSolutions = solutions.toList()
         )
     }
 

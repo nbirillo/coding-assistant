@@ -12,11 +12,11 @@ import org.jetbrains.research.ml.coding.assistant.utils.Util
 import org.jetbrains.research.ml.coding.assistant.utils.reformatInWriteAction
 
 interface HintManager {
-    fun getHintedFile(psiFragment: PsiFile, metaInfo: MetaInfo): PsiFile?
+    fun getHintedFile(psiFragment: PsiFile, metaInfo: MetaInfo): CodeHint?
 }
 
 class HintManagerImpl(private val hintFactory: HintFactory) : HintManager {
-    override fun getHintedFile(psiFragment: PsiFile, metaInfo: MetaInfo): PsiFile? {
+    override fun getHintedFile(psiFragment: PsiFile, metaInfo: MetaInfo): CodeHint? {
         val studentPsiFile = psiFragment.reformatInWriteAction()
         val transformation = CompositeTransformation()
 
@@ -30,15 +30,15 @@ class HintManagerImpl(private val hintFactory: HintFactory) : HintManager {
             metaInfo
         )
         println("Student code:\n${studentPsiFile.text}\n")
-        val hint = hintFactory.createHint(partialSolution) ?: return null
+        val vertexHint = hintFactory.createHint(partialSolution) ?: return null
         val psiCreator = studentPsiFile.project.service<PsiCreator>()
-        val hintPsiFile = updateDocument(psiFragment, hint.hintVertex.code) ?: psiCreator.initFileToPsi(
-            hint.hintVertex.code
+        val hintPsiFile = updateDocument(psiFragment, vertexHint.hintVertex.code) ?: psiCreator.initFileToPsi(
+            vertexHint.hintVertex.code
         )
         WriteCommandAction.runWriteCommandAction(studentPsiFile.project) {
             transformation.inverseApply(hintPsiFile)
         }
-        return hintPsiFile
+        return CodeHint(vertexHint, hintPsiFile)
     }
 
     private fun updateDocument(psiFragment: PsiFile, newContent: String): PsiFile? {
