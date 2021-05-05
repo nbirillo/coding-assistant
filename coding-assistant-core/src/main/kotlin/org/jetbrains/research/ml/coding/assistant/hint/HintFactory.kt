@@ -9,7 +9,7 @@ abstract class HintFactory {
     protected abstract val vertexFinder: VertexFinder
     protected abstract val hintVertexCalculator: HintVertexCalculator
 
-    abstract fun createHint(partialSolution: PartialSolution): CodeHint?
+    abstract fun createHint(partialSolution: PartialSolution): VertexHint?
 
     override fun toString(): String {
         return "${this::class.simpleName}(finder=$vertexFinder, calculator=$hintVertexCalculator)"
@@ -21,7 +21,7 @@ class HintFactoryImpl(
     override val vertexFinder: VertexFinder,
     override val hintVertexCalculator: HintVertexCalculator
 ) : HintFactory() {
-    override fun createHint(partialSolution: PartialSolution): CodeHint? {
+    override fun createHint(partialSolution: PartialSolution): VertexHint? {
         val solutionSpace = repository.fetchSolutionSpace(partialSolution.datasetTask)
         val closestVertex = vertexFinder.findCorrespondingVertex(solutionSpace, partialSolution) ?: return null
         println("Closest Vertex = ${closestVertex.id}")
@@ -29,6 +29,6 @@ class HintFactoryImpl(
             ?: closestVertex.takeIf { it.isFinal }
             ?: return null
         println("Hint Vertex = ${hintVertex.id}")
-        return CodeHint(partialSolution, hintVertex)
+        return VertexHint(partialSolution, hintVertex)
     }
 }
