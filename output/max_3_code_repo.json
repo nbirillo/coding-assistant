@@ -127,7 +127,7 @@
     "920": "v1 = int(input())\nv2 = int(input())\nv3 = int(input())\nif v1>=v2:\n    if v1>=v3:\n        print(v1)\n        ",
     "921": "v1 = int(input())\nv2 = int(input())\nv3 = int(input())\nif v1>=v2:\n    if v1>=v3:\n        print(v1)\nelif v1>=v2:\n     if v1>=v3:\n         print(v1)\n        ",
     "922": "v1 = int(input())\nv2 = int(input())\nv3 = int(input())\nif v1>=v2:\n    if v1>=v3:\n        print(v1)\nelif v1>=v2:\n    if v1>=v3:\n         print(v1)\n        ",
-    "923": "v1 = int(input())\nv2 = int(input())\nv3 = int(input())\nif v1>=v2:\n    if v1>=v3:\n        print(v1)\nelif v1>=v2:\n    if v1>=v3:\n        print(v1)\n        ",
+    "923": "v1 = input()\nif len(v1) > 2:\n    if len(v1) % 2 == 0:\n        v2 = (\"(\".join(v1[:int(len(v1) / 2)]) + \")\".join(v1[int(len(v1) / 2):]))\n    else:\n        v2 = (\"(\".join(v1[:((1) + (int(len(v1) / 2)))]) + \")\" + \")\".join(v1[int(len(v1) / 2 + 1):]))\nprint(int(len(v1)))\nprint(((1) + (int(len(v1) / 2))))\nprint(v2)\n\n",
     "925": "v1 = int(input())\nv2 = int(input())\nv3 = int(input())\nif v1>=v2:\n    if v1>=v3:\n        print(v1)\nelif v2>=v1:\n    if v1>=v3:\n        print(v1)\n        ",
     "926": "v1 = int(input())\nv2 = int(input())\nv3 = int(input())\nif v1>=v2:\n    if v1>=v3:\n        print(v1)\nelif v2>=v1:\n    if v2>=v3:\n        print(v1)\n        ",
     "928": "v1 = int(input())\nv2 = int(input())\nv3 = int(input())\nif v1>=v2:\n    if v1>=v3:\n        print(v1)\nelif v2>=v1:\n    if v2>=v3:\n        print(v2)\n        ",
