@@ -8,6 +8,7 @@ import org.jetbrains.research.ml.coding.assistant.system.PartialSolution
 import org.jetbrains.research.ml.coding.assistant.utils.minElementsBy
 import org.jgrapht.GraphPath
 import org.jgrapht.Graphs
+import org.jgrapht.alg.ConnectivityInspector
 import org.jgrapht.alg.shortestpath.DijkstraShortestPath
 
 abstract class HintVertexCalculator {
@@ -38,23 +39,20 @@ object PoissonPathHintVertexCalculator : HintVertexCalculator() {
         closestVertex: SolutionSpaceVertex,
         partialSolution: PartialSolution
     ): SolutionSpaceVertex? {
+        val inspector = ConnectivityInspector(solutionSpace.graph)
+        val connectedVertices = inspector.connectedSetOf(closestVertex)
+        val finalConnectedVertices = connectedVertices.filter { it.isFinal }
+        val preferredFinalVertex = preferredVertex(partialSolution, finalConnectedVertices) ?: return null
         val dijkstra = DijkstraShortestPath(solutionSpace.graph)
-        val paths = dijkstra.getPaths(closestVertex)
-        val closestFinalSolutions = solutionSpace.finalSolutions.minElementsBy { paths.getWeight(it) }
-        val shortestPaths = closestFinalSolutions.mapNotNull { paths.getPath(it) }
-        if (shortestPaths.isEmpty()) {
-            return null
-        }
-
-        return preferredVertex(partialSolution, shortestPaths)
+        val path = dijkstra.getPath(closestVertex, preferredFinalVertex)
+        return getNextVertex(path)
     }
 
     private fun preferredVertex(
         partialSolution: PartialSolution,
-        paths: Iterable<GraphPath<SolutionSpaceVertex, SolutionSpaceEdge>>
+        vertices: Iterable<SolutionSpaceVertex>
     ): SolutionSpaceVertex? {
-        val nextVertices = paths.mapNotNull(this::getNextVertex)
-        val metaInfos = nextVertices
+        val metaInfos = vertices
             .mapNotNull { vertex ->
                 val preferredInfoIndex =
                     vertex.info.map { it.metaInfo }.indexOfPreferredFor(partialSolution.metaInfo)
