@@ -4,6 +4,8 @@ import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpace
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpaceVertex
 import org.jetbrains.research.ml.coding.assistant.system.PartialSolution
 import org.jetbrains.research.ml.coding.assistant.system.matcher.PartialSolutionMatcher
+import java.util.concurrent.locks.ReentrantLock
+import kotlin.concurrent.withLock
 
 /**
  * Finds the closest vertex to a given student's partial solution
@@ -49,23 +51,26 @@ ${vertex.code}
  * Parallel vertex finder returns the vertex which differ score is minimal using parallel stream.
  */
 class ParallelVertexFinder(override val matcher: PartialSolutionMatcher) : VertexFinder() {
+    private val lock = ReentrantLock()
     override fun findCorrespondingVertex(
         solutionSpace: SolutionSpace,
         partialSolution: PartialSolution
     ): SolutionSpaceVertex? {
         return solutionSpace.graph.vertexSet()
             .parallelStream()
-            .min(compareBy {
-                matcher.differScore(it, partialSolution)
+            .min(compareBy { vertex ->
+                matcher.differScore(vertex, partialSolution)
                     .also { score ->
-                        println(
-                            """    
+                        lock.withLock {
+                            println(
+"""    
 Score = $score
-Current vertex(${it.id}) code:
-${it.code}
+Current vertex(${vertex.id}) code:
+${vertex.code}
 
 """.trimIndent()
-                        )
+                            )
+                        }
                     }
             })
             .orElse(null)
