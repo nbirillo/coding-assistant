@@ -11,8 +11,8 @@ dependencies {
             branch = "develop-8"
         }
     }
-    api("org.jgrapht:jgrapht-core:1.1.0")
-    api("org.jgrapht:jgrapht-ext:1.1.0")
+    api("org.jgrapht:jgrapht-core:1.4.0")
+    api("org.jgrapht:jgrapht-ext:1.4.0")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-protobuf:1.1.0")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.1.0")
 

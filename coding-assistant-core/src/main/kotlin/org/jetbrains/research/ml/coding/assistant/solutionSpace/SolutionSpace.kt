@@ -93,7 +93,7 @@ private fun buildGraph(
 ): AsUnmodifiableGraph<SolutionSpaceVertex, SolutionSpaceEdge> {
     val graph = SimpleDirectedWeightedGraph<SolutionSpaceVertex, SolutionSpaceEdge>(SolutionSpaceEdge::class.java)
     graph.addVertices(vertices)
-    val idToVertex = vertices.map { it.id to it }.toMap()
+    val idToVertex = vertices.associateBy { it.id }
     for ((sourceId, targetId, weight) in edges) {
         val newEdge = graph.addEdge(idToVertex[sourceId], idToVertex[targetId])
         graph.setEdgeWeight(newEdge, weight)
