@@ -55,7 +55,19 @@ class ParallelVertexFinder(override val matcher: PartialSolutionMatcher) : Verte
     ): SolutionSpaceVertex? {
         return solutionSpace.graph.vertexSet()
             .parallelStream()
-            .min(compareBy { matcher.differScore(it, partialSolution) })
+            .min(compareBy {
+                matcher.differScore(it, partialSolution)
+                    .also { score ->
+                        println(
+                            """    
+Score = $score
+Current vertex(${it.id}) code:
+${it.code}
+
+""".trimIndent()
+                        )
+                    }
+            })
             .orElse(null)
     }
 }
