@@ -3,6 +3,7 @@ package org.jetbrains.research.ml.coding.assistant.solutionSpace.repo
 import com.google.common.io.Resources
 import org.jetbrains.research.ml.coding.assistant.dataset.model.DatasetTask
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpace
+import org.jetbrains.research.ml.coding.assistant.solutionSpace.repo.SolutionSpaceRepository.Companion.filename
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.serialization.SerializationUtils
 import java.io.File
 
@@ -10,6 +11,9 @@ interface SolutionSpaceRepository {
     fun fetchSolutionSpace(datasetTask: DatasetTask): SolutionSpace
 
     fun storeSolutionSpace(datasetTask: DatasetTask, solutionSpace: SolutionSpace)
+    companion object {
+        fun filename(datasetTask: DatasetTask) = "${datasetTask.taskName}.solution_space"
+    }
 }
 
 class SolutionSpaceDirectoryRepository(private val directory: File) : SolutionSpaceRepository {
@@ -23,10 +27,6 @@ class SolutionSpaceDirectoryRepository(private val directory: File) : SolutionSp
             .apply { createNewFile() }
         val encodedSolutionSpace = SerializationUtils.encodeSolutionSpace(solutionSpace)
         solutionSpaceFile.writeBytes(encodedSolutionSpace)
-    }
-
-    companion object {
-        private fun filename(datasetTask: DatasetTask) = "${datasetTask.taskName}.solution_space"
     }
 }
 
@@ -74,9 +74,5 @@ class SolutionSpaceResourcesDirectoryRepository(
 
     override fun storeSolutionSpace(datasetTask: DatasetTask, solutionSpace: SolutionSpace) {
         error("Resource files supposed to be read only")
-    }
-
-    companion object {
-        private fun filename(datasetTask: DatasetTask) = "${datasetTask.taskName}.solution_space"
     }
 }

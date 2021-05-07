@@ -5,10 +5,9 @@ import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpace
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpaceEdge
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpaceVertex
 import org.jetbrains.research.ml.coding.assistant.system.PartialSolution
-import org.jetbrains.research.ml.coding.assistant.utils.minElementsBy
 import org.jgrapht.GraphPath
 import org.jgrapht.Graphs
-import org.jgrapht.alg.ConnectivityInspector
+import org.jgrapht.alg.connectivity.ConnectivityInspector
 import org.jgrapht.alg.shortestpath.DijkstraShortestPath
 
 abstract class HintVertexCalculator {
@@ -39,13 +38,13 @@ object PoissonPathHintVertexCalculator : HintVertexCalculator() {
         closestVertex: SolutionSpaceVertex,
         partialSolution: PartialSolution
     ): SolutionSpaceVertex? {
-        val inspector = ConnectivityInspector(solutionSpace.graph)
-        val connectedVertices = inspector.connectedSetOf(closestVertex)
-        val finalConnectedVertices = connectedVertices.filter { it.isFinal }
-        val preferredFinalVertex = preferredVertex(partialSolution, finalConnectedVertices) ?: return null
         val dijkstra = DijkstraShortestPath(solutionSpace.graph)
-        val path = dijkstra.getPath(closestVertex, preferredFinalVertex)
-        return getNextVertex(path)
+        val paths = dijkstra.getPaths(closestVertex)
+        val reachablePaths = solutionSpace.finalSolutions
+            .mapNotNull { sink -> paths.getPath(sink)?.let { sink to it } }
+            .toMap()
+        val preferredFinalVertex = preferredVertex(partialSolution, reachablePaths.keys) ?: return null
+        return reachablePaths[preferredFinalVertex]?.let(this::getNextVertex)
     }
 
     private fun preferredVertex(
