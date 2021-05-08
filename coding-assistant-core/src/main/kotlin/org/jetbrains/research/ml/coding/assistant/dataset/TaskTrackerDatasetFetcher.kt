@@ -57,7 +57,7 @@ object TaskTrackerDatasetFetcher : DatasetFetcher {
      * Fetch a single dynamic solution from the .csv file.
      */
     private fun fetchDynamicSolution(file: File): DynamicSolution {
-        require(file.isFile && file.isTypeOf(FileExtension.CSV)) { "The file has to be csv" }
+        require(file.isFile && file.isTypeOf(FileExtension.CSV)) { "File $file has to be csv" }
         val csvReader = NamedCsvReader.builder()
             .build(file.toPath(), Charset.defaultCharset())
         val records = csvReader.map { DatasetRecord(it.fields) }

@@ -40,11 +40,11 @@ class DatasetUnificationImpl(project: Project) : DatasetUnification {
                 logger.finer { "Start unify(id=${it.id}) $counterValue/${datasetRecords.size}" }
                 unifyRecord(it)
             }
-            .toList()
+            .removeConsecutiveDuplicatesBy()
     }
 
     private fun unifyRecord(datasetRecord: DatasetRecord): DatasetPartialSolution {
-        val psiFile = fileFactory.initFileToPsi(datasetRecord.fragment).reformatInWriteAction()
+        val psiFile = fileFactory.initFileToPsi(datasetRecord.fragment.replaceDoubleNewline()).reformatInWriteAction()
 
         val transformation = CompositeTransformation()
         ApplicationManager.getApplication().invokeAndWait {
@@ -54,5 +54,21 @@ class DatasetUnificationImpl(project: Project) : DatasetUnification {
         }
 
         return DatasetPartialSolution(datasetRecord.id, psiFile.reformatInWriteAction(), datasetRecord.metaInfo)
+    }
+}
+
+private fun String.replaceDoubleNewline(): String {
+    return replace(Regex("""\n(\s*\n)+"""), "\n").trim(' ', '\n')
+}
+
+private fun DynamicIntermediateSolution.removeConsecutiveDuplicatesBy(): DynamicIntermediateSolution {
+    var last: DatasetPartialSolution? = null
+    return mapNotNull {
+        if (last != null && it.psiFragment.textMatches(last!!.psiFragment)) {
+            null
+        } else {
+            last = it
+            it
+        }
     }
 }
