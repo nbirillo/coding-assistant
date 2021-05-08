@@ -12,10 +12,8 @@ import org.jetbrains.research.ml.coding.assistant.system.matcher.EditCountPartia
 import org.jetbrains.research.ml.coding.assistant.util.DatasetUtils
 import org.jetbrains.research.ml.coding.assistant.util.ParametrizedBaseWithSdkTest
 import org.junit.Test
-import kotlin.time.ExperimentalTime
 
 class HintFactoryImplTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(::HintFactoryImplTest)) {
-    @OptIn(ExperimentalTime::class)
     @Test
     fun testBasic() {
         val fragment = """
@@ -35,7 +33,7 @@ class HintFactoryImplTest : ParametrizedBaseWithSdkTest(getResourcesRootPath(::H
         val psiFile = createPsiFile(fragment)
         val metaInfo = MetaInfo(10.0f, MetaInfo.ProgramExperience.LESS_THAN_HALF_YEAR, 0.0, DatasetTask.BRACKETS)
         val file = hintManager.getHintedFile(psiFile, metaInfo)
-        print(file?.text)
+        print(file?.psiFragment?.text)
         psiFile.deleteFile()
     }
 

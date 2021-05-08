@@ -1,9 +1,17 @@
 package org.jetbrains.research.ml.coding.assistant.dataset.model
 
+import org.jetbrains.research.ml.coding.assistant.dataset.model.MetaInfo.ProgramExperience
 import org.junit.Test
 import kotlin.test.assertEquals
 
 class MetaInfoSelectionTest {
+    @Test
+    fun testPEFromMonths() {
+        assertEquals(ProgramExperience.LESS_THAN_HALF_YEAR, ProgramExperience.createFromMonths(2))
+        assertEquals(ProgramExperience.MORE_THAN_SIX, ProgramExperience.createFromMonths(80))
+        assertEquals(ProgramExperience.FROM_TWO_TO_FOUR_YEARS, ProgramExperience.createFromMonths(25))
+    }
+
     @Test
     fun testMetaInfoSelectionFindPE() {
         val metaInfos = listOf(
