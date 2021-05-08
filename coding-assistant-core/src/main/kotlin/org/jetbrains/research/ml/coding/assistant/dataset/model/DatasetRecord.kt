@@ -56,7 +56,12 @@ data class MetaInfo(
 
         companion object {
             fun createFromMonths(months: Int): ProgramExperience {
-                return values().first { it.maxMonths < months }
+                val greaterIndex = values().indexOfFirst { it.maxMonths >= months }
+                if (greaterIndex == -1) {
+                    return MORE_THAN_SIX
+                }
+
+                return values()[greaterIndex]
             }
         }
     }
