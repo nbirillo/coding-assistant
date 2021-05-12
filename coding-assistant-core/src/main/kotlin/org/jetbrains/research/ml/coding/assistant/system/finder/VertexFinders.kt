@@ -4,6 +4,7 @@ import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpace
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpaceVertex
 import org.jetbrains.research.ml.coding.assistant.system.PartialSolution
 import org.jetbrains.research.ml.coding.assistant.system.matcher.PartialSolutionMatcher
+import org.jgrapht.traverse.BreadthFirstIterator
 
 /**
  * Finds the closest vertex to a given student's partial solution
@@ -31,16 +32,16 @@ class NaiveVertexFinder(override val matcher: PartialSolutionMatcher) : VertexFi
     ): SolutionSpaceVertex? {
         return solutionSpace.graph.vertexSet().minByOrNull { vertex ->
             matcher.differScore(vertex, partialSolution)
-                .also { score ->
-                    println(
-                        """    
-Score = $score
-Current vertex(${vertex.id}) code:
-${vertex.code}
-
-""".trimIndent()
-                    )
-                }
+//                .also { score ->
+//                    println(
+//                        """
+//Score = $score
+//Current vertex(${vertex.id}) code:
+//${vertex.code}
+//
+//""".trimIndent()
+//                    )
+//                }
         }
     }
 }
@@ -57,5 +58,25 @@ class ParallelVertexFinder(override val matcher: PartialSolutionMatcher) : Verte
             .parallelStream()
             .min(compareBy { matcher.differScore(it, partialSolution) })
             .orElse(null)
+    }
+}
+
+class BFSParallelVertexFinder(override val matcher: PartialSolutionMatcher) : VertexFinder() {
+    override fun findCorrespondingVertex(
+        solutionSpace: SolutionSpace,
+        partialSolution: PartialSolution
+    ): SolutionSpaceVertex? {
+        return solutionSpace.startSolutions
+            .parallelStream()
+            .map { vertex ->
+                BreadthFirstIterator(solutionSpace.graph, vertex)
+                    .asSequence().toList()
+                    .parallelStream()
+                    .map<Pair<SolutionSpaceVertex, Double>?> { it to matcher.differScore(it, partialSolution) }
+                    .min(compareBy { it.second })
+                    .orElse(null)
+            }
+            .min(compareBy { it.second })
+            .orElse(null)?.first
     }
 }
