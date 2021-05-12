@@ -34,6 +34,9 @@ class SolutionSpace(val graph: Graph<SolutionSpaceVertex, SolutionSpaceEdge>) {
 
     val finalSolutions: List<SolutionSpaceVertex>
         get() = graph.vertexSet().filter { it.isFinal }
+
+    val startSolutions: List<SolutionSpaceVertex>
+        get() = graph.vertexSet().filter { graph.inDegreeOf(it) == 0 }
 }
 
 /**
