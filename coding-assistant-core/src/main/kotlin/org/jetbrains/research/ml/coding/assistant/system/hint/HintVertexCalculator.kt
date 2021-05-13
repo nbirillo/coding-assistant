@@ -7,7 +7,6 @@ import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpaceVer
 import org.jetbrains.research.ml.coding.assistant.system.PartialSolution
 import org.jgrapht.GraphPath
 import org.jgrapht.Graphs
-import org.jgrapht.alg.connectivity.ConnectivityInspector
 import org.jgrapht.alg.shortestpath.DijkstraShortestPath
 
 abstract class HintVertexCalculator {

@@ -7,7 +7,6 @@ import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.removeVert
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.utils.replaceVertex
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.weightCalculator.EdgeWeightCalculator
 import org.jetbrains.research.ml.coding.assistant.solutionSpace.weightCalculator.EdgeWeightCalculatorFactory
-import org.jetbrains.research.ml.coding.assistant.unification.model.DatasetPartialSolution
 import org.jetbrains.research.ml.coding.assistant.unification.model.DynamicIntermediateSolution
 import org.jgrapht.Graph
 import org.jgrapht.alg.cycle.SzwarcfiterLauerSimpleCycles

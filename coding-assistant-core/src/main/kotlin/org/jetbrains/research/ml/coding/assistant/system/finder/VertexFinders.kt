@@ -5,6 +5,8 @@ import org.jetbrains.research.ml.coding.assistant.solutionSpace.SolutionSpaceVer
 import org.jetbrains.research.ml.coding.assistant.system.PartialSolution
 import org.jetbrains.research.ml.coding.assistant.system.matcher.PartialSolutionMatcher
 import org.jgrapht.traverse.BreadthFirstIterator
+import java.util.concurrent.locks.ReentrantLock
+import kotlin.concurrent.withLock
 
 /**
  * Finds the closest vertex to a given student's partial solution
@@ -35,11 +37,11 @@ class NaiveVertexFinder(override val matcher: PartialSolutionMatcher) : VertexFi
 //                .also { score ->
 //                    println(
 //                        """
-//Score = $score
-//Current vertex(${vertex.id}) code:
-//${vertex.code}
+// Score = $score
+// Current vertex(${vertex.id}) code:
+// ${vertex.code}
 //
-//""".trimIndent()
+// """.trimIndent()
 //                    )
 //                }
         }
@@ -57,21 +59,23 @@ class ParallelVertexFinder(override val matcher: PartialSolutionMatcher) : Verte
     ): SolutionSpaceVertex? {
         return solutionSpace.graph.vertexSet()
             .parallelStream()
-            .min(compareBy { vertex ->
-                matcher.differScore(vertex, partialSolution)
-                    .also { score ->
-                        lock.withLock {
-                            println(
-"""    
+            .min(
+                compareBy { vertex ->
+                    matcher.differScore(vertex, partialSolution)
+                        .also { score ->
+                            lock.withLock {
+                                println(
+                                    """    
 Score = $score
 Current vertex(${vertex.id}) code:
 ${vertex.code}
 
 """.trimIndent()
-                            )
+                                )
+                            }
                         }
-                    }
-            })
+                }
+            )
             .orElse(null)
     }
 }
